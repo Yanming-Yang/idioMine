@@ -109,26 +109,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # dataFilePath = r'/Users/yangyanming/Documents/paper6/code_pattern_source_code/data.pkl'
-    # data = read_data(dataFilePath)
-    # print(data['javaFile'][0][0])
-    # print(data['func_ast'][0][0][0])
-
-    # for child in data['func_ast'][0][0][0].children:
-    #     print(child)
-    
-    # print(next(ast.walk_tree(data['func_ast'][0][0][0]))[1])
-    # # for child in data['func_ast'][0][0][0].children:
-    # #     print(child)
-    # for i in range(len(data['func_ast'][0][0][0].attrs)):
-    #     print(data['func_ast'][0][0][0].attrs[i])
-    #     print(type(data['func_ast'][0][0][0].children[i]))
-
-    # print(data['func_ast'][0][0][0].body)
-
-
-# Parser.traverse_AST(Parser.funcASTs[64])
-        
-    
+   
 
 
