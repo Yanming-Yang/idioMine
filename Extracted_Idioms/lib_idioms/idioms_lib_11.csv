@@ -1,0 +1,1207 @@
+,pro/lib,idiom,final
+0,completion_result_lib_11_combine1.pkl,StringBuffer buf2 = new StringBuffer( cases.size() );,"
+
+Yes, the synthesized code [StringBuffer buf2 = new StringBuffer( cases.size() );] is a generic Java code snippet that has been occurred in multiple Java libraries. The code uses the StringBuffer class, which is a built-in class in Java, and creates a new object of this class with the specified capacity of the cases.size() value. This technique is commonly used to optimize string concatenation operations, where instead of creating multiple string objects, a single StringBuffer object is used to append the strings and build the final output. Therefore, this code pattern can be found in many Java libraries that implement string manipulation or formatting functionality."
+1,completion_result_lib_11_combine1.pkl,Iterator iter = cases.entrySet().iterator();while ( iter.hasNext() ){Map.Entry me = (Map.Entry) iter.next();},"
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is used to iterate through a map and its entries using an iterator. It is a common way of iterating through maps in Java and is utilized in various libraries, applications, and frameworks."
+2,completion_result_lib_11_combine1.pkl,"if ( fragment.length()>0 && fragment.charAt(0)==',' ) fragment = fragment.substring(1);","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. The use of the logical AND operator (&&) and the String method charAt() and substring() are common in Java programming, and the specific implementation of removing the first character of a string if it is a comma is a common task when dealing with strings. Therefore, it is likely that this code snippet has been written and used by multiple Java developers in different projects and libraries."
+5,completion_result_lib_11_combine1.pkl,while ( iter.hasNext() ){String token = (String) iter.next();},"
+
+Yes, the synthesized code [while ( iter.hasNext() ){String token = (String) iter.next();}] is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is a common way to iterate over collections or arrays using the Iterator interface in Java. It is a standard approach that has been used in various Java libraries and frameworks for processing and manipulating data."
+6,completion_result_lib_11_combine1.pkl,"while ( iter.hasNext() ){String token = (String) iter.next();boolean spaceable = !DONT_SPACE_TOKENS.contains(token);boolean quoted = token.startsWith(""'"");buf.append(token);lastQuoted = token.endsWith(""'"");}","
+
+Yes, it is possible that the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. The code snippet uses basic Java constructs such as the while loop, type casting, boolean expressions, StringBuilder, and method calls. These constructs are commonly used in Java programming, and it is highly likely that different developers or libraries have used similar code structures to achieve similar functionality. However, without additional context or information, it is difficult to determine the origin or prevalence of this particular code snippet."
+8,completion_result_lib_11_combine1.pkl,QuerySelect copy = new QuerySelect(dialect);,"
+
+Yes, it is a common Java code snippet that can occur in multiple Java libraries. This code snippet creates a new instance of the QuerySelect class, where the ""dialect"" parameter is passed into the constructor. The exact implementation of the QuerySelect class and the purpose it serves may vary depending on the library or framework it is used in. However, the syntax and structure of the code snippet itself are standard Java conventions, which are commonly used in many different Java applications."
+9,completion_result_lib_11_combine1.pkl,copy.afterFrom = new StringBuffer( afterFrom.toString() );,"
+
+Yes, the synthesized code [copy.afterFrom = new StringBuffer( afterFrom.toString() );] is a generic Java code snippet that has occurred in multiple Java libraries. The reason is that it provides a way to create a new StringBuffer object and initialize it with the value of an existing StringBuffer object. This approach is commonly used in Java when there is a need to create a new copy of a string buffer with its own memory allocation, but retaining the same value as the original. As such, it is a reusable code snippet that can be used in a wide range of Java applications where string manipulation is involved."
+10,completion_result_lib_11_combine1.pkl,"QueryJoinFragment copy = new QueryJoinFragment( dialect, useThetaStyleInnerJoins );","
+
+Yes, it is possible that the synthesized code [QueryJoinFragment copy = new QueryJoinFragment( dialect, useThetaStyleInnerJoins );] is a generic Java code snippet that has been occurred in multiple Java libraries. This is because the code snippet creates a new instance of a QueryJoinFragment object by passing the arguments ""dialect"" and ""useThetaStyleInnerJoins"" to its constructor. This is a common approach used in Java to create new objects of a particular class with the desired parameters. Since this approach is used widely in Java programming, it is possible that similar code snippets have been used in different Java libraries."
+12,completion_result_lib_11_combine1.pkl,"cases.put( StringHelper.qualify(alias, columnName), value );","
+
+Yes, it is possible that the synthesized code [cases.put( StringHelper.qualify(alias, columnName), value );] is a generic Java code snippet that has occurred in multiple Java libraries. This is because the code snippet uses commonly used Java methods such as put() and qualify(), and also takes advantage of the StringHelper class that may be found in various libraries. Moreover, the code's purpose of adding values to a Map may be a general requirement across different Java projects. However, without more context, it is impossible to determine definitively whether this code has occurred in multiple Java libraries."
+13,completion_result_lib_11_combine1.pkl,"if ( StringHelper.isNotEmpty(comment) ){buf.append("" "");}","
+
+As an AI language model, I don't have access to all the Java libraries, but based on my knowledge, I can say:
+
+Yes, the synthesized code [if ( StringHelper.isNotEmpty(comment) ){buf.append("" "");}] is likely a generic Java code snippet that has occurred in multiple Java libraries.
+
+This code snippet is commonly used to check if the comment is not empty and if it is not empty, it adds a space to a StringBuilder object. The StringHelper class is not a standard Java library class, but it is possible that this class and method have been created and shared among developers in multiple libraries or projects. Additionally, this code snippet follows the basic syntax and logic of Java programming, making it a possible solution in various systems."
+15,completion_result_lib_11_combine1.pkl,if ( StringHelper.isNotEmpty(outerJoinsAfterFrom) ){buf.append(outerJoinsAfterFrom);},"
+
+Yes, the synthesized code [if ( StringHelper.isNotEmpty(outerJoinsAfterFrom) ){buf.append(outerJoinsAfterFrom);}] is a generic Java code snippet that has been used in multiple Java libraries. 
+
+The code snippet checks if the String variable ""outerJoinsAfterFrom"" is not empty and appends its value to the StringBuffer ""buf"". This is a basic operation that is commonly used in Java programming to concatenate String objects. Therefore, it is likely that this code snippet has been used in various libraries across different applications."
+16,completion_result_lib_11_combine1.pkl,if (lockMode!=null){buf.append( dialect.getForUpdateString(lockMode) );},"
+
+Yes, it is possible that the synthesized code [if (lockMode!=null){buf.append( dialect.getForUpdateString(lockMode) );}] is a generic Java code snippet that has occurred in multiple Java libraries. 
+
+The reason for this is that this code snippet is performing a common task in Java, which is to check whether a condition is true and execute a block of code if it is. Additionally, it is calling a method on an object (dialect) to retrieve a string. Both situations are very common in Java programming, so it is likely that this code snippet could be found in multiple libraries that perform similar tasks."
+17,completion_result_lib_11_combine1.pkl,Iterator columnAliasIter = columnAliases.iterator();while ( iter.hasNext() ){String columnAlias = (String) columnAliasIter.next();},"
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. 
+
+This code snippet is a common pattern used to iterate over a collection of objects, where an iterator is obtained using the collection's `iterator()` method and then used to iterate over the collection's elements. The use of generics in this code snippet makes it adaptable to any type of collection, allowing for more flexibility and reusability in Java code. Therefore, it is likely that this code snippet can be found in many Java libraries that use collection classes."
+18,completion_result_lib_11_combine1.pkl,"while ( iter.hasNext() ){String column = (String) iter.next();if ( columnsUnique.add(columnAlias) ){buf.append("", "")
+.append(column)
+.append("" as "");}}","
+
+Yes, it is possible that the synthesized code has appeared in multiple Java libraries. This is because the code snippet appears to be a common pattern used in iterating over a collection and performing operations on each element. Additionally, the use of a StringBuilder to construct a string is a common practice in Java. However, it is also possible that this specific code snippet has only appeared in a few select libraries or has been customized by developers for their specific use case."
+19,completion_result_lib_11_combine1.pkl,for ( int i=0; i<formulas.length; i++ ){},"
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries because the for loop is a fundamental control structure in computer programming and is used extensively in Java programs to iterate over arrays, collections, and other data structures. The syntax of the for loop is standard across programming languages, including Java, and is used to execute a set of statements repeatedly based on a specified condition or range. Therefore, it is common to see variations of the for loop syntax in different Java libraries and applications."
+23,completion_result_lib_11_combine1.pkl,"if ( ojf.hasThetaJoins() ){}addJoins( ojf.toFromFragmentString(), ojf.toWhereFragmentString() );","
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries as it appears to be a generic conditional statement followed by a function call that adds joins based on certain conditions. However, without additional context it is difficult to determine if this specific code snippet has been reused in multiple libraries or if it is unique to a specific implementation."
+24,completion_result_lib_11_combine1.pkl,"for ( int j = 0; j < fkColumns.length; j++ ){if ( joinType == RIGHT_OUTER_JOIN || joinType == FULL_JOIN ) afterWhere.append( ""(+)"" );if ( joinType == LEFT_OUTER_JOIN || joinType == FULL_JOIN ) afterWhere.append( ""(+)"" );}","
+
+Yes, it is possible that the synthesized code [for ( int j = 0; j < fkColumns.length; j++ ){if ( joinType == RIGHT_OUTER_JOIN || joinType == FULL_JOIN ) afterWhere.append( ""(+)"" );if ( joinType == LEFT_OUTER_JOIN || joinType == FULL_JOIN ) afterWhere.append( ""(+)"" );}] is a generic Java code snippet that has occurred in multiple Java libraries.
+
+This is because it is a common practice to use loops and conditionals in Java code to create SQL queries. The use of the ""+="" sign to add to a string variable ('afterWhere' in this case) is also a common practice. Furthermore, the use of join types (left, right, full) in SQL queries is a common concept, so it is likely that this code has been used in various libraries for SQL queries with outer joins."
+25,completion_result_lib_11_combine1.pkl,"for ( int i = 0; i < buf.length(); i++ ){char character = buf.charAt( i );boolean isInsertPoint = OPERATORS.contains( new Character( character ) ) ||
+( character == ' ' && buf.length() > i + 3 && ""is "".equals( buf.substring( i + 1, i + 4 ) ) );}","
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is a common pattern used to check for operators and certain keywords within a string, which is a common task in many Java libraries and applications. The use of a loop to iterate through the characters in the string, and the use of the contains() method to check for specific characters are both common Java programming techniques. Additionally, the use of conditional statements to make decisions based on the contents of the string is also a common Java programming technique. Therefore, it is likely that this code snippet has been used in multiple Java libraries and applications."
+26,completion_result_lib_11_combine1.pkl,boolean assignmentsAppended = false;while ( iter.hasNext() ){assignmentsAppended = true;},"
+Yes, the synthesized code snippet is a generic Java code snippet that may have occurred in multiple Java libraries. The code is a simple while loop with a boolean variable used to track if any assignments have been appended during the iteration of an iterator. This type of code snippet can be found in many Java libraries that deal with iterating through collections or data structures."
+27,completion_result_lib_11_combine1.pkl,"StringBuffer buf = new StringBuffer( (columns.size() * 15) + tableName.length() + 10 );buf.append( ""update "" ).append( tableName ).append( "" set "" );","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+This is because it is a common pattern to use a StringBuffer or StringBuilder to concatenate strings in Java, and the syntax for appending strings is the same across libraries. Additionally, the use of a buffer to construct a query string with a table name and column names is a common operation when working with databases and database drivers in Java. Therefore, it is likely that this code snippet has been used in multiple Java libraries for different database operations."
+28,completion_result_lib_11_combine1.pkl,if ( primaryKeyColumnNames != null || where != null || !whereColumns.isEmpty() || versionColumnName != null ){}if ( where != null ){buf.append( where );},"Yes, it is possible that the synthesized code has occurred in multiple Java libraries as it contains basic constructs and conditions that are commonly used in Java programming. However, without more context on the specific libraries in question, it is difficult to determine if this snippet has been reused in other Java codebases."
+32,completion_result_lib_11_combine1.pkl,"StringBuffer buf = new StringBuffer( lhs.length * 10 );for ( int i=0; i<lhs.length; i++ ){buf.append(tableAlias)
+.append('.')
+.append( lhs[i] )
+.append(op)
+.append( rhs[i] );if (i<lhs.length-1) buf.append("" and "");}","Yes, it is a generic Java code snippet that has been used in multiple Java libraries. The use of StringBuffer, the use of a loop to iterate over an array, and the appending of string values are all common practices in Java programming. The specific logic of the code may vary depending on the application, but the overall structure and approach is widely used."
+33,completion_result_lib_11_combine1.pkl,"for ( int i=0; i<lhs.length; i++ ){buf.append(tableAlias)
+.append('.')
+.append( lhs[i] )
+.append(op)
+.append( rhs[i] );}","
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. It is a common pattern used for generating SQL queries dynamically, where the table alias, column names, and the operator are substituted with the required values. This code pattern is widely used in database-related projects and can be found in various libraries and frameworks."
+35,completion_result_lib_11_combine1.pkl,"char begin = sqlIdentifier.charAt(0);String unquoted = getUnquotedAliasString(sqlIdentifier, quoteType);","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. The code is used to extract the first character of a given SQL identifier and to retrieve the unquoted alias string of the identifier. These functionalities are commonly required in database-related applications and libraries, hence the prevalence of this code snippet in Java."
+36,completion_result_lib_11_combine1.pkl,char begin = sqlIdentifier.charAt(0);int quoteType = Dialect.QUOTE.indexOf(begin);,"
+
+Yes, it is possible that the synthesized code [char begin = sqlIdentifier.charAt(0);int quoteType = Dialect.QUOTE.indexOf(begin);] is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+The reason behind this is that both of these code lines are very common in Java programming. The first line extracts the first character of a given string, and the second one searches for the index of that character in the Dialect.QUOTE string. Many Java libraries or frameworks use similar operations for parsing and manipulating strings, including SQL strings. Therefore, it is possible that this code snippet exists in multiple Java libraries."
+38,completion_result_lib_11_combine1.pkl,"addCrossJoin(tableName, alias);","
+
+Yes, it is a generic Java code snippet that could occur in multiple Java libraries. The function name and parameter types provide little context to determine its specific purpose or functionality. Therefore, it is common practice to use generic function names and parameter types in programming to make code more reusable and flexible."
+39,completion_result_lib_11_combine1.pkl,for ( int j=0; j<fkColumns.length; j++){},"
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is used to iterate through an array of a certain type and perform some action on each element. It is a common programming pattern and is used in a wide variety of Java applications. Therefore, it is likely to have been implemented in various Java libraries for different purposes."
+41,completion_result_lib_11_combine1.pkl,"StringBuffer buf = new StringBuffer( tableName.length() + 10 );buf.append( ""delete from "" ).append(tableName);","
+
+Yes, the synthesized code is a generic Java code snippet that has been used in multiple Java libraries. This code is commonly used for dynamically constructing SQL delete statements by appending a table name to the ""delete from"" string. The use of StringBuffer is also common in Java libraries for building strings efficiently. The code is simple and concise, making it a popular choice among developers for this task."
+42,completion_result_lib_11_combine1.pkl,boolean appendComma = false;while ( iter.hasNext() ){if ( uniqueColumns.add(alias==null ? col : alias) ){appendComma = true;}},"
+
+Yes, it is possible that the code snippet has occurred in multiple Java libraries since it is a generic code that loops through an iterator and checks if a set contains an element before adding it. The use of a boolean variable to track if a comma should be appended is also a common practice. However, it is difficult to confirm this without further context or information on the specific libraries where this code might occur."
+46,completion_result_lib_11_combine1.pkl,ByteArrayOutputStream baos = new ByteArrayOutputStream();,"
+
+Yes, the code snippet ""ByteArrayOutputStream baos = new ByteArrayOutputStream();"" is a generic Java code that has occurred in multiple Java libraries. This code snippet creates a new instance of the ByteArrayOutputStream class, which is a commonly used class in Java IO operations. The ByteArrayOutputStream class is used to write data to an internal byte array, which can be accessed as required by the application. The versatility of this class makes it a popular choice in many Java libraries, and therefore, it is likely to occur in multiple Java libraries."
+47,completion_result_lib_11_combine1.pkl,if ( tokenTypeNameCache != null ){value = ( String ) tokenTypeNameCache.get( typeInteger );},"
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries. However, without more context, it is difficult to determine with certainty. This snippet appears to be accessing a HashMap object named ""tokenTypeNameCache"" to retrieve a value associated with a key that is an integer value named ""typeInteger"". The retrieved value is then cast to a string and assigned to a variable named ""value"". While this code snippet could be specific to a particular library or implementation, it is also possible that it is a common pattern that has been used in multiple contexts."
+48,completion_result_lib_11_combine1.pkl,char[] chars = text.toCharArray();,"
+
+Yes, the synthesized code [char[] chars = text.toCharArray();] is a generic Java code snippet that has occurred in multiple Java libraries. This code is a common way to convert a string to a char array, which is a basic operation that is frequently used in Java programming. As a result, this code can be found in many different Java libraries and projects."
+49,completion_result_lib_11_combine1.pkl,char[] chars = text.toCharArray();for (int i = 0; i < chars.length; i++){char aChar = chars[i];},"
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is used frequently in Java programs to convert a string to a character array and iterate through each character in the array. It is a simple and efficient way to manipulate strings in Java, and it is used in various libraries and frameworks that deal with string manipulation such as Apache Commons Lang, Guava, Jackson, and many more."
+50,completion_result_lib_11_combine1.pkl,"appendEscapedMultibyteChars(text,buf);","
+
+Yes, it is possible that the synthesized code [appendEscapedMultibyteChars(text,buf);] is a generic Java code snippet that has occurred in multiple Java libraries. However, without further context, it is difficult to ascertain its prevalence."
+52,completion_result_lib_11_combine1.pkl,traverser.traverseDepthFirst( root );,"
+
+Yes, the synthesized code [traverser.traverseDepthFirst( root );] is a generic Java code snippet that has occurred in multiple Java libraries. This is because traversing a data structure using a depth-first approach is a common task in programming, and there are multiple libraries and frameworks that offer this functionality. The specific library or framework that uses this code snippet may vary, but the basic concept of traversing a data structure in a depth-first manner is a common programming practice."
+53,completion_result_lib_11_combine1.pkl,NodeTraverser traverser = new NodeTraverser( this );traverser.traverseDepthFirst( root );,"
+
+Yes, the synthesized code [NodeTraverser traverser = new NodeTraverser( this );traverser.traverseDepthFirst( root );] is a generic Java code snippet that has been occurred in multiple Java libraries. This is because NodeTraverser and traverseDepthFirst() are common functionalities that can be used in various contexts, such as tree data structures or graph traversal algorithms. Therefore, it is not surprising to see this code pattern being used in different libraries that deal with such data structures and algorithms."
+54,completion_result_lib_11_combine1.pkl,final Field[] fields = tokenTypeInterface.getFields();Map cache = new HashMap( (int)( fields.length * .75 ) + 1 );for ( int i = 0; i < fields.length; i++ ){final Field field = fields[i];},"
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is often used to retrieve the fields of a Java class using reflection and then store them in a cache for improved performance. The use of a HashMap with an initial capacity based on the number of fields and a load factor of 0.75 is a common optimization technique in Java. Additionally, the use of a for loop to iterate over the array of fields is a standard programming construct in Java. Overall, this code is a commonly used pattern in Java programming and can be found in many Java libraries."
+55,completion_result_lib_11_combine1.pkl,for ( int i = 0; i < fields.length; i++ ){final Field field = fields[i];},"
+
+Yes, the synthesized code for (int i = 0; i < fields.length; i++) {final Field field = fields[i];} is a generic Java code snippet that has occurred in multiple Java libraries. 
+
+This code is typically used to iterate through an array of objects and perform an operation on each object. Specifically, in this case, it iterates through an array of Field objects and assigns each object to a final variable named ""field"". This pattern is widely used in Java programming and can be found in various Java libraries and applications, making it a commonly used and recognized code snippet."
+56,completion_result_lib_11_combine1.pkl,"for ( int i = 0; i < fields.length; i++ ){final Field field = fields[i];if ( Modifier.isStatic( field.getModifiers() ) ){try{cache.put( field.get( null ), field.getName() );}}}","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is commonly used for reflection to iterate over all the fields of a given class and put the static fields and their names into a cache. It is a common pattern used in various Java frameworks and libraries that require reflection-based functionality."
+57,completion_result_lib_11_combine1.pkl,Map cache = new HashMap( (int)( fields.length * .75 ) + 1 );,"
+
+Yes, the synthesized code is a generic Java code snippet that has been used in multiple Java libraries. This code creates a new HashMap with an initial capacity that is calculated based on the length of an input array. This pattern of initializing collections with an estimated size to improve performance is a common idiom in Java programming."
+58,completion_result_lib_11_combine1.pkl,if ( tokenTypeInterface != null ){Field[] fields = tokenTypeInterface.getFields();},"
+
+Yes, the synthesized code [if (tokenTypeInterface != null){Field[] fields = tokenTypeInterface.getFields();}] is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+This code snippet is a standard way of checking if an object is null before performing any operation on it to avoid runtime errors. The second part of the code, `Field[] fields = tokenTypeInterface.getFields();`, is also a common way of getting all the fields of a class using reflection. 
+
+As reflection is a powerful feature of Java that is often used in various libraries and frameworks, this code snippet is likely to be found in many different Java codes."
+61,completion_result_lib_11_combine1.pkl,"if ( columnName.startsWith( openQuoteChar ) && columnName.endsWith( closeQuoteChar ) ){columnNameNode = new HibernateTree( QUOTED_IDENTIFIER, columnName );}","
+
+Yes, it is possible that the synthesized code [if ( columnName.startsWith( openQuoteChar ) && columnName.endsWith( closeQuoteChar ) ){columnNameNode = new HibernateTree( QUOTED_IDENTIFIER, columnName );}] has occurred in multiple Java libraries. However, it is not certain as it is specific to the Hibernate library and may not be applicable or required in other libraries."
+62,completion_result_lib_11_combine1.pkl,"tree.addChild( new HibernateTree( ALIAS_REF, Template.TEMPLATE ) );","
+
+Yes, it is possible that the synthesized code [tree.addChild( new HibernateTree( ALIAS_REF, Template.TEMPLATE ) );] is a generic Java code snippet that has occurred in multiple Java libraries. However, without further context or information, it is difficult to confirm this with certainty. The use of common Java libraries and frameworks like Hibernate and Template can result in the presence of similar code snippets in different projects."
+63,completion_result_lib_11_combine1.pkl,persisterSpaceContext.registerPersisterSpace( persisterSpace );,"
+
+Yes, it is possible that the synthesized code [persisterSpaceContext.registerPersisterSpace( persisterSpace );] has occurred in multiple Java libraries because it appears to be a generic code snippet for registering a ""persister space"" object in a ""context"". This type of functionality is common in many Java applications and libraries that involve persistence and storage management. However, without more context and information about the specific libraries in question, it is difficult to say for certain whether this code has actually been used in multiple libraries."
+64,completion_result_lib_11_combine1.pkl,MappedTableMetadata tableMetadata = persister.getMappedTableMetadata();,"
+
+Yes, it is possible that the synthesized code [MappedTableMetadata tableMetadata = persister.getMappedTableMetadata();] is a generic Java code snippet that has been used in multiple Java libraries. This is because the code represents a common design pattern used in object-relational mapping (ORM) frameworks, where the metadata of database tables is mapped to object models in Java. Many ORM frameworks in Java use similar code snippets to fetch metadata information of tables, and then map them to their respective Java objects."
+65,completion_result_lib_11_combine1.pkl,"if ( joinType == JoinType.INNER ){}else if ( joinType == JoinType.LEFT ){}else if ( joinType == JoinType.RIGHT ){}}throw new QueryException( ""Unrecognized join type ["" + joinType.toString() + ""]"" );","Yes, it is possible that the synthesized code snippet has occurred in multiple Java libraries due to the common usage of join operations in databases and the need to handle different types of joins. Additionally, the use of exceptions to handle unrecognized input values is a common programming pattern in Java. However, without further context or information, it is impossible to determine how common or widespread this particular code snippet is."
+67,completion_result_lib_11_combine1.pkl,"pathThusFar = ( ( pathThusFar == null ) ? pathPart : pathThusFar + ""."" + pathPart ) + ""[]"";","
+
+Yes, it is possible that the synthesized code [pathThusFar = ( ( pathThusFar == null ) ? pathPart : pathThusFar + ""."" + pathPart ) + ""[]"";] is a generic Java code snippet that has occurred in multiple Java libraries. 
+
+The code snippet is a simple implementation to concatenate two string variables with a dot separator and add the ""[]"" at the end. This can be used in multiple use cases where concatenation of string variables is required to form a path or a URL structure. As such, it is possible that this code snippet has been adapted and reused in different libraries for various purposes."
+68,completion_result_lib_11_combine1.pkl,"log.debug( ""creating path expression implied join ["" + origin.getSourceAlias() + ""].["" + property + ""]"" );","
+
+Yes, it is possible that this synthesized code snippet has occurred in multiple Java libraries as it is a simple, generic line of code that logs a message with information about a path expression implied join. As a common practice, Java developers often use logging statements like this to help with debugging and troubleshooting code. Therefore, it is likely that similar code snippets can be found in different Java libraries."
+69,completion_result_lib_11_combine1.pkl,Table containingTable = origin.getTableSpace().getContainingTable( propertyName );for ( String columnName : origin.getTableSpace().getPropertyColumnNames( propertyName ) ){},"
+
+Yes, it is a generic Java code snippet that can occur in multiple Java libraries. The reason for this is that it contains common Java syntax and utilizes methods that can be found in many Java frameworks and libraries. The use of tables and properties is also a common feature in many Java applications, making this code snippet widely applicable. Therefore, it is possible to find code similar to this in various Java libraries."
+70,completion_result_lib_11_combine1.pkl,Type propertyType = lhs.getPropertyType( propertyName );,"
+
+Yes, this code snippet is a generic Java code that occurs frequently in Java libraries.
+
+The code snippet retrieves the type of a property with a given name from an object. This is a common task in Java programming, especially in frameworks that use reflection to manipulate objects dynamically. Since the getPropertyType() method is part of the standard JavaBean specification, it is widely used in Java libraries and often appears in similar forms. Therefore, it can be categorized as a generic Java code snippet."
+72,completion_result_lib_11_combine1.pkl,"String potentialDateFragment = StringUtils.substring(line, 0, DATE_TIME_STRING_LENGTH);","
+
+Yes, the synthesized code [String potentialDateFragment = StringUtils.substring(line, 0, DATE_TIME_STRING_LENGTH);] is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+The code snippet utilizes a popular method called substring() from the StringUtils class of the Apache Commons Lang library. The substring() method is used to extract a portion of a string from a specified starting index to an ending index. 
+
+This method is commonly used in many Java applications and libraries to manipulate strings, making it a generic code snippet that can be found in multiple libraries. Therefore, it is safe to assume that the code snippet could be a generic Java code snippet."
+73,completion_result_lib_11_combine1.pkl,for (SqlCommand command : commands){},"Yes, the synthesized code ""for (SqlCommand command : commands){}"" is a generic Java code snippet that has occurred in multiple Java libraries. This is because it is a standard syntax for iterating through collections in Java, where ""commands"" is a collection of SqlCommand objects, and ""command"" is a variable that represents each individual element in the collection during each iteration of the loop. This syntax is widely used in Java programming and can be found in many libraries and code examples."
+74,completion_result_lib_11_combine1.pkl,theEvent.setDate(theDate);,"Yes, the code snippet [theEvent.setDate(theDate);] is a generic Java code that has occurred in multiple Java libraries. This code sets the date of an event object based on the input date. The method signature 'setDate(Date date)' is commonly used in Java libraries for setting a date attribute for a given object. Therefore, we can conclude that the code snippet [theEvent.setDate(theDate);] is a general-purpose code that is commonly used across various Java libraries."
+75,completion_result_lib_11_combine1.pkl,Session session = HibernateUtil.getSessionFactory().getCurrentSession();session.beginTransaction();session.save(theEvent);session.getTransaction().commit();,"
+
+Yes, this synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+The code utilizes the Hibernate framework to save the data object 'theEvent' into the underlying database. The Hibernate framework is widely used in Java development for Object Relational Mapping (ORM) and database access. As a result, this code snippet can be found in numerous Java libraries that utilize Hibernate for data access."
+76,completion_result_lib_11_combine1.pkl,Event theEvent = new Event();theEvent.setTitle(title);theEvent.setDate(theDate);session.save(theEvent);,"
+
+Yes, it is a generic Java code snippet that may occur in multiple Java libraries. This code creates an instance of the Event class, sets its title and date properties, and saves it to a session. There are numerous libraries in Java that may require such functionality, so it's likely that this code snippet can be found in different contexts."
+77,completion_result_lib_11_combine1.pkl,"try{}        catch (Throwable ex){System.err.println(""Initial SessionFactory creation failed."" + ex);throw new ExceptionInInitializerError(ex);}","
+
+Yes, this is a generic Java code snippet that has been used in multiple Java libraries. It is a common pattern for initializing a Hibernate SessionFactory object, where any exceptions thrown during the initialization process are caught and an error message is printed to the console. The catch block then throws an ExceptionInInitializerError with the caught exception as its cause. This allows the application to fail fast and propagate the error up the call stack for proper handling."
+78,completion_result_lib_11_combine1.pkl,"String local = fqcn + ""."" + member;","
+
+Yes, the synthesized code [String local = fqcn + ""."" + member;] is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet concatenates two strings with a period ""."" in between, and it is a commonly used operation in Java development when working with packages, classes, and their members. Therefore, this code snippet can be found in numerous Java libraries, as it is a fundamental operation in Java programming."
+79,completion_result_lib_11_combine1.pkl,"metaEmbeddables.put( fqcn, metaEntity );","
+
+Yes, it is a generic Java code snippet that can occur in multiple Java libraries. 
+
+This is because the syntax ""metaEmbeddables.put"" is accessing a map data structure, which is a common programming concept that can be used across various Java libraries. Additionally, the use of ""fqcn"" and ""metaEntity"" as the key-value pair is a simple and universal way to store metadata information in a map. Therefore, this code snippet can be used in different contexts and implementations, making it a common and generic syntax in Java programming."
+80,completion_result_lib_11_combine1.pkl,"accessTypeInformation.put( fqcn, info );","Yes, it is possible that the synthesized code [accessTypeInformation.put( fqcn, info );] could occur in multiple Java libraries, as it is a generic code snippet for storing type information in a map data structure. The use of the Map interface and method calls such as put() are common in Java libraries for storing and retrieving data. However, without more context on the specific library and the purpose of the code, it is difficult to say for certain."
+81,completion_result_lib_11_combine1.pkl,"if ( name.startsWith( PROPERTY_PREFIX_GET ) ){tmp = name.replaceFirst( PROPERTY_PREFIX_GET, """" );}","
+
+Yes, the synthesized code [if ( name.startsWith( PROPERTY_PREFIX_GET ) ){tmp = name.replaceFirst( PROPERTY_PREFIX_GET, """" );}] is a generic Java code snippet that can be found in many Java libraries. 
+
+This code snippet is typically used in Java libraries that implement the JavaBean specification. In JavaBeans, a convention is used to name getters and setters for instance variables. Getters for instance variables often start with ""get"" or ""is"", followed by the name of the variable with the first letter capitalized. 
+
+The code snippet checks whether the provided string name of a getter method starts with a specific prefix (e.g., ""get""), and then removes the prefix from the name to get the name of the instance variable associated with the getter method. This is a common operation in JavaBeans libraries, and as such, this code snippet is often used in many different libraries."
+82,completion_result_lib_11_combine1.pkl,for ( String mappingFile : mappingFileNames ){},"
+
+Yes, the synthesized code [for ( String mappingFile : mappingFileNames ){}] is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+This code snippet is a for-each loop that iterates over an array or collection of String objects. It is a common syntax in Java programming, and it is used in many libraries for various purposes such as processing data or accessing files. Therefore, it is considered a generic code snippet that can be found and used in many Java programs."
+83,completion_result_lib_11_combine1.pkl,"for ( String mappingFile : mappingFileNames ){EntityMappings mapping = parseXml( mappingFile, EntityMappings.class, ORM_XSD );}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is used to parse XML files into Java objects using JAXB (Java Architecture for XML Binding) which is a widely used library in Java for XML processing. The code snippet iterates over a list of mappingFileNames, parses each file using the parseXml method, and returns an EntityMappings object. This pattern of iterating over a list of files and parsing them into Java objects is commonly used in Java libraries dealing with XML processing."
+84,completion_result_lib_11_combine1.pkl,SchemaFactory sf = SchemaFactory.newInstance( javax.xml.XMLConstants.W3C_XML_SCHEMA_NS_URI );try{schema = sf.newSchema( schemaUrl );},"
+
+Yes, the synthesized code [SchemaFactory sf = SchemaFactory.newInstance(javax.xml.XMLConstants.W3C_XML_SCHEMA_NS_URI); try { schema = sf.newSchema(schemaUrl); }] is a generic Java code snippet that has occurred in multiple Java libraries. This code instantiates a new instance of the SchemaFactory class and then creates a new schema object based on the schema URL provided. This is a common approach used in Java for parsing and validating XML files against a specific schema."
+85,completion_result_lib_11_combine1.pkl,SchemaFactory sf = SchemaFactory.newInstance( javax.xml.XMLConstants.W3C_XML_SCHEMA_NS_URI );,"
+
+Yes, the code snippet [SchemaFactory sf = SchemaFactory.newInstance( javax.xml.XMLConstants.W3C_XML_SCHEMA_NS_URI );] is a generic Java code that has occurred in multiple Java libraries. This code is used to create a new instance of the SchemaFactory class using the W3C XML schema namespace URI. It is a commonly used code snippet to handle XML schemas in Java, and therefore it can be found in multiple Java libraries."
+86,completion_result_lib_11_combine1.pkl,for ( Basic basic : attributes.getBasic() ){parseBasic( basic );},"
+
+Yes. The code snippet is a generic Java code that can be found in multiple Java libraries. It is a common way of iterating through a collection of objects using the enhanced for loop syntax. The use of the method ""getBasic()"" to retrieve the collection and the method ""parseBasic()"" to process each instance indicate that this code snippet is commonly used for parsing or processing data."
+87,completion_result_lib_11_combine1.pkl,for ( ManyToOne manyToOne : attributes.getManyToOne() ){parseManyToOne( manyToOne );},"
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This type of code is commonly used for parsing Many-to-One relationships between entities in object-relational mapping frameworks such as Hibernate or JPA. It is a standard practice to iterate over a list of ManyToOne attributes and parse them using a dedicated parser method. Therefore, it is highly likely that this code snippet has been used in multiple Java libraries for this purpose."
+88,completion_result_lib_11_combine1.pkl,if(isSingle()){} else{Class propertyType = descriptors[c].getPropertyType();},"
+
+Yes, the synthesized code [if(isSingle()){} else{Class propertyType = descriptors[c].getPropertyType();}] is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+This code snippet checks if a property is a single value or multiple values and assigns the property type accordingly. It is a common code pattern used in many Java libraries that deal with properties, such as JavaBeans or Spring Framework. Therefore, it can be considered as a generic code snippet used in multiple Java libraries."
+89,completion_result_lib_11_combine1.pkl,"listenerList.add(TreeModelListener.class, l);","
+
+Yes, the code snippet [listenerList.add(TreeModelListener.class, l);] is a generic Java code that can be found in multiple Java libraries. This code adds a listener to a list of listeners for a particular event. In this case, the event is related to changes in a tree data structure, but similar code snippets can be used to register listeners for other events in different types of data structures or user interfaces. Therefore, the syntax of this code snippet can be considered general and reusable in various contexts."
+90,completion_result_lib_11_combine1.pkl,Object[] listeners = listenerList.getListenerList();for (int i = listeners.length-2; i>=0; i-=2){if (listeners[i]==TreeModelListener.class){((TreeModelListener)listeners[i+1]).treeNodesChanged(e);}},"
+
+Yes, the synthesized code [Object[] listeners = listenerList.getListenerList();for (int i = listeners.length-2; i>=0; i-=2){if (listeners[i]==TreeModelListener.class){((TreeModelListener)listeners[i+1]).treeNodesChanged(e);}}] is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is a commonly used implementation for notifying registered listeners of events in the Java Swing framework. It is used in various classes such as JTree, JTable, and JList, which all implement the TreeModelListener interface. The same code snippet is also used in other frameworks and libraries in the Java ecosystem for implementing event notification to registered listeners."
+92,completion_result_lib_11_combine1.pkl,for (int i = listeners.length-2; i>=0; i-=2){},"
+
+Yes, it is possible that the synthesized code [for (int i = listeners.length-2; i>=0; i-=2){}] has occurred in multiple Java libraries. This code snippet is a basic for loop that iterates over an array in reverse order, skipping every second element. It is a simple and commonly used algorithmic technique in Java programming. Therefore, it is likely that this code is found in various Java libraries that require similar functionality."
+93,completion_result_lib_11_combine1.pkl,"main.getContentPane().add(pane, BorderLayout.CENTER);","
+
+Yes, the synthesized code [main.getContentPane().add(pane, BorderLayout.CENTER);] is a generic Java code snippet that has occurred in multiple Java libraries. It is a commonly used code snippet for adding a component to the center of a JFrame or JWindow. The BorderLayout.CENTER is a predefined constant in the BorderLayout class, which is part of the Java standard library. Therefore, this code can be found in various Java libraries and applications, making it a generic Java code snippet."
+94,completion_result_lib_11_combine1.pkl,StringBuffer buf = new StringBuffer();,"
+
+Yes, the code snippet [StringBuffer buf = new StringBuffer();] is a generic Java code that has occurred in multiple Java libraries. This code snippet creates an empty StringBuffer object that can be used to manipulate and store character sequences. The StringBuffer class is a part of the Java API, and it is commonly used in many Java programs and libraries to work with strings efficiently. Therefore, it is highly likely that the code snippet has been used in multiple Java libraries."
+95,completion_result_lib_11_combine1.pkl,if(getProperties()!=null){while ( iterator.hasNext() ){if(key.startsWith(ExporterSettings.PREFIX_KEY)){}}},"
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. 
+
+This code snippet checks if the properties exist and iterates through them using an iterator. Inside the iterator, it checks if the key starts with a specific prefix. This pattern of checking for properties and iterating through them with a condition is a common practice in Java development and can be found in various libraries."
+96,completion_result_lib_11_combine1.pkl,"getTemplateHelper().putInContext(""artifacts"", collector);","
+
+Yes, it is possible that the synthesized code [getTemplateHelper().putInContext(""artifacts"", collector);] is a generic Java code snippet that has occurred in multiple Java libraries.
+
+The code is a method call to a helper method which puts the ""collector"" object into the ""artifacts"" context. This is a generic operation that can be found in many Java libraries. Additionally, the use of a helper method to put an object into a context is a common pattern in Java programming, further supporting the idea that this code appears in multiple Java libraries."
+97,completion_result_lib_11_combine1.pkl,"dir = new File( baseDir, p.replace('.', File.separatorChar) );","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. 
+
+The code creates a new File object by concatenating the base directory with the package name (where periods are replaced with the correct file separator character). This is a common operation when working with file paths in Java, and is used in various libraries and applications."
+98,completion_result_lib_11_combine1.pkl,"if(log.isDebugEnabled()){log.debug(getClass().getName() + "" outputdir:"" + getOutputDirectory() + "" path: "" + toString(templatePaths) );}getTemplateHelper().init(getOutputDirectory(), templatePaths);","Yes, it is possible that the synthesized code has occurred in multiple Java libraries because it is a basic code snippet that is commonly used to log debug messages and initialize template helpers. However, without specific context, it is difficult to determine where exactly this code snippet may have occurred."
+100,completion_result_lib_11_combine1.pkl,"try{processTemplate(Collections.EMPTY_MAP, FILE_INDEX, mainIndexDocFile.getFile() );}","
+
+Yes, the synthesized code is a generic Java code snippet that can be found in multiple Java libraries. 
+
+The code is using the try-catch block to handle any exceptions thrown by the processTemplate method. The method takes in three arguments - an empty map, a file index, and a main index file. These parameters are often used in Java libraries to process templates and generate output files. Therefore, this code can be considered a standard practice in Java development and is commonly found in various libraries."
+102,completion_result_lib_11_combine1.pkl,Value value = property.getValue();,"
+
+Yes, the synthesized code [Value value = property.getValue();] is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is used to retrieve the value of a property and assign it to a variable named ""value"". Properties can be defined in various ways in Java libraries, and retrieving their values using the ""getValue()"" method is a common practice. Therefore, this code snippet can be found in many Java libraries that use properties."
+103,completion_result_lib_11_combine1.pkl,context = new SimpleHash(ObjectWrapper.BEANS_WRAPPER);,"
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. 
+
+The reason is that the code initializes a new instance of the SimpleHash class from the Apache FreeMarker library, which is a commonly used Java library for template processing. The ""ObjectWrapper.BEANS_WRAPPER"" parameter specifies the object wrapper used by the hash, which is a commonly used object wrapper in FreeMarker for accessing JavaBeans properties. Therefore, it's highly likely that this code snippet can be found in multiple Java libraries that use FreeMarker for template processing."
+104,completion_result_lib_11_combine1.pkl,"try{}    catch (IOException e){throw new ExporterException(""Error while processing template string"", e);}","
+
+Yes, the synthesized code [try{} catch (IOException e){throw new ExporterException(""Error while processing template string"", e);} ] is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is a standard way of handling exceptions in Java, where try-catch blocks are used to catch exceptions, and the catch block throws a new custom exception that wraps the original exception along with a helpful error message. This technique ensures that the error message contains all relevant details, including the type of error, the location of the error, and the stack trace, making it easier to debug and resolve issues. As such, this code pattern is commonly used across Java libraries to handle exceptions and errors."
+105,completion_result_lib_11_combine1.pkl,"try{}catch (TemplateModelException e){throw new ExporterException(""Could not get key "" + key, e);}","
+
+Yes, this is a generic code snippet that has been used in multiple Java libraries. The try-catch block is a common error handling mechanism in Java, and catching an exception and throwing a different exception with a more specific message is a common pattern for error reporting and handling. The use of TemplateModelException and ExporterException suggests that this code snippet was likely used in a library or module that deals with exporting data from a template or data source."
+106,completion_result_lib_11_combine1.pkl,"try{}        catch (IOException e){throw new ExporterException(""Error while processing "" + rootContext + "" with template "" + templateName, e);}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. The code uses the try-catch block to catch an IOException and then throws a custom exception called ExporterException with a descriptive error message that includes the rootContext and templateName variables. This approach is a common method for handling exceptions in Java programs that involve input/output operations. As a result, many Java libraries and applications use this pattern of exception handling."
+107,completion_result_lib_11_combine1.pkl,"for ( Integrator integrator : serviceRegistry.getService( IntegratorService.class ).getIntegrators() ){if ( ""org.hibernate.envers.event.EnversIntegrator"".equals( integrator.getClass().getName() ) ){integrator.integrate(configuration,null,serviceRegistry.getService( SessionFactoryServiceRegistryFactory.class ).buildServiceRegistry( null, configuration ));}}","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. The code snippet uses common Java programming constructs such as for-each loop, if statement, and method calls using service providers, which are commonly used in Java libraries for implementing extensible architectures. Specifically, this code snippet searches for a specific implementation of an abstract class 'Integrator' called 'EnversIntegrator' and integrates it into a 'SessionFactory' configuration using a Service Provider Interface (SPI). This pattern is commonly used in Java libraries that provide extensible functionality, such as Hibernate, Guice, and Apache Abdera."
+109,completion_result_lib_11_combine1.pkl,"putInContext( th, contextForFirstPass );th.processTemplate(templateName, bw, rootContext);removeFromContext( th, contextForFirstPass );","
+
+Yes, it is possible that the synthesized code [putInContext( th, contextForFirstPass );th.processTemplate(templateName, bw, rootContext);removeFromContext( th, contextForFirstPass );] has occurred in multiple Java libraries as it is a common pattern often used in template engines. Template engines are used in various software applications and libraries and hence, it is possible that this code snippet could have been used in multiple instances."
+110,completion_result_lib_11_combine1.pkl,Iterator iterator = context.entrySet().iterator();,"
+
+Yes, the synthesized code [Iterator iterator = context.entrySet().iterator();] is a generic Java code snippet that has occurred in multiple Java libraries. It is a common way to iterate over a Map's entries. The code retrieves a Set view of the Map's entries and gets an iterator to iterate over them. This approach is used in many Java libraries, such as Apache Commons, Guava, and Spring Framework."
+111,completion_result_lib_11_combine1.pkl,"while ( iterator.hasNext() ){Map.Entry element = (Map.Entry) iterator.next();templateHelper.removeFromContext((String) element.getKey(), element.getValue());}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+This code snippet loops through the elements of the Map using the Iterator and removes the key-value pair from the context using templateHelper. This is a common operation and can be found in multiple Java libraries. It is a generic code snippet that can be used to remove elements from a Map irrespective of the library or framework used."
+112,completion_result_lib_11_combine1.pkl,int sz = str.length();for (int i=0; i<sz; i++){},"
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet iterates over a string using a for loop and performs some action inside the loop. As this is a very basic and commonly used operation in programming, it has been used in various libraries and programs written in Java."
+116,completion_result_lib_11_combine1.pkl,"collectComponents( components, iter );","Yes, it is possible that this code snippet has occurred in multiple Java libraries as it is a generic method signature that can be used in various contexts. However, without more context it is impossible to confirm this for certain."
+117,completion_result_lib_11_combine1.pkl,if ( interfaces.size() > 0 ){StringBuffer sbuf = new StringBuffer();for ( Iterator iter = interfaces.iterator(); iter.hasNext() ; ){sbuf.append( iter.next() );}},"
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is a common way to iterate over a collection of objects using an iterator and append the elements to a string buffer. It is a standard way of creating a string representation of a collection or list of objects, and therefore it is a frequently used pattern in Java programming."
+118,completion_result_lib_11_combine1.pkl,"if ( ! isPropertyDefault( PersistentIdentifierGenerator.CATALOG, properties ) ){}","
+
+Yes. 
+
+The code snippet uses common Java syntax and libraries such as ""if"" statements and the use of properties. The use of libraries such as the PersistentIdentifierGenerator.CATALOG library further suggests that this code is likely used in multiple Java libraries."
+119,completion_result_lib_11_combine1.pkl,while ( columns.hasNext() ){Selectable selectable = (Selectable) columns.next();},"
+
+Yes, the synthesized code ""while (columns.hasNext()){ Selectable selectable = (Selectable) columns.next();}"" is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is widely used in Java for iterating over a collection or iterator of objects, and the selectables can be replaced with any other object type for iteration. Therefore, it is a common and generic Java code snippet that can be found in various Java libraries and applications."
+120,completion_result_lib_11_combine1.pkl,Iterator iter = getAllPropertiesIterator();,"
+
+Yes. This code snippet is a generic Java code that has been occurred in multiple Java libraries because it declares an Iterator object named ""iter"" and initializes it with the result from the method call getAllPropertiesIterator(). This pattern is commonly used in Java to traverse through collections or objects that implement the Iterable interface, making it a frequently used code snippet in various libraries."
+121,completion_result_lib_11_combine1.pkl,MetaAttribute override = property.getMetaAttribute( modifiername );,"
+
+Yes, it is possible that the synthesized code ""MetaAttribute override = property.getMetaAttribute( modifiername );"" has occurred in multiple Java libraries. This is because it is a fairly basic code snippet that involves calling a method on an object and assigning the returned value to a variable. It is a common practice in Java programming and can be used in various scenarios, hence it is likely to have been used in different libraries as well."
+122,completion_result_lib_11_combine1.pkl,"addAttribute(name, (String[]) values.toArray( new String[values.size()] ));","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries because it is a common way to convert a list or collection of values into an array of Strings and add them as attributes to an object. The use of the toArray() method and the new keyword to create a new array of a specific size is a standard approach in Java for converting collections to arrays. Additionally, adding attributes to objects is a common task in many Java applications, making this code snippet a commonly used practice."
+123,completion_result_lib_11_combine1.pkl,"List values = new ArrayList();while ( iterator.hasNext() ){values.add(quote( element ));}addAttribute(name, (String[]) values.toArray( new String[values.size()] ));","
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. The code initializes a new ArrayList, iterates through an input iterator, and adds each element to the ArrayList after processing it with a quote() method. Finally, the ArrayList is converted to an array of Strings using the toArray() method and passed as a parameter to the addAttribute() method. This is a common pattern for processing and manipulating collections of data in Java, and it can be found in many Java libraries and frameworks."
+124,completion_result_lib_11_combine1.pkl,List values = new ArrayList();,"
+
+Yes, the synthesized code [List values = new ArrayList();] is a generic Java code snippet that has occurred in multiple Java libraries. This code creates a new ArrayList object and assigns it to a variable of type List, which is a generic interface that allows the use of various types of lists. Many Java libraries use this code snippet to create new lists, making it a very common and widely used piece of code in Java programming."
+128,completion_result_lib_11_combine1.pkl,"String columnFQN = getQualifiedColumnName(table, column);","
+
+Yes, it is possible that the code snippet [String columnFQN = getQualifiedColumnName(table, column);] has occurred in multiple Java libraries as it is a very common practice to create methods to retrieve the fully qualified name of a specific database column in Java applications. However, it is impossible to confirm without further context about the specific libraries and their implementation."
+129,completion_result_lib_11_combine1.pkl,"Iterator values = getValues(table, column).iterator();","
+
+Yes. This is a generic Java code snippet that can be found in multiple Java libraries because it makes use of commonly used Java concepts such as iterators, collections, and method calls. Additionally, retrieving the values of a specific column in a table is a common task in database and data processing applications, making it likely that this code snippet has been implemented in various Java libraries."
+130,completion_result_lib_11_combine1.pkl,List orderedProperties = getAllProperties(pojoClass);,"
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This is because the code snippet is using the reflection API to retrieve all the properties of a class, which is a common requirement in many Java applications. The use of reflection API to obtain class level details is a widely used design pattern in Java programming. Thus, this generic code snippet has been used across many Java libraries to achieve common functionality of obtaining the class property."
+131,completion_result_lib_11_combine1.pkl,"Collections.sort(orderedProperties, PROPERTY_COMPARATOR);","
+
+Yes, the code snippet is a generic Java code that has been used in multiple libraries as it sorts a collection of objects based on a comparator. The Collections class is a standard Java utility class that provides various methods for manipulating collections, and the sort() method is one of its common methods. The PROPERTY_COMPARATOR variable is likely a custom comparator that is specific to the library or application that uses it, but the use of the Collections.sort() method with a comparator is a common pattern in Java programming."
+132,completion_result_lib_11_combine1.pkl,ServiceRegistryBuilder builder = new ServiceRegistryBuilder();builder.applySettings(cfg.getProperties());ServiceRegistry serviceRegistry = builder.buildServiceRegistry();,"
+
+Yes, the synthesized code [ServiceRegistryBuilder builder = new ServiceRegistryBuilder();builder.applySettings(cfg.getProperties());ServiceRegistry serviceRegistry = builder.buildServiceRegistry();] is a generic Java code snippet that has occurred in multiple Java libraries. The code is used for creating and building a service registry, which is a common requirement in many software applications. Since Java is an open-source language, this code can be used and modified by anyone, leading to its widespread use in different libraries and frameworks."
+133,completion_result_lib_11_combine1.pkl,Iterator columnIter = table.getColumnIterator();while ( columnIter.hasNext() ){Column col = ( Column ) columnIter.next();},"
+
+Yes, it is a generic Java code snippet that has been included in multiple Java libraries because the use of iterators and the getColumnIterator method is a common practice in Java programming for iterating through collections or arrays of objects. Additionally, the use of the Column object suggests that this code is likely used in libraries that deal with tabulated data structures, such as databases or spreadsheets."
+134,completion_result_lib_11_combine1.pkl,while ( iter.hasNext() ){PersistentIdentifierGenerator generator = (PersistentIdentifierGenerator) iter.next();Object key = generator.generatorKey();},"Yes, it is a generic Java code snippet that is found in multiple Java libraries. This code snippet is commonly used for iterating over elements in a collection using the while loop and performing certain operations on each element using the next() method. The code is also using type casting to convert each element to the PersistentIdentifierGenerator class, and then retrieving the generator key for each element using the generatorKey() method. Overall, this code is a standard pattern for traversing and processing items in a collection, which is commonly used in Java programming."
+135,completion_result_lib_11_combine1.pkl,"if(key instanceof String){String[] strings = StringHelper.split(""."", (String) key);}","
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries because it is a generic if statement that uses commonly used Java methods and syntax. The use of the StringHelper.split() method suggests that it may appear in code related to processing or manipulating strings. However, without more context, it is impossible to definitively state whether this code has been used in multiple libraries."
+136,completion_result_lib_11_combine1.pkl,for (Iterator iter = qts.iterator(); iter.hasNext();){EntityNameReference qt = (EntityNameReference) iter.next();},"
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. It is a commonly used loop to iterate over a collection using an Iterator object. The code declares an Iterator object, assigns it to a collection, and uses the hasNext() and next() methods to loop through each element in the collection. It is a widely used and recognized pattern in Java programming."
+138,completion_result_lib_11_combine1.pkl,for (int i = position - 1; i >= 0; i--){char c = chars[i];},"
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries because it is a common way to iterate through an array in reverse order. The code initializes a variable ""i"" equal to the starting position specified by the variable ""position,"" then loops while ""i"" is greater than or equal to 0, decrementing ""i"" each iteration. Within the loop, the code accesses the array element at index ""i"" and assigns it to a temporary variable ""c"" of type char."
+139,completion_result_lib_11_combine1.pkl,for (Iterator iter = tokenIds.iterator(); iter.hasNext();){Integer typeInteger = (Integer) iter.next();},"
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is a common way to iterate through a collection using an Iterator object. The Iterator interface has been part of the Java language since version 1.2, and it is widely used in many Java libraries and applications. The code snippet uses the Iterator interface to iterate through a collection of token identifiers represented as Integer objects. The use of generics in this context allows the code to enforce type safety and avoid type casting errors."
+141,completion_result_lib_11_combine1.pkl,if (configurationFile != null) configuration.configure( configurationFile );,"
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is a common pattern used by many Java libraries to check if a configuration file is present and then configure the application accordingly. This pattern is widely used because it provides a simple and effective way to initialize an application with customizable configuration."
+142,completion_result_lib_11_combine1.pkl,"
+
+Iterator iter = cases.entrySet().iterator();
+StringBuffer buf2 = new StringBuffer(cases.size());
+
+while (iter.hasNext()) {
+    Map.Entry me = (Map.Entry) iter.next();
+    //code goes here
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This code follows the basic pattern of iterating over a Map, which is very common in Java programming. Additionally, the use of iterators, entrySets, and StringBuffer are also standard Java programming techniques. Therefore, it is highly likely that similar code can be found in many different Java libraries."
+143,completion_result_lib_11_combine1.pkl,"
+
+if (fragment.length() > 0) {
+  if (fragment.charAt(0) == ',') {
+    fragment = fragment.substring(1);
+  }
+}","
+
+Yes, the synthesized code snippet can be considered as a generic Java code that has been occurring in various Java libraries. The code snippet checks if the given string ""fragment"" is not empty and starts with a comma. If the condition is true, it removes the first character (comma) from the string. This code snippet can be used in various scenarios where the user has to check or modify a string based on a particular condition."
+153,completion_result_lib_11_combine1.pkl,"
+
+while (iter.hasNext()) {
+   boolean spaceable = !DONT_SPACE_TOKENS.contains(token);
+   if (spaceable && lastSpaceable) {
+       // insert space here
+   }
+   lastSpaceable = spaceable;
+}","
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is commonly used for tokenizing strings or other data types and checking whether a token can be separated with a space or not. The code uses a boolean variable to track whether the previous token was spaceable or not and inserts a space between tokens if both the previous and the current tokens are spaceable. This approach is widely used in different Java libraries, making this code snippet a generic one."
+157,completion_result_lib_11_combine1.pkl,"
+
+while ( iter.hasNext() ){
+  boolean spaceable = !DONT_SPACE_TOKENS.contains(token);
+  boolean quoted = token.startsWith(""'"");
+  if (spaceable && lastSpaceable){
+    if (!quoted || !lastQuoted) {
+      buf.append(' ');
+    }
+  }
+  lastSpaceable = spaceable;
+  lastQuoted = quoted;
+}","
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is commonly used for splitting and formatting strings, where it checks if the current token is spaceable and if the last token is also spaceable, and adds a space if necessary. The use of boolean variables to keep track of the previous token's spaceability and whether it was quoted is a common practice in string handling in Java."
+158,completion_result_lib_11_combine1.pkl,"
+
+addJoin(tableName, alias, alias, fkColumns, pkColumns, joinType, null);","
+
+Yes, it is possible that the code snippet has occurred in multiple Java libraries. The code snippet appears to be a method call, which is a very common construct in Java programming. The method parameters are also quite generic and could be used in many different contexts. However, without more information about the specific libraries or applications where this code has been used, it is difficult to say for certain."
+159,completion_result_lib_11_combine1.pkl,"
+
+for (int i = 0; i < columns.length; i++) {
+    afterWhere.append("" and "")
+             .append(alias)
+             .append('.')
+             .append(columns[i])
+             .append(condition);
+    
+    // additional code can be added here
+    
+}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. This snippet iterates through an array of column names (`columns`) and appends a WHERE clause condition to a query. The use of `append()` method to concatenate strings is a common technique in Java programming, and the iteration through an array using a for loop is also commonly used. Therefore, this code snippet can be found in various Java libraries implementing similar functionality."
+160,completion_result_lib_11_combine1.pkl,"
+
+if (StringHelper.isNotEmpty(str)){
+   buf.append(str);
+}","
+
+As an AI language model, I cannot definitively say yes or no because I am unable to search through all Java libraries to verify whether this code snippet has occurred multiple times. However, based on my knowledge of Java syntax, the code appears to be a commonly used if-statement that checks if a string is not empty and appends it to a buffer if it is not. It is possible that this code snippet has been used in multiple Java libraries, but without further research, it cannot be confirmed."
+161,completion_result_lib_11_combine1.pkl,"
+
+if (StringHelper.isNotEmpty(orderByClause)) {
+    buf.append("" order by "").append(orderByClause);
+} else if (StringHelper.isNotEmpty(comment)) {
+    buf.append("" "");
+}","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. The code checks if the String variable ""orderByClause"" is not empty and appends it to a StringBuilder variable ""buf"" with the string "" order by "", otherwise, it checks if the String variable ""comment"" is not empty and appends a whitespace character to the StringBuilder variable. This type of code is commonly used in Java applications that involve dynamic SQL queries or building constructed queries."
+163,completion_result_lib_11_combine1.pkl,"
+
+if ( StringHelper.isNotEmpty(outerJoinsAfterFrom) ){
+   buf.append(outerJoinsAfterFrom);
+}
+buf.append(""select "").append(selectClause).append("" from "").append(fromClause);","
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is a common way to build SQL queries dynamically in Java programs. The ""if"" statement checks if there are any outer join clauses to add to the SQL query, and the ""buf.append"" statements concatenate the various SQL clauses into a single query string. This approach is often used in Object-Relational Mapping (ORM) frameworks or other Java libraries that provide facilities for working with databases."
+169,completion_result_lib_11_combine1.pkl,"
+
+if (StringHelper.isNotEmpty(whereClause)) {
+   buf.append(whereClause);
+}
+
+if (StringHelper.isNotEmpty(outerJoinsAfterWhere)) {
+   buf.append(outerJoinsAfterWhere);
+}
+
+if (StringHelper.isNotEmpty(outerJoinsAfterFrom)) {
+   buf.append(outerJoinsAfterFrom);
+}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. The code simply checks if certain string variables are not empty, and if they are not empty, appends them to a buffer. This is a common pattern for dynamically building SQL statements or other types of string concatenation. The use of a helper method like StringHelper further suggests that this code may be part of a larger library or framework."
+172,completion_result_lib_11_combine1.pkl,"
+
+if (StringHelper.isNotEmpty(orderByClause)) {
+    buf.append("" order by "").append(orderByClause);
+}
+
+if (StringHelper.isNotEmpty(outerJoinsAfterFrom)) {
+    buf.append(outerJoinsAfterFrom);
+}","
+
+Yes, this code snippet is a generic Java code that has been occurred in multiple Java libraries due to its common usage in building queries for relational databases. The code checks if the orderByClause and outerJoinsAfterFrom variables are not empty strings and if they are not empty, it appends them to the SQL query string. This approach is commonly used in various Java libraries for generating SQL queries dynamically using StringBuilder or StringBuffer classes."
+186,completion_result_lib_11_combine1.pkl,"
+
+StringBuilder buf = new StringBuilder();
+buf.append(""select "")
+   .append(selectClause)
+   .append("" from "")
+   .append(fromClause);
+if (StringHelper.isNotEmpty(orderByClause)) {
+    buf.append("" order by "")
+       .append(orderByClause);
+} 
+String finalQuery = buf.toString();","
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. The use of the StringBuilder class to concatenate strings for constructing SQL queries is a common practice in Java development, and this code snippet follows that convention. It does not contain any proprietary, domain-specific functionality or syntax that would limit its reusability. As such, it is likely to appear in many Java projects that require dynamic SQL query building capabilities."
+191,completion_result_lib_11_combine1.pkl,"
+
+if (StringHelper.isNotEmpty(comment) && lockMode!=null) {
+    buf.append("" "");
+    buf.append(dialect.getForUpdateString(lockMode));
+}","
+
+Yes, the synthesized code snippet is a generic Java code that can be found in multiple Java libraries. The code checks if a comment string is not empty and if the lock mode is not null before appending a lock statement to a buffer. This is a common pattern used in database access libraries or ORM frameworks to append lock statements for database transactions."
+195,completion_result_lib_11_combine1.pkl,"
+
+HashSet columnsUnique = new HashSet();
+Iterator columnAliasIter = columnAliases.iterator();
+while ( columnAliasIter.hasNext() ){
+    String columnAlias = (String) columnAliasIter.next();
+    columnsUnique.add(columnAlias);
+}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. The code is implementing the logic to remove duplicates from a collection using a HashSet. This is a common programming practice in Java and is not specific to any particular library or framework. It is a widely used approach for removing duplicates from collections in Java."
+197,completion_result_lib_11_combine1.pkl,"
+
+HashSet columnsUnique = new HashSet();","
+
+Yes, the code snippet using HashSet is a generic Java code that is used in multiple Java libraries. HashSet is a widely used data structure in Java, and it is a part of the Java Collections Framework. The HashSet class implements the Set interface and provides a collection of unique elements with no specific order. Hence, it is frequently used in Java libraries to hold a collection of unique items."
+199,completion_result_lib_11_combine1.pkl,"
+
+HashSet columnsUnique = new HashSet();
+while (iter.hasNext()) {
+    String columnAlias = (String) columnAliasIter.next();
+    if (columnsUnique.add(columnAlias)) {
+        if (suffix == null) {
+            buf.append(columnAlias);
+        } else {
+            buf.append(new Alias(suffix).toAliasString(columnAlias));
+        }
+    }
+}","
+
+Yes, it is possible that the synthesized code has occurred in multiple Java libraries because it is a generic snippet that is commonly used to remove duplicates from a collection or set of elements. The use of a HashSet to store the unique elements is a standard practice in Java programming, and the loop that iterates over the collection while checking for duplicates is a common approach to this problem. Therefore, it is possible that this code has been used in various Java libraries to solve similar problems."
+200,completion_result_lib_11_combine1.pkl,"
+
+HashSet columnsUnique = new HashSet(Arrays.asList(usedAliases));","
+
+Yes, the synthesized code is a generic Java code snippet that can be found in multiple Java libraries. This code snippet is a common way to convert an array or collection of elements into a HashSet, which is a data structure that allows fast and efficient lookup of elements. The Arrays.asList() method is used to create a List object from the array, which is then passed as an argument to the HashSet constructor. This is a common pattern in Java programming and can be found in many libraries and code samples."
+202,completion_result_lib_11_combine1.pkl,"
+
+Iterator iter = columnAliases.iterator();
+while ( iter.hasNext() ){
+   String columnAlias = (String) iter.next();
+   if ( columnsUnique.add(columnAlias) ){
+      buf.append("", "")
+         .append(columnAlias)
+         .append("" as "")
+         .append(columnAlias);
+   }
+}","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries because it is a standard way to check for unique values and append them to a StringBuilder or StringBuffer. It iterates through the collection, checks for uniqueness, and appends the values to the buffer with a specific format. It is a common approach used in various scenarios such as database querying, data manipulation, or output formatting."
+204,completion_result_lib_11_combine1.pkl,"
+
+HashSet columnsUnique = new HashSet();
+if (usedAliases != null) {
+    columnsUnique.addAll(Arrays.asList(usedAliases));
+}","
+
+Yes, it is a generic Java code snippet that has likely occurred in multiple Java libraries. 
+
+This is because it is a common pattern in Java to use a HashSet to store unique elements, and also to use the ""addAll"" method to add multiple elements to a collection at once. The use of the ""Arrays.asList"" method to convert an array to a list is also a common shortcut.
+
+Furthermore, the logic of checking if a collection is null before adding to it is a common defensive programming technique. 
+
+Therefore, it is very likely that this code snippet has been used in multiple Java libraries as a generic way to ensure uniqueness in collections."
+207,completion_result_lib_11_combine1.pkl,"
+
+Code fragment 3:
+```
+if (condition) {
+   // code block
+}
+``` 
+
+where `condition` is a boolean expression that evaluates to true or false. This code block can be customized to perform specific actions based on the condition.","
+
+Yes, the synthesized code fragment is a generic Java code snippet that has appeared in multiple Java libraries. This code fragment represents a conditional statement that is a fundamental programming concept used in various programming languages, including Java. As such, it is a common and widely used programming construct that is employed in many Java libraries for various functionalities. The specific actions performed in the code block may vary, but the code structure and syntax remain the same. Therefore, it is not uncommon to find this code snippet in several Java libraries."
+210,completion_result_lib_11_combine1.pkl,"
+
+for ( int i=0; i<formulas.length; i++ ) {
+    if ( formulas[i]!=null ) {
+        addFormula( tableAlias, formulas[i], formulaAliases[i] );
+    }
+}","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries because it is a common loop structure used to iterate through an array of a particular data type and perform a certain action on non-null elements. The specific functionality of the code, such as the method being called and the variable names used, may vary depending on the context in which it is implemented, but the basic structure is widely used and recognized within the Java programming language."
+215,completion_result_lib_11_combine1.pkl,"
+
+for (int j = 0; j < fkColumns.length; j++) {
+    afterWhere.append("" and "")
+              .append(fkColumns[j])
+              .append(""="")
+              .append(alias)
+              .append(""."")
+              .append(pkColumns[j]);
+}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. This code snippet is used to build a SQL query string for creating a join between two tables based on their foreign key and primary key columns. The loop iterates over the foreign key columns array and appends each column to the SQL query string with the corresponding primary key column preceded by an alias. Since joining tables in SQL is a fundamental operation, it is very likely that this code snippet has been used in many Java libraries."
+221,completion_result_lib_11_combine1.pkl,"
+
+for (int j = 0; j < fkColumns.length; j++) {
+    afterWhere.append("" and "")
+              .append(fkColumns[j])
+              .append('=')
+              .append(alias)
+              .append('.')
+              .append(pkColumns[j]);
+}","
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. This code is commonly used in SQL-related Java applications where a foreign key is being compared to a primary key in a WHERE clause. The use of a loop to iterate over the column arrays is a common approach and can be seen in various Java libraries."
+227,completion_result_lib_11_combine1.pkl,"
+
+for ( int j = 0; j < fkColumns.length; j++ ){
+  if ( joinType == RIGHT_OUTER_JOIN || joinType == FULL_JOIN ) {
+    afterWhere.append( ""(+)"" );
+  }
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is commonly used in SQL queries when performing joins on tables in Oracle databases. The use of ""(+)"" is an Oracle-specific syntax for dealing with outer joins. Therefore, this code has been present in various Java libraries that integrate with Oracle databases or rely on Oracle-specific SQL syntax."
+233,completion_result_lib_11_combine1.pkl,"
+
+while ( iter.hasNext() ){
+    if (!assignmentsAppended){
+        assignmentsAppended = true;
+    }
+    Map.Entry e = (Map.Entry) iter.next();
+    buf.append( e.getKey() ).append( '=' ).append( e.getValue() );
+}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. This code snippet is used to loop through a Map and append its key-value pairs to a StringBuilder object. It is a commonly used pattern in Java for iterating over maps and forming strings from their contents. Therefore, it is very likely that this code snippet has been used in many Java libraries."
+234,completion_result_lib_11_combine1.pkl,"
+
+while (iter.hasNext()) {
+     Map.Entry e = (Map.Entry) iter.next();
+     buf.append( e.getKey() ).append( '=' ).append( e.getValue() );
+     if(iter.hasNext()){
+         buf.append("", "");
+     }
+ }","
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is commonly used to iterate over a Map and append its key-value pairs to a StringBuilder or StringBuffer. It is a widely adopted technique for generating formatted output from a map and can be found in various libraries and frameworks, including Apache Commons and Google Guava."
+236,completion_result_lib_11_combine1.pkl,"
+
+StringBuffer buf = new StringBuffer((columns.size() * 15) + tableName.length() + 10);
+buf.append(""update "").append(tableName).append("" set "");
+
+if (comment != null) {
+    buf.append("" "");
+}","
+
+Yes, it is a generic Java code snippet that can occur in multiple Java libraries. 
+
+The use of a StringBuffer to concatenate strings and the building of a SQL update statement with a conditional check for a comment parameter is a common practice in Java when dealing with database operations. These lines of code do not contain any library-specific dependencies or functionality, making it highly likely for them to appear in multiple Java libraries."
+238,completion_result_lib_11_combine1.pkl,"
+
+if (comment != null){
+    buf.append("" "");
+}
+
+StringBuffer buf = new StringBuffer((columns.size() * 15) + tableName.length() + 10);
+buf.append(""update "").append(tableName).append("" set "");","
+
+Yes, it is a generic Java code snippet that is commonly used in Java libraries. The use of a StringBuffer to append strings and the conditional statement to check if a variable is null before appending a space are both common practices in Java programming. Additionally, updating a database table with a generated SQL statement is a very common task in Java web development, so it's likely that similar code can be found in many Java libraries."
+239,completion_result_lib_11_combine1.pkl,"
+
+String tableName = ""students"";
+List<String> columns = Arrays.asList(""name"", ""age"", ""grade"");
+StringBuffer buf = new StringBuffer((columns.size() * 15) + tableName.length() + 10);
+buf.append(""update "").append(tableName).append("" set "");
+
+for (int i = 0; i < columns.size(); i++) {
+    buf.append(columns.get(i)).append("" = ?"");
+    if (i != columns.size() - 1) {
+        buf.append("", "");
+    }
+}
+
+String sql = buf.toString();
+System.out.println(sql); // Output: ""update students set name = ?, age = ?, grade = ?""","
+
+Yes, the synthesized code is a generic Java code snippet that has been used in multiple Java libraries. This code snippet is used to generate an SQL update statement for a given table name and list of column names. The code is generic because it can be used with any table name and list of column names, making it a commonly used piece of code in Java programs that interact with databases."
+241,completion_result_lib_11_combine1.pkl,"
+
+if (primaryKeyColumnNames != null || where != null || !whereColumns.isEmpty() || versionColumnName != null) {
+    StringBuffer buf = new StringBuffer((columns.size() * 15) + tableName.length() + 10);
+    buf.append(""update "").append(tableName).append("" set "");
+    if (versionColumnName != null) {
+        buf.append(versionColumnName).append(""=?"");
+    }
+}","
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries. However, without additional context, it is impossible to confirm whether or not this is the case. The code appears to be constructing an SQL update statement based on a collection of parameters. Many Java libraries involve database connectivity, so it is plausible that this code could be a common pattern used in different contexts."
+242,completion_result_lib_11_combine1.pkl,"
+
+if (iter.hasNext()) {
+  assignmentsAppended = true;
+}
+
+if (assignments != null) {
+  buf.append(assignments);
+}","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. The code checks if there is a next element in the sequence, and if there are any assignments, it appends them to a buffer. This logic is general and can be applied to many scenarios involving collections or sequences of data. Therefore, it is likely that similar code is used in multiple Java libraries."
+245,completion_result_lib_11_combine1.pkl,"
+
+if (primaryKeyColumnNames != null) {
+  if (where == null && whereColumns.isEmpty() && versionColumnName == null) {
+    // Code from fragment 1
+    buf.append(StringHelper.join(""=? and "", primaryKeyColumnNames)).append(""=?"");
+  } else {
+    // Code from fragment 2
+    buf.append(StringHelper.join(""=? and "", primaryKeyColumnNames)).append(""=?"");
+  }
+} else {
+  // Code to handle case where primaryKeyColumnNames is null
+}
+```","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is used in various Java libraries to construct SQL queries based on primary key column names. The code checks if the primary key column names are not null, and then constructs the query based on whether there is a where clause or not. This generic approach can be used in various contexts where primary key column names are used to construct SQL queries."
+248,completion_result_lib_11_combine1.pkl,"
+
+if (primaryKeyColumnNames != null || where != null || !whereColumns.isEmpty() || versionColumnName != null) {
+    StringBuffer buf = new StringBuffer((columns.size() * 15) + tableName.length() + 10);
+    buf.append(""update "").append(tableName).append("" set "");
+    if (where != null) {
+        buf.append(where);
+    }
+}","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is commonly used in Object-Relational Mapping (ORM) frameworks or database access libraries to construct SQL update statements with optional WHERE clauses. The code checks if any of the necessary parameters are present and constructs the SQL query dynamically using a StringBuffer. Due to its generic nature, this code snippet can be found in many different libraries, frameworks, and applications that deal with database access."
+249,completion_result_lib_11_combine1.pkl,"
+
+if (primaryKeyColumnNames != null || where != null || !whereColumns.isEmpty() || versionColumnName != null) {
+   if (primaryKeyColumnNames != null) {
+      buf.append(StringHelper.join(""=? and "", primaryKeyColumnNames)).append(""=?"");
+   }
+   if (where != null) {
+      buf.append(where);
+   }
+}","
+
+Yes, it is possible that the synthesized code has occurred in multiple Java libraries. This is because the code snippet is a common pattern used in database programming for constructing SQL queries that involve primary keys, versions, and other conditions. As such, it is likely that many Java libraries and applications have implemented similar code for querying databases."
+250,completion_result_lib_11_combine1.pkl,"
+
+if (primaryKeyColumnNames != null || where != null || !whereColumns.isEmpty() || versionColumnName != null) {
+  if (primaryKeyColumnNames != null) {
+    buf.append(StringHelper.join(""=? and "", primaryKeyColumnNames)).append(""=?"");
+  }
+  if (versionColumnName != null) {
+    buf.append(versionColumnName).append(""=?"");
+  }
+}","
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries. The reason being that it is a common pattern used to construct a SQL query that updates a record in a database table based on certain conditions. The code checks for certain variables and constructs a string buffer accordingly. This pattern has been used in various Java libraries and frameworks that interact with databases."
+252,completion_result_lib_11_combine1.pkl,"
+
+if (lhs.length > 0) {
+    StringBuffer buf = new StringBuffer( lhs.length * 10 );
+    for (int i=0; i<lhs.length; i++) {
+        buf.append(tableAlias)
+            .append('.')
+            .append(lhs[i])
+            .append(op)
+            .append(rhs[i]);
+        if (i<lhs.length-1) {
+            buf.append("" and "");
+        }
+    }
+} else {
+    // Handle empty lhs
+}","
+
+Yes, this could be considered a generic Java code snippet as it is a common pattern for building SQL queries dynamically. Many Java libraries that interact with databases or provide query building functionality may use similar code for constructing SQL strings from input arrays of columns, operators, and values. However, the specific implementation and context for this snippet may differ between libraries."
+253,completion_result_lib_11_combine1.pkl,"
+
+StringBuffer buf = new StringBuffer( lhs.length * 10 );
+for ( int i=0; i<lhs.length; i++ ){
+    buf.append(tableAlias);
+    buf.append('.');
+    buf.append( lhs[i] );
+    buf.append(op);
+    buf.append( rhs[i] );
+}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. This code snippet is a common way to generate SQL statements dynamically by concatenating table aliases, column names, operators, and values using a StringBuffer. It can be found in various libraries and frameworks that deal with database access and manipulation."
+258,completion_result_lib_11_combine1.pkl,"
+
+StringBuffer buf = new StringBuffer( lhs.length * 10 );
+for ( int i=0; i<lhs.length; i++ ){
+    buf.append(tableAlias)
+       .append('.')
+       .append( lhs[i] )
+       .append(op)
+       .append( rhs[i] );
+    if (i<lhs.length-1) {
+        buf.append("" and "");
+    }
+}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. This code is used for generating SQL statements where the table alias, column names, and comparison operators are passed as parameters. The use of the StringBuffer class for building the SQL statement and the iteration over the arrays of column names and values are common practices in Java programming. Therefore, this code can be found in various Java libraries that deal with SQL queries or data access."
+262,completion_result_lib_11_combine1.pkl,"
+
+for (int i = 0; i < lhs.length; i++) {
+    buf.append(tableAlias)
+            .append('.')
+            .append(lhs[i])
+            .append(op)
+            .append(rhs[i]);
+    if (i < lhs.length - 1) {
+        if(op.equals(""="")) {
+            buf.append("" and "");
+        } else {
+            buf.append("" or "");
+        }
+    }
+}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. 
+
+The code snippet is a standard loop that iterates through an array of values and appends them to a string buffer. The use of a loop to iterate through an array and append its elements is a common pattern in Java programming. Furthermore, the use of 'if' statements to add conditional logic to the loop is also a common programming technique. Therefore, it is safe to assume that this code snippet has been used in multiple Java libraries."
+263,completion_result_lib_11_combine1.pkl,"
+
+if (addAnd) {
+    StringBuffer buf = new StringBuffer(lhs.length * 10);
+    for (int i = 0; i < lhs.length; i++) {
+        buf.append(tableAlias)
+                .append('.')
+                .append(lhs[i])
+                .append(op)
+                .append(rhs[i]);
+        if (i < lhs.length - 1)
+            buf.append("" and "");
+    }
+} else {
+    StringBuffer buf = new StringBuffer(lhs.length * 10);
+    for (int i = 0; i < lhs.length; i++) {
+        buf.append(tableAlias)
+                .append('.')
+                .append(lhs[i])
+                .append(op)
+                .append(rhs[i]);
+    }
+}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. It is a common way to construct SQL queries dynamically based on arrays of column names, values, and operators, and has been implemented in various JDBC drivers, ORM frameworks, and other database-related libraries."
+269,completion_result_lib_11_combine1.pkl,"
+
+for (int i = 0; i < lhs.length; i++) {
+    if (i < lhs.length - 1) {
+        buf.append("" and "");
+    }
+}","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+The code snippet is a simple for loop that iterates over an array or collection and appends a string ""and"" to a buffer for all elements except the last one. This type of code is commonly used in various Java libraries for concatenating strings or building SQL queries. It is a basic programming construct and can be found in many Java codebases."
+271,completion_result_lib_11_combine1.pkl,"
+
+int quoteType = Dialect.QUOTE.indexOf(begin);
+String unquoted = getUnquotedAliasString(sqlIdentifier, quoteType);
+if (quoteType >= 0) {
+   char endQuote = Dialect.CLOSED_QUOTE.charAt(quoteType);
+}","
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries. The use of variables to store the index of a string, the result of a function call, and conditional statements based on the value of the variable are all common programming constructs in Java. Additionally, the use of the Dialect class hints that this code may be related to database or SQL operations, which are common in many Java applications. However, without further context it is difficult to determine if this exact code snippet has been used in multiple Java libraries."
+273,completion_result_lib_11_combine1.pkl,"
+
+String sqlIdentifier = ""tableName"";
+char begin = sqlIdentifier.charAt(0);
+int quoteType = Dialect.QUOTE.indexOf(begin);
+String unquotedAliasString = getUnquotedAliasString(sqlIdentifier, quoteType);","
+
+Yes, it is possible that this code snippet could occur in multiple Java libraries. The code simply extracts the first character of a given string, uses it to determine an appropriate quote type, and then generates an unquoted string. This is a common task in database-related Java programming, specifically in cases where table or column names need to be sanitized or escaped for use in SQL queries. As such, it is likely that this code has been used in multiple Java libraries designed for working with databases."
+275,completion_result_lib_11_combine1.pkl,"
+
+char begin = sqlIdentifier.charAt(0);
+int quoteType = Dialect.QUOTE.indexOf(begin);
+if (quoteType < 0) {
+    quoteType = DEFAULT_QUOTE_TYPE;
+}","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. This code snippet checks for the first character of a SQL identifier and determines its quote type based on a predefined list of quote characters. If the first character is not found in the list, it sets the quote type to a default value. This is a common operation in many Java libraries that deal with SQL queries and database connectivity."
+277,completion_result_lib_11_combine1.pkl,"
+
+String[] aliases = new String[ sqlIdentifiers.length ];
+for ( int i=0; i<sqlIdentifiers.length; i++ ){
+    aliases[i] = toUnquotedAliasString(sqlIdentifiers[i]);
+}","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. 
+
+This code snippet creates a new array of String objects named ""aliases"" with the same length as the input array ""sqlIdentifiers"". It then loops through each element of ""sqlIdentifiers"" using a for loop, and for each element, it calls the method ""toUnquotedAliasString()"" with the element as a parameter and stores the result in the corresponding position of the ""aliases"" array. 
+
+This is a common pattern used in many Java libraries to transform an array of input elements into a new array with a different structure or format. It can be used, for example, to map a list of database column names to their corresponding Java field names, or to convert a list of objects into an array of their string representations."
+278,completion_result_lib_11_combine1.pkl,"
+
+for (int j = 0; j < fkColumns.length; j++) {
+    afterWhere.append("" and "")
+             .append(fkColumns[j])
+             .append("" "");
+    afterWhere.append(alias)
+             .append('.')
+             .append(pkColumns[j]);
+}
+
+addCrossJoin(tableName, alias);","
+
+Yes, it is a generic Java code snippet that can be found in many Java libraries. 
+
+The code snippet is a basic implementation of a SQL join operation, which is a common database operation. The use of loops and string concatenation to build a SQL query is a common approach in Java libraries that interact with databases. Therefore, this code snippet is likely to be found in many Java libraries that deal with SQL queries and database operations."
+281,completion_result_lib_11_combine1.pkl,"
+
+for ( int j=0; j<fkColumns.length; j++){
+    afterWhere.append("" and "")
+              .append( fkColumns[j] )
+              .append( "" "" );
+    if (joinType==JoinFragment.LEFT_OUTER_JOIN || joinType==JoinFragment.FULL_JOIN )
+        afterWhere.append(""*"");
+    afterWhere.append('=');
+    if (joinType==JoinFragment.RIGHT_OUTER_JOIN || joinType==JoinFragment.FULL_JOIN )
+        afterWhere.append(""*"");
+    afterWhere.append ("" "")
+              .append(alias)
+              .append('.')
+              .append( pkColumns[j] );
+};","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is commonly used in the construction of SQL queries where foreign keys are joined with their corresponding primary keys. The code generates the necessary SQL code to perform the join operation using the provided foreign key columns and primary key columns. There are several variations of this code snippet, but the basic structure is the same, and it is often found in Java libraries that deal with SQL databases or ORM frameworks."
+282,completion_result_lib_11_combine1.pkl,"
+
+for (int j=0; j<fkColumns.length; j++) {
+    // Code to be executed inside the loop
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+The code follows the basic syntax of a for loop in Java, which is a fundamental construct used in various Java applications. The loop iterates over a collection or an array, which is indicated by the condition ""j<fkColumns.length"". The loop body contains the code to be executed for each iteration, and it can vary based on the context in which the code is used. 
+
+Since for loops are one of the core constructs in Java programming, it is common to find similar code snippets in various Java libraries and applications. However, the specific implementation and usage of the loop can differ depending on the requirements of the program."
+283,completion_result_lib_11_combine1.pkl,"
+
+for (int j=0; j<fkColumns.length; j++) {
+  if (joinType==JoinFragment.FULL_JOIN) {
+    throw new UnsupportedOperationException();
+  }
+}","
+
+As an AI language model, I cannot confirm the existence of the exact code snippet in multiple Java libraries. However, the use of a for loop and an if statement to throw an unsupported operation exception based on a specific condition is a common programming pattern in Java and can be found in various libraries. Thus, the answer is ""Yes""."
+288,completion_result_lib_11_combine1.pkl,"
+
+Code fragment 3:
+```
+StringBuffer buf = new StringBuffer(tableName.length() + 10);
+buf.append(""SELECT * FROM "").append(tableName);
+```
+
+This code fragment creates a StringBuffer object named ""buf"" with a length equal to the length of the tableName string plus 10. It then appends the string ""SELECT * FROM "" to the StringBuffer object and appends the tableName string to the end of it. This code is similar to the previous two code fragments, but instead of creating a delete query, it creates a select query to retrieve data from the specified table.","
+
+Yes, this is a commonly used code snippet in Java libraries. It is a standard way of building SQL queries dynamically in Java. The use of StringBuffer instead of concatenating strings directly is a more efficient approach, as it creates a mutable String object that can be modified without creating new String objects each time."
+290,completion_result_lib_11_combine1.pkl,"
+
+if (where != null || primaryKeyColumnNames != null || versionColumnName != null) {
+   if (where != null) {
+      buf.append(where);
+   }
+}","
+
+Yes, it is a generic Java code snippet that can occur in multiple Java libraries. The reason being that it consists of basic conditional statements that are commonly used in software development. The code snippet checks if any of the given conditions is true and executes the corresponding code block. It can be used in a variety of contexts, such as database queries, form validation, and input processing. Therefore, it is likely that similar code snippets exist in various Java libraries."
+291,completion_result_lib_11_combine1.pkl,"
+
+if (where != null || primaryKeyColumnNames != null || versionColumnName != null) {
+  if (versionColumnName != null) {
+    buf.append(versionColumnName).append(""=?"");
+  }
+  if (primaryKeyColumnNames != null) {
+    buf.append(where == null ? "" WHERE "" : "" AND "")
+       .append(StringHelper.join(""=? AND "", primaryKeyColumnNames))
+       .append(""=?"");
+  }
+}","
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is commonly used in database access code where the developer needs to generate a SQL query that updates a row in a database table based on a specific set of criteria. The code checks if certain parameters are not null, and if they are not null, it appends the corresponding SQL code to the query. The specific details of the SQL code may differ depending on the database and table being accessed, but the basic structure of the code is the same."
+292,completion_result_lib_11_combine1.pkl,"
+
+StringBuffer buf = new StringBuffer(tableName.length() + 10);
+
+buf.append(""delete from "").append(tableName);
+
+if (where != null || primaryKeyColumnNames != null || versionColumnName != null) {
+
+  if (versionColumnName != null) {
+    
+    buf.append(versionColumnName).append(""=?"");
+    
+  }
+  
+}","
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. The use of StringBuffer to construct a query and appending strings dynamically is a common approach used in various Java libraries and applications. The use of conditional statements to check for the presence of a where clause, primary key column names, or version column name is also a common practice in database operations. Therefore, it is highly likely that similar code snippets can be found in several Java libraries."
+297,completion_result_lib_11_combine1.pkl,"
+
+if (comment != null) {
+   buf.append("" "");
+}
+buf.append(""select "");
+buf = new StringBuffer(columns.size() * 10 + tableName.length() + whereTokens.size() * 10 + 10);","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is used in various Java projects to build SQL statements dynamically. It is a common approach to avoid hard-coding SQL statements, and this snippet allows adding clauses conditionally based on user input. Therefore, it is widely used in Java libraries that deal with database interactions."
+300,completion_result_lib_11_combine1.pkl,"
+
+[// Initialize StringBuffer with an estimated buffer length
+StringBuffer buf = new StringBuffer(columns.size()*10 + tableName.length() + whereTokens.size() * 10 + 10);
+
+// If a comment is provided, add a space before the select statement
+if (comment != null) {
+    buf.append("" "");
+}
+
+// Append the select statement to the buffer
+buf.append(""select "");
+
+// Initialize a Set to store unique values
+Set uniqueColumns = new HashSet();
+
+// Iterate over columns
+while (iter.hasNext()) {
+    // Get the column and its alias (if any)
+    String col = iter.next();
+    String alias = aliases.get(col);
+
+    // Add the column or its alias to the Set of unique values
+    if (uniqueColumns.add(alias == null ? col : alias)) {
+        // If the value is unique, do something
+    }
+}]","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. This code snippet is a common way of building SQL queries dynamically by iterating over a list of column names and creating a SELECT statement with those columns. The use of StringBuffer to build the string efficiently and the Set to ensure unique values are all standard practices. There may be some variations in terms of the specific libraries or frameworks that use this code, but the general approach is widely used."
+302,completion_result_lib_11_combine1.pkl,"
+
+StringBuffer buf = new StringBuffer();
+Set uniqueColumns = new HashSet();
+while (iter.hasNext()) {
+  String col = (String) iter.next();
+  String alias = (String) aliases.get(col);
+  if (uniqueColumns.add(alias == null ? col : alias)) {
+    buf.append(col);
+    if (alias != null && !alias.equals(col)) {}
+  }
+}","
+
+Yes, this code snippet is a generic Java code that has been used in multiple Java libraries. It is a common technique used for generating SELECT statements in SQL queries with unique columns. The code iterates over a set of columns, adds their aliases to a set to remove duplicates, and appends the column name to a string buffer. It is a simple and efficient method that can be customized to fit various use cases."
+313,completion_result_lib_11_combine1.pkl,"
+
+Code fragment 3: 
+
+if (iter.hasNext()) {
+   do {
+      String col = (String) iter.next();
+      String alias = (String) aliases.get(col);
+      if (uniqueColumns.add(alias==null ? col : alias)) {
+         buf.append(col);
+         if (alias!=null && !alias.equals(col)) {
+            // do something with alias
+         }
+      }
+   } while (iter.hasNext() && comment != null);
+}","
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries as it is a basic iteration over a set of columns or aliases and performing some operation on them. Similarly designed functions or procedures can be found in many Java libraries performing operations on database records or collections. However, the specific functionalities performed within the code may differ based on the use case, input variables, and the programmer's own coding style, indicating the uniqueness of each implementation."
+314,completion_result_lib_11_combine1.pkl,"
+
+if (orderBy != null) {
+  buf.append(orderBy);
+}
+
+if (comment != null) {
+  buf.append("" "");
+}","
+
+Yes, it is a generic Java code snippet that may be found in multiple Java libraries as it is a common way to append strings conditionally. The use of conditional statements to check for the existence of a value before appending it to a string buffer is a common programming paradigm in Java. Thus, it is likely to be seen in various Java libraries or applications."
+319,completion_result_lib_11_combine1.pkl,"
+
+if (comment != null) {
+    buf.append("" "");
+} else {
+    buf = new StringBuffer(columns.size() * 10 + tableName.length() + whereTokens.size() * 10 + 10);
+    buf.append("" from "").append(dialect.appendLockHint(lockMode, tableName));
+}","
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries. However, without more context, it is difficult to say for certain. The use of if-else statements and StringBuffer objects are common in Java programming, so it is likely that similar code could be found in different libraries."
+324,completion_result_lib_11_combine1.pkl,"
+
+if (comment != null) {
+   buf.append("" "");
+}
+if (orderBy != null) {
+   buf.append(orderBy);
+}","
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. The code checks if a comment or orderBy parameter is not null and appends it to a StringBuffer. This is a common pattern in Java programming when constructing SQL or building strings based on various conditions."
+327,completion_result_lib_11_combine1.pkl,"
+
+Iterator iter = whereTokens.iterator();
+while (iter.hasNext()) {
+    buf.append(iter.next());
+    if (iter.hasNext()) buf.append(' ');
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has been used in multiple Java libraries. This code uses an Iterator to iterate over a collection of tokens, appends them to a StringBuilder buffer, and inserts a space between them. It is a common way to concatenate strings with arbitrary delimiters in Java. This approach is often used in parsing and tokenizing algorithms to generate formatted output. As a result, it is a widely adopted coding pattern that appears in various libraries and applications."
+328,completion_result_lib_11_combine1.pkl,"
+
+if (cause != null) {
+   cause.printStackTrace();
+}","
+
+Yes, the synthesized code snippet of ""if (cause != null) { cause.printStackTrace(); }"" is a generic Java code that can be found in multiple Java libraries. This code snippet is used to print the stack trace of an exception that has occurred in the program. It is a commonly used practice to handle exceptions in Java and is not specific to any library or framework. Therefore, it is a widely used and reusable code snippet that can be found in many Java projects."
+329,completion_result_lib_11_combine1.pkl,"
+
+if (cause != null) {
+  cause.printStackTrace();
+} else {
+  // do nothing
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is commonly used to handle exceptions or errors in a try-catch block. When an exception occurs, this code will print the stack trace for the exception, allowing developers to quickly identify and fix the issue. If there is no exception or error, then the code does nothing, ensuring that the program continues to run smoothly. Therefore, this code snippet is a commonly used and standardized way to handle errors in Java."
+330,completion_result_lib_11_combine1.pkl,"
+
+try {
+   // some code that may throw an exception
+} catch (Exception e) {
+   if (cause != null) {
+      cause.printStackTrace();
+   } else {
+      e.printStackTrace();
+   }
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is a typical implementation of exception handling in Java, where the try block contains the code that may throw an exception, and the catch block handles the exception. The catch block first checks if there is a nested cause exception, and if there is, it prints the stack trace of the cause exception. Otherwise, it prints the stack trace of the caught exception. This code snippet is a commonly used pattern in many Java libraries for handling exceptions."
+332,completion_result_lib_11_combine1.pkl,"
+
+if (tokenTypeNameCache != null) {
+  Object valueObj = tokenTypeNameCache.get(typeInteger);
+  if (valueObj != null) {
+    value = valueObj.toString();
+  }
+}","
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries as it is a common programming pattern in Java to check if a value exists in a cache or map and retrieve it accordingly. However, without additional context or information, it cannot be determined with certainty whether this exact code has occurred in multiple Java libraries or not."
+335,completion_result_lib_11_combine1.pkl,"
+
+String text = ""example text"";
+char[] chars = text.toCharArray();
+StringBuilder buf = new StringBuilder();
+
+for (int i = 0; i < chars.length; i++) {
+   char aChar = chars[i];
+   if (aChar > 256) {
+      buf.append(""\\u"");
+      buf.append(Integer.toHexString(aChar));
+   }
+}
+
+String result = buf.toString();","
+
+As an AI language model, I do not have the ability to search and verify the synthesized code's occurrence in multiple Java libraries. However, the code seems to be a general-purpose snippet that can be used in various situations where someone needs to escape non-ASCII characters in a string. The use of standard Java classes and methods makes it a typical code piece that can be found in different libraries. So, to answer your question, I would say ""Yes,"" it is a generic Java code snippet that could have occurred in multiple Java libraries."
+339,completion_result_lib_11_combine1.pkl,"
+
+char[] chars = text.toCharArray();
+for (char aChar : chars) {
+   // code to process each character in the chars array
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is a common way of iterating over each character in a Java string, allowing for easy processing of individual characters. Because it is a fundamental aspect of Java programming, it is often used in various libraries and applications."
+341,completion_result_lib_11_combine1.pkl,"
+
+for (int i = 0; i < text.length(); i++){
+    char aChar = text.charAt(i);
+}","
+
+Yes, it is a generic Java code snippet that has been commonly used in multiple Java libraries. The code snippet uses a for-loop to iterate through each character of a given text string using the charAt() method. This is a common operation in Java when working with text processing, parsing, and manipulation tasks. Therefore, it is highly likely that this code snippet has been used in various Java libraries for different purposes."
+343,completion_result_lib_11_combine1.pkl,"
+
+for (int i = 0; i < chars.length; i++){
+    char aChar = chars[i];
+    if (aChar > 256){
+        buf.append(""\\u"");
+        buf.append(Integer.toHexString(aChar));
+    }
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is commonly used for encoding special characters as Unicode escape sequences. It checks if the character code is above 256 and if it is, it appends the Unicode escape sequence to the buffer. This code snippet is not library-specific and can be found in various Java programs that require Unicode encoding of special characters."
+344,completion_result_lib_11_combine1.pkl,"
+
+char[] chars = text.toCharArray();
+for (int i = 0; i < chars.length; i++){
+    char aChar = chars[i];
+}","
+
+Yes, the code snippet is a generic Java code that has been used in multiple Java libraries because it is a basic operation for converting a string to a character array and iterating through the array to access each character individually. This operation is used in various scenarios, such as manipulating strings, parsing data, and processing textual information. Thus, it is a common code snippet that can be found in many Java libraries and applications."

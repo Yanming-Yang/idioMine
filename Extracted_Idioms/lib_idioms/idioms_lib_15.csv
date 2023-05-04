@@ -1,0 +1,677 @@
+,pro/lib,idiom,final
+0,new_completion_result_lib_15_combine1.pkl,"twitter = new TwitterFactory().getInstance();twitter.setOAuthConsumer(consumerKey, consumerSecret);twitter.setOAuthAccessToken(aToken);","Yes, it can be considered a common coding pattern or code idiom because it follows the widely used OAuth authentication protocol for accessing Twitter APIs. The pattern involves creating a Twitter instance using the TwitterFactory(), setting the OAuth consumer key and secret using setOAuthConsumer(), and setting the access token using setOAuthAccessToken(). This pattern is commonly used in many Twitter API applications and is considered a best practice for secure authentication."
+1,new_completion_result_lib_15_combine1.pkl,"twitter.setOAuthConsumer(consumerKey, consumerSecret);","Yes, it can be considered a common coding pattern or code idiom because it is a standard method used in OAuth authentication for many API services, not just Twitter. The use of a consumer key and secret is a widely accepted practice for authorizing access to an API. Therefore, this code snippet can be found in many API clients and libraries, making it a common coding pattern."
+3,new_completion_result_lib_15_combine1.pkl,"twitter = new TwitterFactory().getInstance();
+AccessToken aToken = new AccessToken(token, tokenSecret);
+twitter.setOAuthConsumer(consumerKey, consumerSecret);
+twitter.setOAuthAccessToken(aToken);","Yes, it can be considered a common coding pattern or code idiom because it follows the OAuth authentication process for accessing Twitter API. This pattern is commonly used in various Twitter API integration projects that involve user authentication and authorization. As such, it is a recognizable and widely-accepted way of integrating Twitter API into third-party applications."
+4,new_completion_result_lib_15_combine1.pkl,"if (consumerKey == null || consumerSecret == null || token == null || tokenSecret == null) {
+            throw new IllegalStateException(""Please initialize consumer and access settings!"");
+        }
+        twitter.setOAuthConsumer(consumerKey, consumerSecret);
+        AccessToken aToken = new AccessToken(token, tokenSecret);","Yes, it can be considered a common coding pattern or code idiom because it is a standard way of checking and setting OAuth credentials for Twitter API access. This pattern ensures that all required credentials are provided before attempting to authenticate and make API calls."
+5,new_completion_result_lib_15_combine1.pkl,"if (consumerKey == null) {
+   throw new NullPointerException(""Please use init consumer settings!"");
+}
+Twitter twitter = new TwitterFactory().getInstance();
+twitter.setOAuthConsumer(consumerKey, consumerSecret);
+twitter.setOAuthAccessToken(aToken);","Yes. 
+
+This code block follows a common coding pattern or code idiom known as defensive programming. The if statement checks if the consumerKey is null and throws a NullPointerException if it is. This helps to prevent the code from crashing or producing unexpected behavior when a variable is null or not initialized properly. Additionally, the use of the TwitterFactory class and the setOAuthConsumer and setOAuthAccessToken methods are common practices in implementing Twitter API functionality in code."
+8,new_completion_result_lib_15_combine1.pkl,"Twitter twitter = new TwitterFactory().getInstance();
+if (consumerKey == null) {
+    throw new NullPointerException(""Please use init consumer settings!"");
+} else {
+    twitter.setOAuthConsumer(consumerKey, consumerSecret);
+}
+twitter.setOAuthAccessToken(aToken);","Yes, it can be considered a common coding pattern or code idiom because this code snippet is very commonly used in Java programs that utilize the Twitter API. It initializes the Twitter object using the TwitterFactory, sets the OAuth consumer key and secret, and then sets the OAuth access token to make authenticated requests to the Twitter API. This pattern is used in many Twitter-related Java applications and is a common approach to handling authentication in other similar APIs."
+9,new_completion_result_lib_15_combine1.pkl,"if (consumerKey == null) {
+  throw new NullPointerException(""Please use init consumer settings!"");
+} else {
+  twitter.setOAuthConsumer(consumerKey, consumerSecret);
+}","Yes, it can be considered a common coding pattern or code idiom because it is a standard practice to check for null values before using them in a program. This is done to prevent runtime errors and to ensure that the program behaves as expected. The code snippet is used to check if the consumerKey value is null and if so, it throws a NullPointerException with a message prompting the user to initialize the consumer settings."
+10,new_completion_result_lib_15_combine1.pkl,"for (int offset = 0; offset < intids.length; offset += 100){
+
+    for (int ii = 0; ii + offset < intids.length && ii < limitedIds.length; ii++){
+        
+        limitedIds[ii] = intids[ii + offset];
+        
+    }
+    
+}","Yes, it can be considered a common coding pattern or code idiom as it involves iterating through a large array or list in chunks or batches, which is a common task in many programming applications. The use of a nested for loop to accomplish this task is also a common practice."
+11,new_completion_result_lib_15_combine1.pkl,"Code fragment:
+
+while (true){
+   for (int offset = 0; offset < intids.length; offset += 100){
+      int limit = Math.min(limitedIds.length, intids.length - offset);
+      for (int ii = 0; ii < limit; ii++){
+         limitedIds[ii] = intids[ii + offset];
+      }
+   }
+}","Yes, this code fragment can be considered a common coding pattern or code idiom because it involves iterating through a list (intids) in chunks of a specified size (100) and performing some operation on each chunk (assigning its contents to limitedIds). This approach can be useful for working with large datasets, as it helps to reduce memory usage and optimize performance by only processing a subset of the data at a time."
+12,new_completion_result_lib_15_combine1.pkl,"try {
+   Twitter twitter = new TwitterFactory().getInstance();
+   if (args.length < 2) {
+      // handle error
+   } else {
+      twitter.unsubscribeUserList(args[0], Integer.parseInt(args[1]));
+   }
+} catch (Exception e) {
+   e.printStackTrace();
+   // handle exception
+}","Yes, it can be considered a common coding pattern or code idiom because it follows the structure of a try-catch block, where potential exceptions are caught and handled appropriately. Additionally, it follows the general structure of using a factory to create an instance of a Twitter object and calling a method on that object based on the provided arguments. This pattern is commonly used in many APIs and programming libraries."
+13,new_completion_result_lib_15_combine1.pkl,"if (args.length >= 2){
+   try{
+         twitter.unsubscribeUserList(args[0], Integer.parseInt(args[1]));
+      } 
+   catch (Exception e){
+         System.out.println(""Error: "" + e.getMessage());
+      }
+} else {
+      System.out.println(""Error: Insufficient arguments provided."");
+}","Yes, this can be considered a common coding pattern because it checks if the array of arguments has a length of at least 2, and if it does, it tries to execute a certain block of code using the first 2 arguments. If there is an error, it catches it and prints a message. Otherwise, if the array does not have enough arguments, it prints an error message. This pattern is commonly used for error handling and to ensure that the correct number of arguments are provided before executing a certain block of code."
+14,new_completion_result_lib_15_combine1.pkl,"if (args.length < 2) {
+    System.out.println(""Insufficient arguments."");
+} else {
+    try {
+        Twitter twitter = new TwitterFactory().getInstance();
+        twitter.unsubscribeUserList(args[0], Integer.parseInt(args[1]));
+    } catch (NumberFormatException e) {
+        System.out.println(""Invalid argument: "" + args[1]);
+    } catch (TwitterException e) {
+        System.out.println(""An error occurred: "" + e.getMessage());
+    }
+}","Yes, this can be considered a common coding pattern or code idiom because it follows the basic structure of error handling in programming. It first checks for the presence of sufficient arguments and handles the case where they are not present. Then, it tries to perform the desired action and handles any errors that are encountered during execution. This basic structure can be used in various programming languages and situations, making it a common pattern that programmers can easily recognize and apply."
+15,new_completion_result_lib_15_combine1.pkl,"try{
+    twitter.unsubscribeUserList(args[0], Integer.parseInt(args[1]));
+} catch(Exception e){
+    // handle exception
+}","Yes, it can be considered a common coding pattern or code idiom as it is a basic error handling technique where the code tries to execute a certain action and if an exception occurs, it handles it gracefully. This is a best practice in programming and is used across different programming languages and frameworks."
+16,new_completion_result_lib_15_combine1.pkl,"if (includeUserChanges && users != null) {
+    result = 31 * Arrays.hashCode(users) + 1;
+} else if (users != null) {
+    result = Arrays.hashCode(users);
+} else {
+    result = 0;
+}","Yes, the above code can be considered a common coding pattern or code idiom known as conditional hashing. This technique is commonly used to compute hash codes for objects based on some conditions, such as whether user changes are included or not. It allows for efficient object comparison and hashing while considering multiple factors. The use of Arrays.hashCode() is also a common practice for computing hash codes for arrays."
+17,new_completion_result_lib_15_combine1.pkl,int result = 31 * (users != null ? Arrays.hashCode(users) : 0) + (with != null ? with.hashCode() : 0);,"Yes, it can be considered a common coding pattern because it follows the Java hashCode() contract and is often used to generate hash codes for objects that contain arrays or other objects. It also uses a ternary operator to handle null values, which is a common practice to ensure that hash codes are consistent and predictable."
+18,new_completion_result_lib_15_combine1.pkl,result = 31 * result + (object != null ? object.hashCode() : 0);,"Yes, it can be considered a common coding pattern or code idiom. This is because it is a typical implementation of the hash code function for Java objects, where the algorithm multiplies the current hash code by a prime number and then adds the hash code value of the object. If the object is null, it adds zero instead. This pattern is used to generate a unique numerical value that can be used for efficient object comparisons and hashing."
+20,new_completion_result_lib_15_combine1.pkl,"final LinkedInApiClientFactory factory = LinkedInApiClientFactory.newInstance(CONSUMER_KEY, CONSUMER_SECRET);
+final LinkedInApiClient client = factory.createLinkedInApiClient(accessToken);","Yes, it can be considered a common coding pattern or code idiom. This is because it follows the Factory Method pattern, where a class (in this case, LinkedInApiClientFactory) is responsible for creating objects of another class (LinkedInApiClient). Additionally, it is a common practice to use access tokens to authenticate API calls, making this code relevant in many API integrations."
+21,new_completion_result_lib_15_combine1.pkl,"try {
+    MessageContext messageContext = getMessageContext();
+    String statusStr = TwitterMediatorUtils.lookupFunctionParam(messageContext, STATUS);
+    Twitter twitter = new TwitterClientLoader(messageContext).loadApiClient();
+    Status status = twitter.updateStatus(statusStr);
+    TwitterMediatorUtils.storeResponseStatus(messageContext, status);
+    log.info(""@"" + status.getUser().getScreenName() + "" - "" + status.getText());
+} catch (TwitterException te) {
+    TwitterMediatorUtils.storeErrorResponseStatus(messageContext, te);
+}","Yes, it can be considered a common coding pattern or code idiom. This code block follows the pattern of using a try-catch block to handle errors that may occur during the execution of the code. It also uses utility methods to handle messages and log errors. This pattern is commonly used in programming to handle possible exceptions and manage error messages in a consistent and standardized way."
+24,new_completion_result_lib_15_combine1.pkl,"try {
+  String statusStr = TwitterMediatorUtils.lookupFunctionParam(messageContext, STATUS);
+  Status status = twitter.updateStatus(statusStr);
+  TwitterMediatorUtils.storeResponseStatus(messageContext, status);
+  log.info(""@"" + status.getUser().getScreenName() + "" - "" + status.getText());
+} catch (Exception e) {
+  log.error(""Error updating status"", e);
+}","Yes, it can be considered a common coding pattern or code idiom. The try-catch block is a standard method of exception handling in Java and is used to catch any exceptions that may occur during the execution of the code. In this particular implementation, it is used to catch any errors that may occur during the Twitter status update process and log them for debugging purposes. This is a common practice in software development to ensure that errors are handled gracefully and do not cause the entire application to crash."
+25,new_completion_result_lib_15_combine1.pkl,"try {
+  Status status = twitter.updateStatus(statusStr);
+  TwitterMediatorUtils.storeResponseStatus(messageContext, status);
+  log.info(""@"" + status.getUser().getScreenName() + "" - "" + status.getText());
+} catch (TwitterException te) {
+  log.error(""Failed to show status: "" + te.getMessage(), te);
+  TwitterMediatorUtils.storeErrorResponseStatus(messageContext, te);
+}","Yes, it can be considered a common coding pattern or code idiom. It follows the try-catch error handling mechanism, which is a widely used approach in programming to handle exceptions and errors. In this case, the code is attempting to update a status on Twitter and if an exception occurs, it is caught and an error message is logged. This pattern is used to handle errors gracefully and prevent the program from crashing."
+32,new_completion_result_lib_15_combine1.pkl,"switch (view.getId()){
+   case R.id.search_button:
+      SpannableStringBuilder builder = (SpannableStringBuilder) searchText.getText();
+      query = builder.toString();
+      getSearchTimelineTask();
+      break;
+   default:
+      //Do nothing
+      break;
+};","Yes, it can be considered a common coding pattern. The code snippet is a switch statement that takes in a view ID and performs an action based on the ID. This is a common coding pattern used in Android development to handle user interactions with views. Additionally, the code snippet uses a SpannableStringBuilder to retrieve text from a search bar and performs a task based on the retrieved text. This is also a common code idiom used in Android development for working with text data."
+34,new_completion_result_lib_15_combine1.pkl,"MenuInflater menuInflater = getMenuInflater();
+menuInflater.inflate(R.menu.search_timeline_menu, menu);","Yes, it can be considered a common coding pattern or code idiom because it is a standard way of inflating a menu in Android apps. This code is used in many Android apps to create and display menus, so it has become a widely recognized pattern. It is also recommended by Google's Android documentation, which further solidifies its status as a common coding pattern."
+35,new_completion_result_lib_15_combine1.pkl,"ArrayList<Tweet> tweetList = new ArrayList<Tweet>();
+SearchListAdapter searchListAdapter = new SearchListAdapter(this, tweetList);
+
+if (query.length() == 0) {
+    // empty query, do nothing
+} else {
+    if (wordAdapter.getPosition(query) == -1) {
+        wordAdapter.add(query);
+        doubleWordList.add(query);
+        searchWordDao.insert(query);
+    }
+    task.execute(buildQuery(query));
+}","Yes, `ArrayList` and `ListAdapter` are common data structures used in many Android applications for displaying and handling lists of data. The pattern of checking for an empty query, adding a query to an adapter if it does not already exist, and executing a task with the query parameters is also a common coding pattern in Android development. Additionally, the use of a DAO to insert data into a database is a common pattern in Android for managing data persistence."
+36,new_completion_result_lib_15_combine1.pkl,"InputMethodManager manager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+if(manager != null) {
+    manager.hideSoftInputFromWindow(searchText.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+}","Yes, it can be considered a common coding pattern or code idiom because it is commonly used in Android development to hide the soft keyboard when not needed, and is recommended by official Android documentation. It follows a standard structure of accessing the InputMethodManager object using getSystemService, checking for null, and calling the hideSoftInputFromWindow method with the appropriate parameters."
+38,new_completion_result_lib_15_combine1.pkl,"manager.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT);","Yes, based on the above answers, it can be considered a common coding pattern or code idiom. This is because it is a commonly used method in Android programming for showing the input method editor (IME) on the screen. It is used to allow users to enter text or other input into an app, and is used in a wide range of apps and use cases. As such, it is a well-established pattern in the Android programming community and is widely used in many different apps and projects."
+42,new_completion_result_lib_15_combine1.pkl,"byte[] bytes;
+try (InputStream in = new URL(mediaUrl).openStream();
+     ByteArrayOutputStream out = new ByteArrayOutputStream()) {
+    for (int b; (b = in.read()) != -1; ) {
+        out.write(b);
+    }
+    bytes = out.toByteArray();
+}","Yes, this can be considered a common coding pattern or code idiom. It involves using an InputStream to read data from a URL and writing it to a byte array using a ByteArrayOutputStream. This pattern is commonly used to download content or files from a remote server and store them as bytes for further processing or usage. It is also a standard way of handling binary data in Java, and is used in various libraries and frameworks."
+43,new_completion_result_lib_15_combine1.pkl,"InputStream in = new URL(mediaUrl).openStream(); 
+for (int b; (b = in.read()) != -1; ){} 
+in.close();","Yes, it can be considered a common coding pattern or code idiom. This is because it is a concise and effective way of reading the contents of a URL stream and storing it in a variable. It also follows standard Java coding practices for handling input streams, using a loop to read in bytes until the end of the stream is reached and then closing the stream."
+45,new_completion_result_lib_15_combine1.pkl,"URL url = new URL(mediaUrl);
+InputStream in = url.openStream();
+for (int b; (b = in.read()) != -1; ){}
+in.close();","Yes, it can be considered a common coding pattern or code idiom. This piece of code is commonly used to read the contents of a URL and is widely accepted as a standard approach in Java programming. The use of InputStream and URL classes to perform input/output operations with web resources is a well-established practice, making this code a recognizable pattern for most Java developers."
+48,new_completion_result_lib_15_combine1.pkl,"try {
+      URL url = new URL(mediaUrl);
+      InputStream in = url.openStream();
+      ByteArrayOutputStream out = new ByteArrayOutputStream();
+      for (int b; (b = in.read()) != -1; ) {
+         out.write(b);
+      }
+      byte[] bytes = out.toByteArray();
+      out.close();
+} catch (IOException e) {
+      e.printStackTrace();
+}","Yes, it can be considered a common coding pattern or code idiom because it is a standard way of downloading the content of a URL as a byte array in Java. It follows best practices such as closing the streams in a finally block and handling any potential I/O exceptions. It is a widely used approach that many developers would recognize and understand."
+50,new_completion_result_lib_15_combine1.pkl,"try(InputStream in = url.openStream()){
+    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    byte[] buffer = new byte[1024];
+    int bytesRead;
+    while ((bytesRead = in.read(buffer)) != -1) {
+        out.write(buffer, 0, bytesRead);
+    }
+    byte[] bytes = out.toByteArray();
+    out.close();
+}catch(IOException e){
+    //handle exception
+}","Yes, this can be considered a common coding pattern or code idiom. The above code is a typical way of reading the contents of an InputStream and storing it in a byte array. It is a widely used pattern when dealing with network connections and reading/writing data from them. Consequently, it is common for Java developers to use this code idiom when working with networking programming. Additionally, it handles IOException, which is a standard way of handling exceptional conditions while working with I/O operations."
+52,new_completion_result_lib_15_combine1.pkl,"InputStream in = url.openStream();
+OutputStream out = new ByteArrayOutputStream();
+
+for (int b; (b = in.read()) != -1; ){
+    out.write(b);
+}
+
+in.close();
+out.close();","Yes, it can be considered a common coding pattern or code idiom. This is because it is a widely used pattern for reading data from a remote URL and writing it to an output stream. It follows the principle of input/output streams and uses a loop to read and write data byte by byte. This pattern can be used in various contexts and is generally considered a best practice for handling remote data streams."
+53,new_completion_result_lib_15_combine1.pkl,"ByteArrayOutputStream out = new ByteArrayOutputStream();
+
+for (int b; (b = in.read()) != -1; ){
+    out.write(b);
+}
+
+byte[] bytes = out.toByteArray();
+
+out.close();","Yes, it can be considered a common coding pattern or code idiom. This code snippet is commonly used to read data from an input stream and write it to a byte array output stream. It is used to convert data from one format to another, and it is a relatively simple and efficient way to do so. This pattern is used in many different contexts, from reading and writing files to transferring data over a network."
+55,new_completion_result_lib_15_combine1.pkl,"try {
+    twitter.createFriendship(userId);
+} catch (TwitterException e) {
+    logger.error(""Error while following: "" + userId + "" Announcer: "" + screenName, e);
+}","Yes, it can be considered a common coding pattern because it includes a try-catch block to handle potential exceptions that may occur during the execution of the code. This is a best practice in software development and is commonly used to handle expected errors and prevent them from crashing the program. Additionally, using a logger to output the error message and relevant information is also a common pattern in order to facilitate debugging and troubleshooting."
+56,new_completion_result_lib_15_combine1.pkl,"try {
+  Twitter twitter = random();
+  String screenName = twitter.getScreenName();
+  twitter.createFriendship(userId);
+} catch (TwitterException e) {
+  logger.error(""Error while following: "" + userId + "" Announcer: "" + screenName, e);
+}","Yes, it can be considered a common coding pattern or code idiom. 
+
+This code snippet follows the Try-Catch idiom which is a common programming practice used to handle exceptions or errors that may occur during the execution of a program. In this case, the code tries to follow a user on Twitter but if there is an exception thrown, it catches the error and logs it with contextual information. This is a common way of handling errors and is considered a best practice in programming."
+59,new_completion_result_lib_15_combine1.pkl,"try {
+    // code block with routine database query 
+    logger.debug(DBConstants.QUERY_EXECUTION_SUCC + ps.toString());
+} catch (SQLException ex) {
+    logger.error(DBConstants.QUERY_EXECUTION_FAIL + ps.toString(), ex);
+}","Yes, it can be considered a common coding pattern as it is a standard practice to handle exceptions and log errors in database queries. The try-catch block is used to catch any SQL exception and the logger is used to record the success or failure of the query execution. This pattern ensures that errors are properly handled and logged for future reference, improving the overall robustness and maintainability of the code."
+62,new_completion_result_lib_15_combine1.pkl,"if (twitter != null){
+   try{
+      twitter.updateStatus(message);
+   } catch (TwitterException e){
+      logger.error(""Announcement failed: "" + screenName, e);
+   }
+}","Yes, it can be considered a common coding pattern or code idiom because it follows the structure of using a try-catch block to handle exceptions that may occur when calling a third-party API. This is a common practice in programming to prevent the application from crashing and provide appropriate error handling. Additionally, the use of a logger to log the error message is also a common practice for debugging and improving the code in the future."
+70,new_completion_result_lib_15_combine1.pkl,"try {
+  twitter.retweetStatus(statusId);
+} catch (TwitterException e) {
+  logger.error(""Error while retweeting: "" + statusId + "" Announcer: "" + screenName, e);
+}
+
+The synthesized code is the same as Code fragment 1.","Yes, it can be considered a common coding pattern or code idiom because it follows the structure of a try-catch block used for handling exceptions. The try block contains the code that may throw an exception, and the catch block catches the specific exception type and provides a customized error message or handling logic. This pattern is frequently used in software development when there is a possibility of an error or unexpected behavior that needs to be handled gracefully."
+71,new_completion_result_lib_15_combine1.pkl,"try{
+   String screenName = twitter.getScreenName();
+} 
+catch (TwitterException e){
+   logger.error(""Error while retweeting: "" + statusId + "" Announcer: "" + screenName, e);
+}","Yes, it can be considered a common coding pattern or code idiom. This code follows the principle of error handling using try-catch blocks, which is a commonly used approach in many programming languages. The catch block logs the error message with the help of a logger and provides information about the context of the error, making it easier for developers to debug and fix issues. This pattern is used to handle exceptions and prevent the program from crashing or behaving unexpectedly when an error occurs. Therefore, it is a widely used code idiom."
+72,new_completion_result_lib_15_combine1.pkl,"try {
+   twitter.createFavorite(statusId);
+} catch (TwitterException e) {
+   logger.error(""Error while creating favorite: "" + statusId + "" Announcer: "" + screenName, e);
+}","Yes, it can be considered a common coding pattern or code idiom because it follows the try-catch block structure which is widely used in programming for error handling. The code tries to create a favorite on Twitter using the specified status ID and if it encounters any exception, it logs an error message along with the relevant details. This pattern is commonly used to handle exceptions in code and has become a standard practice in programming."
+75,new_completion_result_lib_15_combine1.pkl,"try{
+   final SharedPreferences prefs = getContext().getSharedPreferences(SHARED_PREFERENCES_NAME,Context.MODE_PRIVATE);
+
+   // Code fragment 2
+   final int load_item_limit = prefs.getInt(PREFERENCE_KEY_LOAD_ITEM_LIMIT, PREFERENCE_DEFAULT_LOAD_ITEM_LIMIT);
+
+   // Add more code fragments here if needed
+
+} catch(Exception e){
+   // Handle exception
+}","Yes, it can be considered a common coding pattern or code idiom known as ""Retrieving and saving shared preferences"". This pattern involves obtaining shared preferences for an application and using them to store and retrieve values persistently. It is a widely used pattern for storing application settings and user preferences."
+78,new_completion_result_lib_15_combine1.pkl,"try {
+    final SharedPreferences prefs = getContext().getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE);
+    final int load_item_limit = prefs.getInt(PREFERENCE_KEY_LOAD_ITEM_LIMIT, PREFERENCE_DEFAULT_LOAD_ITEM_LIMIT);
+    paging.setCount(load_item_limit);
+} catch (Exception e) {
+    e.printStackTrace();
+}","Yes, this can be considered a common coding pattern as it follows the best practice of using shared preferences to store and retrieve user-specific data. It also utilizes exception handling to prevent the app from crashing in case of any unexpected errors."
+84,new_completion_result_lib_15_combine1.pkl,"try{ 
+final int load_item_limit = prefs.getInt(PREFERENCE_KEY_LOAD_ITEM_LIMIT, PREFERENCE_DEFAULT_LOAD_ITEM_LIMIT); 
+paging.setCount(load_item_limit); 
+} catch(Exception e){ 
+//Handle exception 
+}","Yes, it can be considered a common coding pattern or code idiom. The code block is used to retrieve a value from a preference file and set it as the count of a paging object. The try-catch block is used to handle any exceptions that may arise during the retrieval of the value. This pattern is commonly used in Android development, where preferences are often used to store and retrieve user settings."
+88,new_completion_result_lib_15_combine1.pkl,"session = request.getSession(true);
+String userSessionId = session.getAttribute(""USERID"").toString();
+int userId = Integer.parseInt(userSessionId);
+String linkUrl = request.getParameter(""link_url"");","Yes, it can be considered a common coding pattern because it follows the standard practice of obtaining and utilizing session information to retrieve user-specific data. The code checks if a session already exists with the user and creates one if it doesn't. It then retrieves the user ID from the session and converts it to an integer for later use. Finally, it retrieves a link URL parameter from the request to perform some action related to the user. This pattern is often used in web applications to maintain user state and personalize the user experience."
+90,new_completion_result_lib_15_combine1.pkl,"String userSessionId = session.getAttribute(""USERID"").toString(); 
+int userId = Integer.parseInt(userSessionId);
+String linkUrl = null;
+linkUrl = request.getParameter(""link_url"");
+if (linkUrl != null && linkUrl.equals(""complaint"")){
+    // code to handle complaint link
+}","Yes, it can be considered a common coding pattern or code idiom because it follows the principles of using session attributes to retrieve user information, parsing them into appropriate data types, and checking for the presence of a specific parameter before executing a specific code block. This pattern is commonly used in web applications to control access to specific functionality based on user privileges or user input."
+92,new_completion_result_lib_15_combine1.pkl,"getTweetButton = (Button)findViewById(R.id.getTweet);
+tweetText =(TextView)findViewById(R.id.tweetText);","Yes, this can be considered a common coding pattern or code idiom. The pattern involves finding a specific UI element using its id in the layout XML file and initializing it in the code by casting it to the appropriate type (in this case, Button and TextView). This is a common way of accessing UI elements and is used in many Android apps."
+93,new_completion_result_lib_15_combine1.pkl,"getTweetButton = (Button)findViewById(R.id.getTweet);
+getTweetButton.setOnClickListener(this); 
+","Yes, it can be considered a common coding pattern or code idiom because it follows the standard practice of initializing UI elements in Android by finding their corresponding IDs in the XML layout file and adding onClick listeners to handle events triggered by user interaction with them. This pattern is used extensively in Android development and is widely recognized by developers as a best practice."
+94,new_completion_result_lib_15_combine1.pkl,"if (uri != null && uri.toString().startsWith(Const.CALLBACK_URL)) {
+    String verifier = uri.getQueryParameter(Const.IEXTRA_OAUTH_VERIFIER);
+    try {
+        AccessToken accessToken = twitter.getOAuthAccessToken(requestToken, verifier);
+    }
+    catch (Exception e) {
+        e.printStackTrace();
+    }
+}","Yes, it can be considered as a common coding pattern or code idiom because it follows the standard OAuth authentication process, where the user is redirected to a callback URL after giving permission to access their Twitter account. The code extracts the OAuth verifier from the URL and uses it to obtain access tokens from Twitter API, which is a common implementation for OAuth-based authentication. It shows a standard implementation of handling OAuth tokens through the Twitter API library."
+100,new_completion_result_lib_15_combine1.pkl,"getTweetButton = (Button)findViewById(R.id.getTweet);
+getTweetButton.setOnClickListener(this);","Yes, it can be considered a common coding pattern or code idiom because it follows the standard method of accessing a view component in Android using the findViewById() method and attaching a listener to the component using setOnClickListener(). This pattern is frequently used in Android app development."
+112,new_completion_result_lib_15_combine1.pkl,"if (isConnected()) {
+  String oauthAccessToken = mSharedPreferences.getString(Const.PREF_KEY_TOKEN, """");
+  Configuration conf = confbuilder
+    .setOAuthConsumerKey(Const.CONSUMER_KEY)
+    .setOAuthConsumerSecret(Const.CONSUMER_SECRET)
+    .setOAuthAccessToken(oauthAccessToken)
+    .setOAuthAccessTokenSecret(oAuthAccessTokenSecret)
+    .build();
+}","Yes, this can be considered a common coding pattern as it is frequently used in OAuth authentication for accessing APIs. The code retrieves the OAuth access token from shared preferences, sets up the configuration object for OAuth authentication with the API by providing the necessary consumer key and secret, and finally builds the configuration object. This pattern is often used in many different API integrations and is considered best practice for securing access to APIs."
+113,new_completion_result_lib_15_combine1.pkl,"if (isConnected()){
+    buttonLogin.setText(R.string.label_disconnect);
+    String oauthAccessToken = mSharedPreferences.getString(Const.PREF_KEY_TOKEN, """");
+}","Yes, it can be considered a common coding pattern or code idiom because it checks for connectivity and updates the UI accordingly. It also retrieves the OAuth access token from the shared preferences to be used for further requests. This pattern is commonly used in mobile app development and follows the best practices of handling network connections and authentication."
+118,new_completion_result_lib_15_combine1.pkl,int result = 31 * start + (name != null ? name.hashCode() : 0);,"Yes, it can be considered a common coding pattern or code idiom known as the ""hash code algorithm"". This pattern is often used to generate unique hash codes for objects based on their contents, which can then be used to compare or identify them. The specific implementation used in this code (multiplying a constant by a starting value and adding in the hash code of another object) is a widely-used and accepted approach that is optimized for speed and minimizes collisions."
+119,new_completion_result_lib_15_combine1.pkl,"int result = start;
+if (screenName != null) {
+   result = 31 * result + screenName.hashCode();
+} else {
+   result = 31 * result;
+}","Yes, it can be considered a common coding pattern or code idiom as it follows the implementation of the hashcode method for Java objects. This pattern is often used to generate an integer hash value based on the fields of an object. The multiplication by 31 provides a good balance between hash generation speed and avoidance of hash collisions. The null check is also a common practice to ensure that the value being hashed is not null, which could cause a NullPointerException."
+120,new_completion_result_lib_15_combine1.pkl,"```
+int result = start;
+for (int i = 0; i < length; i++) {
+    long id = data[i].getId();
+    result = 31 * result + (int) (id ^ (id >>> 32));
+}
+```","Yes, it can be considered a common coding pattern because it is a way of generating a consistent hash code for an object based on its properties. The use of the number 31 as a multiplier is also a well-known and frequently used practice in generating hash codes. Additionally, the use of bit shifting and XOR operations is a common method of combining values to generate a hash code."
+125,new_completion_result_lib_15_combine1.pkl,"if (mPrefs.contains(PREF_ACCESS_TOKEN)){
+    // Code fragment 2 goes here
+} else {
+    // Code fragment 1 goes here
+}","Yes, it can be considered a common coding pattern or code idiom because it is a conditional statement that checks whether a specific preference key exists in shared preferences or not. This pattern is often used in Android programming to determine whether a user is logged in or not by checking the existence of a token or other authentication credentials. It allows developers to easily control the behavior of an application based on the user's authentication status."
+131,new_completion_result_lib_15_combine1.pkl,"View view;
+if (convertView == null){
+   view = layoutInflater.inflate(R.layout.tweet_row, null);
+} else {
+   view = convertView;
+}","Yes, it can be considered a common coding pattern or code idiom. This code is checking whether there is an existing view that can be reused or whether a new view needs to be created by inflating the layout from an XML file. This approach is commonly used in Android development to optimize the performance of lists or other similar UI components. By reusing existing views instead of creating new ones every time, it reduces the time and resources needed for rendering the UI components. This pattern is known as the ViewHolder pattern and is widely used in Android Development."
+135,new_completion_result_lib_15_combine1.pkl,"if (status != null){
+    screenName = (TextView) view.findViewById(R.id.row_screen_name);
+    screenName.setText(TweetManager.getTweetName(status));
+}","Yes, it can be considered a common coding pattern or code idiom. The code checks if the status object is not null before accessing its properties, and if it is not null, it sets the text of a TextView to the value returned by a method call to a TweetManager class. This pattern is commonly used in Android development to avoid null pointer exceptions and ensure that the app does not crash if the expected data is not present."
+136,new_completion_result_lib_15_combine1.pkl,"[View view = convertView; if (convertView == null) {if (status != null){createdAt = (TextView) view.findViewById(R.id.row_created_at);createdAt.setText("" "" + formatDateText);}}}]","Yes, it can be considered a common coding pattern or code idiom. It follows the pattern of checking if a reusable view (convertView) is available for reuse, and if not, inflating a new view. Additionally, it performs some logic to set the text of a specific TextView if a certain condition is met. This pattern is often used in Android development to improve the performance of ListView and RecyclerView implementations."
+137,new_completion_result_lib_15_combine1.pkl,"if (status != null){
+    screenName = (TextView) view.findViewById(R.id.row_screen_name);
+    screenName.setText(TweetManager.getTweetName(status));
+
+    createdAt = (TextView) view.findViewById(R.id.row_created_at);
+    createdAt.setText("" "" + formatDateText);
+}","Yes, it can be considered a common coding pattern or code idiom because it checks if the status object is not null before proceeding to set text to the screenName and createdAt TextViews. This is a common practice to avoid NullPointerExceptions in Java and similar languages. Additionally, initializing the UI elements with findViewById is also a commonly used approach in Android development. Therefore, this block of code can be considered a standard way of setting text to TextViews in Android apps."
+138,new_completion_result_lib_15_combine1.pkl,"if (convertView == null) {
+   view = layoutInflater.inflate(R.layout.tweet_row, null);
+   if (status != null) {
+      createdAt = (TextView) view.findViewById(R.id.row_created_at);
+      createdAt.setText("" "" + formatDateText);
+   }
+}","Yes, it can be considered a common coding pattern or code idiom in Android development. The code checks if a previously created view (convertView) exists and if not, it inflates a new view from a layout resource file (R.layout.tweet_row). It then sets the value of a text view based on the status object, if it exists. This pattern is often used in list adapters to efficiently reuse views and improve performance."
+140,new_completion_result_lib_15_combine1.pkl,"[View view = convertView;
+if (view == null){
+    view = layoutInflater.inflate(R.layout.tweet_row, null);
+}]","Yes, it can be considered a common coding pattern or code idiom because it follows the practice of reusing existing view instances in order to improve application performance and avoid creating unnecessary instances. The code checks if the convertView is null before inflating a new view instance, which is a common approach in Android application development. Therefore, this code pattern can be found in many Android apps and is considered a best practice."
+141,new_completion_result_lib_15_combine1.pkl,"if (convertView == null){
+   view = layoutInflater.inflate(R.layout.tweet_row, null);
+   if (status != null){
+      screenName = (TextView) view.findViewById(R.id.row_screen_name);
+      screenName.setText(TweetManager.getTweetName(status));
+   }
+} else {
+   view = convertView;
+}","Yes, it can be considered a common coding pattern or code idiom because it follows the standard practice for inflating views in Android, where if the convertView is null, the view is inflated from XML layout and if it is not null, it is reused instead of inflating a new one. Additionally, it also includes updating the values of the views based on the data, which is a common practice in Android development."
+143,new_completion_result_lib_15_combine1.pkl,"if (status != null){
+    screenName = (TextView) view.findViewById(R.id.row_screen_name);
+}
+if (convertView == null){
+    view = layoutInflater.inflate(R.layout.tweet_row, null);
+}","Yes, it can be considered a common coding pattern or code idiom because it is a conditional statement that checks for a specific condition (status not being null) and performs an action based on that condition (setting the screenName text view). It also uses a common technique of checking if the convertView is null before inflating a layout, which helps with performance by reusing existing views instead of creating new ones unnecessarily."
+144,new_completion_result_lib_15_combine1.pkl,"if (convertView == null) {
+  view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
+}
+
+if (status != null) {
+  screenName = (TextView) view.findViewById(R.id.row_screen_name);
+}","Yes, it can be considered a common coding pattern or code idiom because it follows the best practice of using a ViewHolder pattern and efficiently reusing views in a ListView or RecyclerView. The pattern checks if the convertView is null and if it is, inflates the view from the layout XML file. It also sets up the screenName TextView if it is not null. This helps to reduce memory usage and provides smoother scrolling performance."
+147,new_completion_result_lib_15_combine1.pkl,"if (convertView == null){
+    view = layoutInflater.inflate(R.layout.tweet_row, null);
+    if(status != null){
+        screenName = (TextView) view.findViewById(R.id.row_screen_name);
+    }
+}","Yes, it can be considered a common coding pattern or code idiom in Android development. This pattern is commonly used to efficiently reuse views in a ListView or RecyclerView. The convertView parameter is used to check if a view has already been created and can be reused, which saves resources and improves performance. The LayoutInflater is used to inflate the layout file for a row in the list. Finally, the findViewById method is used to retrieve specific views within the row layout. This pattern is used throughout Android development and is considered good practice."
+149,new_completion_result_lib_15_combine1.pkl,"Log.d(TAG, ""Transforming Statuses "" + ""to Tweets :"" + messages.size());{}
+","Yes. 
+
+This can be considered a common coding pattern or code idiom because it is a print statement that is often used to log and debug code during development. The statement follows the standard logging format in Android development and accurately describes the process being executed by the code. It also includes relevant information, such as the size of the messages list, which can be useful when troubleshooting issues in the code. Overall, it is a concise and clear statement that effectively communicates the purpose of the code."
+150,new_completion_result_lib_15_combine1.pkl,"Log.d(TAG, ""Transforming Statuses to Tweets :"" + messages.size());
+for (twitter4j.Tweet message : messages){
+    // code to transform statuses to tweets
+}
+Log.d(TAG, ""Tweets to tweets transformation done."");","Yes, it can be considered a common coding pattern or code idiom. 
+
+This code snippet follows the ""for-each loop"" pattern in Java, which is a common coding practice for iterating through collections such as arrays, lists or sets. The first log statement before the loop and the second one after it also follow a common coding practice of logging events or actions in the code for debugging or tracking purposes. Therefore, this code snippet demonstrates the use of common coding patterns and idioms."
+151,new_completion_result_lib_15_combine1.pkl,"try {
+   Paging page = new Paging(1);
+   do {
+       for (DirectMessage message : directMessages) {
+           System.out.println(""To: @"" + message.getRecipientScreenName() + "" id:"" + message.getId() + "" - "" + message.getText());
+       }
+       directMessages = twitter.getSentDirectMessages(page);
+       page.setPage(page.getPage() + 1);
+   } while (directMessages.size() > 0 && page.getPage() < 10);
+}","Yes, it can be considered a common coding pattern. 
+
+The code is an example of using pagination to retrieve information from an API that may have more results than can be returned in a single request. Using a do-while loop to iterate through the pages until all results have been retrieved is a common pattern in API integration. The use of a paging object to track the current page and set the next page to retrieve is also a common idiom. Overall, this code demonstrates good coding practices in handling an API's data retrieval limitations."
+152,new_completion_result_lib_15_combine1.pkl,"try{
+    AccessToken accessToken = twitter.getOAuthAccessToken(currentRequestToken, pin);
+} catch(TwitterException e){
+    throw new RuntimeException(""Unable to authorize user"", e);
+}","Yes, it can be considered a common coding pattern or code idiom because it is a typical way that developers handle the authentication flow when using the Twitter API. It involves requesting an access token using a previously obtained request token and the user's input PIN, and catching any exceptions that may occur in the process. This pattern allows the developer to handle errors and exceptions gracefully and inform the user of any issues that occur during the authentication process."
+158,new_completion_result_lib_15_combine1.pkl,result = 31 * result + someValue.hashCode();,"Yes, it can be considered a common coding pattern or code idiom because it is frequently used in implementing hash code methods for classes in Java. This pattern involves multiplying the current hash code by a prime number (31 is a common choice), and adding the hash code of the next field or value to the result. This helps to distribute the hash code values more evenly and reduces the likelihood of collisions. It is widely used in the implementation of hashCode() method for Objects in Java."
+161,new_completion_result_lib_15_combine1.pkl,"try{
+  config.testWhileIdle = true;
+  config.numTestsPerEvictionRun = -1;
+} 
+catch(Exception e){
+  System.out.println(""An error occurred: ""+ e.getMessage());
+}","Yes, it is a common coding pattern. 
+
+This code snippet is an example of error handling in Java. The try-catch block is a commonly used construct in Java to handle exceptions that may occur during program execution. The specific code within the try block attempts to set two configuration parameters on an instance of a class, and if an exception is thrown (i.e. if the configuration parameters cannot be set for some reason), the catch block will execute and print an error message to the console.
+
+Overall, this code pattern is commonly seen in Java codebases and is considered good practice for handling potential errors in a program."
+162,new_completion_result_lib_15_combine1.pkl,"try{
+  config.minEvictableIdleTimeMillis = 60000;
+  config.numTestsPerEvictionRun = -1;
+} 
+catch(Exception e){
+  System.out.println(""Error: "" + e.getMessage());
+}","Yes, it can be considered a common coding pattern or code idiom. This code block is setting configuration options for connection pool eviction in a Java application. The use of a try-catch block is also a common pattern for handling exceptions in Java code. Overall, the code follows best practices for connection pool management in Java applications."
+163,new_completion_result_lib_15_combine1.pkl,"if (mRequestToken != null){
+   // do nothing
+} else{
+   if(someCondition){
+      setResult(Activity.RESULT_OK, mIntent);
+   } else{
+      Toast.makeText(mContext, R.string.fail, Toast.LENGTH_LONG).show();
+   }
+}","Yes, it can be considered a common coding pattern or code idiom because it checks for the existence of a request token and then executes different actions based on a condition. This is a common and standard structure used in various programming languages and frameworks."
+164,new_completion_result_lib_15_combine1.pkl,"if (mRequestToken != null){
+    // do something when mRequestToken is not null
+} else {
+    // do something when mRequestToken is null
+    Toast.makeText(mContext, R.string.fail, Toast.LENGTH_LONG).show(); // Code fragment 1
+    setResult(Activity.RESULT_OK, mIntent); // Code fragment 2
+}","Yes. 
+
+The code fragment 1 and code fragment 2 are executed based on the value of mRequestToken. It is a common coding pattern to check for a variable's value before performing certain actions. The use of conditional statements is a fundamental concept in programming and this specific pattern is commonly utilized. Also, providing alternative pathways based on a condition is a crucial part of error handling, which is a common necessity in programming."
+165,new_completion_result_lib_15_combine1.pkl,"try {
+   mRequestToken = mTwitter.getOAuthRequestToken(CALLBACK_URL);
+} catch (TwitterException e) {
+   Log.d(LOG_TAG, ""Cannot get request token: "" + e.getMessage());
+}","Yes, it can be considered a common coding pattern or code idiom because it is used to handle exceptions that may occur during the process of getting an OAuth request token from Twitter API. The try-catch block is a standard way of handling exceptions in Java programming language and is commonly used in similar situations."
+167,new_completion_result_lib_15_combine1.pkl,"if (uri != null){
+  try{
+    if (mAccessToken != null){
+      editor.putString(Main.PREF_ACCESS_TOKEN, mAccessToken.getToken());
+    }
+    SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(mContext);
+    Toast.makeText(mContext, R.string.success, Toast.LENGTH_LONG).show();
+  } catch (Exception e){
+    e.printStackTrace();
+  }
+}","Yes, it can be considered a common coding pattern or code idiom. The code checks if a URI is not null, and then attempts to save an access token to shared preferences, followed by displaying a success toast message. In the case of an exception, it is caught and printed to the console. This pattern of checking for null values, handling exceptions, and using shared preferences and toast messages is commonly used in Android development."
+189,new_completion_result_lib_15_combine1.pkl,"Linkify.addLinks(holder.text_tweet, Linkify.ALL);
+Linkify.addLinks(holder.text_tweet, screenNameMatcher, Constants.SCREEN_NAME_URI.toString() + ""/"");
+imageLoader.displayImage(screenName, holder.image_profile);","As an AI language model, I cannot completely understand the implication of the code. However, based on the given code snippet, it can be considered a common coding pattern or code idiom that involves linking urls and displaying images based on the screen name. Therefore, the answer is ""yes."" This pattern is commonly used in Android programming for displaying tweets or other social media posts with linked URLs and profile images. It is a typical way of enhancing the user experience for better engagement with the app."
+191,new_completion_result_lib_15_combine1.pkl,"holder.text_tweet.setTypeface(mTypeface);
+holder.text_time.setTypeface(mTypeface);
+holder.text_screenname.setTypeface(mTypeface);
+Linkify.addLinks(holder.text_tweet, Linkify.ALL);","Yes, it can be considered a common coding pattern or code idiom because it involves setting the typeface for multiple TextViews and linkifying one of them using a common method. This pattern is often used in Android development to style and format text views and add clickable links."
+194,new_completion_result_lib_15_combine1.pkl,"imageLoader.displayImage(screenName, holder.image_profile); is present in both code fragments.","Yes, it can be considered a common coding pattern as it is used to display an image using a third-party library like Universal Image Loader. This pattern is used in many Android applications to load and display images efficiently. It abstracts away the complexity of image loading and caching, making it easier for developers to display images in their applications. Therefore, it can be considered a code idiom."
+195,new_completion_result_lib_15_combine1.pkl,"final ResponseList<User> users = twitter.searchUsers(mQuery, mPage);
+for (User user : users) {
+    result.add(new ParcelableUser(user, mAccountId, (mPage - 1) * 20 + i));
+}","Yes, this can be considered a common coding pattern or code idiom as it follows a common structure of searching for users with a given query and page number, then iterating through the result list and adding each user to a final result list in a specific format. This structure can be seen in similar search functions across various programming languages and APIs."
+197,new_completion_result_lib_15_combine1.pkl,"List<ParcelableUser> result = new ArrayList<ParcelableUser>();
+for (int i = 0; i < size; i++){
+  result.add(new ParcelableUser(users.get(i), mAccountId, (mPage - 1) * 20 + i));
+}","Yes, this can be considered a common coding pattern or code idiom. It involves looping through a list of objects and adding each object to a new list while performing some additional manipulation on each object before adding it to the new list. This pattern is commonly used in programming when working with collections of objects."
+198,new_completion_result_lib_15_combine1.pkl,"final ResponseList<User> users = twitter.searchUsers(mQuery, mPage);
+final int size = users.size();
+for (int i = 0; i < size; i++){
+    if (users.get(i) != null) {
+        result.add(new ParcelableUser(users.get(i), mAccountId, (mPage - 1) * 20 + i));
+    }
+}","Yes, it can be considered a common coding pattern or code idiom. 
+
+This code snippet follows common practices for iterating over a list of objects, checking for null values, and creating new objects based on the contents of each element. These are all fundamental concepts in Java programming and are widely used in many contexts. Therefore, it can be considered a common coding pattern or code idiom."
+210,new_completion_result_lib_15_combine1.pkl,"for (int i=0;i<statuses.size();i++){
+    cv.put(EliGDatabase.TWEET_USER_COL, user.getName());
+    cv.put(EliGDatabase.TWEET_COL, tweetText);
+}","Yes, this code can be considered a common coding pattern or code idiom because it is a commonly used structure for iterating through a list or array of objects and performing a specific action on each object. In this case, the action is to add data to a SQLite database using ContentValues. This pattern is also known as a ""for each"" loop or a ""for-in"" loop in other programming languages."
+212,new_completion_result_lib_15_combine1.pkl,"ContentValues[] contentValues=new ContentValues[statuses.size()];
+for (int i=0;i<statuses.size();i++){
+    ContentValues cv = new ContentValues();
+    cv.put(EliGDatabase.TWEET_USER_COL, user.getName());
+    contentValues[i]=cv;
+}
+cr.bulkInsert(EliGContentProvider.TWEET_USER_CONTENT_URI, contentValues);","Yes, it can be considered a common coding pattern or code idiom as it involves creating ContentValues objects and inserting them in bulk to a ContentProvider. This is a frequently used pattern in Android development while working with ContentProviders and ContentValues."
+218,new_completion_result_lib_15_combine1.pkl,"try {
+  if (conf.isJSONStoreEnabled()) {
+    for (int i = 0; i < size; i++) {
+      JSONObject userListJson = list.getJSONObject(i);
+    }
+  }
+} catch (JSONException e) {
+  e.printStackTrace();
+}","Yes, this can be considered a common coding pattern or code idiom as it demonstrates the use of a try-catch block to handle potential exceptions that may occur when attempting to access a JSON object. This pattern is often used in code involving JSON parsing to ensure that the program does not break or crash when encountering unexpected data. Additionally, the use of a conditional statement before accessing the JSON object ensures that the code is only executed when a specific condition is met, further improving its robustness."
+221,new_completion_result_lib_15_combine1.pkl,"try{
+   JSONObject json = res.asJSONObject();
+   JSONArray list = json.getJSONArray(""lists"");
+   int size = list.length();
+   PagableResponseList<UserList> users = new PagableResponseListImpl<UserList>(size, json, res);
+   if (conf.isJSONStoreEnabled()){
+      DataObjectFactoryUtil.registerJSONObject(users, json);
+   }
+   for (int i = 0; i < size; i++){
+      // code to process each UserList object in the PagableResponseList
+   }
+}","Yes, it can be considered a common coding pattern or code idiom because it follows the standard structure of parsing a JSON response, iterating through a list/array, and processing each object in the list/array. The use of a PagableResponseList to handle pagination is also a common practice in APIs that return large datasets. Additionally, the conditional check for JSON storage and use of a factory method to register the JSON object also demonstrate good coding practices for managing JSON data in Java."
+225,new_completion_result_lib_15_combine1.pkl,"try{
+  int size = list.length();  
+  PagableResponseList<UserList> users = new PagableResponseListImpl<UserList>(size, json, res);
+  for (int i = 0; i < size; i++){
+    JSONObject userListJson = list.getJSONObject(i);
+    UserList userList = new UserListJSONImpl(userListJson);
+    if (conf.isJSONStoreEnabled()){
+      DataObjectFactoryUtil.registerJSONObject(userList, userListJson);
+    }
+  }
+}","Yes, it can be considered a common coding pattern or code idiom. The code initializes a list and populates it with objects from a JSON object. This is a common pattern in dealing with JSON data in Java. The loop iterates through the JSON object and creates a new UserList object for each element in the list. The code also includes a conditional statement that checks if JSON storage is enabled and registers the created UserList objects in the JSON store. This pattern is often used in Java-based web applications for handling JSON data."
+235,new_completion_result_lib_15_combine1.pkl,int result = (31 * ((int) (targetUserId ^ (targetUserId >>> 32)))) + (sourceFollowingTarget ? 1 : 0);,"Yes, it can be considered a common coding pattern or code idiom. This is because it is using bit shifting and logical operators to efficiently generate a hash code for an object. This is a commonly used technique in many programming languages for generating hash codes. Additionally, the use of ternary operator is also a common pattern in many programming languages for performing conditional assignment of values."
+237,new_completion_result_lib_15_combine1.pkl,"int result = (int) (targetUserId ^ (targetUserId >>> 32));
+result = 31 * result + (sourceFollowingTarget ? 1 : 0);","Yes, it can be considered a common coding pattern or code idiom because it combines bitwise operations and arithmetic operations to create a hash code that efficiently represents a unique identifier for a specific object or entity. This approach is frequently used in various programming languages, and it is often recommended by best practices and coding standards. By using this pattern, developers can ensure that their code is optimized for performance, memory usage, and reliability, which are critical factors in many software applications."
+241,new_completion_result_lib_15_combine1.pkl,"try{ JSONArray list = res.asJSONArray();     int size = list.length();
+   ResponseList<Relationship> relationships = new ResponseListImpl<Relationship>(size, res);
+   if(list != null){
+      for (int i = 0; i < list.length(); i++){
+         JSONObject json = list.getJSONObject(i);
+         Relationship relationship = new Relationship(json);
+         relationships.add(relationship);
+      }
+   }
+}catch(Exception e){
+   e.printStackTrace();
+}","Yes, it can be considered a common coding pattern or code idiom. This code block follows the pattern of iterating through a list of JSON objects, creating corresponding objects in Java, and adding them to a list. This is a common pattern in JSON parsing and object creation in Java. The try-catch block is also a common pattern for handling exceptions that may occur during the parsing process. Overall, this code block demonstrates a common approach to parsing JSON data in Java."
+245,new_completion_result_lib_15_combine1.pkl,"try {
+
+  Twitter svc = buildUblogService(arguments);
+
+  if (log().isDebugEnabled()) {
+
+    log().debug(""Dispatching microblog notification for user '"" + svc.getUserId() + ""' at base URL '"" + svc.getBaseURL() + ""' with message '"" + messageBody + ""'"");
+
+  }
+
+  response = svc.updateStatus(messageBody);
+
+  log().info(""Microblog notification succeeded: update posted with ID "" + response.getId());
+
+} catch (TwitterException e) {
+
+  log().info(""Failed to update status for user '"" + svc.getUserId() + ""' at service URL '"" + svc.getBaseUrl() + ""', caught exception: "" + e.getMessage());
+
+}","Yes, this code block can be considered a common coding pattern. It follows the try-catch block structure commonly used for error handling and uses logging statements to provide information about the execution of the code. Additionally, it demonstrates the use of a third-party service (Twitter) and uses its methods for updating a status and handling exceptions."
+249,new_completion_result_lib_15_combine1.pkl,"for (StreamListener listener : listeners){
+    if(listener instanceof UserStreamListener){
+        ((UserStreamListener) listener).onFavorite(asUser(source), asUser(target), asStatus(targetObject));
+    }
+}","Yes, it can be considered a common coding pattern or code idiom. This pattern is called ""Polymorphic Dispatch"" or ""Dynamic Dispatch"". It enables the program to determine which implementation of a method to run based on the actual type of the object at runtime. In this case, the program checks if the listener is an instance of the UserStreamListener interface using the ""instanceof"" operator and casts it to invoke the onFavorite method. This helps to achieve loose coupling and enhances the flexibility and extensibility of the code."
+251,new_completion_result_lib_15_combine1.pkl,"while (true) {
+  timer++;
+  if (duration > 10) {
+    duration = 100 - timer / 50;
+  }
+  if (timer % duration == 0) {
+    if (stackEnemiesUrls.size() > 0) {
+      e.velocityX += timer / 500;
+      e.active = true;
+    }
+  }
+  if (timer % 2 == 0 && isBullet) {
+    // insert code for bullet actions here
+  }
+}","As an AI language model, I cannot ascertain the frequency of use of this specific section of code. However, it looks like a common coding pattern for tracking time and conditionally performing actions based on the timer value and other conditions. Therefore, the answer is yes."
+254,new_completion_result_lib_15_combine1.pkl,"[kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
+kbase.addKnowledgePackages(kbuilder.add(ResourceFactory.newClassPathResource(rulesFile), ResourceType.DRL ).getKnowledgePackages());]","Yes, it can be considered a common coding pattern or code idiom used in Drools to create a knowledge base and load rules from a specified DRL file. The code snippet is used for knowledge base initialization and package addition, which is a common practice in Drools-based applications. Moreover, this pattern allows developers to separate business rules from the application code, making them more maintainable and flexible to changes."
+255,new_completion_result_lib_15_combine1.pkl,"[kbuilder.add(ResourceFactory.newClassPathResource(rulesFile), ResourceType.DRL);
+KnowledgeBaseConfiguration conf = KnowledgeBaseFactory.newKnowledgeBaseConfiguration();
+conf.setOption(EventProcessingOption.STREAM);
+KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase(conf);]","Yes, it can be considered a common coding pattern or code idiom because it follows standard practices in creating and configuring a knowledge base in a Drools-based application. It involves using the KnowledgeBaseConfiguration to set the EventProcessingOption to STREAM, which is a common requirement for real-time or stream processing applications. Also, using ResourceFactory and KnowledgeBaseFactory to create new instances of resources and knowledge bases is a standard practice in Drools-based applications."
+256,new_completion_result_lib_15_combine1.pkl,"KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
+kbuilder.add(ResourceFactory.newClassPathResource(rulesFile), ResourceType.DRL);
+if (kbuilder.hasErrors()) {
+    throw new RuntimeException(""Error building rules: "" + kbuilder.getErrors().toString());
+}
+KnowledgeBase kbase = KnowledgeBaseFactory.newKnowledgeBase();
+kbase.addKnowledgePackages(kbuilder.getKnowledgePackages());","Yes, it can be considered a common coding pattern because it follows the best practice of creating a KnowledgeBuilder, adding rules to it, checking for errors, and using a KnowledgeBase to manage the knowledge packages. This pattern is widely used in rule-based systems and promotes modularity, maintainability, and reusability."
+260,new_completion_result_lib_15_combine1.pkl,"if(user != null && (System.currentTimeMillis() - lastMessage > ONE_MIN)){
+    lastMessage = System.currentTimeMillis();
+    User user = status.getUser();
+}","Yes, it can be considered a common coding pattern or code idiom. 
+
+This code snippet checks if the user is not null and if the time difference between the current time and the last message time is greater than one minute. If both conditions are true, it updates the last message time and assigns the value of the status user to a local variable named user.
+
+This pattern is commonly used in real-time messaging applications to avoid spamming or flooding the system with excessive messages from the same user. It ensures that a user can only send a message after a specific interval, preventing them from sending multiple messages within a short period. Therefore, it can be considered a commonly used code idiom."
+262,new_completion_result_lib_15_combine1.pkl,if(User user = status.getUser(); user != null && (System.currentTimeMillis() - lastMessage > ONE_MIN)){},"Yes, it can be considered a common coding pattern or code idiom. This code snippet checks if the user object is not null and if the last message was sent more than one minute ago, which is a common check in many applications. The use of System.currentTimeMillis() is also a standard way to get the current time in Java, making this code a recognizable pattern."
+265,new_completion_result_lib_15_combine1.pkl,"if(user != null && (System.currentTimeMillis() - lastMessage > ONE_MIN)){
+    lastMessage = System.currentTimeMillis();
+}","Yes, it can be considered a common coding pattern or code idiom as it checks for both user object not being null and the time elapsed since the last message being greater than one minute before performing a certain action. This is a frequent requirement in many applications and systems to ensure that the application doesn't crash or produce undesirable results if a user object is null or if messages are being sent too frequently. Thus, this pattern is often used to ensure the correctness and reliability of the code."
+272,new_completion_result_lib_15_combine1.pkl,"twitterStream.addListener(new StatusListener(){
+  @Override
+  public void onException(Exception arg0){}
+  @Override
+  public void onTrackLimitationNotice(int arg0){}
+  @Override
+  public void onStatus(Status status){
+    HashtagEntity[] hashtagEntities = status.getHashtagEntities();
+    String screenName = status.getUser().getScreenName();
+    User user = status.getUser();
+    if(user != null && (System.currentTimeMillis() - lastMessage > ONE_MIN)){
+      logger.info(""diablobird onstatus:""+screenName+"",""+status.getText());
+      lastMessage = System.currentTimeMillis();
+      String tweet = ""Hey @""+screenName+""! You can buy Diablo III from Amazon and play right now!. It's $59.99! http:"";
+      int action = (int)(ACTION_TYPES * Math.random());
+      switch (action){
+        case REGULAR_TWEET:
+          announcerMgr.announceForDiabloBird(status.getText());
+          break;
+        case RETWEEET:
+          announcerMgr.retweetForDiabloBird(status.getId());
+        case FAVOURITE:
+          announcerMgr.favouriteForDiabloBird(status.getId());
+        default:
+          announcerMgr.replyForDiabloBird(tweet, status.getId());
+      }
+    }
+  }
+  @Override
+  public void onScrubGeo(long arg0, long arg1){}
+  @Override
+  public void onDeletionNotice(StatusDeletionNotice arg0){}
+});
+
+Announcer announcer = announcerMgr.randomAnnouncerData();
+twitterStream.setOAuthConsumer(announcer.getConsumerKey(), announcer.getConsumerSecret());
+twitterStream.setOAuthAccessToken(new AccessToken(announcer.getAccessToken(), announcer.getAccessTokenSecret()));","Yes, this can be considered a common coding pattern or code idiom. It follows the Observer pattern by using a listener interface to handle events that occur within the stream of tweets. It also shows the use of OAuth authentication to access the Twitter API, which is a common practice for applications that interact with user data on third-party platforms. Additionally, the code uses switch statements to handle different possible actions, which is a common coding pattern for branching logic."
+273,new_completion_result_lib_15_combine1.pkl,"FilterQuery filterQuery = new FilterQuery();
+filterQuery.track(FILTER_TERMS);
+filterQuery.count(0);","Yes, this can be considered a common coding pattern because it is a standard way to create a filter query with specified terms and count set to zero. This pattern can be used for various applications that require filtering of data based on specific terms. Additionally, it follows a standard syntax that is easy to understand and implement, making it a popular choice among developers."
+274,new_completion_result_lib_15_combine1.pkl,"[String message = ""@"" + screenName + "" "" + getRandomMessage(lang);]","Yes, it can be considered a common coding pattern or code idiom. 
+
+This line of code concatenates strings to form a message that includes a Twitter screen name and a randomly selected message in a specific language. This pattern of concatenating strings is a common practice in programming and is often used to construct messages, prompts, and other types of user interfaces. The use of a function to randomly select a message based on a language parameter is also a common coding practice. Overall, this line of code represents a straightforward and readable implementation of common coding patterns."
+275,new_completion_result_lib_15_combine1.pkl,"String message = ""@"" + screenName;
+for(HashtagEntity hashtagEntity : hashtagEntities){
+    message += "" #"" + hashtagEntity.getText();
+}","Yes, it can be considered a common coding pattern or code idiom. It is a common practice to concatenate strings in a loop or with multiple variables using the + or += operators. This particular code idiom is used to add a username (screen name) and hashtags to a message, which is a common task in social media applications."
+278,new_completion_result_lib_15_combine1.pkl,"int randomAdsIndex = (int)(Math.random() * Integer.parseInt(lutil.get(""ads.size"", LocalizationUtil.DEFAULT_LANGUAGE)));
+String adText = lutil.get(""ads."" + randomAdsIndex, lang);","Yes, it can be considered a common coding pattern or code idiom. 
+
+This code follows the pattern of using the Math.random() method to generate a random number within a specific range, and then accessing a collection of items (in this case, advertisements) using that randomly generated index. This pattern is frequently used in programming when working with collections or arrays of items, and is often referred to as ""random selection"" or ""random access."" Additionally, the use of a LocalizationUtil class to access different languages is also a common pattern in internationalization and localization of software."

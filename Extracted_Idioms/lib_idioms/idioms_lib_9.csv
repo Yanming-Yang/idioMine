@@ -1,0 +1,117 @@
+,pro/lib,idiom,final
+0,new_completion_result_lib_9_combine1.pkl,lookup.setNextReader(reader);,"Yes, it can be considered a common coding pattern because it is frequently used in Lucene and other search engines to improve performance by reusing searchers and readers. It is also used in other contexts where data is indexed and searched, such as databases and web applications. The method call sets the next reader for a search or indexing operation, allowing it to continue processing data without having to start from the beginning. This can save time and resources, and is therefore a widely used optimization technique in search and other data processing applications."
+,,SearchLookup lookup = searchContext.lookup();lookup.setNextReader(reader);lookup.setNextDocId(docId);List<Object> values = lookup.source().extractRawValues(mapper.names().sourcePath());,"Yes, it can be considered a common coding pattern because it is a sequence of code instructions that are commonly used together in various contexts and applications. The sequence involves creating a lookup object, setting the reader and document ID for the lookup, and extracting raw values using a mapper object. This code pattern is used to retrieve specific data from a larger dataset and can be adapted to different scenarios by modifying the sourcePath parameter or adding additional lookup and mapper objects"
+,,"Field[] fields = new Field[values.size()];for (int i = 0; i < values.size(); i++){fields[i] = new Field(mapper.names().indexName(), values.get(i).toString(), Field.Store.NO, Field.Index.ANALYZED);}return fields;","Yes, it can be considered a common coding pattern or code idiom. This code creates an array of Field objects and populates it using a loop. This pattern is used extensively in Java programming to create and initialize arrays of objects. Additionally, the use of a loop to iterate over a collection and perform a set of actions on each item is also a common coding pattern. Overall, this code uses well-established programming constructs and patterns that are commonly used in Java development"
+,,while (it.hasNext()){sb.append(prefix).append(it.next()).append(suffix);},"This pattern is commonly used to build strings from collections of values in Java. It is often used to concatenate strings with a separator, for example, to build a comma-separated list of values.
+
+The specific code in the fragment may differ, depending on the specific project and requirements, but the overall pattern of iterating over a collection and building a string is a common one in Java programming."
+,,"tokenizeToStringArray(str, delimiters, true, true);","Yes, the code fragment you provided is a common coding pattern that can occur in multiple Java projects.
+
+The tokenizeToStringArray method is a static method from the org.springframework.util.StringUtils class, which is commonly used in Spring Framework-based Java projects. It takes a string, a set of delimiters, and two boolean flags as input, and returns an array of strings.
+
+The tokenizeToStringArray method is used to split a string into an array of tokens based on the given delimiters, and to remove any empty tokens and trim whitespace from the remaining tokens."
+,,"BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), Helper.UTF8));",The code fragment you provided is a common coding pattern in Java and is used to create a BufferedWriter object that writes characters to a file using a specified character encoding.
+,,SmileParser parser = SmileXContent.smileFactory.createJsonParser(content);,"Yes, the code fragment you provided is a common coding pattern that can occur in multiple Java projects.
+
+The code creates a SmileParser object by using the Jackson library's SmileXContent API to create a parser that reads content in the SMILE binary format, which is a compact binary encoding of JSON. The created parser can then be used to parse SMILE-encoded JSON content."
+,,"try{} catch (Exception e){throw new QueryBuilderException(""Failed to build query"", e);}",
+,,"binder = binder.skipSources(Names.class);for (Enumeration<?> e = properties.propertyNames(); e.hasMoreElements(); ){String value = properties.getProperty(propertyName);binder.bind(Key.get(String.class, new NamedImpl(propertyName))).toInstance(value);}","The code fragment you have provided is using the Google Guice framework to bind properties. It is a common pattern in Java projects that use Guice for dependency injection. The code binds each property defined in a Java Properties object to an instance of a String class, using the property name as the binding key. The skipSources method is called on the binder object to avoid binding the Names class to any implementation.
+
+While this specific code fragment may not appear in every Java project, it is a common pattern in projects that use the Guice framework for dependency injection."
+,,result = 31 * result + (pathElements != null ? Arrays.hashCode(pathElements) : 0);,"Yes, the code fragment you provided is a common coding pattern that can occur in multiple Java projects.
+
+This code is used to compute a hash code for an object based on its fields. The hash code is used to determine the object's position in a hash table, which can improve the performance of certain operations such as searching and indexing."
+,,"catch (IOException e){throw new ElasticSearchParseException(""failed to decompress source"", e);}","The ElasticSearchParseException could be a custom exception class defined in the project, or it could be part of an external library or framework that is being used. The use of catch blocks and exception handling is a common practice in Java programming to ensure that errors are caught and handled gracefully, and this pattern can be found in many Java projects.
+
+
+
+
+
+"
+,,"System.arraycopy(b, offset, buf, count, length);","System.arraycopy() is a standard Java API method that has been available since Java 1.0, so it is widely used and supported across different Java versions and implementations."
+,,"for (SearchHit hit : response.getHits()){System.out.println(hit.getId() + "": "" + hit.sourceAsMap().keySet());
+        for (HighlightField field : hit.getHighlightFields().values()){System.out.println("" "" + Arrays.asList(field.fragments()));}
+};}","the code fragment demonstrates common Java programming techniques such as looping, string concatenation, and method invocation, and is likely to be found in many Java projects that use the Elasticsearch Java API for search and indexing."
+,,"client.prepareIndex(INDEX_NAME, INDEX_TYPE)
+                .setSource(jsonActivity)
+                .setId(activity.getActivity().getId().toString())
+                .execute().actionGet();","while the code fragment you provided may be a common coding pattern for developers working with Elasticsearch in Java, it's important to review the specific implementation in the context of the project in which it is being used."
+,,"SearchResponse searchResponse = client.prepareSearch(INDEX_NAME)                .setQuery(query)                .addSort(DATE_PATH, SortOrder.DESC)                .setFilter(numericRangeFilter(DATE_PATH)                        .from(from.getMillis())                        .to(to.getMillis())                ).execute().actionGet();","The specific implementation of this pattern may vary depending on the project and the requirements, such as the search query, the sort order, and the filter criteria used. However, the general structure of preparing a search request with a query, sort order, and filter is a common coding pattern for developers working with Elasticsearch in Java."
+,,"GetResponse response = client
+                .prepareGet(INDEX_NAME, INDEX_TYPE, activityId.toString())
+                .execute().actionGet();","The specific implementation of this pattern may vary depending on the project and the requirements, such as the name of the Elasticsearch index and type, and the ID of the document being retrieved. However, the general structure of preparing a get request with the Elasticsearch Java API is a common coding pattern for developers working with Elasticsearch in Java."
+,," QueryBuilder query = filteredQuery(                queryString(""userId:"" + userId.toString()),                visibilityFilter        );","The specific implementation of this pattern may vary depending on the project and the requirements, such as the search term used, and the filter criterion used. However, the general structure of using the Elasticsearch Java API query builder to create a filtered query is a common coding pattern for developers working with Elasticsearch in Java."
+,,"for (QueryBuilder queryBuilder : queries){queryBuilder.toXContent(builder, params);}","This pattern is common in Java projects that use Elasticsearch, a search engine that allows developers to index and search large amounts of data. In Elasticsearch, QueryBuilder objects are used to construct search queries, and the toXContent() method is used to write the contents of the QueryBuilder object to a JSON string that can be sent to Elasticsearch for processing."
+,," while ((token = parser.nextToken()) != XContentParser.Token.END_OBJECT){if (token == XContentParser.Token.FIELD_NAME){} else if (token == XContentParser.Token.START_OBJECT){} else if (token.isValue()){if (""version"".equals(currentFieldName)){builder.version = parser.longValue();}}}}","This pattern of parsing structured data using a stream of tokens is common in Java projects that involve working with JSON or other data formats such as XML. The specific actions taken in response to each token will depend on the needs of the project, but the overall pattern of iterating through a stream of tokens and performing different actions based on the token type is widely used in Java development."
+,,"if (size < EntryPriorityQueue.LIMIT){return new InternalStringTermsFacet(facetName, comparatorType, size, Arrays.asList(list), missing, total);}return new InternalStringTermsFacet(facetName, comparatorType, size, ordered, missing, total);","This code is a simple conditional statement that checks whether the size of a list is less than a specific limit. If the size is less than the limit, the code creates an InternalStringTermsFacet object using the list as the facet values. If the size is greater than or equal to the limit, the code creates an InternalStringTermsFacet object using an ordered list as the facet values.
+
+This pattern of creating different objects or taking different actions based on a condition is common in Java projects that involve working with collections of data, such as lists or arrays. The specific actions taken in response to the condition will depend on the needs of the project, but the overall pattern of using conditional statements to handle different cases is widely used in Java development."
+,,"CustomConcurrentMergeScheduler concurrentMergeScheduler = new CustomConcurrentMergeScheduler(logger, shardId, this);","The code fragment you provided is a common coding pattern that can occur in multiple Java projects, especially those that involve concurrent processing and logging."
+,nested loop,"if (request.paramAsBoolean(""hl"", false)){for (SearchHit hit : hits.getHits()){for (String fieldName : highlightFields.keySet()){HighlightField highlightField = highlightFields.get(fieldName);docHighlights.add(fieldName, highlightField.getFragments());}}}","The code fragment you provided is a common coding pattern that can occur in multiple Java projects, especially those that involve searching and highlighting text in search results.
+
+This code checks if the ""hl"" parameter is set to true in the search request. If it is, the code loops through the hits in the search results and for each hit, loops through the highlight fields and adds the highlights to a docHighlights object.
+
+The use of conditional statements to handle different cases based on request parameters is a common pattern in web-based Java projects, as developers often need to handle different cases based on user input. The specific request parameters and actions taken in response to them will depend on the needs of the project, but the overall pattern of checking request parameters is widely used in Java web development.
+
+The use of nested loops to iterate over search results and highlight fields is also a common pattern in search-related Java projects, as it allows developers to process each hit and highlight field and extract relevant information. The specific search and highlight libraries used may vary between projects, but the overall pattern of iterating over search results and extracting relevant information is widely used in Java search development."
+,,"Is this code fragment [final Map<String, List<String>> params = parseUriParams(request.uri());SearchRequest searchRequest = getSearchRequest(params, request);client.search(searchRequest, new ActionListener<SearchResponse>(){@Override
+public void onResponse(SearchResponse response){try{solrResponseWriter.writeResponse(createSearchResponse(params, request, response), request, channel);} catch (Exception e);onFailure(e);logger.error(""Error processing executing search"", e);channel.sendResponse(new XContentThrowableRestResponse(request, e));}
+}
+@Override
+public void onFailure(Throwable e);} catch (IOException e1);logger.error(""Failed to send failure response"", e1);}
+}
+};] a common coding pattern that can occur in multiple Java projects?","The code fragment you provided is a common coding pattern that can occur in Java projects that involve processing HTTP requests and responses.
+
+This code uses the parseUriParams function to extract parameters from the URI of the incoming HTTP request. It then uses those parameters to construct a SearchRequest object, which is passed to the Elasticsearch client.search method along with an anonymous ActionListener object that defines how to handle the search response.
+
+The use of anonymous classes and lambda expressions to define callbacks and listeners is a common pattern in Java projects that involve asynchronous or event-driven processing, such as network communication or user interfaces. The specific callbacks and listeners used will depend on the needs of the project, but the overall pattern of defining behavior in response to events is widely used in Java programming.
+
+The use of exception handling and logging to handle errors is also a common pattern in Java projects, as developers need to ensure that errors and exceptions are properly handled and logged to aid in debugging and troubleshooting. The specific exception handling and logging strategies used may vary between projects, but the overall pattern of handling errors and exceptions is widely used in Java development."
+,,"client.search(searchRequest, new ActionListener<SearchResponse>(){@Override
+public void onResponse(SearchResponse response){try{solrResponseWriter.writeResponse(createSearchResponse(params, request, response), request, channel);} catch (Exception e);onFailure(e);logger.error(""Error processing executing search"", e);channel.sendResponse(new XContentThrowableRestResponse(request, e));}
+}
+@Override
+public void onFailure(Throwable e);} catch (IOException e1);logger.error(""Failed to send failure response"", e1);}
+}
+};",The code fragment you provided is a common coding pattern that can occur in Java projects that involve processing HTTP requests and responses and making asynchronous requests to external services or APIs.
+,,"String[] filteringAliases = clusterService.state().metaData().filteringAliases(index, request.indices());return new IndexDeleteByQueryRequest(request, index, routing, filteringAliases);","It is possible that this code fragment can occur in multiple Java projects, as it involves using methods from the Elasticsearch Java client library. The clusterService.state().metaData().filteringAliases() method is used to retrieve a list of filtering aliases for a given index or indices, which can be used to limit the scope of a delete-by-query operation. The IndexDeleteByQueryRequest class is then used to construct a new delete-by-query request with the specified filtering aliases."
+,,"OptimizeRequest optimizeRequest =
+            new OptimizeRequest( indexName ).maxNumSegments( MAX_NUM_SEGMENTS ).waitForMerge( WAIT_FOR_MERGE );","Yes, the code fragment you provided is a common coding pattern in Java projects that use the Elasticsearch Java High-Level REST Client API to optimize Elasticsearch indices."
+,,"try{} catch (RuntimeException e){} catch (NumberFormatException e1){throw new ElasticSearchParseException(""failed to parse date field ["" + value + ""], tried both date format ["" + dateTimeFormatter.format() + ""], and timestamp number"", e);{}}","Yes, the code fragment you provided is a common coding pattern in Java projects.
+
+The try-catch block is used to handle exceptions that may be thrown when parsing a date field. In this case, the code is attempting to parse a date value, and if an exception of type RuntimeException is caught, it will be ignored. However, if an exception of type NumberFormatException is caught, a new ElasticSearchParseException exception will be thrown with a specific error message that includes the value of the field being parsed and the format being used.
+"
+,,"IndexSettingsService indexSettingsService = new IndexSettingsService(index, settings);","Yes, the code fragment you provided is a common coding pattern that can occur in multiple Java projects.
+
+The code instantiates an object of type IndexSettingsService, passing in two parameters: index and settings. This is a common pattern for instantiating objects of classes that provide some kind of service, functionality or behavior.
+"
+,,searchType = SearchType.fromId(in.readByte());,"Yes, the code pattern someVariable = SomeClass.fromX(inputValue) is a common pattern in Java and other programming languages.
+
+In this specific case, the code is reading a byte value from an input stream in and passing it to the fromId method of the SearchType class, which is then assigned to the searchType variable. The fromId method is presumably returning an instance of the SearchType class based on the given byte value. This pattern is often used in Java to deserialize data from streams or other serialized formats, where a byte, integer, or other value needs to be converted into an instance of a specific class or enum."
+,,"for (int i = 0; i < customSize; i++){String type = in.readUTF();Custom customIndexMetaData = lookupFactorySafe(type).readFrom(in);builder.putCustom(type, customIndexMetaData);}","Yes, it looks like a code pattern written in Java.
+
+The code appears to be iterating through a loop from 0 to a variable named customSize and reading input from a data stream using the readUTF() method to get the value of the type variable, which is a String.
+
+It then uses a method named lookupFactorySafe() to obtain an instance of a custom lookupFactory class for the type value, which is used to read metadata about the custom index from the input stream.
+
+Finally, the builder object's putCustom() method is used to associate the type value with the customIndexMetaData object that was read from the input stream.
+
+Overall, it appears to be a pattern for reading custom index metadata from an input stream and adding it to a builder object.
+
+
+
+"
+,,bind(ShardsAllocator.class).to(shardsAllocator == null ? EvenShardsCountAllocator.class : shardsAllocator).asEagerSingleton();,"Overall, this code pattern sets up a binding for a specific implementation of the ShardsAllocator interface using Guice's dependency injection framework."
+,,for (ResourceDMBean resource : registeredMBeans){String resourceName = resource.getFullObjectName();try{ObjectName objectName = new ObjectName(getObjectName(resourceName));}},"Overall, this code pattern appears to be using the javax.management.ObjectName class to create a new object name for each resource in a collection of registered MBeans, likely for use in monitoring or managing those resources through JMX (Java Management Extensions)."
+,,"registerAction(NodesInfoAction.INSTANCE, TransportNodesInfoAction.class);","Yes, the code pattern you provided is a Java method call to register an action with Elasticsearch.
+"
+,,"InputStream is = classLoader.getResourceAsStream(path);if (is == null){{throw new FileNotFoundException(""Resource ["" + path + ""] not found in classpath with class loader ["" + classLoader + ""]"");}return copyToString(new InputStreamReader(is, ""UTF-8""));","Yes, the code fragment you provided is a common coding pattern that can occur in multiple Java projects.
+
+This code fragment is used to load a resource from the classpath in Java, which is a collection of directories and jar files that contain Java classes and resources."
+,,Swap swap = new Swap();swap.readFrom(in);return swap;,"This pattern is commonly used when implementing serialization or deserialization of objects in Java. It allows objects to be created from data stored in files, network streams, or other data sources. The readFrom method is usually responsible for parsing the data from the input stream and initializing the object's internal state."
+,,"Is this code fragment [  if (facets.isEmpty()){} else{if (size < EntryPriorityQueue.LIMIT){for (TLongIntIterator it = facets.iterator(); it.hasNext(); ){it.advance();ordered.insertWithOverflow(new InternalLongTermsFacet.LongEntry(it.key(), it.value()));ordered.add(new InternalLongTermsFacet.LongEntry(it.key(), it.value()));}}}] a common coding pattern that can occur in multiple Java projects?","this code could be used in other Elasticsearch Java API projects that involve constructing facet results, it is not a generic Java coding pattern that can be applied to any project. This code pattern is specific to constructing facet results in Elasticsearch."
+,,TermsFacet tags = (TermsFacet) rsp.facets().facet(ElasticTweetSearch.TAG);,"the use of libraries and frameworks can result in the use of common coding patterns across different projects. However, the specific implementation details and requirements of each project can result in variations in the code patterns used."
+,,XContentParser.Token token = parser.currentToken();if (token.isValue()){},"Yes, the code fragment you provided is a common coding pattern that can occur in multiple Java projects.
+
+The code fragment appears to be using the XContentParser class, which is a part of the Elasticsearch Java client library. This library is widely used for working with Elasticsearch, a popular search and analytics engine. The XContentParser class is used to parse JSON data, which is a common data format used in many software applications."
+,,for (Facet facet : facets){if (agg == null){} else{for (int i = 0; i < geoDistanceFacet.entries.length; i++){}}},"while the specific objects and methods used in the code fragment may be specific to a particular Java project or library, the use of for-loops and control flow structures are common coding patterns that can occur in multiple Java projects."

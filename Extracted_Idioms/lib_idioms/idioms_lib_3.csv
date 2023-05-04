@@ -1,0 +1,1251 @@
+,pro/lib,idiom,final
+0,completion_result_lib_3_combine1.pkl,if (from instanceof Exchange){currentExchange = (Exchange) from;},"
+
+Yes, the synthesized code [if (from instanceof Exchange){currentExchange = (Exchange) from;}] is a generic Java code snippet that has been occurred in multiple Java libraries. The reason being, the code checks if an object 'from' is an instance of the 'Exchange' class and if it is, it assigns 'from' to the 'currentExchange' variable of type 'Exchange' using type casting. This code can be used in any Java program that requires checking the class type of an object and assigning it to a specific variable."
+1,completion_result_lib_3_combine1.pkl,receiver.addSetupListener(channelSetup);sender.addSetupListener(channelSetup);,"
+
+Yes, it is possible that the synthesized code [receiver.addSetupListener(channelSetup);sender.addSetupListener(channelSetup);] might have occurred in multiple Java libraries as it is a generic code snippet that adds a setup listener to both a sender and a receiver. This code snippet can be used in various applications where there is a need to pass data between two parties, and the parties need to perform some setup before data transmission or reception. Therefore, this code snippet might occur in multiple Java libraries that involve data transfer between two entities."
+2,completion_result_lib_3_combine1.pkl,if (thing == null){},"
+
+Yes, the synthesized code [if (thing == null){}] is a generic Java code snippet that has occurred in multiple Java libraries. This is because the code checks if a variable or object is null before performing any operations on it, which is a common practice in Java programming to prevent null pointer exceptions. Consequently, it is very likely that this code snippet has been used in various Java libraries to handle null values."
+3,completion_result_lib_3_combine1.pkl,"try{m = new MessageImpl((AMQP.BasicProperties) properties.clone(),                    body,                    routingKey);}","
+
+Yes, it is possible that the synthesized code [try{m = new MessageImpl((AMQP.BasicProperties) properties.clone(), body, routingKey);} ] could occur in multiple Java libraries as it is a generic code snippet that creates an object of type MessageImpl using the properties, body, and routing key provided. The try-catch block is used to handle any exceptions that might occur during the instantiation process. If this code snippet serves a common purpose within multiple Java libraries, then it is possible that it could be reused and implemented in various projects."
+4,completion_result_lib_3_combine1.pkl,try{} catch (CloneNotSupportedException e){throw new RuntimeException(e);},"
+
+Yes, this is a generic Java code snippet that has occurred in multiple Java libraries. 
+
+The reason being that the try-catch block is a common technique used in Java for handling exceptions. The catch block in this code specifically catches the CloneNotSupportedException, which is a checked exception that can occur when trying to clone an object that doesn't implement the Cloneable interface.
+
+Throwing a RuntimeException from the catch block is a way to handle the exception in a way that allows it to propagate up the call stack, without needing to declare it in the method signature. This technique is often used when the exception is unlikely to be recoverable, and it allows the caller to decide how to handle the exception, rather than forcing the method to handle it explicitly.
+
+Overall, the combination of the try-catch block and RuntimeException throw is a common pattern in Java, and is likely to be found in many different libraries and codebases."
+5,completion_result_lib_3_combine1.pkl,channelSetupListeners.add(channelSetup);,"
+
+Yes, it is possible that the synthesized code [channelSetupListeners.add(channelSetup);] has occurred in multiple Java libraries because adding a listener to a list of listeners is a common pattern in Java for implementing observer design pattern. It is also possible that the code has been customized for a specific library or application."
+6,completion_result_lib_3_combine1.pkl,"consumer = new QueueingConsumer(channel);consumerTag = channel.basicConsume(getQueueName(), false, consumer);","
+
+Yes, the synthesized code ""consumer = new QueueingConsumer(channel); consumerTag = channel.basicConsume(getQueueName(), false, consumer);"" is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is commonly used in libraries that involve messaging tasks and RabbitMQ integration for message queueing. Therefore, it is a widely used code snippet among developers of such libraries."
+8,completion_result_lib_3_combine1.pkl,if (method.equals(CREATE_CHANNEL_METHOD) || method.equals(CREATE_CHANNEL_INT_METHOD)){},"
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. This type of code block is often used to check if a given method name matches a specific string value using the equals method in Java. In this case, the code is checking for two possible method names and returns true if either of them matches the variable ""method"". This type of conditional statement is commonly used in many Java programs and libraries for various purposes."
+9,completion_result_lib_3_combine1.pkl,"for (int numOperationInvocations = 1; keepOnInvoking && shutdownRecoverable; numOperationInvocations++){if (shutdownRecoverable){keepOnInvoking = retryStrategy.shouldRetry(lastException, numOperationInvocations, connectionLatch);}}","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This is because the code utilizes a common pattern to retry certain operations until success or until a certain condition is met. This pattern is often used in networking and database operations, where it is common to retry failed requests or connections. The code also employs standard Java language constructs, such as for-loops and if-statements, making it a widely recognizable code snippet."
+10,completion_result_lib_3_combine1.pkl,while (!connected){try{} catch (ConnectException ce){exception = ce;}},"
+
+Yes, the synthesized code snippet is a generic Java code that has been occurred in multiple Java libraries. This is because the code follows the typical pattern of trying to establish a connection and handling any exceptions that occur during the process. The use of a while loop with a boolean condition to continuously attempt to connect until success is also a common approach in Java programming. Additionally, the use of a try-catch block to catch a ConnectException is a standard way of handling connection errors in Java. Hence, this code snippet is frequently used in Java development, especially when working with network-related applications."
+11,completion_result_lib_3_combine1.pkl,"target.handleDelivery(consumerTag, envelope, properties, body);","
+
+Yes, it is possible that the synthesized code [target.handleDelivery(consumerTag, envelope, properties, body);] is a generic Java code snippet that has occurred in multiple Java libraries. This is because the code has a generic method name (""handleDelivery"") and takes in parameters that are common in messaging systems (consumerTag, envelope, properties, body). It is likely that different libraries that deal with message handling or processing may have implemented similar methods with these parameters. However, without more context or information about where the code snippet is from, it is difficult to say for certain."
+12,completion_result_lib_3_combine1.pkl,"if (operationRetryTimeoutMillis > 0){if (LOG.isDebugEnabled()){LOG.debug(""Sleeping before next operation invocation (millis): "" + operationRetryTimeoutMillis);{}}try{Thread.sleep(operationRetryTimeoutMillis);}}","
+
+Yes, it is possible that this code has occurred in multiple Java libraries as it is a common approach for handling operation retry timeouts by pausing the execution for a fixed amount of time before the next invocation. Additionally, the use of the LOG.isDebugEnabled() method and LOG.debug() statement suggests that this code is likely used for logging purposes, which is a common practice in many Java libraries."
+13,completion_result_lib_3_combine1.pkl,"Pair<Connection,ServiceRegistration> pair = null;synchronized (map){pair = map.remove(pid);}if(pair != null){pair.getSnd().unregister();try{pair.getFst().close();}}","
+
+Yes, it is possible that this synthesized code snippet has occurred in multiple Java libraries. However, without additional information about the specific libraries and their implementations, it is difficult to determine this with certainty."
+14,completion_result_lib_3_combine1.pkl,Integer portObj = accessor.getInteger(PROP_PORT);,"
+
+Yes, it is a generic Java code snippet that has likely occurred in multiple Java libraries. This code snippet simply retrieves an integer value for a property named ""PROP_PORT"" using an accessor object. It is a common operation in Java programming to retrieve and set property values for objects, and the use of integers is also common in many applications. Therefore, it is likely that this code has been used before in many different libraries and applications."
+15,completion_result_lib_3_combine1.pkl,"String filterStr = String.format(""(%s=%s)"", ServiceProperties.CONNECTION_NAME, connName);","
+
+Yes, the synthesized code is a generic Java code snippet that can occur in multiple Java libraries. 
+
+The reason is that the code snippet is using the String.format() method to format a string by inserting a value for a specified placeholder '%s'. This functionality is a standard feature in the Java programming language and can be used in a wide range of applications. Additionally, the code is also using a constant value from a ServiceProperties class, which could be defined and used in multiple Java libraries. Hence, this code snippet can be considered as a generic Java code snippet that can occur in various projects."
+16,completion_result_lib_3_combine1.pkl,try{} catch (InvalidSyntaxException e){throw new RuntimeException(e);},"
+
+Yes, the synthesized code [try{} catch (InvalidSyntaxException e){throw new RuntimeException(e);}] is a generic Java code snippet that has occurred in multiple Java libraries. 
+
+This code is a common exception handling technique used to handle InvalidSyntaxException in Java code. InvalidSyntaxException is a checked exception that is thrown when there is invalid syntax in a configuration file or some other input source. 
+
+To handle this exception, developers often use a try-catch block, with the catch block handling InvalidSyntaxException and throwing a runtime exception with the caught exception as a parameter. This allows the code to continue to run without crashing, while still providing information about the original error. 
+
+Therefore, it is common to find this code snippet in different Java libraries where configuration files are used, or where other sources of input may contain invalid syntax."
+17,completion_result_lib_3_combine1.pkl,"try{channel.exchangeDeclare(exchangeName, type, passive, durable, autoDelete, arguments);}","
+
+Yes, the synthesized code [try{channel.exchangeDeclare(exchangeName, type, passive, durable, autoDelete, arguments);}] is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is creating an exchange by declaring its name, type, and various properties such as whether it is passive, durable, or auto-deleted. It is a commonly used code snippet in Java libraries that deal with messaging and queues such as the RabbitMQ library."
+18,completion_result_lib_3_combine1.pkl,"@SuppressWarnings(""unchecked"")
+Pair<Channel, ServiceRegistration> pair = (Pair<Channel, ServiceRegistration>) service;pair.getSnd().unregister();try{pair.getFst().close();}","
+
+Yes, the synthesized code [@SuppressWarnings(""unchecked"")
+Pair<Channel, ServiceRegistration> pair = (Pair<Channel, ServiceRegistration>) service;pair.getSnd().unregister();try{pair.getFst().close();}] is a generic Java code snippet that has been occurred in multiple Java libraries. The code uses generics to define a Pair class with two generic parameters, and then casts a variable named ""service"" to that type. The code then calls methods on the Pair object to unregister a service and close a channel. Many libraries require similar functionality, so this code is likely to be found in multiple places."
+19,completion_result_lib_3_combine1.pkl,"channel.basicPublish(name, routingKey, props, body);","
+
+Yes, the code snippet [channel.basicPublish(name, routingKey, props, body);] is a generic Java code that has occurred in multiple Java libraries. This is because it is a common way of publishing messages to a RabbitMQ message broker. RabbitMQ is widely used in various Java applications, and hence this code has been used multiple times in different libraries to integrate applications with RabbitMQ."
+20,completion_result_lib_3_combine1.pkl,"ConnectionExchangeMSF connectionExchangeMSF = new ConnectionExchangeMSF(context);connectionExchangeMsfReg = context.registerService(ManagedServiceFactory.class.getName(), connectionExchangeMSF, svcProps);","
+
+Yes, it is a generic Java code snippet that can occur in multiple Java libraries because it is just creating an instance of a class and then registering it with a service context using the ManagedServiceFactory interface. The exact implementation details may vary depending on the specific library or framework, but the logic and functionality of this code pattern remains the same."
+21,completion_result_lib_3_combine1.pkl,"try{exchange.basicPublish(routingKey, mandatory, immediate, props, body);}","
+
+Yes, this code snippet is a generic Java code that has occurred in multiple Java libraries. 
+
+The code uses the try-catch block to handle any exceptions that might occur during the execution of the code inside the block. The method 'exchange.basicPublish' is used to publish a message to a message broker with the given routing key, mandatory flag, immediate flag, properties, and body.
+
+Since this method is used to publish messages to a message broker and message brokering is a commonly used pattern in software development, this code has been used in multiple Java libraries."
+22,completion_result_lib_3_combine1.pkl,ConnectionExchangeTracker tracker = null;synchronized (map){tracker = map.remove(pid);}if(tracker != null) tracker.close();,"
+
+Yes, it is a generic Java code snippet that can occur in multiple Java libraries.
+
+The code snippet involves a common pattern of using synchronization to access a shared resource (in this case, a map) and then removing an object from the map if it exists. The object is then used and possibly closed or disposed of.
+
+This pattern is used in many Java libraries and applications for managing resources or tracking connections. Therefore, the code snippet can occur in different contexts and implementations, but the overall structure and purpose remain the same."
+23,completion_result_lib_3_combine1.pkl,"boolean passive = accessor.getBoolean(ServiceProperties.EXCHANGE_PASSIVE, false);ConnectionExchangeTracker tracker = new ConnectionExchangeTracker(context, connName, exchangeName, exchangeType, passive, durable, autoDelete, args);","
+
+Yes, it is possible that the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This is because the code uses standard Java language constructs such as boolean variables, method calls, and object instantiation that are commonly used in Java programming. Additionally, the use of the ServiceProperties.EXCHANGE_PASSIVE constant suggests that the code may be part of a larger framework or library that provides a set of common services or APIs. Therefore, it is likely that similar code snippets can be found in other Java libraries or frameworks that offer similar functionality."
+24,completion_result_lib_3_combine1.pkl,context.ungetService(reference);,"
+
+Yes, the synthesized code [context.ungetService(reference);] is a generic Java code snippet that has been occurred in multiple Java libraries. This is because the ""context"" and ""reference"" parameters are defined by the OSGi framework, which is used in many Java libraries to manage modular components. The ""ungetService"" method is used to release the service represented by the ""reference"" parameter, which is a common pattern in OSGi-based applications. Therefore, this code snippet can be considered a generic implementation of a widely-used OSGi programming pattern."
+25,completion_result_lib_3_combine1.pkl,"if(channelName == null || queueName == null){ci.println(""Usage: "" + HELP_DECL_QUEUE);}","
+
+Yes, it is a generic Java code snippet that can occur in multiple Java libraries. The reason being, the code checks for null values in two variables using the logical OR operator and displays a message if either of them is null. This type of validation is a common practice, and developers may use similar code snippets in different projects or libraries."
+26,completion_result_lib_3_combine1.pkl,"String channelName = ci.nextArgument();final String queueName = ci.nextArgument();final String exchangeName = ci.nextArgument();final String routingKey = ci.nextArgument();if(channelName == null || queueName == null || exchangeName == null || routingKey == null){ci.println(""Usage: "" + HELP_BIND_QUEUE);}withConnection(channelName, ci, new ChannelOp(){public void execute(Channel channel){try{channel.queueBind(queueName, exchangeName, routingKey);ci.println(""Queue Bound"");} catch (IOException e);ci.println(""Error binding queue"");ci.printStackTrace(e);}
+}
+};}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. The code snippet is implementing a common functionality of binding a queue to an exchange in a messaging system. The use of interfaces such as ChannelOp and the implementation of the execute method are commonly used patterns in messaging systems. The structure and syntax of the code are also standard Java practices, making it a generic code snippet that can be easily replicated and used across different messaging systems."
+27,completion_result_lib_3_combine1.pkl,"try{ServiceReference[] refs = context.getServiceReferences(Connection.class.getName(), String.format(""(%s=%s)"", ServiceProperties.CONNECTION_NAME, name));{}}","
+
+Yes, the synthesized code is a generic Java code snippet that can occur in multiple Java libraries. This code fragment is used to obtain a reference to a service using the OSGi service registry. The code retrieves a service reference object for a given service interface, Connection in this case, by using a filter query to match the service properties. This is a commonly used method to obtain service references in OSGi-based applications, and can be found in many Java libraries that follow the OSGi specification."
+28,completion_result_lib_3_combine1.pkl,"try{channel.queueDeclare(queueName);consumerTag = channel.basicConsume(queueName, false, consumer);}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries as it is used for declaring and consuming a message from a queue in RabbitMQ or other message broker systems. It is a common pattern used in many Java applications that require messaging for communication between components or services."
+29,completion_result_lib_3_combine1.pkl,"ConnectionFactory factory = new ConnectionFactory();factory.setHost(""localhost"");Connection connection = factory.newConnection();","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. 
+
+The code initializes a ConnectionFactory object, sets the host to ""localhost"" using the setHost() method, and then creates a new Connection object using the newConnection() method. This is a very common pattern for establishing connections to various types of resources, such as databases, messaging systems, and remote services, and is therefore found in many different Java libraries."
+30,completion_result_lib_3_combine1.pkl,long start = System.currentTimeMillis(); long end= System.currentTimeMillis(); long time = end - start;,"
+
+Yes, the synthesized code [long start = System.currentTimeMillis(); long time = end - start;] is a generic Java code snippet that has occurred in multiple Java libraries. This code is commonly used to measure the elapsed time of an operation in Java. It is a simple and effective way to calculate the execution time of a code block or function. This snippet of code is widely used in Java libraries, frameworks, and applications, and can be found in many Java code examples and tutorials."
+31,completion_result_lib_3_combine1.pkl,if (args.length > 0){},"
+
+Yes, the code snippet [if (args.length > 0){}] is a generic Java code snippet that has been used in multiple Java libraries. The reason is that the code checks the length of the command-line arguments passed to the program and executes the code within the curly braces only if at least one argument is passed. This is a common requirement in many command-line applications and utilities that take arguments to configure their behavior. As the snippet is simple and efficient, it is often used as a starting point in many coding examples and tutorials."
+33,completion_result_lib_3_combine1.pkl,if (frame != null){if (frame.type == AMQP.FRAME_HEARTBEAT){}},"
+
+As an AI language model, I generated text from the input given below:
+
+Yes, it is possible that the synthesized code [if (frame != null){if (frame.type == AMQP.FRAME_HEARTBEAT){}}] could be a generic Java code snippet that has been occurred in multiple Java libraries. However, it is also possible that this code snippet is specific to a single library or application. Without additional context, it is difficult to determine with certainty where this code comes from and what it does."
+34,completion_result_lib_3_combine1.pkl,synchronized (_continuationMap){String replyId = properties.getCorrelationId();BlockingCell<Object> blocker = _continuationMap.get(replyId);_continuationMap.remove(replyId);},"
+
+Yes, the use of the synchronized keyword, HashMap data structure, and the get(), remove(), and put() methods are commonly used in Java programming and can appear in multiple libraries. However, the specific implementation of this code snippet may vary depending on the context and requirements of each library."
+35,completion_result_lib_3_combine1.pkl,"DefaultConsumer consumer = new DefaultConsumer(_channel){@Override
+            public void handleShutdownSignal(String consumerTag,                                             ShutdownSignalException signal){synchronized (_continuationMap){for (Entry<String, BlockingCell<Object>> entry : _continuationMap.entrySet()){entry.getValue().set(signal)                    }
+                    _consumer = null                }
+            }
+            @Override
+            public void handleDelivery(String consumerTag,                                       Envelope envelope,                                       AMQP.BasicProperties properties,                                       byte[] body)                    throws IOException{}}String replyId = properties.getCorrelationId()                    BlockingCell<Object> blocker = _continuationMap.get(replyId)                    _continuationMap.remove(replyId)                    blocker.set(body)                }
+            }
+        }{}}}}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. The code defines a custom consumer for handling shutdown signals and message deliveries in an AMQP channel. The use of default consumer and blocking cells is a common approach in AMQP libraries, and this specific code structure has been employed in various implementations. Therefore, it can be considered a generic code snippet for this purpose."
+36,completion_result_lib_3_combine1.pkl,if (Arrays.asList(mechanisms).contains(NAME)){},"
+
+Yes, the synthesized code [if (Arrays.asList(mechanisms).contains(NAME)){}] is a generic Java code snippet that has been occurred in multiple Java libraries. The code uses the 'Arrays.asList' function to convert an array into a list and then checks if the list contains a specific element using the 'contains' method. This is a commonly used approach in Java programming to check if an array contains a value. This code can be used in various contexts, such as checking if a particular element exists in a collection or if a certain value has been set as an option in a configuration file."
+37,completion_result_lib_3_combine1.pkl,"Object value = null;switch(in.readUnsignedByte()){case 'S':
+              value = readLongstr(in);
+              break;
+          case 'I':
+              value = in.readInt();
+              break;
+          case 'D':
+              int scale = in.readUnsignedByte();
+              byte [] unscaled = new byte[4];
+              in.readFully(unscaled);
+              value = new BigDecimal(new BigInteger(unscaled), scale);
+              break;
+          case 'T':
+              value = readTimestamp(in);
+              break;
+          case 'F':
+              value = readTable(in);
+              break;
+          case 'A':
+              value = readArray(in);
+              break;
+          case 'b':
+              value = in.readByte();
+              break;
+          case 'd':
+              value = in.readDouble();
+              break;
+          case 'f':
+              value = in.readFloat();
+              break;
+          case 'l':
+              value = in.readLong();
+              break;
+          case 's':
+              value = in.readShort();
+              break;
+          case 't':
+              value = in.readBoolean();
+              break;
+          case 'x':
+              value = readBytes(in);
+              break;
+          case 'V':
+              value = null;
+              break;
+          default:
+              throw new MalformedFrameException
+                  (""Unrecognised type in table"");
+        }{}}","Yes, this code snippet is a generic Java code that has occurred in multiple Java libraries. It is a common code pattern used for deserialization of data in Java, especially in network communication and message queuing frameworks. The specific data types and formats may vary depending on the library, protocol, or application, but the overall structure of using a switch statement to determine the data type and reading the input stream accordingly is a common approach."
+38,completion_result_lib_3_combine1.pkl,"try{delegate.handleConsumeOk(consumerTag);} catch (Throwable ex){connection.getExceptionHandler().handleConsumerException(                            channel,                            ex,                            delegate,                            consumerTag,                            ""handleConsumeOk"");}","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. It contains a try-catch block where the delegate's method handleConsumeOk() is invoked inside the try block, and if any exception is thrown, it is caught in the catch block. The exception is then passed to the connection's exception handler, which handles the exception in a specific way. This type of error handling is common in most Java libraries that deal with network connections and event handling."
+39,completion_result_lib_3_combine1.pkl,"try{} catch (Throwable ex){connection.getExceptionHandler().handleConsumerException(                            channel,                            ex,                            delegate,                            consumerTag,                            ""handleConsumeOk"");}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+This code snippet is a common practice in Java programming where developers wrap code within the ""try-catch"" block to handle any exceptions or errors that may occur during the execution of the code. The ""catch"" block catches any exception that is thrown by the ""try"" block and executes a specific block of code to handle the exception. 
+
+In this specific code snippet, the ""catch"" block catches any exception of type ""Throwable"" and calls the ""handleConsumerException"" method of the ""connection.getExceptionHandler()"" object to handle the exception. This is a common approach to handle exceptions in Java libraries, and it is likely that this code snippet has been used in multiple Java libraries."
+41,completion_result_lib_3_combine1.pkl,try{} catch (AlreadyClosedException ace){throw ace;},"
+
+Yes, the synthesized code [try{} catch (AlreadyClosedException ace){throw ace;}] is a generic Java code snippet that has been occurred in multiple Java libraries. This is because the code follows the standard try-catch block structure that is commonly used in Java programming. The AlreadyClosedException is also a common exception type that can be encountered in various situations, such as when working with files or network connections. Therefore, this code snippet can be used in multiple libraries that deal with these types of operations."
+42,completion_result_lib_3_combine1.pkl,"
+
+if (CONSUME.equals(methodName)) {
+    for (Object param : params) {
+        if (param instanceof Map) {
+            Map paramMap = (Map)param;
+            if (paramMap.containsKey(ACK)) {
+                AcknowledgeMode mode = AcknowledgeMode.valueOf(paramMap.get(ACK).toString().toUpperCase());
+                listenerContainer.setAcknowledgeMode(mode);
+            }
+        }
+    }
+}","
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries because it is a relatively generic block of code that deals with checking for a specific object type (Map), retrieving a value from the map, and using that value to set a property on a listenerContainer object. This type of code is often used in various libraries that deal with message queuing or other forms of event-driven architecture. However, it is difficult to say for certain without more context about where the code is being used."
+43,completion_result_lib_3_combine1.pkl,"
+
+if (CONSUME.equals(methodName)) {
+  for (Object param : params) {
+    if (param instanceof Map) {
+      Map paramMap = (Map) param;
+      if (paramMap.containsKey(ACK)) {
+        AcknowledgeMode mode = AcknowledgeMode.valueOf(paramMap.get(ACK).toString().toUpperCase());
+        listenerContainer.setAcknowledgeMode(mode);
+      } else if (paramMap.containsKey(ON_MESSAGE)) {
+        Object onMessage = paramMap.get(ON_MESSAGE);
+      }
+    }
+  }
+}","
+
+Yes, it is a generic code snippet that can be found in multiple Java libraries because it is a common pattern used for processing parameters in methods that take a Map as input. This code checks if the map parameter contains certain keys and then takes corresponding actions based on their values. This is a frequently used approach for optional parameters in Java APIs."
+44,completion_result_lib_3_combine1.pkl,"
+
+for (ConnectorStateListener listener : listeners){
+    if (newState != state) {
+        state = newState;
+        listener.connectorStateChanged(this, state);
+    }
+}","
+
+Yes, it is a generic Java code snippet that has likely occurred in multiple Java libraries. This code snippet implements a common design pattern called the Observer pattern, which is used to maintain a list of objects interested in receiving updates whenever an object's state changes. Therefore, it is likely that this code or a variation of it has been used in multiple Java libraries that employ the Observer pattern."
+46,completion_result_lib_3_combine1.pkl,"
+
+if (thing == null){
+     String errorMsg = String.format(""'%s' property must not be null"", prop);
+     throw new IllegalArgumentException(errorMsg);
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is frequently used to check if an object or property is null, and if it is, throw an exception with a custom error message. This is a common practice in Java programming to ensure that the code is robust and handles unexpected situations properly. Therefore, it is not unusual to see this code snippet in many Java libraries and applications."
+48,completion_result_lib_3_combine1.pkl,"
+
+if (timeout < 0) {
+     del = consumer.nextDelivery();
+     res[0] = del == null ? null : new ReceivedMessageImpl(channel, del);
+} else {
+     res[0] = consumer.nextDelivery(timeout);
+}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. The use of the ""if"" statement to check for a non-positive timeout value and the subsequent call to the ""consumer.nextDelivery()"" method with or without a timeout parameter is a common programming pattern in Java messaging systems, such as Apache ActiveMQ, RabbitMQ, and others. Therefore, it is likely that this code snippet has been used in multiple Java libraries that implement messaging functionality."
+49,completion_result_lib_3_combine1.pkl,"
+
+if (timeout < 0) {
+  del = consumer.nextDelivery();
+} else {
+  del = consumer.nextDelivery(timeout);
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is used to receive messages from a message queue using the AMQP protocol. The ""consumer.nextDelivery()"" method is a common method in the AMQP API, and the code is often used in various messaging systems, such as Apache ActiveMQ, RabbitMQ, and Apache Qpid."
+53,completion_result_lib_3_combine1.pkl,"
+
+for (int numOperationInvocations = 1; keepOnInvoking && shutdownRecoverable; numOperationInvocations++){
+    synchronized (target){
+        try{
+            if (method.getName().equals(BASIC_CONSUME_METHOD_NAME)){
+                if (!(targetConsumer instanceof HaConsumerProxy)){
+                    args[args.length - 1] = existingConsumerProxy == null ? consumerProxy : existingConsumerProxy;
+                }
+            }
+        }
+        catch (Exception e){
+            if (shutdownRecoverable){
+                keepOnInvoking = retryStrategy.shouldRetry(e, numOperationInvocations, connectionLatch);
+            }
+            else{
+                throw e;
+            }
+        }
+    }
+} 
+
+The synthesized code adds exception handling to the original code fragment 1, and incorporates code from fragment 2 to determine if the operation should be retried in case of recoverable shutdown. If the shutdown is not recoverable, the exception is re-thrown, otherwise the retry strategy is used to determine if the operation should be retried.","
+
+Yes, it is possible that this synthesized code has occurred in multiple Java libraries. Exception handling and retry strategies are common techniques used in many software applications and libraries, particularly those that involve network communication or other external dependencies. Therefore, it is likely that similar code snippets that handle exceptions and retries have been written by many different developers in multiple Java projects."
+54,completion_result_lib_3_combine1.pkl,"
+
+for (int numOperationInvocations = 1; keepOnInvoking && shutdownRecoverable; numOperationInvocations++){
+    synchronized (target){
+        try{
+            // code to be executed
+        } catch (IOException ioe){
+            if (shutdownRecoverable){
+                keepOnInvoking = retryStrategy.shouldRetry(ioe, numOperationInvocations, connectionLatch);
+            } else {
+                // handle non-recoverable error
+            }
+        }
+    }
+}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. The use of synchronized blocks to execute critical sections of code and the handling of recoverable and non-recoverable errors are common programming practices. The code also uses a for loop to repeat the execution of the code block until a certain condition is met, which is a common programming pattern. Overall, the code follows common Java programming practices and can be found in various Java libraries."
+56,completion_result_lib_3_combine1.pkl,"
+
+for (int numOperationInvocations = 1; numOperationInvocations <= maxNumInvocations && keepOnInvoking && shutdownRecoverable; numOperationInvocations++){
+      synchronized (target){
+          try{
+              //Code block here
+          } catch (IOException ioe){
+              lastException = ioe;
+              shutdownRecoverable = HaUtils.isShutdownRecoverable(ioe);
+          }
+      }
+ }","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. It is a common pattern used for invoking operations on a target object in a synchronized manner and handling potential exceptions. The use of a for loop with a maximum number of invocations and a boolean flag for whether to keep invoking, along with a synchronized block and a try-catch statement inside, is a common approach to ensure thread safety and handle exceptions in multithreaded environments."
+57,completion_result_lib_3_combine1.pkl,"
+
+for (int numOperationInvocations = 1; keepOnInvoking && shutdownRecoverable; numOperationInvocations++){
+    synchronized (target){
+        try{
+            // original code goes here
+        } catch (IOException ioe){
+            // use of lastException and HaUtils.isShutdownRecoverable added
+            lastException = ioe;
+            shutdownRecoverable = HaUtils.isShutdownRecoverable(ioe);
+        }
+    }
+}","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries.
+
+This code snippet is a common pattern in Java programming, where a section of code is synchronized to ensure thread safety, and an exception is caught and handled within the synchronization block. The use of the ""try-catch"" block to handle exceptions is a standard practice in Java programming, and the use of a ""synchronized"" block to ensure thread safety is also a common pattern.
+
+As a result, this code snippet has likely been used in multiple Java libraries that require thread-safe exception handling, making it a generic piece of code that is not specific to any particular library."
+60,completion_result_lib_3_combine1.pkl,"
+
+while (!connected) {
+  if (reconnection) {
+    for (HaConnectionListener listener : listeners) {
+      if (LOG.isDebugEnabled()) {
+        LOG.info(""Reconnection starting, sleeping: addresses="" + addressesAsString + "", wait="" + reconnectionWaitMillis);
+      }
+    }
+  } else {
+    if (LOG.isDebugEnabled()) {
+      LOG.info(""Reconnection starting, sleeping: addresses="" + addressesAsString + "", wait="" + reconnectionWaitMillis);
+    }
+    Thread.sleep(reconnectionWaitMillis);
+  }
+}","
+
+Yes, it is a generic Java code snippet that could exist in multiple Java libraries. 
+
+The code is simply checking whether a connection is established and if not, attempting to reconnect. The use of a for loop to iterate through a collection of listeners and the logging statements are specific to the context of the code, but the basic logic of checking for a connection and attempting to reconnect is a common task in networked applications. Therefore, this code snippet could be used in many different Java libraries."
+62,completion_result_lib_3_combine1.pkl,"
+
+while (!connected) {
+   try {
+      // Code to attempt connection
+      
+      if (reconnection) {
+         for (HaConnectionListener listener : listeners) {
+            // Code to notify listeners of reconnect attempt
+         }
+      }
+   } catch (ConnectException ce) {
+      // Code to handle connection exception
+      exception = ce;
+   }
+}","
+
+Yes, this code snippet is a generic Java code that is commonly used in multiple Java libraries. It is a while loop that attempts to establish a connection, and in case of a connection exception (ConnectException), it handles the exception and notifies any relevant listeners of the reconnection attempt. This is a common pattern used in network programming and is not specific to any particular library or framework."
+63,completion_result_lib_3_combine1.pkl,"
+
+while (!connected){
+    try{
+        Connection connection = newTargetConnection(connectionProxy.getAddresses());
+        connectionProxy.setTargetConnection(connection);
+        connectionProxy.replaceChannelsInProxies();
+        if (reconnection){
+            for (HaConnectionListener listener : listeners){
+                listener.onReconnection(connectionProxy);
+                listener.onConnection(connectionProxy);
+            }
+        }
+        else{
+            connectionProxy.markAsOpen();
+        }
+    } 
+    catch (ConnectException ce){
+        exception = ce;
+    }
+    // Add the code to close the connection latch here
+    connectionProxy.closeConnectionLatch();
+}","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. It follows a commonly used pattern in Java programming for establishing network connections and handling exceptions. The use of try-catch blocks, connection objects, and connection listeners is common in Java networking libraries."
+66,completion_result_lib_3_combine1.pkl,"
+
+if (LOG.isDebugEnabled()){
+    LOG.debug(""Operation invocation failed on IOException: numOperationInvocations="" + numOperationInvocations 
+              + "", maxOperationInvocations="" + maxOperationInvocations + "", message="" + e.getMessage());
+    LOG.debug(""Max number of operation invocations reached, not retrying: "" + maxOperationInvocations);
+}
+
+if (numOperationInvocations == maxOperationInvocations){
+    // do something
+}
+
+if (operationRetryTimeoutMillis > 0){
+    if (LOG.isDebugEnabled()){
+        LOG.debug(""Sleeping before next operation invocation (millis): "" + operationRetryTimeoutMillis);
+    }
+    try{
+        Thread.sleep(operationRetryTimeoutMillis);
+    }
+    catch (InterruptedException ex){
+        // handle the exception
+    }
+}","
+
+Yes, this code snippet is a common pattern found in many Java libraries. It is used to handle exceptions related to operation invocation and retry logic. The if statements check if debugging is enabled and limit the number of operation invocations before performing some action or sleeping for a period before retrying. The use of a try-catch block to catch the InterruptedException is also common."
+67,completion_result_lib_3_combine1.pkl,"
+
+if (operationRetryTimeoutMillis > 0) {
+    if (LOG.isDebugEnabled()) {
+        LOG.debug(""Sleeping before next operation invocation (millis): "" + operationRetryTimeoutMillis);
+    }
+    try {
+        Thread.sleep(operationRetryTimeoutMillis);
+    } catch (InterruptedException e) {
+        // handle exception
+    }
+}","
+
+Yes, this code snippet is a generic Java code that has been used in multiple Java libraries. It is a common technique for implementing retry logic in code that involves potentially problematic operations, such as network requests, database connections, or resource-intensive computations. The code checks whether a timeout value has been set for the operation and sleeps for that amount of time before retrying. The call to Thread.sleep() is a standard method for introducing delay in Java applications. The use of a try-catch block for handling InterruptedException is also a common practice in Java code."
+68,completion_result_lib_3_combine1.pkl,"
+
+```
+synchronized (map) {
+    Pair<Connection,ServiceRegistration> pair = map.remove(pid);
+    if(pair != null) {
+        pair.getSnd().unregister();
+        try {
+            pair.getFst().close();
+        } catch (IOException e) {
+            // handle exception
+        }
+    }
+}
+```
+
+This code fragment combines the synchronization block from Code fragment 2 with the null check and resource cleanup from Code fragment 1. The resulting code safely removes the `Pair` object associated with the given `pid` key from the `map`, checks if the `Pair` is not null, unregisters the `ServiceRegistration` and closes the `Connection`.","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+This code fragment performs a common operation of removing an object from a map and cleaning up associated resources. The use of synchronization indicates that this code is designed to be thread-safe, which is a common requirement in many Java libraries. Additionally, the use of the Pair class is a common pattern in Java for storing multiple objects together. Therefore, it is likely that this code has been used in multiple Java libraries."
+69,completion_result_lib_3_combine1.pkl,"
+
+try {
+    // Get the channel
+    Channel channel = conn.createChannel();
+    
+    // Declare the exchange
+    channel.exchangeDeclare(exchangeName, type, passive, durable, autoDelete, arguments);
+    
+    // Set properties
+    props.put(ServiceProperties.EXCHANGE_TYPE, type);
+    
+} catch (IOException e) {
+    // Handle exception
+} finally {
+    // Close channel and connection
+    try {
+        conn.close();
+    } catch (IOException e) {
+        // Handle exception
+    }
+}","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries, particularly those related to interacting with AMQP (Advanced Message Queuing Protocol) servers such as RabbitMQ, Apache ActiveMQ, and Apache Qpid. The code creates a channel and declares an exchange on an AMQP server, while also setting various properties. The use of a try-catch-finally block to handle exceptions and close the channel and connection after use is a common pattern in Java for handling resources."
+70,completion_result_lib_3_combine1.pkl,"
+
+try {
+    Connection conn = (Connection) context.getService(reference);
+    Channel channel = conn.createChannel();
+    // Rest of the code
+} catch (IOException e) {
+    e.printStackTrace();
+} finally {
+    context.ungetService(reference);
+}","
+
+Yes, the code snippet is a generic Java code that has been occurred multiple times in Java libraries. 
+
+This code snippet follows the standard try-catch-finally block, which is a fundamental structure used in Java programming for exception handling. Moreover, it uses typical syntax and methods from the Java messaging service (JMS) library for connection and channel creation. These JMS methods are widely used in enterprise applications for sending and receiving messages between different software components. Hence, the code can be considered a common pattern used in many Java libraries, not just limited to JMS-based applications."
+75,completion_result_lib_3_combine1.pkl,"
+
+try {
+    Connection conn = (Connection) context.getService(reference);
+    channel = conn.createChannel();
+    LOG.debug(""ConnectionExchangeTracker: connection '"" + connName + ""' ADDED, registering exchange '"" + exchangeName + ""'"");
+    props.put(ServiceProperties.EXCHANGE_CONNECTION, connName);
+} catch (Exception e) {
+    LOG.error(""Error creating channel"", e);
+} 
+","
+
+Yes, it is a generic Java code snippet that can occur in multiple Java libraries because it is a common practice for Java applications to create connections and channels to exchange data with other systems or services. This code snippet shows how to catch any exceptions that may arise during the creation of a channel and log them using the Java logging framework. The code also sets some properties related to the exchange connection, indicating that it is being registered with the given name. Therefore, this code can be used across different Java libraries that require similar functionality."
+78,completion_result_lib_3_combine1.pkl,"
+
+try {
+    Connection conn = (Connection) context.getService(reference);
+    channel = conn.createChannel();
+    channel.exchangeDeclare(exchangeName, type, passive, durable, autoDelete, arguments);
+    props.put(ServiceProperties.EXCHANGE_TYPE, type);
+} catch (IOException e) {
+    // handle exception
+} finally {
+    // release resources
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. It is a common pattern for establishing a connection to external services, creating a channel, and handling exceptions. The use of try-catch-finally blocks is a widely accepted practice for handling resources and promoting clean coding. The specific implementation details may vary, but the overall structure of the code is common in many Java libraries."
+79,completion_result_lib_3_combine1.pkl,"
+
+try {
+    Connection conn = (Connection) context.getService(reference);
+    channel = conn.createChannel();
+    channel.exchangeDeclare(exchangeName, type, passive, durable, autoDelete, arguments);
+} catch (IOException e) {
+    e.printStackTrace();
+}
+```
+
+This synthesizes the two code fragments into a single try-catch block, where the connection is retrieved from the context and a channel is created. Then, the exchange is declared using the parameters provided. If an exception is thrown, it is caught and printed to the console.","
+
+Yes, this is a generic Java code snippet that is commonly used in libraries that utilize RabbitMQ or other messaging systems. It follows the standard structure of retrieving a connection from a context (often a connection pool), creating a messaging channel, and declaring an exchange with specified parameters. The try-catch block is also a common practice in handling potential exceptions that may occur during this process."
+81,completion_result_lib_3_combine1.pkl,"
+
+try {
+    Connection conn = (Connection) context.getService(reference);
+    try {
+        channel = conn.createChannel();
+    } catch (IOException e) {
+        LOG.error(""Error opening channel"", e);
+    } finally {
+        if (channel != null && channel.isOpen()) {
+            try {
+                channel.close();
+            } catch (IOException e) {
+                LOG.error(""Error closing channel"", e);
+            }
+        }
+    }
+} catch (IOException e) {
+    LOG.error(""Error getting connection"", e);
+} finally {
+    context.ungetService(reference);
+}","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This code is a common practice in Java for handling connections to resources such as databases or messaging systems. The try-catch block is used to catch any exceptions that may occur while creating and opening a channel, and the finally block is used to ensure that the channel is properly closed even if an error occurs. This is a common pattern for handling connections to resources and can be found in many Java libraries."
+82,completion_result_lib_3_combine1.pkl,"
+
+try {
+    channel.exchangeDeclare(exchangeName, type, passive, durable, autoDelete, arguments);
+    props.put(ServiceProperties.EXCHANGE_TYPE, type);    
+} catch (IOException e) {
+    LOG.error(""Error opening channel"", e);
+} finally {
+    try {
+        channel.close();
+    } catch (IOException | TimeoutException ex) {
+        LOG.error(""Error closing channel"", ex);
+    }
+}","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. The code snippet is used for declaring an exchange in RabbitMQ, a widely used message-broker software. Since many libraries and applications use RabbitMQ for messaging, it is common to see this code snippet in various forms in different projects."
+85,completion_result_lib_3_combine1.pkl,"
+
+try {
+    @SuppressWarnings(""unchecked"")
+    Pair<Channel, ServiceRegistration> pair = (Pair<Channel, ServiceRegistration>) service;
+    pair.getSnd().unregister();
+    pair.getFst().close();
+} catch (Exception e) {
+    LOG.debug(""Error while closing connection and unregistering service"", e);
+}
+
+LOG.debug(""ConnectionExchangeTracker: connection '"" + connName + ""' REMOVED, unregistering exchange '"" + exchangeName + ""'"");","
+
+Yes, it is possible that the synthesized code has occurred in multiple Java libraries as it includes the common try-catch block for handling exceptions, the use of generics, and the logging of a debug message. However, the specific functionality of closing a connection and unregistering a service may vary depending on the library and its purpose."
+87,completion_result_lib_3_combine1.pkl,"
+
+One possible way to synthesize the code fragments is:
+
+```java
+ConnectionExchangeMSF connectionExchangeMSF = new ConnectionExchangeMSF(context);
+ServiceRegistration<?> connectionExchangeMsfReg = null;
+Dictionary<String, ?> svcProps = null;
+try {
+    svcProps = new Hashtable<String, Object>();
+    connectionExchangeMsfReg = context.registerService(
+        ManagedServiceFactory.class.getName(), connectionExchangeMSF, svcProps);
+    // Code fragment 1 ends here
+} catch (Exception e) {
+    // Handle the exception
+}
+
+// Some more code...
+
+try {
+    svcProps = new Hashtable<String, Object>();
+    connectionExchangeMsfReg = context.registerService(
+        ManagedServiceFactory.class.getName(), connectionExchangeMSF, svcProps);
+    // Code fragment 2 ends here
+} catch (Exception e) {
+    // Handle the exception
+}
+``` 
+
+This synthesizes the two code fragments by declaring a ServiceRegistration variable `connectionExchangeMsfReg` in the context where it is used, initializing it to null, and using try-catch blocks to handle any exceptions that might be thrown by the `registerService` method. The `svcProps` variable is also initialized to a new empty Dictionary in each fragment, which could be used to pass additional properties to the service registration, but its content is not shown in the provided code fragments.","Yes, the synthesized code is a generic Java code snippet that can occur in multiple Java libraries. This is because it uses standard Java constructs and methods (`ConnectionExchangeMSF`, `Hashtable`, `ServiceRegistration`, `Dictionary`, `ManagedServiceFactory`, `registerService`) that are part of the Java API and can be used in different Java projects and libraries. The code does not reference any specific libraries or dependencies, so it can be considered a generic Java code template for registering a service factory in an OSGi container."
+88,completion_result_lib_3_combine1.pkl,"
+
+[try{exchange.basicPublish(routingKey, mandatory, immediate, props, body);} catch(Exception e) {System.out.println(""Error publishing message: "" + e.getMessage());}]","
+
+Yes, the synthesized code appears to be a generic Java code snippet that can occur in multiple Java libraries. 
+
+The code block involves using a try-catch statement to publish a message to an exchange with the RabbitMQ message broker. This is a common operation in messaging systems that use RabbitMQ, and it's likely that many Java libraries for RabbitMQ would include a similar code block for publishing messages.
+
+Furthermore, the use of try-catch blocks for error handling is a standard practice in Java programming, so it's not specific to any particular library or framework."
+90,completion_result_lib_3_combine1.pkl,"
+
+CMPropertyAccessor accessor = new CMPropertyAccessor(dict);
+boolean autoDelete = accessor.getBoolean(ServiceProperties.EXCHANGE_AUTODELETE, false);","
+
+Yes, it is possible that the synthesized code may have occurred in multiple Java libraries as it is a common practice to use property accessors in Java programming. However, without additional context, it is impossible to determine whether this specific code snippet has occurred in multiple libraries or not."
+91,completion_result_lib_3_combine1.pkl,"
+
+public void processProperties(Dictionary dict) {
+    CMPropertyAccessor accessor = new CMPropertyAccessor(dict);
+    String connName = accessor.getMandatoryString(ServiceProperties.CONNECTION_NAME);
+    String exchangeName = accessor.getMandatoryString(ServiceProperties.EXCHANGE_NAME);
+    String exchangeType = accessor.getString(ServiceProperties.EXCHANGE_TYPE);
+    boolean passive = accessor.getBoolean(ServiceProperties.EXCHANGE_PASSIVE, false);
+    boolean durable = accessor.getBoolean(ServiceProperties.EXCHANGE_DURABLE, false);
+    boolean autoDelete = accessor.getBoolean(ServiceProperties.EXCHANGE_AUTODELETE, false);
+}
+
+// example usage
+Dictionary properties = new Hashtable();
+properties.put(ServiceProperties.CONNECTION_NAME, ""my-connection"");
+properties.put(ServiceProperties.EXCHANGE_NAME, ""my-exchange"");
+properties.put(ServiceProperties.EXCHANGE_TYPE, ""direct"");
+properties.put(ServiceProperties.EXCHANGE_PASSIVE, true);
+properties.put(ServiceProperties.EXCHANGE_DURABLE, true);
+properties.put(ServiceProperties.EXCHANGE_AUTODELETE, false);
+
+processProperties(properties);","
+
+Yes, it is a generic Java code snippet that can occur in multiple Java libraries. It is a common pattern to process properties from a dictionary or map by using an accessor object, and then set variables or call methods based on those properties. The use of a specific set of property keys (such as ServiceProperties) is library-specific, but the general structure of the code can be used in many different contexts."
+92,completion_result_lib_3_combine1.pkl,"
+
+String connName = accessor.getMandatoryString(ServiceProperties.CONNECTION_NAME);
+String exchangeName = accessor.getMandatoryString(ServiceProperties.EXCHANGE_NAME);
+String exchangeType = accessor.getString(ServiceProperties.EXCHANGE_TYPE);
+boolean passive = accessor.getBoolean(ServiceProperties.EXCHANGE_PASSIVE, false);
+boolean durable = accessor.getBoolean(ServiceProperties.EXCHANGE_DURABLE, false);
+boolean autoDelete = accessor.getBoolean(ServiceProperties.EXCHANGE_AUTODELETE, false);
+LOG.debug(""STARTING to track connection name '"" + connName + ""' to declare exchange '"" + exchangeName + ""'."");
+ConnectionExchangeTracker tracker = new ConnectionExchangeTracker(context, connName, exchangeName, exchangeType, passive, durable, autoDelete, args);","
+
+Yes, it is a generic Java code snippet that can be found in various Java libraries. It is a common way of declaring and tracking the status of a connection and exchange in messaging protocols, particularly in RabbitMQ. The use of accessor methods to retrieve mandatory and optional properties from a configuration object is a standard approach in Java development. Similarly, the use of boolean flags to specify exchange properties such as passive, durable, and autoDelete is a common convention in messaging libraries. The logging of debug messages is also a typical practice for troubleshooting or monitoring purposes."
+93,completion_result_lib_3_combine1.pkl,"
+
+CMPropertyAccessor accessor = new CMPropertyAccessor(dict);
+String connName = accessor.getMandatoryString(ServiceProperties.CONNECTION_NAME);
+String exchangeName = accessor.getMandatoryString(ServiceProperties.EXCHANGE_NAME);
+String exchangeType = accessor.getString(ServiceProperties.EXCHANGE_TYPE);
+boolean passive = accessor.getBoolean(ServiceProperties.EXCHANGE_PASSIVE, false);
+boolean durable = accessor.getBoolean(ServiceProperties.EXCHANGE_DURABLE, false);
+boolean autoDelete = accessor.getBoolean(ServiceProperties.EXCHANGE_AUTODELETE, false);
+
+LOG.debug(""STARTING to track connection name '"" + connName + ""' to declare exchange '"" + exchangeName + ""'."");
+ConnectionExchangeTracker tracker = new ConnectionExchangeTracker(context, connName, exchangeName, exchangeType, passive, durable, autoDelete, args);","
+
+Yes, it is a generic Java code snippet that could occur in multiple Java libraries. The code snippet is using standard Java libraries and no library or framework-specific functions, making it applicable in different contexts. Additionally, the code snippet is just a block of code that initializes variables and calls methods, which is a common structure in Java programming."
+95,completion_result_lib_3_combine1.pkl,"
+
+boolean autoDelete = accessor.getBoolean(ServiceProperties.EXCHANGE_AUTODELETE, false);
+String connName = accessor.getMandatoryString(ServiceProperties.CONNECTION_NAME);
+LOG.debug(""STARTING to track connection name '"" + connName + ""' to declare exchange '"" + exchangeName + ""'."");
+ConnectionExchangeTracker tracker = new ConnectionExchangeTracker(context, connName, exchangeName, exchangeType, passive, durable, autoDelete, args);","
+
+As an AI language model, I have not come across this specific code snippet before, nor can I determine if it is a generic code snippet that occurs frequently in Java libraries. However, based on its variables and use of common Java libraries such as LOG and ConnectionExchangeTracker, it is possible that it may appear in multiple Java libraries. Therefore, my answer is ""possibly yes."""
+97,completion_result_lib_3_combine1.pkl,"
+
+CMPropertyAccessor accessor = new CMPropertyAccessor(dict);
+boolean autoDelete = accessor.getBoolean(ServiceProperties.EXCHANGE_AUTODELETE, false);","
+
+Yes, it is possible that the synthesized code has occurred in multiple Java libraries. This code snippet is using a common approach in Java of accessing and retrieving values from a dictionary object. The use of a boolean variable and default value is also a common practice in Java programming. Therefore, this code snippet could be found in various Java libraries that involve handling and manipulating data."
+98,completion_result_lib_3_combine1.pkl,"
+
+withConnection(conn, ci, new ChannelOp() {
+    public void execute(Channel channel) {
+        try {
+            channel.exchangeDeclare(exchange, type);
+            ci.println(""Exchange Declared"");
+        } catch (IOException e) {
+            ci.println(""Error declaring exchange"");
+            e.printStackTrace();
+        }
+    }
+});","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This type of code is commonly used in libraries related to RabbitMQ or other messaging systems that rely on channels and exchanges. The use of anonymous classes and the execute method is a pattern that is prevalent in many Java libraries."
+100,completion_result_lib_3_combine1.pkl,"
+
+String channelName = ci.nextArgument();
+final String queueName = ci.nextArgument();
+final String exchangeName = ci.nextArgument();
+final String routingKey = ci.nextArgument();
+if(channelName == null || queueName == null || exchangeName == null || routingKey == null){
+    ci.println(""Usage: "" + HELP_BIND_QUEUE);
+}
+withConnection(channelName, ci, new ChannelOp(){
+    public void execute(Channel channel){
+        try{
+            channel.queueBind(queueName, exchangeName, routingKey);
+            ci.println(""Queue Bound"");
+        } catch (IOException e){
+            ci.println(""Error binding queue"");
+            ci.printStackTrace(e);
+        }
+    }
+});","
+
+Yes, it is a generic Java code snippet that has been used in multiple Java libraries. 
+
+The code snippet performs a basic bind operation between a queue and an exchange in RabbitMQ message broker. The usage of the ChannelOp interface and withConnection method is a common pattern used in various Java libraries that interact with RabbitMQ. Therefore, it is highly likely that this code has been used in multiple Java libraries."
+101,completion_result_lib_3_combine1.pkl,"
+
+withConnection(channelName, ci, new ChannelOp(){ 
+    public void execute(Channel channel){
+        try{
+            channel.queueBind(queueName, exchangeName, routingKey);
+            ci.println(""Queue Bound"");
+        } catch (IOException e){
+            ci.println(""Error binding queue"");
+            e.printStackTrace();
+        }
+    }
+}); 
+//This code binds a queue to an exchange using the given channel name, queue name, exchange name, and routing key. If there is an error, it is printed to the console.","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This code follows the common practice of using a functional interface and an anonymous class to execute an operation on a resource (in this case, a channel). The try-catch block is also a standard way of handling exceptions in Java. Overall, this code is a common pattern used in various Java libraries for performing channel operations like binding a queue to an exchange."
+105,completion_result_lib_3_combine1.pkl,"
+
+String channelName = ci.nextArgument();
+if(channelName != null && queue != null){
+    withConnection(channelName, ci, new ChannelOp(){
+        public void execute(Channel channel){
+            try{
+                GetResponse response = channel.basicGet(queue, true);
+                if(response == null){
+                    ci.println(""---No message received---"");
+                } else{
+                    ci.println(""---Message Received---"");
+                    byte[] body = response.getBody();
+                    String message = new String(body);
+                    ci.println(message);
+                }
+            } catch (IOException e){
+                ci.println(""Error Receiving Message"");
+                e.printStackTrace();
+            }
+        }
+    });
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This is because it uses common Java syntax and libraries such as the try-catch block, the String class, and the IOException class. Additionally, it uses the RabbitMQ Java client library, which is a widely used library for implementing messaging systems in Java applications."
+107,completion_result_lib_3_combine1.pkl,"
+
+try {
+  channel.queueDeclare(queueName);
+  consumerTag = channel.basicConsume(queueName, false, consumer);
+} catch (Exception e) {
+  // handle exception
+} finally {
+  // close resources
+  channel.close();
+}","
+
+Yes, this code snippet is a generic Java code that has been occurred in multiple Java libraries. The code is used for declaring a queue and starting a consumer to receive messages from the queue using the RabbitMQ message broker. The try-catch block is used to handle any possible exceptions that may occur when declaring the queue or starting the consumer. The finally block is used to close the resources, in this case, the RabbitMQ channel. This code can be seen in many RabbitMQ client libraries written in Java."
+108,completion_result_lib_3_combine1.pkl,"
+
+for (int i = 0 ; i < count/10000 ; i ++){
+    long inner_start = System.currentTimeMillis();
+    // code to be timed
+    long inner_end = System.currentTimeMillis();
+    System.out.println(""round "" + (i + 1) + "" takes "" + (inner_end - inner_start) + "" milliseconds "");
+}
+long start = System.currentTimeMillis();
+// code to be timed
+long end = System.currentTimeMillis();
+long time = end - start;
+```","
+
+Yes, this is a generic Java code snippet that has been used in multiple Java libraries. The code is used to measure the execution time of a certain piece of code or function, which is a common requirement for many applications. The code uses the System.currentTimeMillis method to measure the time it takes to execute a particular piece of code and then prints the execution time to the console. This code structure can be found in various Java libraries and is often used to benchmark different algorithms or to optimize performance-critical operations."
+109,completion_result_lib_3_combine1.pkl,"
+
+Boolean autoAck = true;
+if(args.length > 3){
+    autoAck = Boolean.valueOf(args[3]);
+}
+for(int i = 0 ; i < cc ;i ++){
+    sr.setAutoAck(autoAck);
+}","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. The code checks if the number of arguments passed to the program is greater than 3, and if so, it sets the autoAck value to the Boolean value of the fourth argument. Then, it iterates through a loop, setting the AutoAck value in each iteration. This type of code is commonly used in Java programs that deal with messaging or networking, where the AutoAck parameter is used to automatically acknowledge receipt of messages."
+110,completion_result_lib_3_combine1.pkl,"
+
+try{
+    long now;
+    while ((now = System.nanoTime() / NANOS_IN_MILLI) < _runTime){
+    }
+    synchronized(this){
+        wait(_runTime - now);
+    }
+}catch(InterruptedException e){
+    // Handle the exception
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is an implementation of a wait-for-time pattern where a thread waits for a specified duration before performing the next action. This pattern is widely used in concurrency-related programming in Java, and therefore, it is very likely to be present in multiple Java libraries. Additionally, the code uses standard Java synchronization and wait mechanism, making it a commonly used approach in Java development."
+111,completion_result_lib_3_combine1.pkl,"
+
+int connectPort;
+if(args.length > 2){
+    connectPort = Integer.parseInt(args[2]);
+}else{
+    connectPort = DEFAULT_CONNECT_PORT;
+}
+
+String connectHost;
+if(args.length > 1){
+    connectHost = args[1];
+}else{
+    connectHost = DEFAULT_CONNECT_HOST;
+}
+
+System.out.println(""Invoked as: Tracer "" + listenPort + "" "" + connectHost + "" "" + connectPort);
+
+try{
+    while(true){
+        new Tracer( conn, ""Tracer-"" + (counter++), connectHost, connectPort, logger).start();
+    }
+}","
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. 
+
+The code snippet consists of basic Java constructs like variable initialization, conditionals, and loops, and it does not contain any libraries, frameworks, or APIs that are specific to any particular domain or application. Therefore, it can be adapted and reused in various contexts and projects that require network communication and logging functionality."
+112,completion_result_lib_3_combine1.pkl,"
+
+String connectHost = args.length > 1 ? args[1] : DEFAULT_CONNECT_HOST;
+System.out.println(""Invoked as: Tracer "" + listenPort + "" "" + connectHost + "" "" + connectPort);
+try{
+    int counter = 0;
+    while (true){
+        new Tracer( conn, ""Tracer-"" + (counter++), connectHost, connectPort, logger).start();
+    }
+} 
+
+This synthesized code merges both Code fragment 1 and Code fragment 2. It initializes the ""counter"" variable before the while loop and removes the unnecessary try block before the while loop.","
+
+Yes, it is a generic Java code snippet that is commonly used in Java libraries. The code initializes a counter and starts a while loop to repeatedly create and start new instances of the Tracer class. The code also includes a conditional statement to set the connectHost variable based on the command-line arguments. These are standard programming concepts that are used in many Java programs and libraries."
+113,completion_result_lib_3_combine1.pkl,"
+
+int connectPort;
+if(args.length > 2){
+    connectPort = Integer.parseInt(args[2]);
+}else{
+    connectPort = DEFAULT_CONNECT_PORT;
+}
+
+int counter = 0;
+while(true){
+    Tracer tracer = new Tracer(conn, ""Tracer-"" + (counter++), connectHost, connectPort, logger);
+    tracer.start();
+}","
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is commonly used in Java programs to establish a connection to a specified host and port, and create a new thread for each connection using the Tracer class. The use of conditional statements and a while loop is also a common programming pattern in Java, making this code snippet common and reusable across different Java libraries."
+114,completion_result_lib_3_combine1.pkl,"
+
+String connectHost = args.length > 1 ? args[1] : DEFAULT_CONNECT_HOST;
+int listenPort = args.length > 0 ? Integer.parseInt(args[0]) : DEFAULT_LISTEN_PORT;","
+
+Yes, it is a generic Java code snippet that can be found in multiple Java libraries. The code snippet is commonly used to parse command-line arguments in Java applications. It checks whether the user has provided values for the required parameters, and if not, uses default values. This approach is widely used in Java libraries, making this snippet a common occurrence in a variety of projects."
+115,completion_result_lib_3_combine1.pkl,"
+
+The code fragment appears to be the same in both cases. It defines a DefaultConsumer for an AMQP channel and overrides two methods: handleShutdownSignal and handleDelivery. 
+
+In the handleShutdownSignal method, the code synchronizes with a continuation map, iterates over its entries, and sets the value of each BlockingCell object to the shutdown signal. The consumer object is set to null at the end of the method.
+
+In the handleDelivery method, the code retrieves the correlation ID from the message properties, gets the corresponding BlockingCell from the continuation map, removes the entry from the map, and sets the value of the BlockingCell to the message body. 
+
+The synthesized code would therefore be:
+
+```
+DefaultConsumer consumer = new DefaultConsumer(_channel){
+    @Override
+    public void handleShutdownSignal(String consumerTag, ShutdownSignalException signal){
+        synchronized (_continuationMap){
+            for (Entry<String, BlockingCell<Object>> entry : _continuationMap.entrySet()){
+                entry.getValue().set(signal);
+            }
+            _consumer = null;
+        }
+    }
+    
+    @Override
+    public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException{
+        String replyId = properties.getCorrelationId();
+        BlockingCell<Object> blocker = _continuationMap.get(replyId);
+        _continuationMap.remove(replyId);
+        blocker.set(body);
+    }
+};
+```","Yes, the synthesized code is a generic Java code snippet that could occur in multiple Java libraries. 
+
+The code implements a DefaultConsumer for an AMQP channel, which is a common pattern in libraries that deal with messaging protocols like RabbitMQ. The handleShutdownSignal and handleDelivery methods are also common methods that are often overridden to handle specific behavior when dealing with messages. Overall, the code is not specific to any particular library or use case, and could be found in many different contexts."
+116,completion_result_lib_3_combine1.pkl,"
+
+synchronized (_continuationMap) {
+    if (props == null) {
+        props = new AMQP.BasicProperties.Builder();
+    }
+    props = props.builder().correlationId(replyId).replyTo(_replyQueue).build();
+    publish(props, message);
+}","
+
+Yes, it is a generic Java code snippet that could occur in multiple Java libraries. The use of synchronized block shows that this code is the thread-safe way of accessing the shared resource, which is the _continuationMap object in this case. The code inside the synchronized block creates a new instance of the AMQP.BasicProperties.Builder class if props is null and sets the correlationId and replyTo properties using the _replyQueue and replyId values. Finally, the publish method is called with the generated properties and message parameters. This code is generic enough to be used in any Java application where RabbitMQ messaging is used."
+117,completion_result_lib_3_combine1.pkl,"
+
+try {
+   delegate.handleConsumeOk(consumerTag);
+} catch (Throwable ex) {
+   connection.getExceptionHandler().handleConsumerException(
+        channel,
+        ex,
+        delegate,
+        consumerTag,
+        ""handleConsumeOk""
+   );
+}","
+
+Yes, this is a generic Java code snippet that has occurred in multiple Java libraries. 
+
+The reason for this is that it is a common pattern for handling exceptions that may occur in a delegate method. The code tries to execute the delegate method and if it throws an exception, it catches it and calls the handleConsumerException method to handle the exception. The handleConsumerException method is usually defined in a separate exception handler class and can take different arguments depending on the library. This pattern is used to handle exceptions in a consistent way across different parts of the application code."
+120,completion_result_lib_3_combine1.pkl,"
+
+Code fragment [try{consumer.handleShutdownSignal(consumerTag, signal);} catch (Throwable ex){connection.getExceptionHandler().handleConsumerException(                    channel,                    ex,                    consumer,                    consumerTag,                    ""handleShutdownSignal"");}] is duplicated.","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This code is commonly used in the implementation of message queue systems or other similar client-server communication protocols. The code block is used to handle shutdown signals that are sent to the client or consumer, and it catches any exceptions that may occur during this process. Since this is a common scenario in many different applications and systems, it is likely that this code has been reused and duplicated across various libraries and projects."
+122,completion_result_lib_3_combine1.pkl,"
+
+[MixIn annotation = mixInClass.getAnnotation(MixIn.class);
+Class<?> originalClass = annotation.value();
+if (originalClass.equals(Void.class)) {
+    if (mixInClass.getInterfaces().length == 1) {
+        originalClass = mixInClass.getInterfaces()[0];
+    } else {
+        originalClass = mixInClass.getSuperclass();
+        if (originalClass == null) {
+            throw new IllegalArgumentException(""The annotation @MixIn used without parameters requires the MixIn class to either extends a particular class or implement one interface"");
+        }
+    }
+}
+];","
+
+Yes, this code snippet is a generic Java code that has been occurred in multiple Java libraries. The code is used to obtain the original class to which the @MixIn annotation is applied. It checks if the annotation has any specified value, and if not, it determines the original class by checking the interfaces implemented by the MixIn class, or alternatively, the superclass of the MixIn class. This is a common implementation used in many Java libraries that involve mixing behavior into classes or other similar use cases."
+123,completion_result_lib_3_combine1.pkl,"
+
+Set<ConstraintViolation<?>> constraintViolations = new HashSet<ConstraintViolation<?>>();
+
+constraintViolations.addAll(validator.validate(queue));
+
+if (!constraintViolations.isEmpty()) {
+
+   throw new ConstraintViolationException(constraintViolations);
+
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is a commonly used way to validate objects using the Java Bean Validation API. It first creates an empty set to hold any constraint violations that may occur during the validation process. Then, the validator validates the object and adds any constraint violations to the set. Finally, if there are any constraint violations, a ConstraintViolationException is thrown with the set of violations as its argument. This approach to validation is used in many Java libraries because it follows the standard conventions for using the Java Bean Validation API."
+125,completion_result_lib_3_combine1.pkl,"
+
+if (from instanceof Exchange) {
+   currentExchange = (Exchange) from;
+} else {
+   currentExchange = null;
+}","
+
+Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. It is commonly used in middleware and networking related libraries or frameworks that deal with message exchange or request/response processing. The purpose of the code is to check if the incoming object is of type Exchange, and if so, cast it to the Exchange type, otherwise set the currentExchange variable to null."
+126,completion_result_lib_3_combine1.pkl,"
+
+if (CONSUME.equals(methodName)) {
+    for (Object param : params) {
+        if (param instanceof Map) {
+            Map paramMap = (Map) param;
+            if (paramMap.containsKey(ON_MESSAGE)) {
+                Object onMessage = paramMap.get(ON_MESSAGE);
+            } else if (paramMap.containsKey(ACK)) {
+                AcknowledgeMode mode = AcknowledgeMode.valueOf(paramMap.get(ACK).toString().toUpperCase());
+                listenerContainer.setAcknowledgeMode(mode);
+            }
+        }
+    }
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. It is a common pattern used for handling parameters in Java methods that accept variable arguments. The code checks whether each parameter in the arguments is an instance of a Map, and if so, it checks whether it contains certain keys (ON_MESSAGE and ACK) to perform the corresponding actions. This pattern is used in various Java libraries and frameworks for handling parameters with different types and combinations."
+131,completion_result_lib_3_combine1.pkl,"
+
+for (ConnectorStateListener listener : listeners){
+    listener.connectorStateChanged(this, newState);
+} 
+state = newState;","
+
+Yes, this is a generic Java code snippet that can be found in many Java libraries. 
+
+The code uses a for-each loop to iterate through a collection of objects that implement the ConnectorStateListener interface. It then calls the connectorStateChanged method on each object, passing in a reference to the current object (this) and the new state. Finally, it updates the state variable with the new value.
+
+This pattern is used frequently in Java to notify listeners of changes in state or status. It is a common design pattern that promotes loose coupling and flexibility in code."
+132,completion_result_lib_3_combine1.pkl,"
+
+if (thing == null) {
+    String msg = String.format(""'%s' property in %s must not be null"", prop, c);
+}","
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries. 
+
+The snippet checks whether a specific variable is null and then creates an error message using String.format(). This is a common practice in Java programming and is often used to validate input or ensure certain conditions are met before proceeding with other code. Since this is a standard technique, it is likely that other developers have used similar code in their libraries or applications. However, without further context it's impossible to say for certain whether this exact code has been used elsewhere."
+133,completion_result_lib_3_combine1.pkl,"
+
+if (timeout < 0) {
+  del = consumer.nextDelivery();
+} else {
+  boolean hasNextDelivery = consumer.getNextDeliveryChannel().poll(timeout, TimeUnit.MILLISECONDS) != null;
+  if (hasNextDelivery) {
+    del = consumer.nextDelivery();
+  } else {
+    // handle timeout
+  }
+}","
+
+Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries.
+
+This code is a common pattern for receiving messages from a messaging system using the AMQP protocol. The code uses Apache Qpid JMS libraries to receive messages from an AMQP message broker. However, this pattern is used in other libraries that support AMQP as well.
+
+The code snippet checks for the availability of a message from the message broker. If the timeout value is less than zero, it blocks and waits for the next message to arrive. If the timeout value is greater than zero, it waits for the specified timeout duration before checking again. If a message is available, it is returned, otherwise, the code handles the timeout event.
+
+This code pattern is simple and efficient, and many AMQP libraries use it. So, it is a generic Java code snippet that is widely used in multiple Java libraries."
+134,completion_result_lib_3_combine1.pkl,"
+
+synchronized (channelProxies){
+ for (HaChannelProxy proxy : channelProxies){
+ int channelNumber = proxy.getTargetChannel().getChannelNumber();
+ proxy.setTargetChannel(target.createChannel(channelNumber));
+ }}","
+
+Yes, the code fragment is a generic Java code snippet that has occurred in multiple Java libraries. The use of synchronized blocks to control access to shared objects is a common programming practice, and iterating through collections of objects is also a common operation. Additionally, the logic of getting and setting target channels based on channel numbers is a common pattern in network programming. Therefore, it is likely that similar code fragments can be found in many Java libraries."
+139,completion_result_lib_3_combine1.pkl,"
+
+for (int numOperationInvocations = 1; keepOnInvoking && shutdownRecoverable; numOperationInvocations++){
+    synchronized (target){
+        try{
+            // original code fragment 1
+        }
+        catch (IOException ioe){
+            if (shutdownRecoverable){
+                keepOnInvoking = retryStrategy.shouldRetry(ioe, numOperationInvocations, connectionLatch);
+            }
+            else{
+                throw ioe;
+            }
+        }
+        catch (Exception e){
+            // code from fragment 2
+            if (shutdownRecoverable){
+                keepOnInvoking = retryStrategy.shouldRetry(e, numOperationInvocations, connectionLatch);
+            }
+            else{
+                throw e;
+            }
+        }
+    }
+}","
+
+Yes, it is a generic Java code snippet that has likely occurred in multiple Java libraries. 
+
+This is because the code implements a common retry strategy when dealing with potential errors or exceptions during an operation. It uses synchronization to ensure that only one thread is accessing the target object at a time, which is a common practice in multi-threaded environments. The code also incorporates a retry logic that is often used in applications that need to handle recoverable errors, and this logic can be customized based on the specific needs of the application. Overall, these are common techniques that have been used in many Java libraries and applications."
+141,completion_result_lib_3_combine1.pkl,"
+
+for (int numOperationInvocations = 1; keepOnInvoking && shutdownRecoverable; numOperationInvocations++) {
+   synchronized (target) {
+      try {
+         // code to be executed
+      } catch (IOException ioe) {
+         lastException = ioe;
+         shutdownRecoverable = HaUtils.isShutdownRecoverable(ioe);
+         if (shutdownRecoverable) {
+            keepOnInvoking = retryStrategy.shouldRetry(lastException, numOperationInvocations, connectionLatch);
+         } else {
+            keepOnInvoking = false;
+            break; // added to exit loop on non-recoverable shutdown
+         }
+      }
+   }
+}","
+
+Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+The code snippet uses a for loop to repeat a block of code until certain conditions are met. It also uses synchronization with a target object to ensure thread safety. The try-catch block within the loop handles any potential IOExceptions that may occur within the code block. The use of a retry strategy and a connection latch variable makes this code useful for network or server-related applications. Due to its generic nature, this code snippet has likely been used in various Java libraries for different purposes."
+147,completion_result_lib_3_combine1.pkl,"
+
+while(!connected){  
+    try{  
+        if(reconnection){  
+            for(HaConnectionListener listener : listeners){ 
+                // perform reconnection actions 
+            }  
+        }
+        // no exception thrown, therefore connected
+        connected = true;
+    }catch(ConnectException ce){  
+        exception = ce;
+        if(!reconnection){
+            // if no reconnection, set connected to false and break out of loop
+            connected = false;
+            break;
+        }
+    }  
+}","
+
+Yes, the synthesized code snippet is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet implements a common pattern of attempting to establish a network connection and handling potential connection errors, including the option to perform reconnection attempts. Many Java libraries and applications use similar code for network communication, making this a familiar and widely-recognized pattern in Java development."
+149,completion_result_lib_3_combine1.pkl,"
+
+while (!connected) {
+  try {
+    Connection connection = newTargetConnection(connectionProxy.getAddresses());
+    connectionProxy.setTargetConnection(connection);
+    connectionProxy.replaceChannelsInProxies();
+    if (reconnection) {
+      for (HaConnectionListener listener : listeners) {
+        listener.onReconnection(connectionProxy);
+        listener.onConnection(connectionProxy);
+      }
+    }
+    connectionProxy.markAsOpen();
+    connected = true;
+  } catch (Exception e) {
+    connectionProxy.markAsClosed();
+    connected = false;
+    if (LOG.isDebugEnabled()) {
+      LOG.info(""Reconnection failed, sleeping: addresses="" + 
+          addressesAsString + "", wait=1000"", e);
+    }
+    Thread.sleep(1000);
+  }
+}","Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+The code involves establishing a connection through a try-catch block and continuously attempting to reconnect until a successful connection is made. This is a common pattern in network programming and is used in many Java libraries. Additionally, the use of listeners and logging are also widely used in Java libraries, making this code snippet even more generic."
+150,completion_result_lib_3_combine1.pkl,"
+
+while (!connected) {
+  try {
+    Connection connection = newTargetConnection(connectionProxy.getAddresses());
+    connectionProxy.setTargetConnection(connection);
+    connectionProxy.replaceChannelsInProxies();
+    if (reconnection) {
+      for (HaConnectionListener listener : listeners) {
+        listener.onReconnection(connectionProxy);
+        listener.onConnection(connectionProxy);
+      }
+    }
+    connectionProxy.markAsOpen();
+    connected = true;
+  } catch (Exception e) {
+    connectionProxy.markAsClosed();
+    connected = false;
+    Thread.sleep(1000);
+  } finally {
+    connectionProxy.closeConnectionLatch();
+  }
+}","
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries. This is because the code includes a common pattern for establishing a connection that involves trying to create the connection, catching exceptions if the connection fails, and retrying connection attempts until successful. This pattern is common in many networked applications, so it is likely that similar code has been written in multiple Java libraries."
+156,completion_result_lib_3_combine1.pkl,"
+
+while (!connected) {
+    try {
+        Connection connection = newTargetConnection(connectionProxy.getAddresses());
+        connectionProxy.setTargetConnection(connection);
+        connectionProxy.replaceChannelsInProxies();
+        if (reconnection) {
+            for (HaConnectionListener listener : listeners) {
+                listener.onReconnection(connectionProxy);
+                listener.onConnection(connectionProxy);
+            }
+        } else {
+            connectionProxy.markAsOpen();
+        }
+        // Add the code to close the connection latch here
+        connectionProxy.closeConnectionLatch();
+        break; // exit the loop if connection succeeds
+    } catch (ConnectException ce) {
+        exception = ce;
+    }
+}","
+
+Yes, it is possible that this code snippet has occurred in multiple Java libraries, as it is a basic while loop with various try-catch blocks for handling exceptions related to connecting to a server. It is a common pattern used in network programming and could be replicated in various Java libraries."
+158,completion_result_lib_3_combine1.pkl,"
+
+while (!connected) {
+  try {
+    if (reconnection) {
+      for (HaConnectionListener listener : listeners) {
+        // Notify listeners of attempted reconnection
+      }
+    }
+    // Attempting connection here
+    // If connection is successful, ""connected"" will be set to true
+  } catch (ConnectException ce) {
+    // If connection fails, we catch the exception and store it
+    exception = ce;
+  }
+}","
+
+Yes, the synthesized code snippet is a generic Java code that has occurred in multiple Java libraries. The code follows a common pattern of attempting a connection and catching any exceptions that may arise during the process. Additionally, it has a reconnection feature that notifies listeners in case of a failed connection attempt. Overall, this code pattern is commonly used in Java networking applications and can be found in various libraries."

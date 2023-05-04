@@ -1,0 +1,190 @@
+,pro/lib,idiom,final
+0,new_completion_result_pro_9_combine1.pkl,"wrapped.addFlattenedComponents(increaseWriterIndex, buffer);","Yes, it is possible that the synthesized code [wrapped.addFlattenedComponents(increaseWriterIndex, buffer);] is a generic Java code snippet that has occurred in multiple Java libraries. However, without more context or information about the specific library and its purpose, it is impossible to say for certain. The method name and parameters do not provide enough information to determine the uniqueness of the code."
+1,new_completion_result_pro_9_combine1.pkl,"wrapped.setBytes(index, src, srcIndex, length);","Yes. The code snippet is a generic Java code that can occur in multiple Java libraries. The method setBytes() is a commonly used method in Java libraries for setting a range of bytes in an array or buffer. The usage of parameters such as index, src, srcIndex, and length is also common in Java libraries for specifying the position and length of the bytes to be set. Therefore, this code snippet can be found in various Java libraries that deal with byte manipulation or buffer management."
+2,new_completion_result_pro_9_combine1.pkl,wrapped.writeBoolean(value);,"Yes, the synthesized code [wrapped.writeBoolean(value);] is a generic Java code snippet that has occurred in multiple Java libraries. This is because ""writeBoolean"" is a standard method of the ""DataOutputStream"" class in Java, which is commonly used for writing boolean values to output streams. Thus, it is likely that this code snippet has been used in various Java libraries across different applications."
+3,new_completion_result_pro_9_combine1.pkl,wrapped.writeByte(value);,"Yes, the synthesized code [wrapped.writeByte(value);] is a generic Java code snippet that has occurred in multiple Java libraries. This is because the method ""writeByte"" is a commonly used method in many libraries that deal with input/output operations, such as file handling, network communication, and serialization. Hence, the use of this code snippet can be found in various contexts and applications."
+4,new_completion_result_pro_9_combine1.pkl,"buf.setShortLE(index, (short) value);","Yes, the synthesized code [buf.setShortLE(index, (short) value);] is a generic Java code snippet that has occurred in multiple Java libraries. 
+
+The code snippet is using the Java NIO (New Input/Output) library to set a short value in a buffer at a given index. The method name ""setShortLE"" indicates that the value is being set in little-endian byte order. This is a common operation when working with binary data, such as network protocols or file formats.
+
+As the snippet uses a standard Java library, it is very likely that it has been used in multiple Java libraries or applications. It is a generic code snippet that can be used to perform a specific function in any project that requires setting a short value in a buffer."
+5,new_completion_result_pro_9_combine1.pkl,"buf.setMediumLE(index, value);","Yes, the synthesized code [buf.setMediumLE(index, value);] is a generic Java code snippet that has been occurred in multiple Java libraries. This is because the code snippet uses a common Java class, ""buf,"" which is widely used in Java programming. Additionally, the method ""setMediumLE"" is a common method used to set values in a buffer, which is also a commonly used data structure in Java programming. Therefore, it is likely that this code snippet has been used in multiple Java libraries."
+6,new_completion_result_pro_9_combine1.pkl,"buf.getBytes(index, dst, dstIndex, length);","Yes, the synthesized code [buf.getBytes(index, dst, dstIndex, length);] is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is used to read a sequence of bytes from a buffer into a destination array at a specified index and length. It is a commonly used method in Java for file I/O or network programming. Many libraries and frameworks in Java use this method, such as Apache Common IO, Netty, and JDK's java.nio package. Therefore, it can be considered a generic code snippet that is widely used in the Java ecosystem."
+7,new_completion_result_pro_9_combine1.pkl,"buf.setShort(index, ByteBufUtil.swapShort((short) value));","Yes. This code snippet is a generic Java code that has occurred in multiple Java libraries because it deals with byte manipulation and swapping, which is a common requirement in many programming tasks. Additionally, the use of ByteBufUtil and setShort() method indicates that the code is related to Netty, which is a popular Java-based networking framework used in many applications."
+8,new_completion_result_pro_9_combine1.pkl,"buf.setMedium(index, ByteBufUtil.swapMedium(value));","Yes, it is a generic Java code snippet that has been used in multiple Java libraries. The code snippet is used to swap the endianness of a medium integer value and write it to a ByteBuf at the given index. Since byte ordering and endianness can vary between systems, this code is used to ensure that the medium integer value is properly formatted for the target system."
+9,new_completion_result_pro_9_combine1.pkl,"buf.setInt(index, ByteBufUtil.swapInt(value));","Yes, the synthesized code [buf.setInt(index, ByteBufUtil.swapInt(value));] is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is commonly used to swap the byte order of an integer value to match the endianness of the system being used. It is often used in networking and file I/O operations where data must be transmitted or stored in a particular byte order. As such, it is a widely used and generic code snippet in the Java programming language."
+10,new_completion_result_pro_9_combine1.pkl,"buf.setBytes(index, src, srcIndex, length);","Yes, the synthesized code [buf.setBytes(index, src, srcIndex, length);] is a generic Java code snippet that has occurred in multiple Java libraries. This is because the method name and parameters used in the code are commonly used in Java for manipulating byte arrays. The ""setBytes"" method is used to set a range of bytes in the target buffer from a source buffer, and the ""index"", ""src"", ""srcIndex"", and ""length"" parameters are standard parameters commonly used in Java for this purpose. This makes it a widely used code snippet in Java libraries."
+11,new_completion_result_pro_9_combine1.pkl,for (int i = 0; i < nioBuffers.length; i++){nioBuffers[i] = nioBuffers[i].order(order);},"Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. The code is used to order the bytes in a ByteBuffer according to a specific byte order. This is a common operation when working with binary data, so it is not surprising that this code snippet has been utilized in multiple Java libraries."
+12,new_completion_result_pro_9_combine1.pkl,"buf.setBoolean(index, value);","Yes, the code snippet [buf.setBoolean(index, value);] is a generic Java code that has occurred in multiple Java libraries. The method setBoolean() is a standard method of the Java NIO ByteBuffer class that allows you to set the value of the specified index in the buffer to the given boolean value. It can be used in various contexts, such as network programming, file handling, and other I/O operations, which may require the use of binary data and boolean values. Therefore, it is a commonly used method in different Java libraries, making the code snippet a generic one."
+14,new_completion_result_pro_9_combine1.pkl,buf.skipBytes(length);,"Yes. The method ""skipBytes()"" is a standard method in the Java language's ByteBuffer class, which is frequently used in many Java libraries. Therefore, the code snippet [buf.skipBytes(length);] is a generic Java code occurrence that is used in several Java libraries."
+15,new_completion_result_pro_9_combine1.pkl,buf.writeMedium(ByteBufUtil.swapMedium(value));,"Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. 
+
+The reason for this is that ByteBuf is a commonly used class in Java for handling and manipulating binary data. The method writeMedium is a part of the ByteBuf class and is commonly used for writing 3-byte integers to a ByteBuf. The method ByteBufUtil.swapMedium is used to convert the endianness of the 3-byte integer before writing it to the ByteBuf. 
+
+Therefore, it is likely that this code snippet may be used in different libraries that require working with binary data in Java."
+16,new_completion_result_pro_9_combine1.pkl,writeShort(value);,"Yes, the synthesized code [writeShort(value);] is a generic Java code snippet that has occurred in multiple Java libraries. This is because it is a commonly used method for writing a short value to an output source, and can be found in various classes such as OutputStream, DataOutputStream, and ByteBuffer."
+17,new_completion_result_pro_9_combine1.pkl,writeInt(Float.floatToRawIntBits(value));,"Yes, the synthesized code [writeInt(Float.floatToRawIntBits(value));] is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is used to convert a floating-point value into its raw binary representation as an integer using the method ""Float.floatToRawIntBits"" and then write that integer value to a destination using the method ""writeInt."" This functionality is commonly needed in various Java applications, which is why this code snippet has been utilized in multiple Java libraries."
+18,new_completion_result_pro_9_combine1.pkl,buf.writeZero(length);,"Yes, the synthesized code [buf.writeZero(length);] is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is used to write a sequence of zeros of a specified length to a ByteBuf in Netty, which is a commonly used Java library for network programming. However, this code snippet can also be found in other Java libraries and is not specific to Netty."
+19,new_completion_result_pro_9_combine1.pkl,"checkIndex(index, 2);_setShortLE(index, value);","Yes, it is possible that the synthesized code [checkIndex(index, 2);_setShortLE(index, value);] could be a generic code snippet that has been used in multiple Java libraries. However, without further context or information about the libraries, it is impossible to say for certain. The checkIndex() method could be used to validate an index value against a certain boundary or size, while the _setShortLE() method could be used to set a short value using little-endian byte order. These are common tasks in Java programming, so it is plausible that this snippet has been used in various libraries."
+23,new_completion_result_pro_9_combine1.pkl,"index = checkIndex(index);
+_setByte(index, value);","Yes, this code snippet is a generic Java code that has occurred in multiple Java libraries. The reason being that it is a common approach to first check if the index is valid and then set the value in the specified location. This promotes error-free code and ensures that the program does not encounter any index out of bounds exception during the run-time. It is a best programming practice and has been used by many Java developers across different libraries."
+24,new_completion_result_pro_9_combine1.pkl,"if (index < 0 || index > maxLength - 2) {
+    throw new IndexOutOfBoundsException();
+}
+unwrap().setShortLE(idx(index), value);","Yes, it is a generic Java code snippet that has been used in multiple Java libraries. 
+
+The code checks if the index is within a valid range before setting a short value using the ""setShortLE"" method. This is a common practice in Java to prevent index out of bounds exceptions, which can occur if indexes are not properly validated before accessing an array, list, or any other data structure that holds elements at specific indexes. The ""setShortLE"" method is a part of the Java NIO (New IO) package, which is commonly used for efficient handling of large data sets. As a result, this code snippet can be found in various libraries, frameworks, and applications that make use of the Java NIO package."
+31,new_completion_result_pro_9_combine1.pkl,"if (dst.hasArray()) {
+    getBytes(index, dst.array(), dst.arrayOffset() + dstIndex, length);
+} else if (dst.nioBufferCount() > 0) {
+    for (ByteBuffer bb : dst.nioBuffers(dstIndex, length)) {
+        int bbLen = bb.remaining();
+        getBytes(index, bb);
+        index += bbLen;
+    }
+} else {
+    dst.setBytes(dstIndex, this, index, length);
+}","Yes. This code snippet is a generic Java code that can be found in multiple Java libraries because it is a common way to transfer bytes from one data structure to another. It uses the hasArray() method and nioBufferCount() method to determine the type of data structure to be used and sets the bytes accordingly. This is a widely used technique in Java programming, especially in networking and file handling libraries."
+40,new_completion_result_pro_9_combine1.pkl,"if (dst.hasArray()){} 
+else if (dst.nioBufferCount() > 0){
+    for (ByteBuffer bb: dst.nioBuffers(dstIndex, length)){
+        int bbLen = bb.remaining();
+        getBytes(index, bb);
+        index += bbLen;
+    }
+}","Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+The code snippet checks if the destination object has an underlying array that can be accessed directly, and if not, it iterates over the NIO ByteBuffers that make up the destination object and copies the bytes into them. This pattern of checking for an array-backed buffer and falling back to NIO ByteBuffers is common in Java libraries that deal with byte array manipulation and network communication, such as Apache Commons IO, Netty, and Jetty, to name a few examples."
+41,new_completion_result_pro_9_combine1.pkl,if (size != 0) {},"Yes, the synthesized code [if (size != 0) {}] is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet checks if the size of a collection or array is not equal to zero before performing any operations on it, which is a common practice in Java programming. Additionally, this code can be used in various contexts, making it a frequently occurring code snippet across different Java libraries."
+43,new_completion_result_pro_9_combine1.pkl,"ByteBuf buf;
+if (heapArena != null) {
+    buf = heapArena.allocate(cache, initialCapacity, maxCapacity);
+} else {
+    buf = PlatformDependent.hasUnsafe() ?
+        new UnpooledUnsafeHeapByteBuf(this, initialCapacity, maxCapacity) :
+        new UnpooledHeapByteBuf(this, initialCapacity, maxCapacity);
+}
+buf = toLeakAwareBuffer(buf);","Yes, it is a code snippet that has occurred in multiple Java libraries. 
+
+This code snippet is from the Netty library, which is a widely used and popular networking framework in Java. Additionally, the use of ByteBuf, PlatformDependent, and the allocation of memory using heapArena are all common practices in many Java libraries, making this snippet a generic representation of how these practices are implemented."
+44,new_completion_result_pro_9_combine1.pkl,"int directArenasLen = (directArenas != null) ? directArenas.length : 0;
+
+if (directArenasLen > 0) {
+    for (PoolArena<ByteBuffer> a : directArenas) {
+        // code to be executed for each direct arena
+    }
+}
+
+","Yes, this is a generic Java code snippet that can be found in multiple Java libraries. It is a common way of checking for null arrays and iterating through arrays in Java."
+45,new_completion_result_pro_9_combine1.pkl,"// Check the length of heapArenas
+int heapArenasLen = heapArenas == null ? 0 : heapArenas.length;
+
+// Loop through heapArenas
+if (heapArenasLen > 0) {
+    for (PoolArena<byte[]> a : heapArenas) {
+        // Code to execute for each element in heapArenas
+    }
+}
+","Yes, this is a common pattern for iterating through arrays and performing actions on each element. The use of generics allows for the same code to be used with different types of objects. This pattern is used in various Java libraries and is considered good practice for code reusability and maintainability."
+48,new_completion_result_pro_9_combine1.pkl,"fromIndex = 0
+toIndex = buffer.size()
+
+for (int i = fromIndex; i < toIndex; i++){
+  if (buffer._getByte(i) == value){
+    // Code to be executed if byte value is found
+  }
+}","Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+This code snippet is a common way to iterate over a byte buffer in Java and search for a specific value. It is a basic implementation of a for loop that loops through the elements within the specified indices of the byte buffer and checks if the value matches the input value. This code can be found in various libraries that work with byte buffers, such as Apache's ByteBufferUtils and Netty's ByteBufUtil."
+56,new_completion_result_pro_9_combine1.pkl,"for (int i = start; i < end; i++){
+    if (c < 0x80){
+    } else if (c < 0x800){
+    } else if (isSurrogate(c)){
+        if (++i == end){
+        }
+    }
+}","Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is commonly used for handling character encoding and detecting surrogate pairs in Unicode strings. It is a basic implementation that can be found in many Java libraries, frameworks, and applications."
+57,new_completion_result_pro_9_combine1.pkl,"            int codePoint = Character.toCodePoint(c, c2);
+            buffer.put(writerIndex++, (byte) (0xf0 | (codePoint >> 18)));
+            buffer.put(writerIndex++, (byte) (0x80 | ((codePoint >> 12) & 0x3f)));
+            buffer.put(writerIndex++, (byte) (0x80 | ((codePoint >> 6) & 0x3f)));
+            buffer.put(writerIndex++, (byte) (0x80 | (codePoint & 0x3f)));
+        }
+    }
+}","Yes, it is a generic Java code snippet that has occurred in multiple Java libraries because it is a standard code used for encoding Unicode characters into UTF-8 byte sequences. The code uses if-else statements to determine the range of the character and proceeds to encode it accordingly. This encoding technique is commonly used in Java and other programming languages for handling Unicode conversions."
+81,new_completion_result_pro_9_combine1.pkl,"int wIndex = writerIndex; ensureWritable(length);UnsafeByteBufUtil.setZero(addr(wIndex), length);writerIndex = wIndex + length;","Yes, this synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This code fragment is commonly used in Java libraries that deal with byte buffers, such as Netty and Apache MINA, to set a range of bytes to zero in the buffer. The use of the ""UnsafeByteBufUtil"" class indicates that this code is used in low-level, performance-critical scenarios, where direct access to memory addresses is required."
+82,new_completion_result_pro_9_combine1.pkl,"The following code sets the specified number of bytes to zero starting at the current writer index position in the underlying buffer:
+```
+int wIndex = writerIndex;
+UnsafeByteBufUtil.setZero(addr(wIndex), length);
+writerIndex = wIndex + length;
+```
+This code fragment ensures that there is enough space in the buffer for writing the specified number of bytes, sets the specified number of bytes to zero starting at the current writer index position, and updates the writer index:
+```
+ensureWritable(length);
+UnsafeByteBufUtil.setZero(addr(wIndex), length);
+writerIndex = wIndex + length;
+```","Yes, this is a generic Java code snippet that has been used in multiple Java libraries. It utilizes the built-in ByteBuffer class and the UnsafeByteBufUtil class, which are commonly used in Java code for memory operations. The code fragment also performs common operations such as ensuring writable space in the buffer and setting bytes to zero, making it a widely used snippet in various Java libraries."
+83,new_completion_result_pro_9_combine1.pkl,"int wIndex = writerIndex;
+ensureWritable(length);
+UnsafeByteBufUtil.setZero(addr(wIndex), length);
+writerIndex = wIndex + length;","Yes, it is possible that the synthesized code [int wIndex = writerIndex; ensureWritable(length); UnsafeByteBufUtil.setZero(addr(wIndex), length); writerIndex = wIndex + length;] could occur in multiple Java libraries as it uses common Java concepts and techniques, such as variables, method calls, and calculations with arithmetic operators. However, it's difficult to confirm without knowing the context of where the code snippet came from."
+84,new_completion_result_pro_9_combine1.pkl,"
+Synthesized code:
+
+```
+long[] bitmap; // initialize with appropriate size
+
+int bitmapIdx; // index of the bit to set
+int r = bitmapIdx & 63; // position of the bit in the long integer
+int q = bitmapIdx >>> 6; // index of the long integer in the bitmap
+
+assert (bitmap[q] >>> r & 1) == 0;
+bitmap[q] |= 1L << r;
+``` 
+","Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+The code performs a common task of setting a bit in a bitmap, which is a data structure commonly used for fast and compact representation of boolean values. The bitwise operations used to compute the index of the long integer are also a common optimization that avoids expensive division operations. The assertion to check that the bit is not already set before setting it is also a common practice to avoid unintended changes to the bitmap. As a result, this code snippet is generic and reusable in various Java libraries that use bitmaps to represent boolean values efficiently."
+85,new_completion_result_pro_9_combine1.pkl,"if (dst.hasMemoryAddress()) {
+    PlatformDependent.copyMemory(memory, idx(index), dst.memoryAddress() + dstIndex, length);
+} else if (dst.hasArray()) {
+    getBytes(index, dst.array(), dst.arrayOffset() + dstIndex, length);
+} else {
+    dst.setBytes(dstIndex, memory, idx(index), length);
+}
+
+checkDstIndex(index, length, dstIndex, dst.capacity());
+
+if (dst.hasMemoryAddress()) {
+    PlatformDependent.copyMemory(memory, idx(index), dst.memoryAddress() + dstIndex, length);
+} else if (dst.hasArray()) {
+    getBytes(index, dst.array(), dst.arrayOffset() + dstIndex, length);
+} else {
+    dst.setBytes(dstIndex, memory, idx(index), length);
+}","Yes, this code snippet is a generic Java code that has occurred in multiple Java libraries. 
+
+The code snippet contains generic functionalities such as copying memory, checking indices, and setting bytes to a destination. These functionalities are common in many Java libraries and are often implemented in a similar manner, resulting in similar code snippets. Additionally, the use of conditional statements to handle different types of destinations (memory address, array, or bytes) is also a common pattern."
+89,new_completion_result_pro_9_combine1.pkl,"int writtenBytes = setBytes(writerIndex, in, length);
+if (writtenBytes > 0){
+   writerIndex += writtenBytes;
+};","Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is commonly used in Java libraries that deal with input/output operations, such as those related to network communication or file input/output. The code is used to set bytes in a buffer and update the writer index, and its structure is simple and widely applicable to various scenarios, making it a common pattern in Java libraries."
+90,new_completion_result_pro_9_combine1.pkl,"int nBytes = length & 7;
+if (nBytes == 4) {
+    // Code block for nBytes == 4 
+} else if (nBytes < 4) {
+    for (int i = nBytes; i > 0; i--) {
+        // Code block for nBytes < 4
+    }
+} else {
+    for (int i = nBytes - 4; i > 0; i--) {
+        // Code block for nBytes > 4
+    }
+}","Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. The code performs byte alignment and byte-ordering operations on binary data. These operations are commonly used in network protocols, file formats, cryptography, and other areas of software engineering. Therefore, it is not uncommon to find similar code in various Java libraries or applications that deal with binary data."
+91,new_completion_result_pro_9_combine1.pkl,"
+//Code fragment 1
+int nLong = length >>> 3;
+for (int i = nLong; i > 0; i--){
+    //Process 8 bytes at a time
+}
+
+","Yes, this code snippet appears to be a generic Java code that is used in multiple Java libraries. It is a common way to process data in chunks of 8 bytes and handle any remaining bytes separately. The code is not specific to any particular library's functionality and can be used in various contexts where data streams need to be processed."

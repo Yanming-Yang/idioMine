@@ -1,0 +1,138 @@
+,pro/lib,idiom,final
+0,completion_result_lib_8_combine1.pkl,lookup.setNextReader(reader);,
+1,completion_result_lib_8_combine1.pkl,lookup.setNextDocId(docId);,
+2,completion_result_lib_8_combine1.pkl,SearchLookup lookup = searchContext.lookup();lookup.setNextReader(reader);lookup.setNextDocId(docId);List<Object> values = lookup.source().extractRawValues(mapper.names().sourcePath());,"Yes, it's possible for this code fragment to occur in multiple Java projects, particularly those that involve searching and indexing of data.
+
+The code fragment appears to be using the Lucene library to perform a search and retrieve a list of raw values based on a specific search query. The SearchLookup object is used to access the search context and retrieve the necessary data, while the mapper.names().sourcePath() method appears to be used to specify the path to the desired data.
+
+However, the specific usage and context of this code fragment would depend on the specific project it is used in, and it's difficult to say for certain whether it is a common coding pattern without additional information."
+3,completion_result_lib_8_combine1.pkl,if (!getField().equals(field)){},
+5,completion_result_lib_8_combine1.pkl,"Lucene40StoredFieldsReader(fieldInfos, numTotalDocs, size, fieldsStream.clone(), indexStream.clone());",
+6,completion_result_lib_8_combine1.pkl,long startOffset = indexStream.readLong();long lastOffset = startOffset;while (count < numDocs){lengths[count++] = (int) (offset-lastOffset);lastOffset = offset;} fieldsStream.seek(startOffset);,"Yes, this code fragment appears to be a common coding pattern that can occur in multiple Java projects. It involves reading data from a stream and using a loop to iterate through the data and process it in some way. The use of variables to keep track of offsets and lengths is also a common programming technique."
+7,completion_result_lib_8_combine1.pkl,try{} catch (CloneNotSupportedException e){throw new RuntimeException(e);},
+8,completion_result_lib_8_combine1.pkl,"return new FieldComparator<Integer>(){int seed        private final int[] values = new int[numHits]        int bottomVal        @Override
+        public int compare(int slot1, int slot2){return values[slot1] - values[slot2]  
+        }
+        @Override
+        public void setBottom(int slot){bottomVal = values[slot]        }
+        @Override
+        public int compareBottom(int doc){return bottomVal - hash(doc+seed)        }
+        @Override
+        public void copy(int slot, int doc){values[slot] = hash(doc+seed)        }
+        @Override
+        public FieldComparator setNextReader(AtomicReaderContext context){seed = getSeed(fieldname, context)          return this        }
+        @Override
+        public Integer value(int slot){return values[slot]        }
+        @Override
+        public int compareDocToValue(int doc, Integer valueObj){return hash(doc+seed) - valueObj.intValue()        }
+      }","The code fragment appears to be a custom implementation of a FieldComparator for sorting search results in Apache Lucene. While the general concept of creating a custom FieldComparator can be common in Java projects that use Lucene for search functionality, the specific implementation details and code syntax used in this fragment may not be directly applicable to other projects."
+9,completion_result_lib_8_combine1.pkl,"Query q = QueryParsing.parseQuery(cmd.query, schema);",
+10,completion_result_lib_8_combine1.pkl,PropertyDefinitionWrapper propertyDef = cmisDictionaryService.findProperty(propertyName);if (propertyDef != null){return propertyDef.getPropertyLuceneBuilder().getLuceneFieldName();},"Yes, this code fragment is a common coding pattern that can occur in multiple Java projects. It is a simple if statement that checks if an object is not null and then calls a method on it if it is not null. This pattern is used widely in Java for null checking before calling a method or accessing an object's properties to avoid null pointer exceptions."
+11,completion_result_lib_8_combine1.pkl," propertyDef.getPropertyLuceneBuilder().buildLuceneEquality(lqp, value, mode, luceneFunction);","It is possible that this code fragment can occur in multiple Java projects that utilize the CMIS (Content Management Interoperability Services) API, which is a standard interface for interacting with Enterprise Content Management (ECM) systems. The buildLuceneEquality method is used to construct a Lucene query that can be used to search for documents based on a specific property value. However, it is not a universal pattern and its occurrence may be limited to projects that use the CMIS API."
+12,completion_result_lib_8_combine1.pkl,"propertyDef.getPropertyLuceneBuilder().buildLuceneExists(lqp, not);","Yes, this code fragment is a common pattern that can occur in multiple Java projects. It is a method call to the buildLuceneExists method of an object obtained from a PropertyDefinitionWrapper instance, which is a common way to wrap property definitions in various Java projects. This method is used to generate a Lucene query that checks whether a given property exists in a document or not, and it takes as arguments a Lucene query parser, a boolean flag indicating whether to negate the query or not, and possibly other parameters. The resulting Lucene query can be used to search for documents that have or do not have a specific property."
+13,completion_result_lib_8_combine1.pkl,"PropertyDefinitionWrapper propertyDef = cmisDictionaryService.findProperty(propertyName);return propertyDef.getPropertyLuceneBuilder().buildLuceneExists(lqp, not);","Yes, this code fragment is a common coding pattern that can occur in multiple Java projects. It is retrieving a property definition from a service and then using the Lucene builder associated with that property to generate a Lucene query for checking the existence of a property value. This pattern can be used in any project that needs to interact with a CMIS repository and perform queries using Lucene."
+14,completion_result_lib_8_combine1.pkl,"propertyDef.getPropertyLuceneBuilder().buildLuceneGreaterThanOrEquals(lqp, value, mode, luceneFunction);","Yes, the code fragment propertyDef.getPropertyLuceneBuilder().buildLuceneGreaterThanOrEquals(lqp, value, mode, luceneFunction) can occur in multiple Java projects where Lucene library is used for building search functionality. This code fragment builds a Lucene query for a greater than or equals comparison for a property value defined in a CMIS dictionary service. The pattern of using Lucene to build search queries for property values is common in many Java projects that require search functionality."
+,,for ( LuceneBatchInserterIndex index : indexes.values() ){index.shutdown();},"This code fragment is specific to projects using the Neo4j graph database with the LuceneBatchInserterIndex plugin. While similar code may be used in other Neo4j projects that use the same plugin, it is not a common coding pattern that would occur in multiple Java projects outside of this context."
+,,"if (luceneBundle != null){getDependencies().put(DEPENDENCIES_KEY_LUCENE, luceneBundleVersion);} else{getDependencies().put(DEPENDENCIES_KEY_LUCENE, """");}","It's possible for this code fragment to occur in multiple Java projects, as it appears to be a simple conditional statement that checks for the existence of a variable and then sets a value in a map based on whether or not the variable is null.
+
+However, without additional context about the purpose of the code and the variables being used, it's difficult to say for certain whether this specific code fragment is commonly used or not."
+,,"if (dependencies == null){dependencies = new HelpProperties(DEPENDENCIES_VERSION_FILENAME, indexDir);}","The code fragment appears to be using a custom class called HelpProperties to manage dependencies in the project. While it is possible that this code fragment or a similar pattern may be used in multiple Java projects, it is not a widely recognized or commonly used pattern or library."
+,,"try{Document doc = new Document();doc.add(new Field(FIELD_NAME, name, Field.Store.YES, Field.Index.NOT_ANALYZED));addExtraFields(doc);String pluginId = LocalSearchManager.getPluginId(name);if (relativePath != null);doc.add(new Field(FIELD_INDEX_ID, relativePath, Field.Store.YES, Field.Index.NOT_ANALYZED));}
+SearchParticipant participant = null;HelpURLConnection urlc = new HelpURLConnection(url);String id = urlc.getValue(""id"");String pid = urlc.getValue(""participantId"");if (pid != null)
+participant = BaseHelpSystem.getLocalSearchManager().getGlobalParticipant(pid);if (participant == null)
+participant = BaseHelpSystem.getLocalSearchManager().getParticipant(pluginId, name);if (participant != null);IStatus status = participant.addDocument(this, pluginId, name, url, id, new LuceneSearchDocument(doc));if (status.getSeverity() == IStatus.OK);String filters = doc.get(""filters"");indexedDocs.put(name, filters != null ? filters : ""0"");if (id != null)
+doc.add(new Field(""id"", id, Field.Store.YES, Field.Index.NO));if (pid != null)
+doc.add(new Field(""participantId"", pid, Field.Store.YES, Field.Index.NO));iw.addDocument(doc);}
+return status;}
+IStatus status = htmlSearchParticipant.addDocument(this, pluginId, name, url, id, new LuceneSearchDocument(doc));};",the general functionality of indexing documents and adding them to a search index is a common task in many Java projects that use search functionality.
+,,"synchronized (searcherCreateLock){if (searcher == null){searcher = new IndexSearcher(luceneDirectory, false);}}","Yes, the code fragment is a common coding pattern that can occur in multiple Java projects.
+
+The pattern involves using a synchronized block to ensure that only one thread at a time can create or access a shared resource (in this case, an IndexSearcher). The if statement checks if the shared resource is null and creates a new instance if it is. This pattern is often used in multi-threaded applications to avoid race conditions and ensure thread safety when accessing shared resources."
+,,"QParser q = fp.subQuery(fp.getString(), LuceneQParserPlugin.NAME);return q.getQuery();","Yes, the code fragment is a common coding pattern that can occur in multiple Java projects. It appears to be using the Solr/Lucene library to parse and build a query object from a user-provided string. The QParser class is used to parse the query string, and the resulting Query object is returned. This pattern is often used in search applications where users can input search queries in a text box, and the queries need to be parsed and executed against an index of documents."
+,,"if (iter instanceof OpenBitSetIterator && iter.docID() == -1){final OpenBitSetIterator obs = (OpenBitSetIterator) iter;and(obs.arr, obs.words);obs.advance(numBits);}","The code fragment looks like it could be part of a common coding pattern for processing OpenBitSetIterators in a Lucene-based Java project, particularly for operations that require bitwise operations. However, without additional context it's difficult to say for certain whether this specific code fragment is commonly used."
+,,Runnable runnable = new Runnable(){public void run(){try{if (_batchCount > 0){_doCommit()},"Yes, this code fragment is a common coding pattern in Java projects. It creates a new instance of an anonymous class that implements the Runnable interface and defines the run() method, and then assigns it to a variable named ""runnable"". This is often used to create and pass a simple implementation of an interface to another part of the code that expects an object of that interface type."
+,,"if (PropsValues.LUCENE_STORE_TYPE.equals(_LUCENE_STORE_TYPE_FILE)){}else if (PropsValues.LUCENE_STORE_TYPE.equals(
+_LUCENE_STORE_TYPE_JDBC)){}else if (PropsValues.LUCENE_STORE_TYPE.equals(_LUCENE_STORE_TYPE_RAM)){} else{throw new RuntimeException(""Invalid store type "" + PropsValues.LUCENE_STORE_TYPE);}}","Yes, this code fragment is a common coding pattern that can occur in multiple Java projects. It is an example of a common programming construct, a series of if-else statements that check for certain conditions and take different actions based on the condition that is true. The code is checking the value of a property (LUCENE_STORE_TYPE) and taking different actions depending on its value."
+,,"Session session = SessionFactoryUtils.getSession(sessionFactory, false);FullTextSession fullTextSession = Search.createFullTextSession(session);","Yes, this code fragment is a common pattern in Java projects that use Hibernate Search, a library that provides full-text search functionality for Hibernate-managed entities. This code creates a FullTextSession instance based on a Hibernate Session obtained from a SessionFactory. The FullTextSession allows executing full-text search queries against indexed entities."
+,,"if ( entry.getWebSites().isEmpty() ){} else{for ( WebSite site : entry.getWebSites() ){luceneDocument.add(new Field(""url"", site.getUrl(), Field.Store.YES, Field.Index.NOT_ANALYZED, Field.TermVector.NO));}}","Yes, this code fragment is a common coding pattern that can occur in multiple Java projects. It is used to add a field to a Lucene document for each website associated with an entry, with the field name ""url"" and the URL as its value. This can be useful for search and retrieval of documents by their associated websites."
+,,"Document doc = buildDocument(Constants.COMMUNITY, community.getID(), community.getHandle(), null);String name = community.getMetadata(""name"");","Yes, this code fragment is a common coding pattern that can occur in multiple Java projects. It involves creating a Lucene Document object and populating it with data from a community object, and then extracting a specific metadata value (in this case, the ""name"" metadata) from the community object. The code fragment is typical of applications that use Lucene for full-text indexing and search, and need to extract data from a structured data source (in this case, a community object) to create searchable documents."
+,,"try{unIndexContent(context, dso.getHandle());}catch(Exception exception){log.error(exception.getMessage(),exception);emailException(exception);}","Yes, this code fragment can be a common coding pattern in Java projects that involve indexing content. The try-catch block is used to catch any exception that may occur during the unindexing process, and the caught exception is logged and emailed for further analysis. This type of error handling is commonly used in Java projects where it is important to handle exceptions gracefully and provide a way to investigate and resolve any errors that may occur."
+,, Directory dir = null;try{dir = _dirMgr.getDirectory();}if (dir == null) return 0;return IndexUtil.getNumSegments(dir);,"Overall, this code fragment appears to be a basic implementation of a null check and directory indexing. It is possible that similar code patterns are used in other Java projects that involve handling directories and index segments."
+,,"IndexWriterConfig config = new IndexWriterConfig(new StandardAnalyzer());
+IndexWriter writer = new IndexWriter(indexDirectory, config);
+
+Document doc = new Document();
+doc.add(new StringField(""id"", ""1"", Field.Store.YES));
+doc.add(new TextField(""content"", ""This is a sample document"", Field.Store.YES));
+
+writer.addDocument(doc);
+writer.close();",Indexing documents
+,,"IndexReader reader = DirectoryReader.open(indexDirectory);
+IndexSearcher searcher = new IndexSearcher(reader);
+
+Query query = new TermQuery(new Term(""content"", ""sample""));
+
+TopDocs results = searcher.search(query, 10);
+for (ScoreDoc scoreDoc : results.scoreDocs) {
+    Document doc = searcher.doc(scoreDoc.doc);
+    System.out.println(doc.get(""id""));
+}
+
+reader.close();",Searching documents
+,,"Analyzer analyzer = new StandardAnalyzer();
+
+TokenStream tokenStream = analyzer.tokenStream(""content"", new StringReader(""This is a sample document""));
+CharTermAttribute charTermAttribute = tokenStream.addAttribute(CharTermAttribute.class);
+
+tokenStream.reset();
+while (tokenStream.incrementToken()) {
+    System.out.println(charTermAttribute.toString());
+}
+
+tokenStream.close();",Analyzing text
+,,"Analyzer analyzer = new StandardAnalyzer();
+QueryParser parser = new QueryParser(""content"", analyzer);
+
+Query query = parser.parse(""sample"");
+
+TopDocs results = searcher.search(query, 10);
+for (ScoreDoc scoreDoc : results.scoreDocs) {
+    Document doc = searcher.doc(scoreDoc.doc);
+    System.out.println(doc.get(""id""));
+}",Query parsing:
+,,"Facets facets = new FastTaxonomyFacetCounts(taxoReader, facetsConfig, facetsCollector);
+
+List<FacetResult> facetResults = facets.getAllDims(10);
+for (FacetResult facetResult : facetResults) {
+    System.out.println(facetResult.dim);
+    for (LabelAndValue labelAndValue : facetResult.labelValues) {
+        System.out.println(labelAndValue.label + "" ("" + labelAndValue.value + "")"");
+    }
+}",Faceted search
+,,"Highlighter highlighter = new Highlighter(formatter, new QueryScorer(query));",Highlighting search results
+,,"SortField sortField = new SortField(""title"", SortField.Type.STRING, false);
+Sort sort = new Sort(sortField);
+
+TopDocs results = searcher.search(query, 10, sort);",sort result
+,," StringBuilder buffer = new StringBuilder();if (!term.field().equals(field)){buffer.append(term.field());buffer.append("":"");}buffer.append(term.text());buffer.append('~');buffer.append(Integer.toString(maxEdits));buffer.append(ToStringUtils.boost(getBoost()));return buffer.toString();", this code fragment represents a common pattern in Java for building string representations of objects using a StringBuilder object and conditional statements to construct the string based on certain conditions.
+,,"for (int i = 0; i < fields.length; i++){QueryParserWrapper qp = new QueryParserWrapper(fields[i], analyzer);}","Yes, the code fragment [for (int i = 0; i < fields.length; i++){QueryParserWrapper qp = new QueryParserWrapper(fields[i], analyzer);}] is a common coding pattern that can occur in multiple Java projects.
+
+This code creates multiple instances of the QueryParserWrapper class in a loop, where each instance is initialized with a different field and analyzer. This pattern is often used in search-related functionality where queries need to be parsed against multiple fields with different analyzers."
+,,DocIdSetIterator dcit = iterators[0];int size = iterators.length;while (i < size){if (i != skip){dcit = iterators[i];}},"Yes, this code fragment is a common coding pattern that can occur in multiple Java projects. It represents a loop that iterates through an array of iterators and selects a particular iterator to use based on a condition."
+,,"if (queries != null){for (int i = 0; i < queries.length; i++){sb.append(i+"". ""+ queries[i].getClass().getSimpleName()+"" - ""+queries[i].toString());}}","Yes, this code fragment is a common coding pattern in Java projects. It is iterating over an array of queries and appending their class name and string representation to a StringBuilder object. This is a common way to create a debug or error message that includes information about the queries being executed."
+,,"Highlighter highlighter = new Highlighter(new SimpleHTMLFormatter(INTERNAL_BEGIN_HIT, INTERNAL_END_HIT), new QueryScorer(query));try{escapedFragments = escapedFragments.replaceAll(INTERNAL_BEGIN_HIT, getBeginHitTag());}","Yes, this code fragment shows the use of the Lucene library to perform text highlighting based on a query, which is a common coding pattern that can occur in multiple Java projects that involve searching and displaying search results. The code instantiates a Highlighter object and uses a SimpleHTMLFormatter to format the highlighted text. The QueryScorer object is used to score the query matches, and the resulting Highlighter object is used to replace the internal highlighting tags with the actual HTML tags to highlight the matching text."
+,,IteratorSearchResponse result = nexusIndexer.searchIterator( req );return result;,"Yes, this code fragment is a common coding pattern that can occur in multiple Java projects. It uses the Nexus Indexer library to perform a search and returns the search result as an IteratorSearchResponse object. The Nexus Indexer library is widely used in Java projects for indexing and searching artifacts in local and remote repositories."
+,,"NGramTokenizer ngramTokenizer = new NGramTokenizer(reader, ngramMinLength, ngramMaxLength);","Yes, the use of the NGramTokenizer class to create n-grams from text is a common coding pattern that can occur in multiple Java projects, particularly in information retrieval or natural language processing applications where n-grams can be used for tasks such as text classification, topic modeling, or language modeling."
+,,SearchContext context = createContext(request);,"creating a context object to hold search parameters and/or search results is a common pattern in many search-related Java projects. The specific implementation may vary, but the concept of using a context object for search-related operations is a well-established pattern."
+,,Pattern p = rawpat == defaultPatternRaw ? defaultPattern : Pattern.compile(rawpat);,"Yes, this code fragment is a common coding pattern in Java projects. It is using the ternary operator to conditionally assign a value to the Pattern p variable. The ternary operator is a common way to write simple conditional statements in Java."
+,,Analyzer analyzer = analyzers.get(fieldName);return analyzer != null ? analyzer : getDynamicFieldType(fieldName).getAnalyzer();,"Yes, this code fragment is a common coding pattern that can occur in multiple Java projects. It checks if there is a cached Analyzer for a given fieldName. If there is one, it returns it. Otherwise, it retrieves the Analyzer from a dynamic field type associated with the given fieldName. This pattern is commonly used in search-related Java projects to dynamically determine the appropriate analyzer to use for a given field."
+,,for (int i = 0; i < hits.scoreDocs.length; i++){final Document doc = searcher.doc(hits.scoreDocs[i].doc);},"Yes, this code fragment is a common coding pattern that can occur in multiple Java projects. It is used to iterate over the search results and retrieve the corresponding documents from the index using a Searcher object."
+,,if (streams == null){streams.tokenStream = new NTripleQueryTokenizer(reader);,"Yes, this code fragment is a common coding pattern that can occur in multiple Java projects. It is used to check if a token stream is null and, if it is, to create a new instance of the NTripleQueryTokenizer with a reader. If the token stream is not null, then it is reset using the given reader. This is a common pattern used in projects that involve text processing, such as search engines or natural language processing applications."
+,,"for (SearchGroupDocs<BytesRef> group : groupMap.values()){int ord = group.groupValue == null ? 0 : index.binarySearchLookup(group.groupValue, spareBytesRef);if (ord >= 0){groupDocs[ordSet.put(ord)] = group;}}","Yes, this code fragment is a common pattern that can occur in multiple Java projects. It involves iterating over a collection of SearchGroupDocs, determining the order of the group value using binarySearchLookup, and then adding the group to an array of groupDocs at the appropriate index. This is a common technique used when working with search results that are grouped by a particular field."
+,,"Query snq = getSpanNearQuery(sncf.getIndexReader(),                                  sncf.getFieldName(),                                  getWeight(),                                  sncf.getBasicQueryFactory());sncf.addSpanQuery(snq);","Yes, this code fragment shows the usage of Span Queries in Lucene/Solr search libraries which is a common coding pattern that can occur in multiple Java projects that involve text search functionality."
+,,"FullTextQuery fullTextQuery = fullTextSession.createFullTextQuery(query, documentClass); fullTextQuery.setProjection(FullTextQuery.SCORE, FullTextQuery.THIS);","Yes, this code fragment is a common coding pattern in projects that use Hibernate Search for full-text search capabilities. It creates a FullTextQuery object and sets its projection to return the score and the entity itself. The FullTextQuery class is a part of Hibernate Search and is used to perform full-text queries on indexed entities."
+,,"if (queryConfig == null || !queryConfig.hasAttribute(InvenioDefaultIdFieldAttribute.class)){throw new QueryNodeException(new MessageImpl(                QueryParserMessages.LUCENE_QUERY_CONVERSION_ERROR,                ""Configuration error: "" + InvenioDefaultIdFieldAttribute.class.toString() + "" is missing""));}","Yes, this code fragment appears to be a common coding pattern that can occur in multiple Java projects. It is checking if a certain attribute is present in a configuration object, and throwing an exception if it is not. This pattern is commonly used to ensure that required configuration settings are present before attempting to use them in the code."
+,,if (lastDoc == NO_MORE_DOCS){return lastDoc;} else if (scorers[(scorers.length - 1)].docID() < target){scorers[(scorers.length - 1)].advance(target);}return lastDoc = doNext();,"Yes, this code fragment can be considered a common coding pattern that can occur in multiple Java projects. It is part of the implementation of an iterator that merges results from multiple Scorers in a BooleanQuery, advancing each Scorer to the target document ID, and returning the next document ID that matches all the Scorer criteria. The code pattern involves checking if the last document ID retrieved is NO_MORE_DOCS, advancing the Scorer with the lowest docID to the target document, and then calling the doNext() method to get the next matching document."
+,,"Is this code fragment [if (commit == null){} else{if (directory != commit.getDirectory()){}}return (DirectoryReader) new SegmentInfos.FindSegmentsFile(directory){@Override
+      protected Object doBody(String segmentFileName) throws IOException{final SegmentInfos infos = new SegmentInfos();infos.read(directory, segmentFileName);return doOpenIfChanged(infos, null);}
+    };}] a common coding pattern that can occur in multiple Java projects?","Yes, this code fragment is a common coding pattern in Java projects that use the Lucene library for information retrieval and search applications. The code checks if the commit is null and if the directory is different from the commit's directory, then it returns a new DirectoryReader using the SegmentInfos class. This code is commonly used to handle the opening and closing of index readers in Lucene."

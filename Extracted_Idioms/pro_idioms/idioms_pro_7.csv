@@ -1,0 +1,265 @@
+,pro/lib,idiom,final
+0,new_completion_result_pro_7_combine1.pkl,"eventListenerRegistry.setListeners( EventType.AUTO_FLUSH, myCompleteSetOfListeners );","Yes, it is possible that the synthesized code [eventListenerRegistry.setListeners( EventType.AUTO_FLUSH, myCompleteSetOfListeners );] is a generic Java code snippet that has occurred in multiple Java libraries. However, I cannot confirm this without additional context about the code and its specific use cases."
+2,new_completion_result_pro_7_combine1.pkl,"eventListenerRegistry.setListeners(EventType.AUTO_FLUSH, myListenersToBeCalledFirst.concat(myCompleteSetOfListeners));","Yes, it is possible that the synthesized code [eventListenerRegistry.setListeners(EventType.AUTO_FLUSH, myListenersToBeCalledFirst.concat(myCompleteSetOfListeners));] is a generic Java code snippet that has occurred in multiple Java libraries. This is because it is a common design pattern to register event listeners in Java, and using a library to manage listeners is also common. Therefore, it is likely that similar code snippets exist in other Java libraries. However, without further context or information it is impossible to know for certain."
+3,new_completion_result_pro_7_combine1.pkl,"eventListenerRegistry.addListeners( EventType.AUTO_FLUSH, myListenersToBeCalledFirstAndLast );","Yes, it is possible that the synthesized code [eventListenerRegistry.addListeners( EventType.AUTO_FLUSH, myListenersToBeCalledFirstAndLast );] is a generic Java code snippet that has occurred in multiple Java libraries. This is because the code is using commonly named Java classes and method calls that are not specific to any particular library. The use of event listener registration and calling methods is also a common programming pattern in Java. However, it is important to note that without additional context or information about the specific libraries in question, it is difficult to confirm whether this exact code has been used in multiple Java libraries."
+4,new_completion_result_pro_7_combine1.pkl,"eventListenerRegistry.setListeners( EventType.AUTO_FLUSH, myCompleteSetOfListeners );
+eventListenerRegistry.appendListeners( EventType.AUTO_FLUSH, myListenersToBeCalledLast );","Yes, the synthesized code [eventListenerRegistry.setListeners( EventType.AUTO_FLUSH, myCompleteSetOfListeners ); eventListenerRegistry.appendListeners( EventType.AUTO_FLUSH, myListenersToBeCalledLast );] is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is a common way to register event listeners and append new listeners to be called last in certain event types. Many Java libraries and frameworks use event-driven architecture, and this code snippet provides a way to manage event handlers for different types of events. Therefore, it is likely that this code snippet has been used in multiple Java libraries."
+5,new_completion_result_pro_7_combine1.pkl,"try {
+       versionProperties.load(stream);
+    } catch (IOException e) {
+       throw new RuntimeException(""Unable to load properties from file - "" + file.getAbsolutePath(), e);
+    }","Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is a standard approach to load properties from a file using the Java Properties class. The try-catch block is a common way to handle file input/output exceptions in Java. The RuntimeException is often thrown to indicate an unexpected error that cannot be handled at runtime. This code snippet is widely used in Java applications and libraries for loading configuration files, resource files, and other types of files containing key-value pairs."
+8,new_completion_result_pro_7_combine1.pkl,"if ( !dir.startsWith( base ) ){
+    throw new BuildException( ""The enhancement directory 'dir' ("" + dir + "") is no subdirectory of 'base' ("" + base + "")"" );
+}
+File root = new File( dir );
+if ( !root.exists() ){
+    log( ""Skipping Hibernate enhancement task execution since there is no classes dir "" + dir, Project.MSG_INFO );
+}
+if ( sourceSet.isEmpty() ){
+    log( ""Skipping Hibernate enhancement task execution since there are no classes to enhance on "" + dir, Project.MSG_INFO );
+}
+log( ""Starting Hibernate enhancement task for classes on "" + dir, Project.MSG_INFO );
+
+ClassLoader classLoader = toClassLoader( Collections.singletonList( new File( base ) ) );","Yes, the code snippet contains common if statements and file manipulations that are frequently used in Java libraries."
+9,new_completion_result_pro_7_combine1.pkl,"try{
+  byte[] buffer = new byte[1024];
+  FileInputStream fileInputStream = new FileInputStream( javaClassFile );
+  while ( ( length = fileInputStream.read( buffer ) ) != -1 ){
+    originalBytes.write( buffer, 0, length );
+  }
+}finally{
+  fileInputStream.close();
+}","Yes, this is a generic Java code snippet that has been occurred in multiple Java libraries. The code snippet shows the standard way of reading the contents of a file into a byte array using a FileInputStream, and closing the stream in a finally block to ensure that it is closed even if an exception is thrown. This is a common idiom used in Java to ensure that I/O resources are properly managed and released."
+16,new_completion_result_pro_7_combine1.pkl,"try{
+  while ( ( length = fileInputStream.read( buffer ) ) != -1 ){
+    originalBytes.write( buffer, 0, length );
+  }
+}catch(IOException e){
+  System.out.println(""Error reading file"");
+}","Yes, this is a generic Java code snippet that has been occurred in multiple Java libraries. This code block tries to convert the absolute path of a Java class file to a class name and reads the file content into a buffer. If an IOException occurs, it prints an error message. This type of code is commonly used in Java to read class files and convert their content into a usable form."
+17,new_completion_result_pro_7_combine1.pkl,"try{
+   //code to be executed
+}catch(Exception e){
+   log( msg, e, Project.MSG_WARN );
+   if ( failOnError ){
+      throw new BuildException( msg, e );
+   }
+}","Yes, the synthesized code is a generic Java code snippet that can be found in multiple Java libraries. It is a standard exception handling code block that catches any exception that may occur during the execution of the 'code to be executed' and logs a warning message. If the 'failOnError' flag is set to true, it throws a BuildException with the corresponding message and exception. This type of code block is commonly used in Java libraries and applications for handling errors and ensuring graceful error handling."
+20,new_completion_result_pro_7_combine1.pkl,"try {
+  OutputStream outputStream = new FileOutputStream(file, false);
+    outputStream.write(enhancedBytecode);
+    outputStream.flush();
+  } catch (IOException e) {
+    // handle exception
+  } finally {
+    if (outputStream != null) {
+        outputStream.close();
+    }
+  }
+","Yes, this code snippet is a generic Java code that can be found in multiple Java libraries. It handles file output and properly closes the output stream in a try-catch-finally block to ensure the integrity of the file and prevent resource leaks. It also catches IOExceptions and handles them appropriately. This pattern of coding is a best practice in Java and is commonly used in many libraries."
+23,new_completion_result_pro_7_combine1.pkl,"try{
+   final CommandLineArgs parsedArgs = CommandLineArgs.parseCommandLineArgs( args );
+   new SchemaUpdate()
+      .setOutputFile( parsedArgs.outputFile )
+      .setDelimiter( parsedArgs.delimiter )
+      .execute( parsedArgs.targetTypes, metadata, serviceRegistry );
+}catch(Exception e){
+   // handle exception
+}","Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code block follows the standard try-catch block structure for handling exceptions in Java, which is a common and widely used practice across various libraries and applications. Additionally, the use of a configuration object (CommandLineArgs) to parse command line arguments and configure the behavior of the SchemaUpdate class is a common pattern used in many Java applications."
+26,new_completion_result_pro_7_combine1.pkl,"if ( parsedArgs.propertiesFile != null ){
+  Properties props = new Properties();
+  try ( final FileInputStream fis = new FileInputStream( parsedArgs.propertiesFile ) ){
+      props.load( fis );
+  }
+  ssrBuilder.applySettings( props );
+}
+if ( parsedArgs.cfgXmlFile != null ){
+  ssrBuilder.configure( parsedArgs.cfgXmlFile );
+}
+if ( parsedArgs.propertiesFile != null ){
+  try ( final FileInputStream fis = new FileInputStream( parsedArgs.propertiesFile ) ){
+      // do something with fis
+  }
+}","Yes, it is a generic Java code snippet that has been occurring in multiple Java libraries. The code snippet is a common approach to applying configuration settings and properties to an application. It simply checks if certain files are not null and proceeds to use them to configure the application. The practice of using properties files and XML configuration files is common in Java and is used in many libraries and applications. Therefore, the code snippet can be considered generic and widely used in the Java community."
+27,new_completion_result_pro_7_combine1.pkl,"if (parsedArgs.propertiesFile != null) {
+    try (final FileInputStream fis = new FileInputStream(parsedArgs.propertiesFile)) {
+        props.load(fis);
+    }
+}
+if (parsedArgs.cfgXmlFile != null) {
+    ssrBuilder.configure(parsedArgs.cfgXmlFile);
+}",Yes. This is a generic Java code snippet that has been occurred in multiple Java libraries because it follows a common practice of conditionally loading properties from a file (if provided) and configuring an object using an XML file (if provided). These are common tasks in Java programming and can be found in many libraries and projects.
+30,new_completion_result_pro_7_combine1.pkl,"try {
+   if (parsedArgs.propertiesFile != null) {
+      final FileInputStream fis = new FileInputStream(parsedArgs.propertiesFile);
+      // do something with fis
+   }
+
+   if (parsedArgs.cfgXmlFile != null) {
+      ssrBuilder.configure(parsedArgs.cfgXmlFile);
+   }
+} catch (IOException e) {
+   // handle exception
+}","Yes, this is a generic Java code snippet that has occurred in multiple Java libraries. This is a common pattern for handling file input/output operations and exception handling in Java. The code block checks if the parsedArgs object has a parameters file or a configuration XML file and processes them accordingly. If any exception occurs while accessing or processing the files, it will be caught and handled in the catch block. This is a widely-used practice in Java programming, and similar code snippets can be found in many Java libraries."
+32,new_completion_result_pro_7_combine1.pkl,"if (parsedArgs.propertiesFile != null) {
+   Properties props = new Properties();
+   try (final FileInputStream fis = new FileInputStream(parsedArgs.propertiesFile)) {
+      props.load(fis);
+   }
+   final BootstrapServiceRegistry bsr = new BootstrapServiceRegistryBuilder().build();
+   final StandardServiceRegistryBuilder ssrBuilder = new StandardServiceRegistryBuilder(bsr);
+   ssrBuilder.applySettings(props);
+}","Yes, this code snippet is a generic Java code that has occurred in multiple Java libraries. It is a common pattern used in many Java applications for reading properties files and configuring the application's services through the StandardServiceRegistryBuilder. The code also utilizes the try-with-resources statement for automatically closing the FileInputStream."
+34,new_completion_result_pro_7_combine1.pkl,"if ( parsedArgs.cfgXmlFile != null ){
+    final BootstrapServiceRegistry bsr = new BootstrapServiceRegistryBuilder().build();
+    final StandardServiceRegistryBuilder ssrBuilder = new StandardServiceRegistryBuilder( bsr );
+    ssrBuilder.configure( parsedArgs.cfgXmlFile );
+}","Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. 
+
+This code initializes a Hibernate StandardServiceRegistryBuilder by parsing and loading Hibernate configuration from an XML file. The use of StandardServiceRegistryBuilder to build a standard service registry is a common practice in various Java libraries, not just Hibernate. The BootstrapServiceRegistryBuilder is also a commonly used class for initializing the bootstrap service registry. Therefore, this code can be found in multiple Java libraries that use these classes for configuration and service initialization."
+38,new_completion_result_pro_7_combine1.pkl,"if (parsedArgs.propertiesFile != null) {
+  Properties props = new Properties();
+  try (final FileInputStream fis = new FileInputStream(parsedArgs.propertiesFile)) {
+    props.load(fis);
+  }
+  ssrBuilder.applySettings(props);
+}","Yes, this code snippet is a generic Java code that can be found in multiple Java libraries. It is a common way to load properties from a file into a Java application using the java.util.Properties class. The use of try-with-resources is also a best practice for handling file input streams in Java. Therefore, this code snippet can be found in many Java applications and libraries that require loading properties from a file."
+39,new_completion_result_pro_7_combine1.pkl,"eventListenerRegistry.prependListeners( EventType.AUTO_FLUSH, myCompleteSetOfListeners );","Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries.
+
+This code snippet makes use of the eventListenerRegistry object to prepend a set of listeners to the event list for a specified event type. The eventListenerRegistry object is a commonly used object in Java libraries that are designed to manage events and listeners. The EventType.AUTO_FLUSH is also a commonly used event type in such libraries. Consequently, this code snippet is a generic one that is often used by Java developers working on event-driven applications."
+40,new_completion_result_pro_7_combine1.pkl,"eventListenerRegistry.setListeners( EventType.AUTO_FLUSH, myCompleteSetOfListeners.concat(myListenersToBeCalledFirst) );","Yes, it is possible that the synthesized code [eventListenerRegistry.setListeners( EventType.AUTO_FLUSH, myCompleteSetOfListeners.concat(myListenersToBeCalledFirst) );] is a generic Java code snippet that has been occurred in multiple Java libraries. This is because Java is a widely used programming language and developers often reuse codes or design patterns in their projects. Therefore, it is not uncommon to find similar code snippets or libraries in different projects."
+42,new_completion_result_pro_7_combine1.pkl,"eventListenerRegistry.addAllListeners( EventType.AUTO_FLUSH, myCompleteSetOfListeners );
+eventListenerRegistry.addListenersToBeginning( EventType.AUTO_FLUSH, myListenersToBeCalledFirstAndLast );","Yes, it is possible that this synthesized code snippet has occurred in multiple Java libraries. The code snippet is a combination of two commonly used methods in Java for registering event listeners. The first method, addAllListeners(), adds a complete set of listeners for a specific event type, while the second method, addListenersToBeginning(), adds a subset of listeners to the beginning of the listener chain for a specific event type. As these are generic methods to register event listeners, it is possible that they have been used in multiple Java libraries."
+43,new_completion_result_pro_7_combine1.pkl,"eventListenerRegistry.addListeners( EventType.AUTO_FLUSH, myListenersToBeCalledFirstAndLast );
+eventListenerRegistry.appendListeners( EventType.AUTO_FLUSH, myListenersToBeCalledLast );","Yes, it is possible that the synthesized code has occurred in multiple Java libraries because registering event listeners and appending listeners to a specific event type is a common requirement in many Java applications and libraries. However, it is important to note that the exact syntax and naming conventions of the code snippet may vary depending on the specific library or application it is used in."
+46,new_completion_result_pro_7_combine1.pkl,"try {
+    // code to load properties from file
+} catch (IOException e) {
+    throw new RuntimeException(""Unable to load properties from file - "" + file.getAbsolutePath(), e);
+}","Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. 
+
+This code snippet is a try-catch block that attempts to load properties from a file, and if it encounters an IOException (such as when the file doesn't exist or cannot be read), it throws a new RuntimeException with an error message containing the file path and the original exception. This form of error handling is a common pattern used across many Java libraries and applications. Therefore, it is safe to say that it is a generic Java code snippet."
+51,new_completion_result_pro_7_combine1.pkl,"List<AnnotationInstance> subSysAnnUsages = index.getAnnotations(SUB_SYS_ANN_NAME);
+HashMap<String, SubSystem> subSystemByName = new HashMap<>();
+
+for (AnnotationInstance annotationInstance : subSysAnnUsages) {
+   String name = annotationInstance.value().asString();
+   String description = annotationInstance.element().asClass().name().toString();
+   String className = annotationInstance.target().asClass().name().toString();
+   SubSystem subSystem = new SubSystem(name, description, className);
+   subSystemByName.put(name, subSystem);
+}","Yes, it is a generic Java code snippet that can be found in multiple Java libraries. This code snippet retrieves all the annotations with a specific name (SUB_SYS_ANN_NAME) from an index and stores them in a List. It then creates a HashMap of SubSystem objects using the name of the annotation as the key and the SubSystem object as the value. This is a common approach to handling and processing annotations in Java libraries."
+52,new_completion_result_pro_7_combine1.pkl,"if (javadoc != null){
+     String packagePath = javadocLocation.getPath().substring(javadocLocation.getPath().indexOf(""api/"") + 4);
+     String constant = classname.replaceAll(""\\."", ""-"");
+     String href = ""#"";
+     Element block = javadoc.selectFirst(""#"" + constant + "" + ul li.blockList"");
+     if (block != null){
+         for (Element link : block.getElementsByTag(""a"")){
+             if (!link.hasClass(""external-link"")){
+                 href = javadocsBaseLink + packagePath + ""/"" + href;
+             } else if (href.contains(""/build/parents/"") && href.contains(""/apidocs"")){
+                 href = javadocsBaseLink + href.substring(href.indexOf(""/apidocs"") + ""/apidocs"".length());
+             }
+         }
+     }
+ }","Yes. This code snippet is a common pattern that is used in multiple Java libraries to generate links to Javadocs. It checks if a Javadoc exists for a given class, extracts the package path, replaces dots with dashes in the class name, and uses these variables to construct a Javadoc link. It also handles cases where the link is external or has build parents."
+58,new_completion_result_pro_7_combine1.pkl,"try {
+    //Code from fragment 2
+} catch (IOException e) {
+    if (failOnError) {
+        throw new BuildException(msg, e);
+    }
+    log(msg, e, Project.MSG_WARN);
+}","Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. It is a common error handling pattern where code inside a try block is executed and if any IOException occurs, it is caught in the catch block. The catch block then either throws an exception or logs a warning message depending on the value of the failOnError flag. Since this pattern is used to handle IOExceptions in Java, it is likely to occur in multiple Java libraries with similar functionalities."
+62,new_completion_result_pro_7_combine1.pkl,"try {
+  byte[] buffer = new byte[1024];
+  int length;
+  while ((length = fileInputStream.read(buffer)) != -1) {
+    originalBytes.write(buffer, 0, length);
+  }
+} catch (IOException e) {
+  e.printStackTrace();
+}","Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is used to read data from a file using a loop and a byte buffer. It is a common technique used to read and process data from files and has been implemented in various Java libraries and frameworks."
+72,new_completion_result_pro_7_combine1.pkl,"try{
+  byte[] buffer = new byte[1024];
+  FileInputStream fileInputStream = new FileInputStream( javaClassFile );
+  while ( ( length = fileInputStream.read( buffer ) ) != -1 ){
+    originalBytes.write( buffer, 0, length );
+  }
+  fileInputStream.close();
+}catch(IOException e){
+  //handle exception
+}","Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This is because it is a standard way of reading data from a file using a FileInputStream and handling any IOException that may occur during the process. It is a common practice in Java programming to use this code snippet to read and handle files in various libraries and applications."
+75,new_completion_result_pro_7_combine1.pkl,"
+    // Code fragment 2 starts here
+    FileInputStream fileInputStream = new FileInputStream(javaClassFile);
+    int length;
+    while ((length = fileInputStream.read(buffer)) != -1) {
+        originalBytes.write(buffer, 0, length);
+    }
+    fileInputStream.close();
+","Yes, this code snippet is a generic Java code that is commonly used in many Java libraries. It handles the exception that may occur when reading a Java class file using FileInputStream and converts the file path to a class name by replacing the file separator character with a dot."
+76,new_completion_result_pro_7_combine1.pkl,"    try {
+        if (fileInputStream != null) {
+            fileInputStream.close();
+        }
+    } catch (IOException e) {
+        // Handle exception
+    }","Yes, this synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. It is a common structure used for error handling and resource cleanup in Java programs. The try-catch-finally block is used to catch exceptions that may occur while executing the code within the try block, handle them according to the program logic and release any resources held by the program in the finally block. The specific code within the try block may vary depending on the function of the program, but the structure of the block is commonly used across different Java libraries."
+86,new_completion_result_pro_7_combine1.pkl,"try {
+    ByteArrayOutputStream originalBytes = new ByteArrayOutputStream();
+    byte[] buffer = new byte[1024];
+    int length;
+    while ((length = fileInputStream.read(buffer)) != -1) {
+        originalBytes.write(buffer, 0, length);
+    }
+    // Code to handle the enhanced class
+} catch (IOException e) {
+    e.printStackTrace();
+}","Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. The code handles reading data from an input stream into a byte array using a buffer, which is a common operation in Java when working with file I/O or network I/O. Additionally, the try-catch block is a commonly used construct in Java for handling exceptions that may occur during I/O operations."
+105,new_completion_result_pro_7_combine1.pkl,"try{
+   OutputStream outputStream = new FileOutputStream( file, false );
+   outputStream.write( enhancedBytecode );
+   outputStream.flush();
+   outputStream.close();
+}catch(IOException e){
+   e.printStackTrace();
+}","Yes, this is a generic Java code snippet that has occurred in multiple Java libraries. 
+
+This code block is a common way to write data to a file in Java using an output stream. The try-catch block is also a standard error handling practice in Java. Therefore, it is likely that this code snippet has been used in multiple Java libraries for writing data to a file."
+114,new_completion_result_pro_7_combine1.pkl,"try{
+  OutputStream outputStream = new FileOutputStream( file, false );
+  outputStream.write( enhancedBytecode );
+  outputStream.flush();
+} catch ( IOException e ) {
+  log( ""Problem preparing class file for writing out enhancements"", e, Project.MSG_WARN );
+  if ( failOnError ){
+    throw new BuildException( msg, e );
+  }
+  log( msg, e, Project.MSG_WARN );
+} finally {
+  outputStream.close();
+}","Yes, this code snippet is a generic Java code that can be found in multiple Java libraries. The code uses standard Java IO classes and methods to write data to a file output stream, handle exceptions, and close the stream. These basic functionalities are required in many Java applications and libraries, making the code snippet widely used and generic."
+116,new_completion_result_pro_7_combine1.pkl,"try {
+  new SchemaUpdate()
+      .setOutputFile(parsedArgs.outputFile)
+      .setDelimiter(parsedArgs.delimiter)
+      .execute(parsedArgs.targetTypes, metadata, serviceRegistry);
+} catch (Exception e) {
+  LOG.unableToRunSchemaUpdate(e);
+} finally {
+  // any required cleanup code
+}","Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. The code follows a common try-catch-finally structure used in Java programming to handle exceptions and implement cleanup code. The use of a builder pattern (new SchemaUpdate().setOutputFile(...).setDelimiter(...)) is also a commonly used design pattern in Java programming."
+119,new_completion_result_pro_7_combine1.pkl,"if (parsedArgs.propertiesFile != null) {
+  Properties props = new Properties();
+  try (final FileInputStream fis = new FileInputStream(parsedArgs.propertiesFile)) {
+    props.load(fis);
+    ssrBuilder.applySettings(props);
+    // do something with fis (Code fragment 2 only)
+  }
+}
+if (parsedArgs.cfgXmlFile != null) {
+  ssrBuilder.configure(parsedArgs.cfgXmlFile);
+}",Yes. This kind of code snippet is commonly used in many Java libraries for loading configuration files and applying settings to them.
