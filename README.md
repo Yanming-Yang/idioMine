@@ -18,7 +18,7 @@ Our replicated package consists of six folders that organize the relevant data a
 
 ### 2. we would like to illustrate how to use IdioMine to extract idioms from the source code.
 
-IdioMine includes three steps to extract idioms from datasets.
+IdioMine includes five steps to extract idioms from datasets.
 
       - First, IdioMine extracts raw functions from datasets.
 
