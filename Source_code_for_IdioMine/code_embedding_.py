@@ -7,10 +7,7 @@ from sklearn.cluster import DBSCAN
 from sklearn.metrics import silhouette_score
 from skopt import gp_minimize
 from skopt.space import Real, Integer
-from sklearn.neighbors import NearestNeighbors
 from sklearn.metrics import pairwise_distances_argmin_min
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 def get_code_embedding(data_file):
     # Load the pre-trained tokenizer
@@ -57,8 +54,8 @@ def dense_clustering(data):
         # print('labels', labels)
         return -score
     
-    space = [Real(0.01, 1, name='eps'),
-         Integer(2, 5, name='min_samples')]
+    space = [Real(0.01, 0.5, name='eps'),
+         Integer(2, 10, name='min_samples')]
 
     result = gp_minimize(objective, space, n_calls=50, random_state=0)
 
@@ -71,25 +68,19 @@ def dense_clustering(data):
     print('best_score', best_score)
     return best_eps, best_min_samples
 
-
-def get_embedding_pkl():
-    data_file = r'./code_pattern_str.pkl'
+def get_embedding_pkl(data_file, embedding_file):
+    # data_file = r'./code_pattern_str.pkl'
     data = pd.read_pickle(data_file)
     embeddings_data = get_code_embedding(data_file)
-    embedding_file = r'./code_embedding.pkl'
+    # embedding_file = r'./code_embedding.pkl'
     data.insert(data.shape[1], 'code_embedding', embeddings_data)
     pd.to_pickle(data, embedding_file)
 
-def clustering(embedding_file):
+def clustering(embedding_file, cluster_data_file):
     data = pd.read_pickle(embedding_file)
-    print(data.columns)
-    print(len(data['sub_code_pattern'][0]))
     embedding_data = data['code_embedding']
-    print(len(embedding_data[0]))
-    # print(embedding_data[100])
-    # print(embedding_data[1][0][3].shape)
 
-   # max_size = 0
+    # max_size = 0
     embeddings_list = []
     info_list = []
     for embeddings in embedding_data:
@@ -103,23 +94,17 @@ def clustering(embedding_file):
             embeddings_list.append(tf.zeros(768))
             info_list.append(None)
     best_eps, best_min_samples = dense_clustering(embeddings_list)
-    cluster_labels = perform_best_DBSCAN_and_analysis(embeddings_list, info_list, best_eps, best_min_samples)
-    print(cluster_labels)
+    cluster_labels = perform_best_DBSCAN_and_analysis(embeddings_list, info_list, best_eps, best_min_samples, cluster_data_file)
 
-    # for i in range(len(cluster_labels)):
-    #     print(cluster_labels[i])
-    #     if cluster_labels[i] == 1:
-    #         print(embedding_data[i][0][3])
-
-def perform_best_DBSCAN_and_analysis(data, info_list, best_eps, best_min_samples):
+def perform_best_DBSCAN_and_analysis(data, info_list, best_eps, best_min_samples, cluster_data_file):
     data = np.stack([tensor.numpy() for tensor in data])
     # dbscan = DBSCAN(eps=best_eps, min_samples=best_min_samples)
     dbscan = DBSCAN(eps=best_eps, min_samples=best_min_samples)
-    clusters_ = dbscan.fit(data)
+    dbscan.fit(data)
     cluster_labels = dbscan.labels_
     # Get unique cluster labels
     unique_labels = set(cluster_labels)
-
+    cluster_data = pd.DataFrame(columns=['label', 'center_point', 'cluster_size', 'center_point_info', 'cluster_data'])
     # Iterate over each unique cluster label
     for label in unique_labels:
         if label == -1:
@@ -128,11 +113,10 @@ def perform_best_DBSCAN_and_analysis(data, info_list, best_eps, best_min_samples
         # Get samples that belong to this cluster
         points_in_cluster = data[cluster_labels == label]
         infos = [info_list[i] for i in np.where(cluster_labels == label)[0].tolist()]
-        # print('infos', infos)
+        print('infos', infos)
         # Calculate centroid of the cluster
         centroid = np.mean(points_in_cluster, axis=0)
         closest_point_idx, _ = pairwise_distances_argmin_min(points_in_cluster, np.array([centroid]))
-        # closest_point = points_in_cluster[closest_point_idx]
         if len(closest_point_idx) > 0 and infos != None:
             closest_point = [infos[idx] for idx in closest_point_idx][0]
             if closest_point != None:
@@ -142,13 +126,10 @@ def perform_best_DBSCAN_and_analysis(data, info_list, best_eps, best_min_samples
         else:
             closest_point = None
         print(f"Nearest point to center of cluster {label}: {closest_point_str}, and {len(points_in_cluster)}")
+        cluster_data.loc[len(cluster_data.index)] = [label, closest_point_str, len(points_in_cluster), infos[closest_point_idx[0]], infos]
+        # cluster_data = pd.concat([cluster_data, pd.DataFrame({'label': label, 'center_point': closest_point_str, 'cluster_size': points_in_cluster, 'center_point_info': infos[closest_point_idx[0]]})])
+    pd.to_pickle(cluster_data, cluster_data_file)
+    print('load data')
+    return cluster_labels
 
-    # plt.scatter(data[:, 0], data[:, 1], c=cluster_labels, cmap='viridis')
-    sns.kdeplot(x=data[:, 0], y=data[:, 1], cmap='viridis', shade=True, bw_method='silverman')
-    sns.scatterplot(x=data[:, 0], y=data[:, 1], hue=cluster_labels, palette='rainbow')
-    plt.show()
 
-if __name__ == '__main__':
-    # get_embedding_pkl()
-    embedding_file = r'./code_embedding.pkl'
-    clustering(embedding_file)

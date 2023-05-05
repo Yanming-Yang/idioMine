@@ -86,14 +86,19 @@ def main():
     data_files = []
     pro_func_ast = []
 
-    PathStr = r'../lib_data/5'
+    parser = argparse.ArgumentParser(description='args description')
+    parser.add_argument('--PathStr', '-PS', help='the path of the input project')
+    parser.add_argument('--dataFilePath', '-dFP', help='the output file')
 
+    # PathStr = r'./repos_new/repos_9'
+
+    args = parser.parse_args()
     GJF = GetJavaFile(projects, data_files)
-    GJF.get_Java_projects(PathStr)
+    GJF.get_Java_projects(args.PathStr)
     for i in range(len(GJF.projects)):
         print(GJF.projects[i])
         funcs_in_pro = []
-        GJF.get_all_java_files(PathStr)
+        GJF.get_all_java_files(args.PathStr)
         for pro_file_tmp in GJF.pro_file_list[i]:
             # take pro_file_list[0][1] as an example and generate functions' ASTs in this file
             funcASTs = []
@@ -103,9 +108,9 @@ def main():
             funcs_in_pro.append(Parser.funcASTs)
         pro_func_ast.append(funcs_in_pro)
 
-    dataFilePath = r'./lib_data_5_new.pkl'
-    write_data(GJF, pro_func_ast, dataFilePath)
-
+    # dataFilePath = r'./library_data_new_9.pkl'
+    
+    write_data(GJF, pro_func_ast, args.dataFilePath)
 
 if __name__ == "__main__":
     main()

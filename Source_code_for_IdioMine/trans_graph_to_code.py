@@ -12,42 +12,41 @@ from ast_to_graph import iter_specific_edges
 from sub_graph_structure import make_a_tree_for_func
 from ast_to_graph import get_cfg_edges, add_cfg_to_ast, get_Def_Use_edges, Recursion_get_parents
 from codeNode import CodeNode
+import argparse
+import time
+import eventlet
+eventlet.monkey_patch()
+
 
 def trans_sub_graphs_to_code(Gs: List[nx.MultiDiGraph], sub_graphs: List[List[int]], func_contents: List[str]):
     all_code_fragements = []
     for i in range(len(func_contents)):
-        try:
+        start_time = time.time()
+        with eventlet.Timeout(10, False):
+            print(func_contents[i])
             func_stmts, func_tree = make_a_tree_for_func(func_contents[i])
+        if time.time() - start_time < 10 and func_stmts != [] and func_tree != Tree():
             code_fragements = []
             for j in range(len(sub_graphs[i])):
                 try:
+                    # print(1)
                     str_ = trans_sub_graph_to_code(Gs[i], sub_graphs[i][j], func_tree)
+                    # print(2)
                     stmt_list = get_code_fragment_for_each_subG(str_)
+                    # print(3)
                     code_tree = build_struc_to_get_code_fragement(stmt_list)
+                    # print(4)
                     code_fragement_str = traversal_code_tree(code_tree)
+                    # print(5)
                     print(code_fragement_str)
+                    # print(6)
                     code_fragements.append(code_fragement_str)
+                    # print(7, j, len(sub_graphs[i])-1)
                 except:
-                    print('the inner loop')
-                    traceback.print_exc()
-                    # print('*' * 50)
-                    # for node in Gs[i].nodes.data():
-                    #     print(node)
-                    # print('*' * 50)
-                    # print(sub_graphs[i][j])
-                    # print('*' * 50)
-                    # print(func_tree)
-                    # print('*' * 50)
-                    # print(func_contents[i])
-                    # print('*' * 50)
-                    print(i, j)
                     continue
             all_code_fragements.append(code_fragements)
-        except:
-            print('the outter loop')
-            traceback.print_exc()
+        else:
             all_code_fragements.append(None)
-            continue
     return all_code_fragements
 
 
@@ -92,32 +91,23 @@ def mapping_parent_children_node_to_code(G: nx.MultiDiGraph, ast_node_id: int, l
                 AST_node_to_code_node.append((root_children_AST[i], [root_children_code[j], root_children_code[j + 1]]))
                 j += 2
         elif isinstance(G.nodes[root_children_AST[i]]['code'], javalang.tree.BlockStatement):
-            # block_children = list(iter_specific_edges(G, root_children_AST[i], 'AST'))
-            # del root_children_AST[i]
-            # for child in block_children:
-            #     root_children_AST.append(child)
-            # parent_children_node_to_code(i, j)  
             root_children_code_ = [node.identifier for node in func_tree.all_nodes_itr() if func_tree.parent(node.identifier) != None and func_tree.parent(node.identifier).identifier == root_children_code[j]]
             AST_node_to_code_node.append((root_children_AST[i], root_children_code_))
             j += 1
         else:
-            print('root_children_AST', root_children_AST)
-            print('i', i)
-            print('root_children_code', root_children_code)
-            print('j', j)
             AST_node_to_code_node.append((root_children_AST[i], [root_children_code[j]]))
-            j += 1
+            j += 1 
         i += 1
         return i, j
     
     j = 0
     i = 0
-    while i < len(root_children_AST):
+    while i < len(root_children_AST) and j < len(root_children_code):
         i, j = parent_children_node_to_code(i, j)
     return AST_node_to_code_node
 
 
-# def mapping_parent_children_node_to_code2(G: nx.MultiDiGraph, ast_node_id: int, code_node_id: List[int], func_tree: Tree):
+def mapping_parent_children_node_to_code2(G: nx.MultiDiGraph, ast_node_id: int, code_node_id: List[int], func_tree: Tree):
     AST_node_to_code_node = []
 
     root_children_code = [node.identifier for node in func_tree.all_nodes_itr() if func_tree.parent(node.identifier) != None and func_tree.parent(node.identifier).identifier == code_node_id]
@@ -182,33 +172,36 @@ def trans_sub_graph_to_code(G: nx.MultiDiGraph, sub_graph: List[int], func_tree:
     # if process_sub_G(G, sub_graph):
     if True:
         while len(sub_graph) != 0:
-            str_ = ''
-            if sub_graph[0] != -1:
-                if G.nodes[sub_graph[0]]['label'] != 'body' and G.nodes[sub_graph[0]]['parent'] == 0:
-                    sub_graph.popleft()
-                    continue
-                parent_ids = []
-                parent_ids = Recursion_get_parents(G, sub_graph[0], parent_ids)
-                if len(parent_ids) == 2:
-                    code_ast = [code_node[0] for code_node in  AST_Children_node_to_code]
-                    code_str = [code_node[1] for code_node in  AST_Children_node_to_code]
-                    index = code_ast.index(parent_ids[0])
-                    code_nodes = code_str[index]
-                    for i in range(len(code_nodes)):
-                        str_ += func_tree[code_nodes[i]].data
-                
-                elif len(parent_ids) > 2:
-                    parent_ids.reverse()
-                    i = 1
-                    code_asts = [code_node[0] for code_node in AST_Children_node_to_code]
-                    code_strs = [code_node[1] for code_node in AST_Children_node_to_code]
-                    index = code_asts.index(parent_ids[i])
-                    code_str = code_strs[index]
+            try:
+                str_ = ''
+                if sub_graph[0] != -1:
+                    if G.nodes[sub_graph[0]]['label'] != 'body' and G.nodes[sub_graph[0]]['parent'] == 0:
+                        sub_graph.popleft()
+                        continue
+                    parent_ids = []
+                    parent_ids = Recursion_get_parents(G, sub_graph[0], parent_ids)
+                    if len(parent_ids) == 2:
+                        code_ast = [code_node[0] for code_node in  AST_Children_node_to_code]
+                        code_str = [code_node[1] for code_node in  AST_Children_node_to_code]
+                        index = code_ast.index(parent_ids[0])
+                        code_nodes = code_str[index]
+                        for i in range(len(code_nodes)):
+                            str_ += func_tree[code_nodes[i]].data
+                    
+                    elif len(parent_ids) > 2:
+                        parent_ids.reverse()
+                        i = 1
+                        code_asts = [code_node[0] for code_node in AST_Children_node_to_code]
+                        code_strs = [code_node[1] for code_node in AST_Children_node_to_code]
+                        index = code_asts.index(parent_ids[i])
+                        code_str = code_strs[index]
 
-                    str_, AST_Children_node_to_code, i, code_str = process_diff_types_stmts(G, parent_ids, i, AST_Children_node_to_code, code_str, func_tree, str_)
-                str_s.append(str_)
-                AST_Children_node_to_code = mapping_parent_children_node_to_code(G, 0, 'body', 1, func_tree)
-                sub_graph.popleft()
+                        str_, AST_Children_node_to_code, i, code_str = process_diff_types_stmts(G, parent_ids, i, AST_Children_node_to_code, code_str, func_tree, str_)
+                    str_s.append(str_)
+                    AST_Children_node_to_code = mapping_parent_children_node_to_code(G, 0, 'body', 1, func_tree)
+                    sub_graph.popleft()
+            except:
+                break
     return str_s
 
 def process_diff_types_stmts(G, parent_ids, i, AST_Children_node_to_code, code_str, func_tree, str_):
@@ -937,8 +930,13 @@ def add_new_data_column(data, code_fragement_list, data_file):
 
 
 def main():
-    all_func_info_path = r'./func_info_data_new_5.pkl'
-    func_data = pd.read_pickle(all_func_info_path)
+    parser = argparse.ArgumentParser(description='args description')
+    parser.add_argument('--all_func_info_path', '-afip', help='the input file')
+    parser.add_argument('--new_file_path', '-nfp', help='new file path')
+    args = parser.parse_args()
+
+    # all_func_info_path = r'./func_info_data_new_6.pkl'
+    func_data = pd.read_pickle(args.all_func_info_path)
 
     pro_names = func_data['project_name']
     file_names = func_data['file_name']
@@ -949,38 +947,10 @@ def main():
     func_graphs = func_data['func_graph']
     func_sub_graphs = func_data['func_sub_graph']
 
-    # for node in func_graphs[1053].nodes.data():
-    #     print(node)
-    # func_stmts, func_tree = make_a_tree_for_func(func_contents[1053])
-    # for node in func_tree.all_nodes_itr():
-    #     print(node)
-
-    # print(func_tree)
-    # print('*' * 50)
-    # print(func_contents[1053])
-
-    # # print(file_names[2])
-    # # print(func_names[2])
-
-    
-    # print('sub_graphs', func_sub_graphs[1053])
-    # print('*' * 20)
-    # str_ = trans_sub_graph_to_code(func_graphs[1053], func_sub_graphs[1053][0], func_tree)
-    # print('result', str_)
-    # # seqMatch = difflib.SequenceMatcher(None, str_[2].strip(), str_[3].strip())
-    # # match = seqMatch.get_matching_blocks() 
-
-    # stmt_list = get_code_fragment_for_each_subG(str_)
-    # code_tree = build_struc_to_get_code_fragement(stmt_list)
-    # print(code_tree)
-    # print('*' * 50)
-    # code_fragement = traversal_code_tree(code_tree)
-    # print(code_fragement)
-
     all_code_fragements = trans_sub_graphs_to_code(func_graphs, func_sub_graphs, func_contents)
 
-    new_file_path = r'./code_pattern_str_new_5.pkl'
-    add_new_data_column(func_data, all_code_fragements, new_file_path)    
+    # new_file_path = r'./code_pattern_str_new_6.pkl'
+    add_new_data_column(func_data, all_code_fragements, args.new_file_path)    
 
 if __name__ == '__main__':
     main()

@@ -12,6 +12,8 @@ import datetime
 import time
 import eventlet
 eventlet.monkey_patch()
+import argparse 
+import traceback
 
 # import sys   
 # sys.setrecursionlimit(100000)
@@ -239,9 +241,8 @@ def get_func_content(func_info, raw_data) -> List[List[List[str]]]:
     for i in range(len(projects)):
         for j in range(len(java_files_in_pro[i])):
             try:
-                print(java_files_in_pro[i][j])
                 funs_in_a_file = get_func_content_in_a_file(java_files_in_pro[i][j])
-                # print(funs_in_a_file)
+                print(java_files_in_pro[i][j])
                 func_contents_info.append((projects[i], java_files_in_pro[i][j], funs_in_a_file))
             except:
                 continue
@@ -270,37 +271,56 @@ def all_func_info(raw_data, func_contents_info) -> List[Tuple[str, str, str, jav
         file_name = func_contents_info[i][1]
         func_content_info = func_contents_info[i][2]
         for j in range(len(func_content_info)):
-            func_name = func_content_info[j][0]
-            func_content = func_content_info[j][1]
-            project_id = func_content_info[j][2]
-            file_id = func_content_info[j][3]
-            func_id = func_content_info[j][4]
+            timeout = eventlet.Timeout(60)
+            try:
+                func_name = func_content_info[j][0]
+                func_content = func_content_info[j][1]
+                project_id = func_content_info[j][2]
+                file_id = func_content_info[j][3]
+                func_id = func_content_info[j][4]
 
-            # print('real 1', file_name + '/' + func_name)
-            # print('real 2', file_names[project_id][file_id] + '/' + func_ASTs[project_id][file_id][func_id].name)
-            # print(1, func_name)
-            # if func_name != 'getConfiguration':
-            # print(len(file_name_list))
-            for k in range(len(file_name_list)):
-                if file_name + ';' + func_name == file_name_list[k][0]:
-                    # print(k)
-                    index_a = file_name_list[k][1][0]
-                    index_b = file_name_list[k][1][1]
-                    index_c = file_name_list[k][1][2]
-                    func_paras = func_ASTs[index_a][index_b][index_c].parameters
-                    return_type = func_ASTs[index_a][index_b][index_c].return_type
+                # print('real 1', file_name + '/' + func_name)
+                # print('real 2', file_names[project_id][file_id] + '/' + func_ASTs[project_id][file_id][func_id].name)
+                # print(len(func_content_info))
+                # print(0, j)
+                # print(func_content_info[j])
 
-                    with eventlet.Timeout(60, False):
+                # print(j, func_name, '1')
+        
+                # if func_name != '':
+                # print('len_file_name_list', len(file_name_list))
+                for k in range(len(file_name_list)):
+                    # print('a', file_name + ';' + func_name == file_name_list[k][0])
+                    if file_name + ';' + func_name == file_name_list[k][0]:
+                        # with eventlet.Timeout(120, False):
+                        index_a = file_name_list[k][1][0]
+                        index_b = file_name_list[k][1][1]
+                        index_c = file_name_list[k][1][2]
+                        func_paras = func_ASTs[index_a][index_b][index_c].parameters
+                        return_type = func_ASTs[index_a][index_b][index_c].return_type
+                        
                         G, terminals = construct_ast_graph(func_ASTs[index_a][index_b][index_c], treeNodeType)
+                        # print('G1', G)
                         G_new, dfg_DefUse = get_CFG_and_DFG(G) #wrong
                         var_sub_graph = get_sub_graph_in_a_graph(G_new, dfg_DefUse)
                         new_func_info = (pro_name, file_name, func_name, return_type, func_paras, func_content, G_new, var_sub_graph)
+                        # print('b', (pro_name, file_name, func_name, return_type, func_paras) not in exist_method)
                         if (pro_name, file_name, func_name, return_type, func_paras) not in exist_method:
                             func_info_new.append(new_func_info)
-                            print(3, func_name)
+                            # print(k, func_name, '2')
                             exist_method.append((pro_name, file_name, func_name, return_type, func_paras))
+                        # if k < len(file_name_list) - 1:
+                        #     continue 
+                        # else:
+                        #     print('break')
+                        #     break
+            except:
+                traceback.print_exc()
+                if j < len(func_content_info) - 1:
+                    continue 
+                else:
+                    print('break')
                     break
-
     return func_info_new
 
 # ----------------------------------------------------------------
@@ -346,14 +366,12 @@ def get_func_info_pkl(func_info_new, all_func_info_path):
     pd.to_pickle(data, all_func_info_path)
 
 def main():
-    dataFilePath = r'./data_new_8.pkl'
-    data = read_data(dataFilePath)
-    # funcAST = data['func_ast'][0][0][2]
-    # G, terminals = construct_ast_graph(funcAST, treeNodeType)
-    # G, dfg_DefUse = get_CFG_and_DFG(G)
-    # print(dfg_DefUse)
-    # var_sub_graph = get_sub_graph_in_a_graph(G, dfg_DefUse)
-    # print(var_sub_graph)
+    parser = argparse.ArgumentParser(description='args description')
+    parser.add_argument('--dataFilePath', '-dFP', help='the input file')
+    parser.add_argument('--all_func_info_path', '-afip', help='the output file')
+    args = parser.parse_args()
+    # dataFilePath = r'./data_new_9.pkl'
+    data = read_data(args.dataFilePath)
 
     func_info = get_func_info_in_pros(data)
     print('finish 1')
@@ -361,11 +379,9 @@ def main():
     print('finish 2')
     func_info_all = all_func_info(data, func_content_info)
     print('finish 3')
-    all_func_info_path = r'./func_info_data_new_8.pkl'
-    get_func_info_pkl(func_info_all, all_func_info_path)
-
-    # with open(all_func_info_path, 'wb') as f:
-    #     pickle.dump(func_info_all, f, protocol=pickle.HIGHEST_PROTOCOL)
+    
+    # all_func_info_path = r'./func_info_library_data_new_9.pkl'
+    get_func_info_pkl(func_info_all, args.all_func_info_path)
 
 if __name__ == '__main__':
     main()

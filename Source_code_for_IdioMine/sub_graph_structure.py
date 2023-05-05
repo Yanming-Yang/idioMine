@@ -10,12 +10,17 @@ from collections import deque
 import re
 from treelib import Tree, Node
 from ast_to_graph import iter_specific_edges
+import time
 
 def make_a_tree_for_func(func):
     func_tree = Tree()
     func_stmts = []
     func_tree.create_node(identifier=1, data = 'root', tag = 1)
-    func_stmts, func_tree = get_stmts_in_func(func_tree, func, func_stmts)
+    start_time = time.time()
+    try:
+        func_stmts, func_tree = get_stmts_in_func(func_tree, func, func_stmts)
+    except:
+        func_stmts, func_tree = [], Tree()
     return func_stmts, func_tree
 
 # c = 0
@@ -38,9 +43,6 @@ def get_stmts_in_func(func_tree: Tree, func: str, func_stmts: List[Tuple[int, st
     sub_func_stmts = [stmt for stmt in sub_func_stmts if stmt != '']
     # print('test', sub_func_stmts)
     sub_func_stmts = [stmt + '\n' for stmt in sub_func_stmts]
-    # call_stack_index = c
-    # c = c + 1
-    # print('begin', 'call_stack_index:', call_stack_index, 'sub_func_stmts count:', len(sub_func_stmts))
     i = 0
     for stmt in sub_func_stmts:
         i = sub_func_stmts.index(stmt)
@@ -211,6 +213,9 @@ def get_stmts_in_func(func_tree: Tree, func: str, func_stmts: List[Tuple[int, st
                         if stmts2[stmts_indexs_2[len(stmts_indexs_2) - 1] + 1:] != '':
                             sub_func_stmts.insert(i + 1, stmts2[stmts_indexs_2[len(stmts_indexs_2) - 1] + 1:])
                 block_str = ''
+        else:
+            print(sub_func_stmts[i])
+
     return [i for i in func_stmts if i != ''], func_tree
 
 # ----------------------------------------------------------------
@@ -297,12 +302,6 @@ def main():
 
     func_stmts, func_tree = make_a_tree_for_func(func_contents[1106])
     print(func_tree)
-    # print(func_contents[3])
-    # for node in func_tree.all_nodes_itr():
-    #     print('3', node)
-    #     if node.data != '':
-    #         # print(node)
-    #         print('parent', func_tree.parent(node))
 
 if __name__ == '__main__':
     main()
