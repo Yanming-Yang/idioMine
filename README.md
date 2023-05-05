@@ -3,6 +3,7 @@
 ### 1. We would like to detail the organization of our replicated package.
 
 Our replicated package consists of six folders that organize the relevant data as follows:
+
       - `Source_code_for_IdioMine` contains the source code of our approach.
 
       - `Evaluation` contains the code utilized to evaluate the effectiveness of IdioMine in answering RQ1.
@@ -18,6 +19,7 @@ Our replicated package consists of six folders that organize the relevant data a
 ### 2. we would like to illustrate how to use IdioMine to extract idioms from the source code.
 
 IdioMine includes three steps to extract idioms from datasets.
+
       - First, IdioMine extracts raw functions from datasets.
 
             *Command: python get_data.py --PathStr ProjectFolder/LibraryFolder --dataFilePath dataset.pkl*
@@ -35,6 +37,6 @@ IdioMine includes three steps to extract idioms from datasets.
             *Command: python frequent_sub_idioms.py sub-idioms.pkl, -> frequent_sub_idioms.pkl*
 
       - Finally, IdioMine synthesizes related frequent sub-idioms into potential code idioms and identify real idioms from potential ones.
-      
+
             *Command: python ChatGPT_genrate_code_pattern.py --cluster_data_file frequent_sub_idioms.pkl --completion_result_file completion_result_ --completion_result_file_single completion_result.pkl*
 
