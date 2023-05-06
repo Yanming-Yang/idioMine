@@ -12,7 +12,7 @@ Our replicated package consists of six folders that organize the relevant data a
 
       - `User_study` contains the top-18 idioms extracted by IdioMine, Haggies, and ChatGPT 3.5, respectively, and users' preference towards those top idioms.
       
-      - `RQ3` presents the statistical results of the idioms extracted by IdioMine from various Java projects and libraries.
+      - `Idiom_analysis` presents the statistical results of the idioms extracted by IdioMine from various Java projects and libraries.
 
       - `ChatGPT_results` includes the idioms extracted from different Java projects and libraries by ChatGPT 3.5, as well as those extracted by ChatGPT 4.0 from libraries. These idioms are discussed in Section V.
 
