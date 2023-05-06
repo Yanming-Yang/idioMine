@@ -162,11 +162,6 @@ def idiomCoverage(args):
         idiom_coverage_rate = idiom_coverages[-1]
     return idiom_coverages, idiom_coverage_rate, idiom_size, combination_idiom_size
 
-# def CHatGPT_precision(args, test_data, train_data, ChatGPT_idiom):
-#     code_ast = pd.read_pickle(args.codeContentAST)
-#     code_contents = code_ast['func_content']
-#     for i in range(len(code_contents)):
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='args description')

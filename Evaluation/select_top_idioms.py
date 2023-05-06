@@ -64,13 +64,6 @@ def get_useful_idioms(args):
 
 
 if __name__ == '__main__':
-    # parser = argparse.ArgumentParser(description='args description')
-    # parser.add_argument('--idioms', '-iDF', type=str, help='the input file')
-    # parser.add_argument('--clusters', '-DF', type=str, help='the output file')
-    # parser.add_argument('--output', '-OT', type=str, help='the output file')
-    # args = parser.parse_args()
-    # top_idioms(args)
-
     parser = argparse.ArgumentParser(description='args description')
     parser.add_argument('--idioms', '-iDF', type=str, help='the input file')
     parser.add_argument('--output', '-OT', type=str, help='the input file')
