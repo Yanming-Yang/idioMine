@@ -58,9 +58,7 @@ if __name__ == '__main__':
     for i in range(len(embedding_files)):
         try:
             clustering(embedding_files[i], cluster_data_files[i])
-            print('done_cluster', i)
         except:
-
             traceback.print_exc()
             continue
 

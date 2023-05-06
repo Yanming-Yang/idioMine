@@ -90,8 +90,6 @@ def main():
     parser.add_argument('--PathStr', '-PS', help='the path of the input project')
     parser.add_argument('--dataFilePath', '-dFP', help='the output file')
 
-    # PathStr = r'./repos_new/repos_9'
-
     args = parser.parse_args()
     GJF = GetJavaFile(projects, data_files)
     GJF.get_Java_projects(args.PathStr)
@@ -107,8 +105,6 @@ def main():
             Parser.get_func_ASTs(tree)
             funcs_in_pro.append(Parser.funcASTs)
         pro_func_ast.append(funcs_in_pro)
-
-    # dataFilePath = r'./library_data_new_9.pkl'
     
     write_data(GJF, pro_func_ast, args.dataFilePath)
 

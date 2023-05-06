@@ -935,7 +935,6 @@ def main():
     parser.add_argument('--new_file_path', '-nfp', help='new file path')
     args = parser.parse_args()
 
-    # all_func_info_path = r'./func_info_data_new_6.pkl'
     func_data = pd.read_pickle(args.all_func_info_path)
 
     pro_names = func_data['project_name']
@@ -949,7 +948,6 @@ def main():
 
     all_code_fragements = trans_sub_graphs_to_code(func_graphs, func_sub_graphs, func_contents)
 
-    # new_file_path = r'./code_pattern_str_new_6.pkl'
     add_new_data_column(func_data, all_code_fragements, args.new_file_path)    
 
 if __name__ == '__main__':

@@ -123,7 +123,6 @@ def whether_a_code_pattern(completion_answer):
     model="gpt-3.5-turbo", 
     messages=[
         {"role": "user", "content": "Does this synthesized code [{pattern}] possess clear semantics? Please begin the answer with yes or no and explain why".format(pattern= code)},
-        # {"role": "user", "content": "In what situation this synthesized code can be used?"},
               ]
     )
     print(completion) 
@@ -138,7 +137,6 @@ def used_pattern_libraries(completion_answer):
     model="gpt-3.5-turbo", 
     messages=[
         {"role": "user", "content": "What common Java libraires occur the code fragments that are similar to the synthesized code [{pattern}], please give the specific name of these libraries".format(pattern= code)},
-        # {"role": "user", "content": "In what situation this synthesized code can be used?"},
               ]
     )
     print(completion)  
@@ -153,7 +151,6 @@ def situation_suggestion(completion_answer):
     model="gpt-3.5-turbo", 
     messages=[
         {"role": "user", "content": "Would this synthesized code [{pattern}] be suitable for use in a general application or common situation? If yes, please describe what application usage this code fragment can be applied. Please begin the answer with yes or no and explain why".format(pattern= code)},
-        # {"role": "user", "content": "In what situation this synthesized code can be used?"},
               ]
     )
     print(completion)  
@@ -167,9 +164,7 @@ def final_qustion(completion_answer):
     completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo", 
     messages=[
-        # {"role": "user", "content": "Based on the above answers, [{pattern}] can be considered a common coding pattern or code idiom? Please begin the answer with yes or no and explain why".format(pattern= code)},
         {"role": "user", "content": " [{pattern}] can be considered a common coding pattern or code idiom? Please begin the answer with yes or no and explain why".format(pattern= code)},
-        # {"role": "user", "content": "In what situation this synthesized code can be used?"},
               ]
     )
     print(completion) 

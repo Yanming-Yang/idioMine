@@ -279,18 +279,7 @@ def all_func_info(raw_data, func_contents_info) -> List[Tuple[str, str, str, jav
                 file_id = func_content_info[j][3]
                 func_id = func_content_info[j][4]
 
-                # print('real 1', file_name + '/' + func_name)
-                # print('real 2', file_names[project_id][file_id] + '/' + func_ASTs[project_id][file_id][func_id].name)
-                # print(len(func_content_info))
-                # print(0, j)
-                # print(func_content_info[j])
-
-                # print(j, func_name, '1')
-        
-                # if func_name != '':
-                # print('len_file_name_list', len(file_name_list))
                 for k in range(len(file_name_list)):
-                    # print('a', file_name + ';' + func_name == file_name_list[k][0])
                     if file_name + ';' + func_name == file_name_list[k][0]:
                         # with eventlet.Timeout(120, False):
                         index_a = file_name_list[k][1][0]
@@ -300,14 +289,11 @@ def all_func_info(raw_data, func_contents_info) -> List[Tuple[str, str, str, jav
                         return_type = func_ASTs[index_a][index_b][index_c].return_type
                         
                         G, terminals = construct_ast_graph(func_ASTs[index_a][index_b][index_c], treeNodeType)
-                        # print('G1', G)
                         G_new, dfg_DefUse = get_CFG_and_DFG(G) #wrong
                         var_sub_graph = get_sub_graph_in_a_graph(G_new, dfg_DefUse)
                         new_func_info = (pro_name, file_name, func_name, return_type, func_paras, func_content, G_new, var_sub_graph)
-                        # print('b', (pro_name, file_name, func_name, return_type, func_paras) not in exist_method)
                         if (pro_name, file_name, func_name, return_type, func_paras) not in exist_method:
                             func_info_new.append(new_func_info)
-                            # print(k, func_name, '2')
                             exist_method.append((pro_name, file_name, func_name, return_type, func_paras))
                         # if k < len(file_name_list) - 1:
                         #     continue 
@@ -370,17 +356,12 @@ def main():
     parser.add_argument('--dataFilePath', '-dFP', help='the input file')
     parser.add_argument('--all_func_info_path', '-afip', help='the output file')
     args = parser.parse_args()
-    # dataFilePath = r'./data_new_9.pkl'
     data = read_data(args.dataFilePath)
 
     func_info = get_func_info_in_pros(data)
-    print('finish 1')
     func_content_info = get_func_content(func_info, data)
-    print('finish 2')
     func_info_all = all_func_info(data, func_content_info)
-    print('finish 3')
     
-    # all_func_info_path = r'./func_info_library_data_new_9.pkl'
     get_func_info_pkl(func_info_all, args.all_func_info_path)
 
 if __name__ == '__main__':
