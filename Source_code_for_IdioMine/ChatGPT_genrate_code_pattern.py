@@ -88,7 +88,7 @@ def get_pattern_result(cluster_data_file, prompts, completion_result_file, compl
         index_result.append(index_result_j)
 
 def learned_prompt(prompts):
-    openai.api_key = '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'
+    openai.api_key = 'xxxxx'
     for prompt in prompts:
         completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo", 
@@ -102,12 +102,12 @@ def learned_prompt(prompts):
 
 
 def get_synthesized_pattern(center_cluster_1, center_cluster_2):
-    openai.api_key = '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'
+    openai.api_key = 'xxxxx'
 
     completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo", 
     messages=[
-        {"role": "user", "content": "Code fragment 1 [{center_cluster_1}] and Code fragment 2 [{center_cluster_2}] synthesize the reasonable code fragment []".format(center_cluster_1= center_cluster_1, center_cluster_2 = center_cluster_2)},
+        {"role": "user", "content": "Code fragment 1 [{center_cluster_1}] and Code fragment 2 [{center_cluster_2}] synthesize the reasonable code fragment [] based on our provided code, please do not integrate extra code".format(center_cluster_1= center_cluster_1, center_cluster_2 = center_cluster_2)},
         # {"role": "user", "content": "In what situation this synthesized code can be used?"},
               ]
     )
@@ -116,7 +116,7 @@ def get_synthesized_pattern(center_cluster_1, center_cluster_2):
     return completion
 
 def whether_a_code_pattern(completion_answer):
-    openai.api_key = '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'
+    openai.api_key = 'xxxxx'
     # code = completion_answer['choices'][0]['message']['content']
     code = completion_answer
     completion = openai.ChatCompletion.create(
@@ -130,13 +130,13 @@ def whether_a_code_pattern(completion_answer):
     return completion
 
 def used_pattern_libraries(completion_answer):
-    openai.api_key = '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'
+    openai.api_key = 'xxxxx'
     # code = completion_answer['choices'][0]['message']['content']
     code = completion_answer
     completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo", 
     messages=[
-        {"role": "user", "content": "What common Java libraires occur the code fragments that are similar to the synthesized code [{pattern}], please give the specific name of these libraries".format(pattern= code)},
+        {"role": "user", "content": "What common Java libraries contain the code fragments that are similar to the synthesized code [{pattern}], please give the specific name of these libraries".format(pattern= code)},
               ]
     )
     print(completion)  
@@ -144,7 +144,7 @@ def used_pattern_libraries(completion_answer):
     return completion
 
 def situation_suggestion(completion_answer):
-    openai.api_key = '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'
+    openai.api_key = 'xxxxx'
     # code = completion_answer['choices'][0]['message']['content']
     code = completion_answer
     completion = openai.ChatCompletion.create(
@@ -158,7 +158,7 @@ def situation_suggestion(completion_answer):
     return completion
 
 def final_qustion(completion_answer):
-    openai.api_key = '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'
+    openai.api_key = 'xxxxx'
     # code = completion_answer['choices'][0]['message']['content']
     code = completion_answer
     completion = openai.ChatCompletion.create(

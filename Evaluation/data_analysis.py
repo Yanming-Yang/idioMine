@@ -4,9 +4,13 @@ import argparse
 def read_effective_data_in_a_pro(dataFile):
     data = pd.read_pickle(dataFile)
     idioms = data['pattern_completion']
-    final_idioms = data['final_completion']
-    judge_idioms = data['judge_completion']
     explaination = data['situation_completion']
+    judge_idioms = data['judge_completion']
+    if 'new' in dataFile:
+        final_idioms = data['final_completion']
+    else:
+        final_idioms =  data['judge_completion']
+
 
     real_idioms = []
     finals = []
