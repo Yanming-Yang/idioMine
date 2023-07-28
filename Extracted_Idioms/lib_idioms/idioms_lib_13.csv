@@ -1,12 +1,8 @@
 ,pro/lib,idiom,final
 0,new_completion_result_lib_13_combine1.pkl,sb.append(makeIndent(depth));,"Yes, it can be considered a common coding pattern because it is frequently used to add indentation to code that will be outputted or logged. It is a concise and efficient way to ensure that the output is visually structured and easy to read. The use of a StringBuilder to build the string also allows for efficient memory management. Therefore, it is a recognizable code idiom that is used in many different programming languages."
-,,"wrapped.ensureWritable(minWritableBytes, force);",
-,,wrapped.getBoolean(index);,
 ,,getAccess().getInDoc().write(System.err);,
-,,inputMessageStack.push(m);,"Yes, the synthesized code [inputMessageStack.push(m);] is a generic Java code snippet that has occurred in multiple Java libraries. The use of the push() method to add an element to a stack is a standard feature of the Java Collections Framework, which is used extensively in Java programming. Therefore, it is quite common for developers to use inputMessageStack.push(m) code to add elements to a stack in various libraries and applications."
 ,, try{if (n == null){} else{n.write(System.err);}},
 ,,Property p = n.getProperty(path);return p.getTypedValue();,"Yes, the synthesized code [Property p = n.getProperty(path);] is a generic Java code snippet that has been occurred in multiple Java libraries. This is because the code is simply calling the getProperty() method on an object named \""n\"" with a given String path, which is a very common operation in Java programs that deal with properties or configuration files. The specific context and implementation of this code snippet may vary across different libraries, but the basic syntax and function remain the same"
-,,"ScriptableObject.putProperty(this, name, value);",
 ,,"return javascriptSupport.unwrap(ScriptableObject.getProperty(this, name));",
 ,,"return javascriptSupport.callMethod((EObject) javaObject, methodName, args, true);",
 ,,"return javascriptSupport.evaluate(script, this, true);",
@@ -71,8 +67,3 @@ This code fragment is used to set a property on a node in a graph database or ot
 ,,"String tmp =  System.getProperty(""java.io.tmpdir"");System.setProperty(""java.io.tmpdir.Indexdir"", tmp + ""Indexdir/"");","This code is used to set the system property java.io.tmpdir.Indexdir to a subdirectory named ""Indexdir"" within the temporary directory defined by the java.io.tmpdir system property. This is a common pattern for creating a temporary directory within the system's temporary directory."
 ,,"Context ctx = Context.enter();ctx.evaluateString(getScope(), fn, fn, 1, null);","it is a common pattern in projects that use Rhino or other JavaScript engines to execute scripts in a Java environment. The use of a context object and the evaluateString() method to evaluate JavaScript code are common techniques in this type of integration. Additionally, the ability to execute JavaScript code in a Java environment can be useful in many types of projects, such as web applications or automation tools."
 ,,try{Scriptable scope = cx.newObject(scriptScope);scope.setPrototype(scriptScope);},The code fragment you provided appears to be written in Java and uses the Rhino JavaScript engine's API to create a new scriptable object and set its prototype. This pattern is not specific to any particular project but is commonly used in projects that involve scripting languages like JavaScript.
-,,"javascriptSupport.callMethod((EObject) javaObject, methodName, args, true);","It is possible that this code fragment could occur in multiple projects that use Java and the Eclipse Modeling Framework (EMF).
-
-The javaObject variable is being cast to an EObject (an EMF interface) and then passed as a parameter to the callMethod method of a javascriptSupport object, along with a methodName and args. The true parameter at the end of the method call is a boolean flag indicating whether to use a direct or reflective method invocation.
-
-While this particular code fragment is specific to Java and EMF, the general pattern of calling a method on an object with parameters is a common coding pattern that can occur in many different programming languages and project contexts."

@@ -1,6 +1,4 @@
 ,pro/lib,idiom,final
-0,completion_result_lib_8_combine1.pkl,lookup.setNextReader(reader);,
-1,completion_result_lib_8_combine1.pkl,lookup.setNextDocId(docId);,
 2,completion_result_lib_8_combine1.pkl,SearchLookup lookup = searchContext.lookup();lookup.setNextReader(reader);lookup.setNextDocId(docId);List<Object> values = lookup.source().extractRawValues(mapper.names().sourcePath());,"Yes, it's possible for this code fragment to occur in multiple Java projects, particularly those that involve searching and indexing of data.
 
 The code fragment appears to be using the Lucene library to perform a search and retrieve a list of raw values based on a specific search query. The SearchLookup object is used to access the search context and retrieve the necessary data, while the mapper.names().sourcePath() method appears to be used to specify the path to the desired data.

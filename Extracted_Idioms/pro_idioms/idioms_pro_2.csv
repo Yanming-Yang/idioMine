@@ -1,10 +1,4 @@
 ,pro/lib,idiom,final
-0,completion_result_pro_2_combine1.pkl,"doPost(req, res);","
-
-Yes, the synthesized code [doPost(req, res);] is a generic Java code snippet that has occurred in multiple Java libraries. This snippet is a commonly used method in Java servlets that handles HTTP POST requests. It is a standardized method and can be found in various Java web development libraries and frameworks, such as Apache Tomcat, JavaServer Pages (JSP), Spring, and Java Servlet API. The doPost method takes two arguments, HttpServletRequest and HttpServletResponse, which are used to handle incoming HTTP request and send HTTP response back to the client."
-1,completion_result_pro_2_combine1.pkl,"JerseyBroadcasterUtil.broadcast(r, e, this);","
-
-Yes, it is possible that the synthesized code [JerseyBroadcasterUtil.broadcast(r, e, this);] is a generic Java code snippet that has occurred in multiple Java libraries. However, without additional information about the context in which the code snippet is used and the purpose of the libraries, it is impossible to verify this assumption."
 2,completion_result_pro_2_combine1.pkl,s = r.getRequest().getHeader(HeaderConfig.X_ATMOSPHERE_TRACKING_ID);,"
 
 Yes, it is a generic Java code snippet that can be found in multiple Java libraries. The code snippet retrieves a specific request header value using the Atmosphere framework's API. Since retrieving request header values is a common task in web development, similar code snippets are likely to be found in multiple Java libraries that handle web requests and responses."
@@ -15,18 +9,12 @@ Yes, it is a generic Java code snippet that can be found in multiple Java librar
 6,completion_result_pro_2_combine1.pkl,long newSize = bb.limit() * 2L;if (newSize > maxSize){newSize = maxSize;}ByteBuffer newBuffer = ByteBuffer.allocate((int) newSize);,"
 
 Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is commonly used to allocate a new ByteBuffer with a size that is double the size of the current ByteBuffer. The if statement checks if the new size exceeds a maximum allowed size (maxSize), and if so, it sets the new size to the maximum allowed size. This is a common practice in buffer management to avoid memory overflows. Therefore, this code snippet can be found in many Java libraries that deal with buffer management, such as network programming, data serialization, and file I/O."
-7,completion_result_pro_2_combine1.pkl,"proxied.onError(webSocket,t);","
-
-Yes, it is a generic code snippet that has been used in multiple Java libraries. This is because the syntax and parameters used in the line of code are commonly found in many Java libraries that deal with web sockets and networking. The use of the ""onError"" method with the parameters ""webSocket"" and ""t"" is standard practice when handling errors in web socket communication. Therefore, it is likely that this line of code is a common occurrence in Java libraries that use web sockets."
 8,completion_result_pro_2_combine1.pkl,destroyable = Boolean.parseBoolean(s);,"
 
 Yes, the synthesized code [destroyable = Boolean.parseBoolean(s);] is a generic Java code snippet that has occurred in multiple Java libraries. The reason being, the code uses a built-in Java method ""Boolean.parseBoolean()"" to convert a string value to boolean. This method is commonly used in Java applications and libraries for parsing boolean values from user inputs or configuration files. Therefore, the code snippet can be considered as a generic Java code that is widely used across various Java libraries."
 9,completion_result_pro_2_combine1.pkl,String methodType = config.getInitParameter(ApplicationConfig.WEBSOCKET_METHOD);,"
 
 Yes, it is a generic Java code snippet that can occur in multiple Java libraries. This code snippet is used to retrieve a parameter from a configuration file which is a common operation in many Java applications. The specific implementation and usage may vary, but the syntax and structure of the code remain the same."
-11,completion_result_pro_2_combine1.pkl,"logger.trace(""The WebSocket has been closed before the message was processed."");{}","
-
-Yes, this could be a generic Java code snippet that has occurred in multiple Java libraries. The `logger.trace` method is used for logging information at a trace level, which is often used for debugging purposes. It is a common practice for developers to include logging statements in their code, especially when working with complex systems like websockets. Therefore, it is possible that this code snippet has been used in multiple Java libraries by different developers."
 12,completion_result_pro_2_combine1.pkl,webSocket.resource().getBroadcaster().broadcast(data);,"
 
 Yes, the synthesized code [webSocket.resource().getBroadcaster().broadcast(data);] is a generic Java code snippet that has been occurred in multiple Java libraries. This code is used to broadcast data to all connected WebSocket clients. The WebSocket class is a part of the Java API for WebSocket programming, and the usage of the getBroadcaster() method with the broadcast() method is a common implementation pattern in many Java WebSocket libraries. Therefore, this code snippet can be considered as a standard and widely used technique in Java for WebSocket broadcasting."
@@ -51,15 +39,6 @@ Yes, the synthesized code for (int i = 0; i < s.length(); i++){char c = s.charAt
 20,completion_result_pro_2_combine1.pkl,for (int i = 32; i < 127; i++){bits.set(i);},"
 
 Yes, the code snippet [for (int i = 32; i < 127; i++){bits.set(i);}] is a generic Java code that has occurred in multiple Java libraries. This code is used to set all the bits in a BitSet object from ASCII value 32 (space character) to ASCII value 126 (tilde character). It is a common operation in applications that deal with character sets and encoding. Therefore, it is a widely used code snippet in various Java libraries and applications."
-21,completion_result_pro_2_combine1.pkl,"escapeJavaStyleString(writer, str, escapeSingleQuotes, escapeForwardSlash);","
-
-Yes, it is a generic Java code snippet that has been used in multiple Java libraries. 
-
-The method name ""escapeJavaStyleString"" suggests that it is a utility method for escaping strings in a particular style, which is commonly used in Java applications. The presence of boolean parameters ""escapeSingleQuotes"" and ""escapeForwardSlash"" also suggests that the method allows customization of the escaping behavior for specific characters.
-
-Furthermore, the use of a writer object suggests that the method is designed to output the escaped string to a destination, rather than returning a new escaped string object. This kind of functionality is also common in Java libraries.
-
-Overall, the combination of these factors indicates that the code snippet is likely a common pattern in Java libraries for escaping strings in a standardized way."
 22,completion_result_pro_2_combine1.pkl,"encoderOut.compact();lastCoderResult = encoder.encode(encoderIn, encoderOut, endOfInput);((Buffer)encoderOut).flip();","
 
 Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. The code snippet involves the use of a character encoder to encode a string into a byte buffer, followed by flipping the buffer for reading. This is a common operation in Java programming, especially in situations that involve converting data between different formats or encoding schemes. The specific methods used in the code snippet, such as `compact()`, `encode()`, and `flip()` are part of the standard Java libraries and are widely used in various contexts. Therefore, this code snippet is likely to appear in many Java programs that involve character encoding and data manipulation."
@@ -87,9 +66,6 @@ Yes, this synthesized code is a generic Java code snippet that has been used in 
 Yes, it is a generic Java code snippet that can be found in multiple Java libraries. 
 
 This code is a simple if-statement that checks if the value of the variable ""n"" is equal to the length of the ""filters"" array. This is a common check that may be performed in a variety of programs and libraries, depending on the specific needs of the code. As such, it is likely to be found in many different Java libraries and programs."
-29,completion_result_pro_2_combine1.pkl,"doFilter(request, response);","
-
-Yes, the synthesized code [doFilter(request, response);] is a generic Java code snippet that has occurred in multiple Java libraries. This is because doFilter is a standardized method defined in the javax.servlet.Filter interface, which is part of the Java Servlet API. Therefore, any Java library or web application that uses servlets and filters is likely to use this method to perform request processing and filtering."
 31,completion_result_pro_2_combine1.pkl,ExecutorService e = (ExecutorService) config.properties().get(ASYNC_WRITE_THREAD_POOL);config.properties().remove(ASYNC_WRITE_THREAD_POOL);,"
 
 Yes, it is a code snippet that can occur in multiple Java libraries because it is using the generic ExecutorService interface and the properties() method, which is a common way of obtaining properties in Java programs. The removal of the ASYNC_WRITE_THREAD_POOL property is also a common practice when using properties in a program. However, the specific context in which this code appears may vary depending on the library or application it is used in."
@@ -101,9 +77,6 @@ Yes, the code snippet [for (int i = files.length - 1; i >=0; --i){}] is a generi
 Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. 
 
 The code snippet is using the InputStream class's read method to read bytes into a buffer. The returned value is the number of bytes read, which is assigned to the variable n. This is a commonly used pattern when working with InputStreams. The buffer is typically of a fixed size, and the read method is called multiple times until all the data has been read. So, this code snippet can be found in various libraries and projects that involve reading data from streams."
-34,completion_result_pro_2_combine1.pkl,"readFully(bytes, 0, bytes.length);","
-
-Yes, the code snippet [readFully(bytes, 0, bytes.length);] is a generic Java code snippet that has occurred in multiple Java libraries. It is a common method for reading the full contents of a byte array in Java, and as such has been implemented in various libraries and frameworks."
 35,completion_result_pro_2_combine1.pkl,"if (size >= buffer.length){final byte[] newBuffer = new byte[buffer.length * 2];System.arraycopy(buffer, 0, newBuffer, 0, buffer.length);buffer = newBuffer;}","
 
 Yes, it is a common code snippet that has been used in multiple Java libraries. This code snippet is used to dynamically resize an array if the size of the array reaches its limit. This is a common functionality that is required in many programs and libraries that deal with arrays. Therefore, it is likely that you will see this code snippet in many Java libraries."

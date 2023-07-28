@@ -35,15 +35,6 @@ Yes, it is a common pattern in Java programming to iterate over a collection of 
 
 Yes, it is possible that the synthesized code [String configName = YarnConfiguration.NM_CSI_ADAPTOR_PREFIX
         + driverName + YarnConfiguration.NM_CSI_ADAPTOR_ADDRESS_SUFFIX;] has occurred in multiple Java libraries because it is using the YarnConfiguration class, which is a part of Apache Hadoop YARN, a popular framework for distributed processing of large data sets. Since many Java applications use Hadoop YARN, it is possible that this code snippet has been used in multiple libraries that leverage Hadoop YARN for distributed processing."
-13,completion_result_pro_6_combine1.pkl,report.setApplicationAttemptId(applicationAttemptId);,"
-
-Yes. The code [report.setApplicationAttemptId(applicationAttemptId);] is a generic Java code snippet that has occurred in multiple Java libraries because it is a commonly used method call in Java for setting the Application Attempt ID in Apache Hadoop and other distributed computing frameworks. This code can therefore be found in various libraries and code repositories that use these frameworks."
-14,completion_result_pro_6_combine1.pkl,report.setStartTime(startTime);,"
-
-Yes, the synthesized code [report.setStartTime(startTime);] is a generic Java code snippet that has occurred in multiple Java libraries. This is because setStartTime() is a common method used to set the starting time of a report or some other process in many different applications. It is a basic programming functionality that can be easily implemented in different software systems. Therefore, it is common to see this code snippet in many different Java libraries."
-15,completion_result_pro_6_combine1.pkl,statistics.setAllocatedVCores(allocatedVCores);,"
-
-Yes, it is possible that the code snippet [statistics.setAllocatedVCores(allocatedVCores);] has occurred in multiple Java libraries. This is because the code looks like a common setter method in Java that sets the value of a variable named ""allocatedVCores"" for an object named ""statistics"". Thus, it is a generic code snippet that can be used in various Java libraries. However, the specific context and implementation of the code may differ based on the library and the purpose for which it is used."
 16,completion_result_pro_6_combine1.pkl,"final int prime = 31;result =
         prime * result + ((getNodeId() == null) ? 0 : getNodeId().hashCode());result =
         prime * result + ((getToken() == null) ? 0 : getToken().hashCode());","
@@ -130,20 +121,6 @@ It takes a single argument unit, which is a string representing a unit of measur
 The switch statement evaluates the value of unit and returns a corresponding enum value that represents the unit of measurement. Each case in the switch statement matches a specific value of unit, and returns the corresponding enum value.
 
 If the value of unit does not match any of the specified cases, the switch statement throws an IllegalArgumentException with an error message that indicates the unknown unit."
-,,report.setFinishTime(finishTime);,"Yes, this is a code pattern written in Java.
-
-It calls the setFinishTime() method on the report object, passing in the finishTime as an argument.
-
-Without more context, it's difficult to determine the specific purpose of this code pattern. However, it's possible that this code is used in the context of a job or task tracking system, where report is an object that stores information about the progress and status of a job or task, and finishTime is the time when the job or task finished executing.
-
-The setFinishTime() method may update the report object to reflect the finish time of the job or task, which could be used for monitoring, analysis, or reporting purposes."
-,,report.setHost(host);,"Yes, this is a code pattern written in Java.
-
-It calls the setHost() method on the report object, passing in the host as an argument.
-
-Without more context, it's difficult to determine the specific purpose of this code pattern. However, it's possible that this code is used in the context of a job or task tracking system, where report is an object that stores information about the progress and status of a job or task, and host is the name of the host where the job or task is running.
-
-The setHost() method may update the report object to reflect the current host where the job or task is running, which could be used for monitoring or analysis purposes. It could also be used to associate the job or task with a specific host or set of hosts in a distributed computing environment."
 ,,"final ProtocRunner protoc = new ProtocRunner(project, imports, output,        source, protocCommand, protocVersion, checksumPath, this, false);","The ProtocRunner object may be responsible for running the Protoc compiler to generate Java files from the proto files, using the specified command, version, and input/output directories. The checksumPath argument may be used to cache the results of the compilation to avoid unnecessary recompilations."
 ,,"switch (scm){case GIT:\n        for (String s : scmOut){if (s.startsWith(""commit"")){commit = s.substring(""commit"".length());break;}\n        }\n        break;};}"," it's possible that this code is used in the context of a build or deployment process, where scm is a variable that indicates the type of source code management system being used (e.g., Git, SVN, etc.).
 

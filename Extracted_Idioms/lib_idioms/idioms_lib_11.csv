@@ -96,9 +96,7 @@ Yes, it is a generic Java code snippet that can be found in multiple Java librar
 Yes, it is possible that the synthesized code [char begin = sqlIdentifier.charAt(0);int quoteType = Dialect.QUOTE.indexOf(begin);] is a generic Java code snippet that has been occurred in multiple Java libraries. 
 
 The reason behind this is that both of these code lines are very common in Java programming. The first line extracts the first character of a given string, and the second one searches for the index of that character in the Dialect.QUOTE string. Many Java libraries or frameworks use similar operations for parsing and manipulating strings, including SQL strings. Therefore, it is possible that this code snippet exists in multiple Java libraries."
-38,completion_result_lib_11_combine1.pkl,"addCrossJoin(tableName, alias);","
-
-Yes, it is a generic Java code snippet that could occur in multiple Java libraries. The function name and parameter types provide little context to determine its specific purpose or functionality. Therefore, it is common practice to use generic function names and parameter types in programming to make code more reusable and flexible."
+,,,
 39,completion_result_lib_11_combine1.pkl,for ( int j=0; j<fkColumns.length; j++){},"
 
 Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is used to iterate through an array of a certain type and perform some action on each element. It is a common programming pattern and is used in a wide variety of Java applications. Therefore, it is likely to have been implemented in various Java libraries for different purposes."
@@ -120,9 +118,7 @@ Yes, the synthesized code [char[] chars = text.toCharArray();] is a generic Java
 49,completion_result_lib_11_combine1.pkl,char[] chars = text.toCharArray();for (int i = 0; i < chars.length; i++){char aChar = chars[i];},"
 
 Yes, the synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is used frequently in Java programs to convert a string to a character array and iterate through each character in the array. It is a simple and efficient way to manipulate strings in Java, and it is used in various libraries and frameworks that deal with string manipulation such as Apache Commons Lang, Guava, Jackson, and many more."
-50,completion_result_lib_11_combine1.pkl,"appendEscapedMultibyteChars(text,buf);","
-
-Yes, it is possible that the synthesized code [appendEscapedMultibyteChars(text,buf);] is a generic Java code snippet that has occurred in multiple Java libraries. However, without further context, it is difficult to ascertain its prevalence."
+,,,
 52,completion_result_lib_11_combine1.pkl,traverser.traverseDepthFirst( root );,"
 
 Yes, the synthesized code [traverser.traverseDepthFirst( root );] is a generic Java code snippet that has occurred in multiple Java libraries. This is because traversing a data structure using a depth-first approach is a common task in programming, and there are multiple libraries and frameworks that offer this functionality. The specific library or framework that uses this code snippet may vary, but the basic concept of traversing a data structure in a depth-first manner is a common programming practice."
@@ -156,9 +152,7 @@ Yes, it is possible that the synthesized code [if ( columnName.startsWith( openQ
 62,completion_result_lib_11_combine1.pkl,"tree.addChild( new HibernateTree( ALIAS_REF, Template.TEMPLATE ) );","
 
 Yes, it is possible that the synthesized code [tree.addChild( new HibernateTree( ALIAS_REF, Template.TEMPLATE ) );] is a generic Java code snippet that has occurred in multiple Java libraries. However, without further context or information, it is difficult to confirm this with certainty. The use of common Java libraries and frameworks like Hibernate and Template can result in the presence of similar code snippets in different projects."
-63,completion_result_lib_11_combine1.pkl,persisterSpaceContext.registerPersisterSpace( persisterSpace );,"
-
-Yes, it is possible that the synthesized code [persisterSpaceContext.registerPersisterSpace( persisterSpace );] has occurred in multiple Java libraries because it appears to be a generic code snippet for registering a ""persister space"" object in a ""context"". This type of functionality is common in many Java applications and libraries that involve persistence and storage management. However, without more context and information about the specific libraries in question, it is difficult to say for certain whether this code has actually been used in multiple libraries."
+,,,
 64,completion_result_lib_11_combine1.pkl,MappedTableMetadata tableMetadata = persister.getMappedTableMetadata();,"
 
 Yes, it is possible that the synthesized code [MappedTableMetadata tableMetadata = persister.getMappedTableMetadata();] is a generic Java code snippet that has been used in multiple Java libraries. This is because the code represents a common design pattern used in object-relational mapping (ORM) frameworks, where the metadata of database tables is mapped to object models in Java. Many ORM frameworks in Java use similar code snippets to fetch metadata information of tables, and then map them to their respective Java objects."
@@ -187,7 +181,7 @@ The code snippet utilizes a popular method called substring() from the StringUti
 
 This method is commonly used in many Java applications and libraries to manipulate strings, making it a generic code snippet that can be found in multiple libraries. Therefore, it is safe to assume that the code snippet could be a generic Java code snippet."
 73,completion_result_lib_11_combine1.pkl,for (SqlCommand command : commands){},"Yes, the synthesized code ""for (SqlCommand command : commands){}"" is a generic Java code snippet that has occurred in multiple Java libraries. This is because it is a standard syntax for iterating through collections in Java, where ""commands"" is a collection of SqlCommand objects, and ""command"" is a variable that represents each individual element in the collection during each iteration of the loop. This syntax is widely used in Java programming and can be found in many libraries and code examples."
-74,completion_result_lib_11_combine1.pkl,theEvent.setDate(theDate);,"Yes, the code snippet [theEvent.setDate(theDate);] is a generic Java code that has occurred in multiple Java libraries. This code sets the date of an event object based on the input date. The method signature 'setDate(Date date)' is commonly used in Java libraries for setting a date attribute for a given object. Therefore, we can conclude that the code snippet [theEvent.setDate(theDate);] is a general-purpose code that is commonly used across various Java libraries."
+,,,
 75,completion_result_lib_11_combine1.pkl,Session session = HibernateUtil.getSessionFactory().getCurrentSession();session.beginTransaction();session.save(theEvent);session.getTransaction().commit();,"
 
 Yes, this synthesized code is a generic Java code snippet that has been occurred in multiple Java libraries. 
@@ -202,12 +196,8 @@ Yes, this is a generic Java code snippet that has been used in multiple Java lib
 78,completion_result_lib_11_combine1.pkl,"String local = fqcn + ""."" + member;","
 
 Yes, the synthesized code [String local = fqcn + ""."" + member;] is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet concatenates two strings with a period ""."" in between, and it is a commonly used operation in Java development when working with packages, classes, and their members. Therefore, this code snippet can be found in numerous Java libraries, as it is a fundamental operation in Java programming."
-79,completion_result_lib_11_combine1.pkl,"metaEmbeddables.put( fqcn, metaEntity );","
-
-Yes, it is a generic Java code snippet that can occur in multiple Java libraries. 
-
-This is because the syntax ""metaEmbeddables.put"" is accessing a map data structure, which is a common programming concept that can be used across various Java libraries. Additionally, the use of ""fqcn"" and ""metaEntity"" as the key-value pair is a simple and universal way to store metadata information in a map. Therefore, this code snippet can be used in different contexts and implementations, making it a common and generic syntax in Java programming."
-80,completion_result_lib_11_combine1.pkl,"accessTypeInformation.put( fqcn, info );","Yes, it is possible that the synthesized code [accessTypeInformation.put( fqcn, info );] could occur in multiple Java libraries, as it is a generic code snippet for storing type information in a map data structure. The use of the Map interface and method calls such as put() are common in Java libraries for storing and retrieving data. However, without more context on the specific library and the purpose of the code, it is difficult to say for certain."
+,,,
+,,,
 81,completion_result_lib_11_combine1.pkl,"if ( name.startsWith( PROPERTY_PREFIX_GET ) ){tmp = name.replaceFirst( PROPERTY_PREFIX_GET, """" );}","
 
 Yes, the synthesized code [if ( name.startsWith( PROPERTY_PREFIX_GET ) ){tmp = name.replaceFirst( PROPERTY_PREFIX_GET, """" );}] is a generic Java code snippet that can be found in many Java libraries. 
@@ -240,9 +230,7 @@ Yes, the synthesized code is a generic Java code snippet that has occurred in mu
 Yes, the synthesized code [if(isSingle()){} else{Class propertyType = descriptors[c].getPropertyType();}] is a generic Java code snippet that has been occurred in multiple Java libraries. 
 
 This code snippet checks if a property is a single value or multiple values and assigns the property type accordingly. It is a common code pattern used in many Java libraries that deal with properties, such as JavaBeans or Spring Framework. Therefore, it can be considered as a generic code snippet used in multiple Java libraries."
-89,completion_result_lib_11_combine1.pkl,"listenerList.add(TreeModelListener.class, l);","
-
-Yes, the code snippet [listenerList.add(TreeModelListener.class, l);] is a generic Java code that can be found in multiple Java libraries. This code adds a listener to a list of listeners for a particular event. In this case, the event is related to changes in a tree data structure, but similar code snippets can be used to register listeners for other events in different types of data structures or user interfaces. Therefore, the syntax of this code snippet can be considered general and reusable in various contexts."
+,,,
 90,completion_result_lib_11_combine1.pkl,Object[] listeners = listenerList.getListenerList();for (int i = listeners.length-2; i>=0; i-=2){if (listeners[i]==TreeModelListener.class){((TreeModelListener)listeners[i+1]).treeNodesChanged(e);}},"
 
 Yes, the synthesized code [Object[] listeners = listenerList.getListenerList();for (int i = listeners.length-2; i>=0; i-=2){if (listeners[i]==TreeModelListener.class){((TreeModelListener)listeners[i+1]).treeNodesChanged(e);}}] is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is a commonly used implementation for notifying registered listeners of events in the Java Swing framework. It is used in various classes such as JTree, JTable, and JList, which all implement the TreeModelListener interface. The same code snippet is also used in other frameworks and libraries in the Java ecosystem for implementing event notification to registered listeners."
@@ -310,7 +298,7 @@ This code snippet loops through the elements of the Map using the Iterator and r
 112,completion_result_lib_11_combine1.pkl,int sz = str.length();for (int i=0; i<sz; i++){},"
 
 Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet iterates over a string using a for loop and performs some action inside the loop. As this is a very basic and commonly used operation in programming, it has been used in various libraries and programs written in Java."
-116,completion_result_lib_11_combine1.pkl,"collectComponents( components, iter );","Yes, it is possible that this code snippet has occurred in multiple Java libraries as it is a generic method signature that can be used in various contexts. However, without more context it is impossible to confirm this for certain."
+,,,
 117,completion_result_lib_11_combine1.pkl,if ( interfaces.size() > 0 ){StringBuffer sbuf = new StringBuffer();for ( Iterator iter = interfaces.iterator(); iter.hasNext() ; ){sbuf.append( iter.next() );}},"
 
 Yes, the synthesized code is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is a common way to iterate over a collection of objects using an iterator and append the elements to a string buffer. It is a standard way of creating a string representation of a collection or list of objects, and therefore it is a frequently used pattern in Java programming."
@@ -346,9 +334,6 @@ Yes. This is a generic Java code snippet that can be found in multiple Java libr
 130,completion_result_lib_11_combine1.pkl,List orderedProperties = getAllProperties(pojoClass);,"
 
 Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This is because the code snippet is using the reflection API to retrieve all the properties of a class, which is a common requirement in many Java applications. The use of reflection API to obtain class level details is a widely used design pattern in Java programming. Thus, this generic code snippet has been used across many Java libraries to achieve common functionality of obtaining the class property."
-131,completion_result_lib_11_combine1.pkl,"Collections.sort(orderedProperties, PROPERTY_COMPARATOR);","
-
-Yes, the code snippet is a generic Java code that has been used in multiple libraries as it sorts a collection of objects based on a comparator. The Collections class is a standard Java utility class that provides various methods for manipulating collections, and the sort() method is one of its common methods. The PROPERTY_COMPARATOR variable is likely a custom comparator that is specific to the library or application that uses it, but the use of the Collections.sort() method with a comparator is a common pattern in Java programming."
 132,completion_result_lib_11_combine1.pkl,ServiceRegistryBuilder builder = new ServiceRegistryBuilder();builder.applySettings(cfg.getProperties());ServiceRegistry serviceRegistry = builder.buildServiceRegistry();,"
 
 Yes, the synthesized code [ServiceRegistryBuilder builder = new ServiceRegistryBuilder();builder.applySettings(cfg.getProperties());ServiceRegistry serviceRegistry = builder.buildServiceRegistry();] is a generic Java code snippet that has occurred in multiple Java libraries. The code is used for creating and building a service registry, which is a common requirement in many software applications. Since Java is an open-source language, this code can be used and modified by anyone, leading to its widespread use in different libraries and frameworks."
@@ -417,11 +402,6 @@ while ( iter.hasNext() ){
 }","
 
 Yes, it is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is commonly used for splitting and formatting strings, where it checks if the current token is spaceable and if the last token is also spaceable, and adds a space if necessary. The use of boolean variables to keep track of the previous token's spaceability and whether it was quoted is a common practice in string handling in Java."
-158,completion_result_lib_11_combine1.pkl,"
-
-addJoin(tableName, alias, alias, fkColumns, pkColumns, joinType, null);","
-
-Yes, it is possible that the code snippet has occurred in multiple Java libraries. The code snippet appears to be a method call, which is a very common construct in Java programming. The method parameters are also quite generic and could be used in many different contexts. However, without more information about the specific libraries or applications where this code has been used, it is difficult to say for certain."
 159,completion_result_lib_11_combine1.pkl,"
 
 for (int i = 0; i < columns.length; i++) {
@@ -1153,7 +1133,7 @@ if (tokenTypeNameCache != null) {
   }
 }","
 
-Yes, it is possible that this code snippet has occurred in multiple Java libraries as it is a common programming pattern in Java to check if a value exists in a cache or map and retrieve it accordingly. However, without additional context or information, it cannot be determined with certainty whether this exact code has occurred in multiple Java libraries or not."
+As an AI language model, I do not have the ability to search and verify the synthesized code's occurrence in multiple Java libraries. However, the code seems to be a general-purpose snippet that can be used in various situations where someone needs to escape non-ASCII characters in a string. The use of standard Java classes and methods makes it a typical code piece that can be found in different libraries. So, to answer your question, I would say ""Yes,"" it is a generic Java code snippet that could have occurred in multiple Java libraries."
 335,completion_result_lib_11_combine1.pkl,"
 
 String text = ""example text"";

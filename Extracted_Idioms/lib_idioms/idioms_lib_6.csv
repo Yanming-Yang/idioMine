@@ -11,9 +11,6 @@ Yes, it is a generic Java code snippet that can be found in multiple Java librar
 3,completion_result_lib_6_combine1.pkl,"if (tokensSize != tagsSize || tagsSize != lemmasSize){throw new IllegalArgumentException(          ""All arrays must have the same length: "" +              ""sentenceSize: "" + tokensSize + "", tagsSize: "" + tagsSize +                  "", predsSize: "" + lemmasSize + ""!"");}","
 
 Yes, it is a generic Java code snippet that has been used in multiple Java libraries. This code ensures that arrays have the same length before proceeding with any operations, which is a common requirement in many Java applications. Moreover, the use of IllegalArgumentException is a standard Java practice to handle errors in method arguments."
-4,completion_result_lib_6_combine1.pkl,"collectFeatures(prefix, suffix, previous, next, null);","
-
-Yes, the synthesized code [collectFeatures(prefix, suffix, previous, next, null);] is a generic Java code snippet that may occur in multiple Java libraries. It is a common practice in Java programming to call methods with multiple parameters, such as prefix, suffix, previous, next, and null, to collect features. This code can be used in various scenarios, making it a generic and widely used code snippet in Java."
 5,completion_result_lib_6_combine1.pkl,"CrossValidationPartitioner<SentenceSample> partitioner =
         new CrossValidationPartitioner<>(samples, nFolds);","
 
@@ -73,27 +70,12 @@ Yes, the synthesized code for (int si = 0, sl = spans.length; si < sl; si++){} i
 This code snippet is used to iterate over an array or a collection in Java. It initializes two variables, si and sl, where si represents the index of the current element and sl represents the length of the array or collection. The loop runs as long as the si variable is less than the sl variable, which ensures that all elements of the array or collection are visited.
 
 Many Java libraries use this code snippet in their implementation, as it provides a simple and efficient way to iterate over arrays and collections. Therefore, it is considered a generic Java code snippet that is consistently used in various Java libraries."
-23,completion_result_lib_6_combine1.pkl,"mlParams.put(TrainingParameters.ITERATIONS_PARAM, ITERATIONS_DEFAULT_VALUE);","
-
-Yes, the synthesized code [mlParams.put(TrainingParameters.ITERATIONS_PARAM, ITERATIONS_DEFAULT_VALUE);] is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is used to set the number of iterations for training machine learning models. The TrainingParameters class is commonly used in various machine learning libraries and frameworks, and the syntax of the code snippet is standard Java code that can be used in any Java-based project."
 26,completion_result_lib_6_combine1.pkl,"String versionString = getManifestProperty(VERSION_PROPERTY);if (versionString != null){} else{throw new InvalidFormatException(""Missing "" + VERSION_PROPERTY + "" property in "" +            MANIFEST_ENTRY + ""!"");}","
 
 Yes, it is a generic Java code snippet that has been occurred in multiple Java libraries. This code snippet is used to retrieve the value of a specified property from a Java archive's manifest file. If the property is missing, an exception is thrown. This is a common approach used by many Java developers to ensure that their code is working with the correct version of a library or application. Therefore, it is likely that this code snippet has been used in multiple Java libraries to achieve this goal."
 27,completion_result_lib_6_combine1.pkl,"if (getManifestProperty(COMPONENT_NAME_PROPERTY) == null)      throw new InvalidFormatException(""Missing "" + COMPONENT_NAME_PROPERTY + "" property in "" +            MANIFEST_ENTRY + ""!"");","
 
 Yes, it is a generic Java code snippet that can occur in multiple Java libraries. This code snippet checks for the existence of a specific manifest property in a Java application and throws an exception if it is missing. The use of the getManifestProperty method with the COMPONENT_NAME_PROPERTY constant can be used in any Java application that requires a specific manifest property to be present. Therefore, this code can appear in various Java libraries for different use cases."
-30,completion_result_lib_6_combine1.pkl,"manifest.setProperty(key, value);","
-
-Yes, the synthesized code [manifest.setProperty(key, value);] is a generic Java code snippet that has occurred in multiple Java libraries. This code snippet is used to set properties in the manifest file of a JAR file in Java. Since the usage of manifest files is common in Java development, this code snippet is often used in different libraries and applications that require setting properties in the manifest file."
-32,completion_result_lib_6_combine1.pkl,artifact.serialize(out);,"
-
-Yes, the synthesized code [artifact.serialize(out);] can be a generic Java code snippet that has occurred in multiple Java libraries. It is because the snippet is a straightforward representation of serialization in Java, which is a widely used technique for converting objects into a stream of bytes to be saved to a file or sent over the network. Since serialization is a fundamental concept in Java, it is expected that many libraries would implement it, and the code snippet mentioned above could be found in those implementations."
-33,completion_result_lib_6_combine1.pkl,"properties.store(out, """");","
-
-Yes, the code snippet [properties.store(out, """");] is a generic Java code that can occur in multiple Java libraries. This code is used to save the key-value pairs of Java properties into an output stream. It is a commonly used method to serialize Java properties and store them in a file, database or any other data source. Therefore, it is expected to appear in multiple Java libraries, especially those dealing with properties configuration and management."
-34,completion_result_lib_6_combine1.pkl,out.write(artifact);,"
-
-Yes, the synthesized code [out.write(artifact);] is a generic Java code snippet that has occurred in multiple Java libraries. The method out.write() is a common method used in Java for writing data to an output stream, and the parameter artifact could represent any object or data that needs to be written. Thus, the code can be found in various Java libraries that deal with output stream manipulation and data serialization."
 35,completion_result_lib_6_combine1.pkl,"for (AdaptiveFeatureGenerator generator : generators){generator.updateAdaptiveData(tokens, outcomes);}","
 
 Yes, it is a generic Java code snippet that can be found in multiple Java libraries. It is a common pattern for updating adaptive feature generators in natural language processing tasks, where the generators are used to extract features from the input data (tokens) and predict outcomes (e.g., part-of-speech tags or named entities). The loop iterates over a list of generators, and for each generator, it calls the method ""updateAdaptiveData"" with the input data and the predicted outcomes, which allows the generator to update its internal state and adjust its feature extraction process accordingly. This pattern is used in various Java libraries for natural language processing, such as OpenNLP and Stanford CoreNLP."
@@ -156,15 +138,6 @@ The reason behind this is that the code iterates through a map using the `Map.en
 58,completion_result_lib_6_combine1.pkl,"EvalParameters evalParams = new NaiveBayesEvalParameters(            params, outcomeLabels.length, outcomeTotals, predLabels.length);","
 
 No, it is not a generic Java code snippet that has occurred in multiple Java libraries. This code is specific to the Naive Bayes algorithm and is used to initialize evaluation parameters."
-59,completion_result_lib_6_combine1.pkl,output.writeDouble(d);,"
-
-Yes, the synthesized code [output.writeDouble(d);] is a generic Java code snippet that has been occurred in multiple Java libraries. This is because the writeDouble method is a part of the java.io.DataOutput interface which is implemented by various classes including DataOutputStream, ObjectOutputStream, and RandomAccessFile. Therefore, it is a commonly used method for writing double values to output streams in Java."
-60,completion_result_lib_6_combine1.pkl,output.writeInt(i);,"
-
-Yes, the code snippet [output.writeInt(i);] is a generic Java code that can be found in multiple Java libraries. It is used to write an integer value to an output stream. This method is defined in the Java IO library and is commonly used in many other libraries that deal with file I/O or network I/O. It is a standard way to write integer data to a stream and can be used in any Java program that needs to write integer data to an output stream."
-61,completion_result_lib_6_combine1.pkl,"ModelParameterChunker.writeUTF(output, s);","
-
-Yes, it is possible that the code snippet [ModelParameterChunker.writeUTF(output, s);] has occurred in multiple Java libraries as it is a generic method to write a string in UTF format to an output stream. This functionality can be required in various scenarios and applications, and hence it is possible that it is used in multiple Java libraries."
 62,completion_result_lib_6_combine1.pkl,"for (int ei = startIndex; ei < startIndex + length; ei++){if (values != null){prior.logPrior(modelDistribution, contexts[ei], values[ei]);GISModel.eval(contexts[ei], values[ei], modelDistribution, evalParams);}for (int j = 0; j < contexts[ei].length; j++){for (int aoi = 0; aoi < activeOutcomes.length; aoi++){if (values != null && values[ei] != null){modelExpects[threadIndex][pi].updateParameter(aoi, modelDistribution[oi]                  * values[ei][j] * numTimesEventsSeen[ei]);}}}}","
 
 Yes, it is possible that the generated code has occurred in multiple Java libraries. However, without additional context or information about the specific libraries that were analyzed, it is difficult to confirm this with certainty."
@@ -199,9 +172,6 @@ Yes, it is a generic Java code snippet that has occurred in multiple Java librar
 71,completion_result_lib_6_combine1.pkl,for (int i = 0; i < posModel.getNumOutcomes(); i++){modelTags.add(posModel.getOutcome(i));},"
 
 Yes, it is possible that the synthesized code [for (int i = 0; i < posModel.getNumOutcomes(); i++){modelTags.add(posModel.getOutcome(i));}] is a generic Java code snippet that has occurred in multiple Java libraries. This is because the code snippet is a simple for loop that iterates over a sequence of outcomes and adds them to a list. Such an operation could be common in many Java libraries, particularly those dealing with data analysis or machine learning, where it is often necessary to process output from trained models. However, without more context, it is impossible to say with certainty whether this particular code snippet has been used in multiple libraries."
-72,completion_result_lib_6_combine1.pkl,"ngramModel.cutoff(cutoff, Integer.MAX_VALUE);","
-
-Yes, it is possible that the code [ngramModel.cutoff(cutoff, Integer.MAX_VALUE);] has occurred in multiple Java libraries as it is a generic code snippet that can be used in various contexts where an n-gram model needs to be truncated at a certain frequency cutoff. However, without further context, it is impossible to confirm if this code snippet has been used in multiple libraries."
 73,completion_result_lib_6_combine1.pkl,"manifestEntries.put(FEATURE_GENERATORS, featureGeneratorsAsString());","
 
 Yes, it is possible that the code snippet [manifestEntries.put(FEATURE_GENERATORS, featureGeneratorsAsString());] has occurred in multiple Java libraries. 
