@@ -88,7 +88,7 @@ def get_pattern_result(cluster_data_file, prompts, completion_result_file, compl
         index_result.append(index_result_j)
 
 def learned_prompt(prompts):
-    openai.api_key = 'xxxxx'
+    openai.api_key = 'xxxxxx'
     for prompt in prompts:
         completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo", 
@@ -102,7 +102,7 @@ def learned_prompt(prompts):
 
 
 def get_synthesized_pattern(center_cluster_1, center_cluster_2):
-    openai.api_key = 'xxxxx'
+    openai.api_key = 'xxxxxx'
 
     completion = openai.ChatCompletion.create(
     model="gpt-3.5-turbo", 
@@ -116,7 +116,7 @@ def get_synthesized_pattern(center_cluster_1, center_cluster_2):
     return completion
 
 def whether_a_code_pattern(completion_answer):
-    openai.api_key = 'xxxxx'
+    openai.api_key = 'xxxxxx'
     # code = completion_answer['choices'][0]['message']['content']
     code = completion_answer
     completion = openai.ChatCompletion.create(
@@ -130,7 +130,7 @@ def whether_a_code_pattern(completion_answer):
     return completion
 
 def used_pattern_libraries(completion_answer):
-    openai.api_key = 'xxxxx'
+    openai.api_key = 'xxxxxx'
     # code = completion_answer['choices'][0]['message']['content']
     code = completion_answer
     completion = openai.ChatCompletion.create(
@@ -144,7 +144,7 @@ def used_pattern_libraries(completion_answer):
     return completion
 
 def situation_suggestion(completion_answer):
-    openai.api_key = 'xxxxx'
+    openai.api_key = 'xxxxxx'
     # code = completion_answer['choices'][0]['message']['content']
     code = completion_answer
     completion = openai.ChatCompletion.create(
@@ -158,7 +158,7 @@ def situation_suggestion(completion_answer):
     return completion
 
 def final_qustion(completion_answer):
-    openai.api_key = 'xxxxx'
+    openai.api_key = 'xxxxxx'
     # code = completion_answer['choices'][0]['message']['content']
     code = completion_answer
     completion = openai.ChatCompletion.create(
