@@ -15,15 +15,17 @@ def get_code_idioms_in_a_pro(args):
     code_idioms_list = []
     idx = 0
     for i in range(len(real_idioms)):
-        if not (real_idioms[i].count(';') == 1 and ('this' in real_idioms[i] or 'return' in real_idioms[i] or 'super' in real_idioms[i])):
-            if '{' in real_idioms[i] or '?' in real_idioms[i] or  real_idioms[i].count('=') > 0:
-                if not (real_idioms[i].count('=') > 0 and real_idioms[i].split('=')[0].strip().count(' ') == 0):
-                    print(idx, real_idioms[i])
-                    code_idioms_list.append((real_idioms[i], judges[i], explaination_idiom[i], finals[i]))
-                    # print(idx, real_idioms[i] + '\n', judges[i] + '\n')
-                    # print(libraries_idiom[i] + '\n', explaination_idiom[i] + '\n')
-                    print('*' * 50)
-                    idx += 1
+        # if not (real_idioms[i].count(';') == 1 and ('this' in real_idioms[i] or 'return' in real_idioms[i] or 'super' in real_idioms[i])):
+        if not (real_idioms[i].count(';') == 1 and real_idioms[i].count('(') == 0 and ('return' in real_idioms[i] or 'this.' in real_idioms[i] or 'super.' in real_idioms[i])): # new
+            if not (real_idioms[i].count(';') == 1 and real_idioms[i].count('=') == 0 and real_idioms[i].count('(') == 1): # new
+                if '{' in real_idioms[i] or '?' in real_idioms[i] or  real_idioms[i].count('=') > 0:
+                    if not (real_idioms[i].count('=') > 0 and real_idioms[i].split('=')[0].strip().count(' ') == 0):
+                        print(idx, real_idioms[i])
+                        code_idioms_list.append((real_idioms[i], judges[i], explaination_idiom[i], finals[i]))
+                        # print(idx, real_idioms[i] + '\n', judges[i] + '\n')
+                        # print(libraries_idiom[i] + '\n', explaination_idiom[i] + '\n')
+                        print('*' * 50)
+                        idx += 1
     return code_idioms_list
 
 def split_data_for_evaluation(args):
