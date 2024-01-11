@@ -8,8 +8,6 @@ Our replicated package consists of six folders that organize the relevant data a
 
       - `Evaluation` contains the code utilized to evaluate the effectiveness of IdioMine in answering RQ1.
 
-      - `Extracted_Idioms` contains IdioMine's extracted idioms.
-
       - `User_study` contains the top-18 idioms extracted by IdioMine, Haggies, and ChatGPT 3.5, respectively, and users' preference towards those top idioms.
       
       - `Idiom_analysis` includes the ground-truth dataset in RQ2 and the statistical results of the idioms extracted by IdioMine from various Java projects and libraries in RQ3.
