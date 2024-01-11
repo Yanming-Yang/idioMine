@@ -15,9 +15,8 @@ def get_code_idioms_in_a_pro(args):
     code_idioms_list = []
     idx = 0
     for i in range(len(real_idioms)):
-        # if not (real_idioms[i].count(';') == 1 and ('this' in real_idioms[i] or 'return' in real_idioms[i] or 'super' in real_idioms[i])):
-        if not (real_idioms[i].count(';') == 1 and real_idioms[i].count('(') == 0 and ('return' in real_idioms[i] or 'this.' in real_idioms[i] or 'super.' in real_idioms[i])): # new
-            if not (real_idioms[i].count(';') == 1 and real_idioms[i].count('=') == 0 and real_idioms[i].count('(') == 1): # new
+        if not (real_idioms[i].count(';') == 1 and ('this.' in real_idioms[i] or 'super.' in real_idioms[i])):
+            if not (real_idioms[i].count(';') == 1 and real_idioms[i].count('=') == 0 and real_idioms[i].count('(') == 1):
                 if '{' in real_idioms[i] or '?' in real_idioms[i] or  real_idioms[i].count('=') > 0:
                     if not (real_idioms[i].count('=') > 0 and real_idioms[i].split('=')[0].strip().count(' ') == 0):
                         print(idx, real_idioms[i])
@@ -26,6 +25,17 @@ def get_code_idioms_in_a_pro(args):
                         # print(libraries_idiom[i] + '\n', explaination_idiom[i] + '\n')
                         print('*' * 50)
                         idx += 1
+    return code_idioms_list
+
+def get_code_idioms_in_a_pro_new(args):
+    code_idioms_list = []
+    real_idioms_pd = pd.read_csv(args.idiomDataFile)
+    real_idioms = real_idioms_pd['idiom']
+    finals = real_idioms_pd['final']
+    for i in range(len(real_idioms)):
+        if type(real_idioms[i]) == str:
+            if not (real_idioms[i].count(';') == 1 and real_idioms[i].count('=') == 0):
+                code_idioms_list.append((real_idioms[i], finals[i]))
     return code_idioms_list
 
 def split_data_for_evaluation(args):
@@ -65,8 +75,9 @@ def idiomSetPrecision(args, code_idioms_list, test_data, train_data):
         flag_train = 0
         flag_test = 0
         for j in range(len(center_point)):
+            # print(center_point)
             # if Levenshtein.ratio(code_idioms_list[i], center_point[j]) > 0.01:
-            if center_point[j] != None and (center_point[j] == code_idioms_list[i][0] or difflib.SequenceMatcher(None, center_point[j], code_idioms_list[i][0]).quick_ratio() > 0.75):
+            if center_point[j] != None and (center_point[j] == code_idioms_list[i][0] or difflib.SequenceMatcher(None, center_point[j], code_idioms_list[i][0]).quick_ratio() >= 0.75):
                 file_names = [cluster_info_i[1] for cluster_info_i in cluster_info[j]]
                 func_names = [cluster_info_i[2] for cluster_info_i in cluster_info[j]]
                 for k in range(len(file_names)):
@@ -96,7 +107,7 @@ def idiomSetPrecision(args, code_idioms_list, test_data, train_data):
         elif train_flags[i] == 1 and test_flags[i] == 0:
             uncovered_idioms += 1
 
-    idiom_set_precision = float(float(covered_idioms) / float(len([i for i in train_flags if i == 1])))
+    idiom_set_precision = float(float(covered_idioms) / float(len([i for i in train_flags if i == 1]) + 1))
     print(idiom_set_precision)
     return idiom_set_precision
 
@@ -117,6 +128,8 @@ def idiomCoverage(args):
     G = code_ast['func_graph'] # G.size()
     code_content = code_ast['func_content']
     real_idioms, judges, libraries_idiom, explaination_idiom = read_effective_data_in_a_pro(args.idiomDataFile)
+    # real_idioms_pd = pd.read_csv(args.idiomDataFile)
+    # real_idioms = real_idioms_pd['idiom']
     idiom_coverage_rate = 0
     idiom_coverages = []
     idiom_size = []
@@ -129,9 +142,10 @@ def idiomCoverage(args):
             if sub_code_pattern[j] != [] and sub_code_pattern[j] != None:
                 for k in range(len(sub_code_pattern[j])):
                     judge = [True if token in real_idioms else False for token in sub_code_pattern[j][k].replace('\{\}', ';').replace('{', ';').replace('}', ';').split(';')] 
-                    if sub_code_pattern[j][k] in real_idioms[i] or False not in judge:
+                    if type(real_idioms[i]) == str and sub_code_pattern[j][k] in real_idioms[i] or True in judge: # difflib.SequenceMatcher(None, center_point[j], code_idioms_list[i][0]).quick_ratio() > 0.5
+                    # if type(real_idioms[i]) == str and difflib.SequenceMatcher(None,sub_code_pattern[j][k], real_idioms[i]).quick_ratio() > 0.75 or False not in judge:
                         if list(set(list(func_sub_graph[j][k]))) != [0] and func_sub_graph[j][k] != []:
-                            print(func_sub_graph[j][k])
+                            # print(func_sub_graph[j][k])
                             idiom_ast_nodes.append(func_sub_graph[j][k])
                             G_index.append(j)
 
@@ -150,20 +164,42 @@ def idiomCoverage(args):
             idiom_coverage_list.append(idiom_coverage_)
             related_leafs = 0
             try:
-                for i in list(chain.from_iterable(idiom_ast_nodes[index: index + value])):
-                    related_leafs += len(list(iter_specific_edges(G[key], i, 'AST')))
+                node_list = list(chain.from_iterable(idiom_ast_nodes[index: index + value]))
+                for i in node_list:
+                    related_leafs = get_leaves(node_list, G, key, i, related_leafs)
+                    # print('related_leafs', related_leafs)
+                    # related_leafs += len(list(iter_specific_edges(G[key], i, 'AST')))
+                idiom_size_.append(len(node_list) + related_leafs)
             except:
                 continue
-            idiom_size_.append(len(list(chain.from_iterable(idiom_ast_nodes[index: index + value]))) + related_leafs)
+            idiom_size_.append(len(node_list) + related_leafs)
         # print(idiom_coverage_list)
 
-        idiom_coverage = float(sum(idiom_coverage_list) / len(idiom_coverage_list))
+        # idiom_coverage = float(sum(idiom_coverage_list) / (len(idiom_coverage_list) + 1))
+        idiom_coverage = float(sum(idiom_coverage_list) / (len(idiom_coverage_list)))
         idiom_coverages.append(idiom_coverage)
-        idiom_size.append(sum(idiom_size_)/len(idiom_size_)) #sum(idiom_size_)/len(idiom_size_)
+        idiom_size.append(sum(idiom_size_)/(len(idiom_size_))) #sum(idiom_size_)/len(idiom_size_)
+        # idiom_size.append(sum(idiom_size_)/(len(idiom_size_) + 1)) #sum(idiom_size_)/len(idiom_size_)
         idiom_coverages.sort()
         idiom_coverage_rate = idiom_coverages[-1]
     return idiom_coverages, idiom_coverage_rate, idiom_size, combination_idiom_size
 
+def get_leaves(node_list, G, key, i, related_leafs):
+        for j in list(iter_specific_edges(G[key], i, 'AST')):
+            if j not in node_list:
+                related_leafs += len(list(iter_specific_edges(G[key], j, 'AST')))
+            else:
+                i = j
+                get_leaves(node_list, G, key, i, related_leafs)
+        return related_leafs
+
+
+
+
+# def CHatGPT_precision(args, test_data, train_data, ChatGPT_idiom):
+#     code_ast = pd.read_pickle(args.codeContentAST)
+#     code_contents = code_ast['func_content']
+#     for i in range(len(code_contents)):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='args description')
@@ -175,15 +211,16 @@ if __name__ == '__main__':
     parser.add_argument('--trainFile', '-trF', type=str, help='the output file')
     args = parser.parse_args()
 
+    # code_idioms_list = get_code_idioms_in_a_pro_new(args)
     code_idioms_list = get_code_idioms_in_a_pro(args)
     test_data, train_data = split_data_for_evaluation(args)
     # test_data = pd.read_pickle(args.testFile)
     # train_data = pd.read_pickle(args.trainFile)
     idiom_set_precision = idiomSetPrecision(args, code_idioms_list, test_data, train_data)
     idiom_coverages, idiom_coverage_rate, idiom_size, combination_idiom_size = idiomCoverage(args)
-    print(idiom_set_precision)
-    print(idiom_coverage_rate)
-    print('idiom_size', float(sum(idiom_size)  / float(len(idiom_size) )))
+    print('ISP:', idiom_set_precision)
+    print('IC:', idiom_coverage_rate)
+    print('idiom_size', max(idiom_size))
 
     # total = 0
     # for i in idiom_coverages: 
