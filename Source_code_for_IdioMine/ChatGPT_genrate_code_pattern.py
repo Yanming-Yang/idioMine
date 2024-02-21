@@ -78,7 +78,7 @@ def get_pattern_result(cluster_data_file, prompts, completion_result_file, compl
             traceback.print_exc()
         return iter_result_j_, combine_result_info_j_, index_result_j_
     
-    learned_prompt(prompts)
+    learned_prompt2(prompts)
     single_pattern_result(cluster_center_point_infos, cluster_center_points_all)
 
     for j in range(k): 
@@ -93,6 +93,7 @@ def learned_prompt(prompts):
         completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo", 
         messages=[
+            {"role": "system", "content": "You are an expert in program synthesis."},
             {"role": "user", "content": "{prompt}".format(prompt= prompt)},
             # {"role": "user", "content": "In what situation this synthesized code can be used?"},
                 ]
@@ -100,13 +101,27 @@ def learned_prompt(prompts):
         print(completion)
         time.sleep(30)
 
+def learned_prompt2(prompts):
+    openai.api_key = 'xxxxxx'
+    client = OpenAI()
+
+    client.files.create(
+    file=open("prompt.json", "rb"),
+    purpose="fine-tune"
+    )
+
+    client.fine_tuning.jobs.create(
+    training_file="xxxx", 
+    model="gpt-3.5-turbo"
+)
 
 def get_synthesized_pattern(center_cluster_1, center_cluster_2):
     openai.api_key = 'xxxxxx'
 
     completion = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo", 
+    model="gpt-3.5-turbo", # model='ft:gpt-3.5-turbo:xxxx'
     messages=[
+        {"role": "system", "content": "You are an expert in program synthesis."},
         {"role": "user", "content": "Code fragment 1 [{center_cluster_1}] and Code fragment 2 [{center_cluster_2}] synthesize the reasonable code fragment [] based on our provided code, please do not integrate extra code".format(center_cluster_1= center_cluster_1, center_cluster_2 = center_cluster_2)},
         # {"role": "user", "content": "In what situation this synthesized code can be used?"},
               ]
@@ -116,12 +131,13 @@ def get_synthesized_pattern(center_cluster_1, center_cluster_2):
     return completion
 
 def whether_a_code_pattern(completion_answer):
-    openai.api_key = 'xxxxxx'
+    openai.api_key = 'xxxxxx' 
     # code = completion_answer['choices'][0]['message']['content']
     code = completion_answer
     completion = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo", 
+    model="gpt-3.5-turbo", # model='ft:gpt-3.5-turbo:xxxx'
     messages=[
+        {"role": "system", "content": "You are an expert in program synthesis."},
         {"role": "user", "content": "Does this synthesized code [{pattern}] possess clear semantics? Please begin the answer with yes or no and explain why".format(pattern= code)},
               ]
     )
@@ -134,8 +150,9 @@ def used_pattern_libraries(completion_answer):
     # code = completion_answer['choices'][0]['message']['content']
     code = completion_answer
     completion = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo", 
+    model="gpt-3.5-turbo", # model='ft:gpt-3.5-turbo:xxxx'
     messages=[
+        {"role": "system", "content": "You are an expert in program synthesis."},
         {"role": "user", "content": "What common Java libraries contain the code fragments that are similar to the synthesized code [{pattern}], please give the specific name of these libraries".format(pattern= code)},
               ]
     )
@@ -148,8 +165,9 @@ def situation_suggestion(completion_answer):
     # code = completion_answer['choices'][0]['message']['content']
     code = completion_answer
     completion = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo", 
+    model="gpt-3.5-turbo", # model='ft:gpt-3.5-turbo:xxxx'
     messages=[
+        {"role": "system", "content": "You are an expert in program synthesis."},
         {"role": "user", "content": "Would this synthesized code [{pattern}] be suitable for use in a general application or common situation? If yes, please describe what application usage this code fragment can be applied. Please begin the answer with yes or no and explain why".format(pattern= code)},
               ]
     )
@@ -162,8 +180,9 @@ def final_qustion(completion_answer):
     # code = completion_answer['choices'][0]['message']['content']
     code = completion_answer
     completion = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo", 
+    model="gpt-3.5-turbo", # model='ft:gpt-3.5-turbo:xxxx'
     messages=[
+        {"role": "system", "content": "You are an expert in program synthesis."},
         {"role": "user", "content": " [{pattern}] can be considered a common coding pattern or code idiom? Please begin the answer with yes or no and explain why".format(pattern= code)},
               ]
     )
